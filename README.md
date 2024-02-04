@@ -6,6 +6,18 @@ The website we are creating responds to the need of renting a car for personal u
 
 ### Team members
 
+#### Julia
+
+#### Cristina
+
+#### Jackson
+
+#### Antoine
+
+#### André
+
+#### Leiticia
+
 ### User stories
 
 ### Task breakdown
