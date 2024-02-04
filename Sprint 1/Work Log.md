@@ -49,6 +49,7 @@ In Wiki
 In Log document
 - [ ] log with time stamps, activity details and time spend by each team member
 
-In Minutes Meeting file
+In Minutes Meeting files
 - [ ] Meetings Minutes file (minutes files should be named <teamName_Sprint#_meetingnumber_meeting_date>
+- [ ] One file for each meeting
 
