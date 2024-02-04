@@ -3,12 +3,12 @@
 ### Julia :
 | Time (h) | Task | 
 | :---: | --- |
+| 1 | added more to the README file and categorized the tasks to be done, depending on the location of its documentation |
 
 ### Cristina : 
 | Time (h) | Task | 
 | :---: | --- |
 | 1 | setting up the folders and starting up on the README file |
-
 
 ### Jackson : 
 | Time (h) | Task | 
