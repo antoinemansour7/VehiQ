@@ -17,11 +17,11 @@
 ### Antoine : 
 | Time (h) | Task | 
 | :---: | --- |
-### Andre : 
+### André : 
 | Time (h) | Task | 
 | :---: | --- |
 
-### Laeticia :
+### Leiticia :
 | Time (h) | Task | 
 | :---: | --- |
 
