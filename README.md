@@ -86,7 +86,7 @@ curve, and extensibility.
  
  3.2 Frontend Frameworks
  
- 3.2.1 Framework X
+ 3.2.1 Vue.js
 - Description: Brief overview of Framework X.
 - Rationale:
   - Justification for choosing Framework X.
