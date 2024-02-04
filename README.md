@@ -2,7 +2,7 @@
 
 ### Project Description  
 
-The website we are creating responds to the need of renting a car for personal use for a period of time. The product is a website that lets the user navigate the available cars and depending on location and time of rental, choose the best pick for the user. 
+The website we are creating responds to the need of renting a car for personal use for a period of time. The product is a website that lets the user navigate through the available cars depending on the location and the time of the rental, all while being able to see reviews of previous users. When they choose their best pick, the user can then proceed to the payment of the rental.
 
 ### Team members
 
