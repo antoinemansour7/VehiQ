@@ -4,6 +4,27 @@
 
 Our project, a cutting-edge Car Rental Platform, aims to revolutionize the way users rent cars for personal use. By leveraging the latest web technologies, we offer a seamless, intuitive, and comprehensive car rental experience. Users can effortlessly browse a wide selection of vehicles, read detailed reviews from previous customers, and choose the perfect car that suits their needs and preferences. Our secure and straightforward payment process ensures a hassle-free rental experience from start to finish.
 
+### Primary Users and Main Use Cases
+
+#### Customers
+
+- **Browse Vehicles for Rent**: Access a catalog of vehicles, filtering by type, category, and price range.
+- **Start a Reservation**: Specify rental details like location and dates to view available vehicles and add optional equipment.
+- **View/Modify/Cancel Reservation**: Manage reservations with the flexibility to adjust or cancel as needed.
+- **Find a Branch**: Locate the nearest rental branch using postal code or airport information.
+- **Rating and Review**: Provide feedback on vehicles and the rental experience.
+
+#### Customer Service Representatives (CSRs)
+
+- **Check-in Process**: Assist customers with new or existing reservations, verify identification, review rental agreements, and process payments.
+- **Check-out Process**: Inspect vehicles, ensure rental agreement compliance, process final billing, and confirm return completion in the system.
+
+#### System Administrators
+
+- **CRUD Operations on Vehicles**: Manage vehicle inventory.
+- **CRUD Operations on User Accounts**: Handle user account management.
+- **CRUD Operations on Reservations**: Oversee reservation records.
+
 ## Team Member Roles
 
 #### Julia - UI/UX Designer
