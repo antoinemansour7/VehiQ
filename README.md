@@ -1,10 +1,10 @@
 # Matter-soen341projectW2024
 
-## Enhanced Project Description
+## Project Description
 
 Our project, a cutting-edge Car Rental Platform, aims to revolutionize the way users rent cars for personal use. By leveraging the latest web technologies, we offer a seamless, intuitive, and comprehensive car rental experience. Users can effortlessly browse a wide selection of vehicles, read detailed reviews from previous customers, and choose the perfect car that suits their needs and preferences. Our secure and straightforward payment process ensures a hassle-free rental experience from start to finish.
 
-## Expanded Team Member Roles
+## Team Member Roles
 
 #### Julia - UI/UX Designer
 
@@ -12,11 +12,11 @@ Julia enhances user experience, bringing her extensive experience with HTML, CSS
 
 #### Cristina - Frontend Lead
 
-#### Jackson - QA Engineer
+#### Jackson
 
 #### Antoine
 
-#### André - DevOps Engineer
+#### André
 
 #### Leiticia - Backend Developer
 
