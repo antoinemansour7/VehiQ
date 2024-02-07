@@ -33,7 +33,7 @@ Julia enhances user experience, bringing her extensive experience with HTML, CSS
 
 #### Cristina - Frontend Lead
 
-Cristina ensures that the implemented UI is coherent in every view and that it is easy for the user to interact with the platform. Her experience with the chosen frontenf framework, Vue.js and her meticulous approach to implementation makes her an asset in the team
+Cristina ensures that the implemented UI is coherent in every view and that it is easy for the user to interact with the platform. Her experience with the chosen frontend framework, Vue.js and her meticulous approach to implementation makes her an asset in the team
 #### Jackson
 
 #### Antoine
@@ -76,6 +76,10 @@ Strengths:
 As previously mentioned, React has a component-architecture which makes it easier to manage large and complex applications due to its encapsulated nature. React ahs a virtual Dom which is a lighter version of the actual DOM in the memory. Thus, React has faster and more efficient DOM updates and Browser re-renders since it updates the virtual DOM then optimize when updating the real DOM. React is the most in-demand web framework as such it has a large and ever-growing community provides an abundance of resources such as tutorials, forums and online communities. 
 Weakness:
 React is based on a flux architecture which can prove hard to learn for developers. New concepts such as Actions, Dispatchers, Views, and Stores are hard to understand for beginners. Indeed, the Flux architecture can introduce scalability challenges due to growing set of dependencies between the aforementioned concepts. Also, React’s flux architecture forces developers to write many repetitive codes known as boilerplate code to set up the Flux pattern.  
+Uses Cases:
+-React Native allows developers to build mobile applications using JavaScript and React, thus enabling code sharing between the web and mobile platform.
+-Large-Scale Web Applications: React’s modular architecture and vast tools like Redux and React Router is a great asset to build large-scale web applications with multiples UI requirements.
+
 
 Description:
 Vue.js is a JavaScript framework for building interactive web interfaces. It focuses on the view layer and provides a simple API. It’s very approachable since its syntax is a blend of HTML and JavaScript. Vue.js is known for its vast ecosystems of libraries and tools making it a popular framework for both small and big projects alike.
@@ -83,6 +87,13 @@ Rationale:
 Vue.js was chosen due to its simple nature. When we considered our front-end developers technological background, we found that Vue.js ’s ease of integration and incremental approach was the right fit for our team. Indeed, we are more familiar with HTML, CSS, and JavaScript thus Vue.js similar syntax is a great asset. Also, its component-based architecture and incremental philosophy enables us to modularize the code which help us scale harmoniously.
 Qualitative Assessment:
 Strengths:
+As we previously mentioned, Vue.js has a simple syntax and has HTML-based templates which makes it friendly to developers already comfortable with HTML, CSS and JavaScript. Vue.js, through its virtual DOM, efficiently updates the DOM when a data property is changed in a Vue component. Also, Vue.js provided reactive features such as computed properties and watchers which allows faster responses to changing data. Vue.js encourages component-based architecture. Thus, the encapsulated components promote easy communication between parent-child, code reuse, modularity and maintainability.
+Weakness:
+Vue.js is a relatively newer framework, thus it faces challenges in enterprise adoptions compare to its older peers such as React and Angular. Indeed, to the lack of enterprise adoption, Vue.js doesn’t have the same level of studies and documentation. Also, its ecosystem of libraries and tools may not be as vast as React or Angular. Some developers may not find a library or the set of tools specific to their unique needs. Furthermore, Vue.js official tooling named Vue CLI is very limited. Indeed, it doesn’t offer as many features as React’s Create React App nor Angular’s Angular CLI. For example, Vue CLI does not offer built-in support for server-side rendering while React has Next.js and Angular has a built-in option.
+Uses Cases:
+-In-app Widgets: Vue.js is lightweight and flexible enough to be embedded into existing applications. It can easily be integrated to larger application due to its modular and incremental nature.
+-Interactive User Interfaces: Vue.js ‘s fast response rate due to its virtual DOM and responsive features is well suited for application with real-time data updates like dashboards. 
+
 
 
 ### Integration and Interoperability
