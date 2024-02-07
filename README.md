@@ -34,7 +34,10 @@ Julia enhances user experience, bringing her extensive experience with HTML, CSS
 #### Cristina - Frontend Lead
 
 Cristina ensures that the implemented UI is coherent in every view and that it is easy for the user to interact with the platform. Her experience with the chosen frontend framework, Vue.js and her meticulous approach to implementation makes her an asset in the team
-#### Jackson
+
+#### Jackson- Frontend Integration Developer
+
+Jackson's previous work involves creating a Animal Adoption Agency Website and Financial Counseling Website from scratch using HTML,CSS, JavaScript and PHP. He ensures that the website not only looks great but also provides a seamless experience for our users. From designing layouts to implementing interactive features with JavaScript, he's passionate about creating engaging web experiences. His familarity with backend development such as PHP will allow him connect the frontend of the car rental website with the backend systems responsible for managing and storing data related to car inventory, availability, and bookings.
 
 #### Antoine
 
