@@ -40,7 +40,7 @@ Cristina ensures that the implemented UI is coherent in every view and that it i
 Jackson's previous work involves creating a Animal Adoption Agency Website and Financial Counseling Website from scratch using HTML,CSS, JavaScript and PHP. He ensures that the website not only looks great but also provides a seamless experience for our users. From designing layouts to implementing interactive features with JavaScript, he's passionate about creating engaging web experiences. His familarity with backend development such as PHP will allow him connect the frontend of the car rental website with the backend systems responsible for managing and storing data related to car inventory, availability, and bookings.
 
 #### Antoine - Backend Developer
-Antoine's role envolves developing server-side applications. He will focus on integrating Django, along side other backend technologies to create a solid core for the car rental platform. His goal is to maintain a flawless application logic to ensure the system's efficiency and reliability. Furthermore, he will work closely with front-end developers to maintain the user experience desired by providing the necessary backend functionnalities.
+Antoine's role envolves developing server-side applications. He will focus on integrating Django, along side other backend technologies to create a solid core for the car rental platform. His goal is to maintain a flawless application logic to ensure the system's efficiency and reliability. Furthermore, he will work closely with front-end developers to maintain the desired user experience  by providing the necessary backend functionnalities.
 
 #### André
 
