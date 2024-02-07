@@ -14,7 +14,8 @@
 
 ### Jackson :
 
-| Time (h) | Task |
+| Time (h) | Task                                                                                                              |
+| :------: | ----------------------------------------------------------------------------------------------------------------- |
 |    1     | Finished Description/Rationale/Qualitative Assessment for Vue.js and Description/Qualitative Assessment for React |
 
 
