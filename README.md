@@ -67,6 +67,22 @@ Our Agile methodology allows us to adapt to changes quickly, focusing on iterati
 - **Vue.js**: Selected for its ease of learning and integration, Vue.js enables us to develop a dynamic UI efficiently.
 - **React**: Offers a vast ecosystem and high performance, ideal for complex UIs.
 - **Angular**: A full-fledged framework providing a wide range of features, suitable for enterprise-level applications.
+- Description:
+React is a front-end framework. It is an open-source JavaScript library developed and create by Meta Platforms formerly known as Facebook. It’s a component-based framework meaning developers can create reusable self-contained piece of code that defines a specific UI component.
+Rationale:
+Qualitative Assessment:
+Strengths:
+As previously mentioned, React has a component-architecture which makes it easier to manage large and complex applications due to its encapsulated nature. React ahs a virtual Dom which is a lighter version of the actual DOM in the memory. Thus, React has faster and more efficient DOM updates and Browser re-renders since it updates the virtual DOM then optimize when updating the real DOM. React is the most in-demand web framework as such it has a large and ever-growing community provides an abundance of resources such as tutorials, forums and online communities. 
+Weakness:
+React is based on a flux architecture which can prove hard to learn for developers. New concepts such as Actions, Dispatchers, Views, and Stores are hard to understand for beginners. Indeed, the Flux architecture can introduce scalability challenges due to growing set of dependencies between the aforementioned concepts. Also, React’s flux architecture forces developers to write many repetitive codes known as boilerplate code to set up the Flux pattern.  
+
+Description:
+Vue.js is a JavaScript framework for building interactive web interfaces. It focuses on the view layer and provides a simple API. It’s very approachable since its syntax is a blend of HTML and JavaScript. Vue.js is known for its vast ecosystems of libraries and tools making it a popular framework for both small and big projects alike.
+Rationale:
+Vue.js was chosen due to its simple nature. When we considered our front-end developers technological background, we found that Vue.js ’s ease of integration and incremental approach was the right fit for our team. Indeed, we are more familiar with HTML, CSS, and JavaScript thus Vue.js similar syntax is a great asset. Also, its component-based architecture and incremental philosophy enables us to modularize the code which help us scale harmoniously.
+Qualitative Assessment:
+Strengths:
+
 
 ### Integration and Interoperability
 
