@@ -66,6 +66,18 @@ Our Agile methodology allows us to adapt to changes quickly, focusing on iterati
 - **Node.js**: Offers great performance for I/O intensive operations, suitable for real-time features.
 - **ASP.NET**: Known for its robustness in enterprise scenarios, it provides strong security and performance.
 
+
+Description:
+Node.js is an open-source, cross-platform JavaScript runtime environment that allows the execution of JavaScript code server-side, allowing for the development of backend applications using the same language familiar to many developers from frontend development.
+Rationale:
+
+Qualitive Assessment:
+Strengths:
+Weakness:
+Uses Cases:
+
+
+
 #### Frontend Framework Evaluation
 
 - **Vue.js**: Selected for its ease of learning and integration, Vue.js enables us to develop a dynamic UI efficiently.
