@@ -67,7 +67,8 @@ Our Agile methodology allows us to adapt to changes quickly, focusing on iterati
 - **Vue.js**: Selected for its ease of learning and integration, Vue.js enables us to develop a dynamic UI efficiently.
 - **React**: Offers a vast ecosystem and high performance, ideal for complex UIs.
 - **Angular**: A full-fledged framework providing a wide range of features, suitable for enterprise-level applications.
-- Description:
+
+Description:
 React is a front-end framework. It is an open-source JavaScript library developed and create by Meta Platforms formerly known as Facebook. It’s a component-based framework meaning developers can create reusable self-contained piece of code that defines a specific UI component.
 Rationale:
 Qualitative Assessment:
