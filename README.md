@@ -62,7 +62,7 @@ Our Agile methodology allows us to adapt to changes quickly, focusing on iterati
 
 #### Backend Framework Evaluation
 
-- **Django**: Chosen for its comprehensive features and rapid development capabilities, ideal for our secure and scalable web application.
+- **Django**: Chosen for its comprehensive features and rapid development capabilities, ideal for our secure and scalable web application 
 - **Node.js**: Offers great performance for I/O intensive operations, suitable for real-time features.
 - **ASP.NET**: Known for its robustness in enterprise scenarios, it provides strong security and performance.
 
@@ -70,8 +70,8 @@ Our Agile methodology allows us to adapt to changes quickly, focusing on iterati
 Description:
 Node.js is an open-source, cross-platform JavaScript runtime environment that allows the execution of JavaScript code server-side, allowing for the development of backend applications using the same language familiar to many developers from frontend development.
 Rationale:
-Node.js is known for building efficient, scalable applications because of it's non-broken, event driven architecure. 
-Due to it's simple integration with web technologies, this JavaScript based framework was chosen to be a great fit for our project. It is also worth mentionning that all the developers in the project are well-familiarzed with this language.
+Node.js is known for building efficient, scalable applications because of it's non-broken, event driven architecure making it highly scalable and suitable for real life applications.
+Due to it's simple integration with web technologies, this JavaScript based framework was chosen and will be a great fit for our project. It is also worth mentionning that all the developers in the project are well-familiarzed with this language.
 
 Qualitive Assessment:
 Strengths:
