@@ -33,6 +33,7 @@ Julia enhances user experience, bringing her extensive experience with HTML, CSS
 
 #### Cristina - Frontend Lead
 
+Cristina ensures that the implemented UI is coherent in every view and that it is easy for the user to interact with the platform. Her experience with the chosen frontenf framework, Vue.js and her meticulous approach to implementation makes her an asset in the team
 #### Jackson
 
 #### Antoine
@@ -79,4 +80,12 @@ We prioritize application and data security through encryption, secure API endpo
 
 The Matter-soen341projectW2024 project leverages Django and Vue.js to offer a seamless car rental experience. Our choice of technologies, based on detailed evaluations, positions us to meet our objectives effectively and provide a platform that is both user-friendly and robust.
 
+## User Stories
+
+1. As a user, I want to log into my account so that i can book a car for rental.
+2. As a user, I want to filter my car search so that i can rent the one that interests me the most.
+3. As a user, I want to be able to modify my reservation so that i can have flexibility.
+4. As a user, I want to be able to modify my profile so that i can update my information relevant to the application.
+5. As an administrator, I want to be able to add new car from new companies that i sign contracts with so that the user sees that they are now available.
+6. As a user, I want to make a reservation on a chosen car so that i can use it for my personal use.
 ---
