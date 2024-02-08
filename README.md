@@ -4,7 +4,7 @@
 
 - [Project Description](#project-description)
 - [Primary Users and Use Cases](#primary-users-and-use-cases)
-- [Team Member Roles](#team_member-roles)
+- [Team Member Roles](#team-member-roles)
 - [Project Approach and Technology](#project-approach-and-technology)
   - [Backend Framework Evaluation](#backend-framework-evaluation)
   - [Frontend Framework Evaluation](#frontend-framework-evaluation)
