@@ -89,7 +89,7 @@ ASP.NET is an open-source web framework used for building the most modern dynami
 ASP.NET enhances the .NET platform with components for building specific types of apps. It offers a new comprehensive framework that processes web requests  in languages like C# and F#.
 
 Rationale: 
-ASP.NET development offers developers 
+ASP.NET  offers developers a seamless integration with other Microsoft technologies, like Visual Studio, SQL Server, and Azure. ASP.NET provides a rich set of features and libraries for building web applications and also includes support for model-view-controller architecture. Caching, web APIs, and authentication and authorization are examples of more technologies that ASP.NET offers. 
 
 
 #### Frontend Framework Evaluation
