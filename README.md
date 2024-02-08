@@ -66,7 +66,7 @@ Our Agile methodology allows us to adapt to changes quickly, focusing on iterati
 - **Node.js**: Offers great performance for I/O intensive operations, suitable for real-time features.
 - **ASP.NET**: Known for its robustness in enterprise scenarios, it provides strong security and performance.
 
-
+#### Node.js
 Description:
 Node.js is an open-source, cross-platform JavaScript runtime environment that allows the execution of JavaScript code server-side, allowing for the development of backend applications using the same language familiar to many developers from frontend development. It is built on Google Chrome's V8 JavaScript Engine.
 Rationale:
@@ -90,6 +90,7 @@ Uses Cases:
 - **React**: Offers a vast ecosystem and high performance, ideal for complex UIs.
 - **Angular**: A full-fledged framework providing a wide range of features, suitable for enterprise-level applications.
 
+#### React
 Description:
 React is a front-end framework. It is an open-source JavaScript library developed and created by Meta Platforms formerly known as Facebook. It’s a component-based framework meaning developers can create reusable self-contained code that defines a specific UI component.
 Rationale:
@@ -102,7 +103,7 @@ Uses Cases:
 -React Native allows developers to build mobile applications using JavaScript and React, thus enabling code sharing between the web and mobile platforms.
 -Large-Scale Web Applications: React’s modular architecture and vast tools like Redux and React Router a great assets for building large-scale web applications with multiple UI requirements.
 
-
+#### Vue.js
 Description:
 Vue.js is a JavaScript framework for building interactive web interfaces. It focuses on the view layer and provides a simple API. It’s very approachable since its syntax is a blend of HTML and JavaScript. Vue.js is known for its vast ecosystems of libraries and tools making it a popular framework for both small and big projects alike.
 Rationale:
