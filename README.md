@@ -29,7 +29,7 @@ Our project, a cutting-edge Car Rental Platform, aims to revolutionize the way u
 
 #### Julia - UI/UX Designer
 
-Julia enhances user experience, bringing her extensive experience with HTML, CSS, and JavaScript to the table. Her creativity and innovative approach drive the aesthetic and functional design of our user interface.
+Julia enhances user experience, bringing her extensive experience with HTML, CSS, and JavaScript to the table. Her creativity and innovative approach drive the aesthetic and functional design of our user interface, all while making sure that the user requirements are met.
 
 #### Cristina - Frontend Lead
 
