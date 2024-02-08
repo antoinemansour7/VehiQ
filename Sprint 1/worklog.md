@@ -17,6 +17,7 @@
 | Time (h) | Task                                                                                                              |
 | :------: | ----------------------------------------------------------------------------------------------------------------- |
 |    1     | Finished Description/Rationale/Qualitative Assessment for Vue.js and Description/Qualitative Assessment for React |
+|    0.5   | Created the Acceptance Criterias for the 6 user stories                                                           |
 
 
 ### Antoine :
