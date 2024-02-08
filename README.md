@@ -83,6 +83,10 @@ Overall, Node.js is a powerful tool for web development, but it has some weaknes
 - Collaborative Tools: Node.js provides extensive tools for collaborative applications such as document editing platforms which let multiple users collaborate and edit the same document in real-time. Node.js handles WebSockets which facilitates real-time event base communication.
 - IoT Applications: The Node.js non-blocking I/O model is a perfect match for IoT Applications, those that handle concurrent connections from various devices at the same time. The ability to process a large amount of data aligns well with the lightweight data-intensive requirements of IoT models.
 
+Description:
+ASP.NET is an open-source web framework used for building the most modern dynamic web applications and services with .Net by Microsoft. It accommodates different programming styles like Web Forms, MVC, and Web API.
+ASP.NET enhances the .NET platform with components for building specific types of apps. It offers a new comprehensive framework that processes web requests  in languages like C# and F#.
+
 
 
 #### Frontend Framework Evaluation
