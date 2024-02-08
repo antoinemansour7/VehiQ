@@ -17,8 +17,7 @@
 | Time (h) | Task                                                                                                              |
 | :------: | ----------------------------------------------------------------------------------------------------------------- |
 |    1     | Finished Description/Rationale/Qualitative Assessment for Vue.js and Description/Qualitative Assessment for React |
-|    0.5   | Created the Acceptance Criterias for the 6 user stories                                                           |
-
+|   0.5    | Created the Acceptance Criterias for the 6 user stories                                                           |
 
 ### Antoine :
 
@@ -35,6 +34,7 @@
 | Time (h) | Task                                                        |
 | :------: | ----------------------------------------------------------- |
 |    1     | Create Approach and Technology Template for the README file |
+|    1     | Updated README.md with Django specifications                |
 
 ### TASKS:
 
