@@ -133,6 +133,7 @@ React is based on a flux architecture which can prove hard to learn for develope
 <br>**Use Cases:** <br>
 
 - React Native allows developers to build mobile applications using JavaScript and React, thus enabling code sharing between the web and mobile platforms.
+
 - **Large-Scale Web Applications**: React’s modular architecture and vast tools like Redux and React Router a great assets for building large-scale web applications with multiple UI requirements.
 
 <ins><br>**Vue.js**<br></ins>
