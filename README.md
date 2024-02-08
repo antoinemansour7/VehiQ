@@ -13,8 +13,8 @@
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
-- [User Stories](#user-stories)
 - [Conclusion](#conclusion)
+- [User Stories](#user-stories)
 
 ## Project Description
 
@@ -157,7 +157,6 @@ React is based on a flux architecture which can prove hard to learn for develope
 Vue.js is a JavaScript framework for building interactive web interfaces. It focuses on the view layer and provides a simple API. It’s very approachable since its syntax is a blend of HTML and JavaScript. Vue.js is known for its vast ecosystems of libraries and tools making it a popular framework for both small and big projects alike.
 <br>**Rationale:** <br>
 Vue.js was chosen due to its simple nature. When we considered our front-end developers' technological background, we found that Vue.js ’s ease of integration and incremental approach were the right fit for our team. Indeed, we are more familiar with HTML, CSS, and JavaScript thus Vue.js similar syntax is a great asset. Also, its component-based architecture and incremental philosophy enable us to modularize the code which helps us scale harmoniously.
-Qualitative Assessment:
 <br>**Strengths:** <br>
 As previously mentioned, Vue.js has a simple syntax and HTML-based templates, making it friendly to developers already comfortable with HTML, CSS, and JavaScript. Vue.js, through its virtual DOM, efficiently updates the DOM when a data property is changed in a Vue component. Also, Vue.js provided reactive features such as computed properties and watchers which allow faster responses to changing data. Vue.js encourages component-based architecture. Thus, the encapsulated components promote easy communication between parent-child, code reuse, modularity, and maintainability.
 <br>**Weakness:** <br>
