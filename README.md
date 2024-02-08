@@ -128,6 +128,8 @@ Vue.js is a relatively newer framework, thus it faces challenges in enterprise a
 <ins><br>**Angular**<br></ins>
 **Description:** <br>
 Angular is an open-source framework used to develop web applications created by Google. It is a TypeScript based framework, which is an extended version of JavaScript. Its main use is to build single-page web applications.
+<br>**Rationale:** <br>
+Angular provides a wide-ranging toolkit and may be too complex for our car rental web application. Furthermore, considering the front-end developers of our team, Angular is not the best option due to its unfamiliarity. 
 <br>**Strengths:** <br>
 Angular provides a wide variety of tools, libraries, and third-party integrations, which can facilitate and accelerate the development of the web application. It has a reduced need for manipulating the DOM manually, due to its data binding feature, which simplifies the synchronization between the data model and the UI. Additionally, Angular is still being updated regularly by its large community of developers, meaning that there is a vast amount of ressources to provide support to the user.
 <br>**Weaknesses:** <br>
