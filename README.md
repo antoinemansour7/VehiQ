@@ -42,7 +42,8 @@ Jackson's previous work involves creating an Animal Adoption Agency Website and 
 #### Antoine - Backend Developer
 Antoine's role involves developing server-side applications. He will focus on integrating Django, along side other backend technologies to create a solialongside the car rental platform. His goal is to maintain flawless application logic to ensure the system's efficiency and reliability. Furthermore, he will work closely with front-end developers to maintain the desired user experience  by providing the necessary backend functionalities.
 
-#### André
+#### André - Backend Developer
+André's role is to focus on the backend side of the web car rental application. His focus will be to create an efficient database to ensure a secure and enjoyable user experience by creating and utilizing efficient models and database queries. 
 
 #### Leiticia - Backend Developer
 
