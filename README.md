@@ -40,10 +40,12 @@ Cristina ensures that the implemented UI is coherent in every view and that it i
 Jackson's previous work involves creating an Animal Adoption Agency Website and Financial Counseling Website from scratch using HTML,CSS, JavaScript and PHP. He ensures that the website not only looks great but also provides a seamless experience for our users. From designing layouts to implementing interactive features with JavaScript, he's passionate about creating engaging web experiences. His familarity with backend development such as PHP will allow him to connect the front end of the car rental website with the backend systems responsible for managing and storing data related to car inventory, availability, and bookings.
 
 #### Antoine - Backend Developer
-Antoine's role involves developing server-side applications. He will focus on integrating Django, along side other backend technologies to create a solialongside the car rental platform. His goal is to maintain flawless application logic to ensure the system's efficiency and reliability. Furthermore, he will work closely with front-end developers to maintain the desired user experience  by providing the necessary backend functionalities.
+
+Antoine's role involves developing server-side applications. He will focus on integrating Django, along side other backend technologies to create a solialongside the car rental platform. His goal is to maintain flawless application logic to ensure the system's efficiency and reliability. Furthermore, he will work closely with front-end developers to maintain the desired user experience by providing the necessary backend functionalities.
 
 #### André - Backend Developer
-André's role is to focus on the backend side of the car rental web application. His focus will be to create an efficient database to ensure a secure and enjoyable user experience by creating and utilizing efficient models and database queries. 
+
+André's role is to focus on the backend side of the car rental web application. His focus will be to create an efficient database to ensure a secure and enjoyable user experience by creating and utilizing efficient models and database queries.
 
 #### Leiticia - Backend Developer
 
@@ -63,9 +65,25 @@ Our Agile methodology allows us to adapt to changes quickly, focusing on iterati
 
 #### Backend Framework Evaluation
 
-- **Django**: Chosen for its comprehensive features and rapid development capabilities, ideal for our secure and scalable web application 
+- **Django**: Chosen for its comprehensive features and rapid development capabilities, ideal for our secure and scalable web application
 - **Node.js**: Offers great performance for I/O intensive operations, suitable for real-time features.
 - **ASP.NET**: Known for its robustness in enterprise scenarios, it provides strong security and performance.
+
+<ins><br>**Django**<br></ins>
+**Description:** <br>
+Django is a free open-source Python-based web framework that runs on a web server. It was developed to make the web developement process fast and easy.
+Build by experienced developers, it takes care of much of the hassle of web developement, so you can focus on writting your app without needing to reinvent the wheel.
+<br>**Rationale:** <br>
+Django was chosen for its robust set of features that enable building secure, scalable, and maintainable web applications quickly. Its built-in admin panel, ORM (Object-Relational Mapping), and class-based views are particularly beneficial for our project's backend development needs.
+<br>**Strengths:** <br>
+Django includes a comprehensive standard library, an automatic admin interface, and a tight security model to help developers avoid common security mistakes such as SQL injection, cross-site request forgery, and clickjacking.
+Its scalability and flexibility make it suitable for projects of any size.
+<br>**Weaknesses:** <br>
+Django's monolitic structure can be cumbersome for smaller projects or when a more microservices-oriented architecture is preffered. Its ORM may not be the most efficient for handling complex queries massive datasets.
+<br>**Use Cases:** <br>
+
+- **Rapid Development:** Django's "batteries-included" approach for rapid development of features without the need for extensive setup.
+- **Data-Driven Applications:** With its powerful ORM, Django is well-suited for applications that require complex data processing and storage, such as car rental platform.
 
 <ins><br>**Node.js**<br></ins>
 **Description:** <br>
@@ -75,39 +93,27 @@ Node.js is known for building efficient, scalable applications because of its no
 Due to its simple integration with web technologies, this JavaScript-based framework was chosen and will be a great fit for our project. Additionally, It is also worth mentioning that all the developers in the project are well-familiarized with this language.
 Qualitative Assessment:
 <br>**Strengths:** <br>
-Node.js possesses multiple strengths that make it a preferred choice for the development of web applications. First of all, Node.js can handle multiple operations in the background without blocking the main thread due to its asynchronous architecture. This model is a perfect match for web applications that require a lot of I/O operations, thus increasing the throughput of the system. Unlike other traditional processing models, I/O operations don't halt the execution of subsequent operations. 
+Node.js possesses multiple strengths that make it a preferred choice for the development of web applications. First of all, Node.js can handle multiple operations in the background without blocking the main thread due to its asynchronous architecture. This model is a perfect match for web applications that require a lot of I/O operations, thus increasing the throughput of the system. Unlike other traditional processing models, I/O operations don't halt the execution of subsequent operations.
 While using Node.js, developers can maintain unity within their frontend and backend scripting structures with of a single language, JavaScript. Such a unified environment reduces the workflow and learning curve of both front and back teams. Hence, The development process gains greater efficiency and organization.
 <br>**Weakness:** <br>
-Overall, Node.js is a powerful tool for web development, but it has some weaknesses that make it less suitable for certain projects. As explicitly said, Node.js operates on a single-threaded loop. This is great for I/O tasks, but not for CPU-intensive operations. The single-threaded nature can become a bottleneck  when it has to deal with these operations. As the event loop is frequently busy operating I/O requests, other incoming requests get delayed, which reduces the overall performance of the system. Another weakness is the extensive nesting of callback functions, necessary for any asynchronous architecture.                        
+Overall, Node.js is a powerful tool for web development, but it has some weaknesses that make it less suitable for certain projects. As explicitly said, Node.js operates on a single-threaded loop. This is great for I/O tasks, but not for CPU-intensive operations. The single-threaded nature can become a bottleneck when it has to deal with these operations. As the event loop is frequently busy operating I/O requests, other incoming requests get delayed, which reduces the overall performance of the system. Another weakness is the extensive nesting of callback functions, necessary for any asynchronous architecture.  
 <br>**Use Cases:** <br>
-- Collaborative Tools: Node.js provides extensive tools for collaborative applications such as document editing platforms which let multiple users collaborate and edit the same document in real-time. Node.js handles WebSockets which facilitates real-time event base communication.
-- IoT Applications: The Node.js non-blocking I/O model is a perfect match for IoT Applications, those that handle concurrent connections from various devices at the same time. The ability to process a large amount of data aligns well with the lightweight data-intensive requirements of IoT models.
+
+- **Collaborative Tools**: Node.js provides extensive tools for collaborative applications such as document editing platforms which let multiple users collaborate and edit the same document in real-time. Node.js handles WebSockets which facilitates real-time event base communication.
+- **IoT Applications**: The Node.js non-blocking I/O model is a perfect match for IoT Applications, those that handle concurrent connections from various devices at the same time. The ability to process a large amount of data aligns well with the lightweight data-intensive requirements of IoT models.
 
 <ins><br>**ASP.NET**<br></ins>
 **Description:**
 ASP.NET is an open-source web framework used for building the most modern dynamic web applications and services with .Net by Microsoft. It accommodates different programming styles like Web Forms, MVC, and Web API.
-ASP.NET enhances the .NET platform with components for building specific types of apps. It offers a new comprehensive framework that processes web requests  in languages like C# and F#.
+ASP.NET enhances the .NET platform with components for building specific types of apps. It offers a new comprehensive framework that processes web requests in languages like C# and F#.
 
-**Rationale:** 
-ASP.NET  offers developers a seamless integration with other Microsoft technologies, like Visual Studio, SQL Server, and Azure. ASP.NET is known for providing a rich set of features and libraries for building web applications and also includes support for model-view-controller architecture. Caching, web APIs, authentication, and authorization are examples of more technologies that ASP.NET offers.
-
-Qualitative Assessment:
-
+**Rationale:**
+ASP.NET offers developers a seamless integration with other Microsoft technologies, like Visual Studio, SQL Server, and Azure. ASP.NET is known for providing a rich set of features and libraries for building web applications and also includes support for model-view-controller architecture. Caching, web APIs, authentication, and authorization are examples of more technologies that ASP.NET offers.
 **Strengths:**
-
-
-
 **Weakness:**
-The main weaknesses of using ASP.NET come from its environment. While being great for Microsoft technologies, using ASP.NET with a non-Windows environment can be relatively challenging. Furthermore, ASP.NET could present a difficulty in the learning curve for those who are not familiar with .Net languages such as C#, F#, and VB.NET
+The main weaknesses of using ASP.NET come from its environment. While being great for Microsoft technologies, using ASP.NET with a non-Windows environment can be relatively challenging. Furthermore, ASP.NET could present a difficulty in the learning curve for those who are not familiar with .Net languages such as C#, F#, and VB.NET.
 
-**Use cases:**
--E-commerce website: The scalability and integration with Microsoft Technologies make ASP.NET a common choice of web application framework for CRM systems, ERP software, and supply chain management systems. 
--Enterprise Applications: ASP.NET is well suited to accommodate E-commerce websites that require features like browsing, filtering, shopping carts, processing payments, and customer accounts. 
-
-
-
-
-
+**Use cases:** -**E-commerce website**: The scalability and integration with Microsoft Technologies make ASP.NET a common choice of web application framework for CRM systems, ERP software, and supply chain management systems. -**Enterprise Applications**: ASP.NET is well suited to accommodate E-commerce websites that require features like browsing, filtering, shopping carts, processing payments, and customer accounts.
 
 #### Frontend Framework Evaluation
 
@@ -121,12 +127,13 @@ React is a front-end framework. It is an open-source JavaScript library develope
 <br>**Rationale:** <br>
 <br>**Qualitative Assessment:** <br>
 <br>**Strengths:** <br>
-As previously mentioned, React has a component architecture that makes it easier to manage large and complex applications due to its encapsulated nature. React has a virtual DOM which is a lighter version of the actual DOM in the memory. Thus, React has faster and more efficient DOM updates and Browser re-renders since it updates the virtual DOM and then optimizes when updating the real DOM. React is the most in-demand web framework as such it has a large and ever-growing community and provides an abundance of resources such as tutorials, forums, and online communities. 
+As previously mentioned, React has a component architecture that makes it easier to manage large and complex applications due to its encapsulated nature. React has a virtual DOM which is a lighter version of the actual DOM in the memory. Thus, React has faster and more efficient DOM updates and Browser re-renders since it updates the virtual DOM and then optimizes when updating the real DOM. React is the most in-demand web framework as such it has a large and ever-growing community and provides an abundance of resources such as tutorials, forums, and online communities.
 <br>**Weakness:** <br>
 React is based on a flux architecture which can prove hard to learn for developers. New concepts such as Actions, Dispatchers, Views, and Stores are hard to understand for beginners. Indeed, the Flux architecture can introduce scalability challenges due to a growing set of dependencies between the aforementioned concepts. Also, React’s flux architecture forces developers to write many repetitive codes known as boilerplate code to set up the Flux pattern.  
 <br>**Use Cases:** <br>
+
 - React Native allows developers to build mobile applications using JavaScript and React, thus enabling code sharing between the web and mobile platforms.
-- Large-Scale Web Applications: React’s modular architecture and vast tools like Redux and React Router a great assets for building large-scale web applications with multiple UI requirements.
+- **Large-Scale Web Applications**: React’s modular architecture and vast tools like Redux and React Router a great assets for building large-scale web applications with multiple UI requirements.
 
 <ins><br>**Vue.js**<br></ins>
 **Description:** <br>
@@ -139,23 +146,23 @@ As previously mentioned, Vue.js has a simple syntax and HTML-based templates, ma
 <br>**Weakness:** <br>
 Vue.js is a relatively newer framework, thus it faces challenges in enterprise adoption compared to its older peers such as React and Angular. Indeed, due to the lack of enterprise adoption, Vue.js doesn’t have the same level of studies and documentation. Also, its ecosystem of libraries and tools may not be as vast as React or Angular. Some developers may not find a library or a set of tools specific to their unique needs. Furthermore, Vue.js official tooling named Vue CLI is very limited. Indeed, it doesn’t offer as many features as React’s Create React App or Angular’s Angular CLI. For example, Vue CLI does not offer built-in support for server-side rendering while React has Next.js and Angular has a built-in option.
 <br>**Use Cases:** <br>
-- In-app Widgets: Vue.js is lightweight and flexible enough to be embedded into existing applications. It can easily be integrated into larger applications due to its modular and incremental nature.
-- Interactive User Interfaces: Vue.js ‘s fast response rate due to its virtual DOM and responsive features suits applications with real-time data updates like dashboards. 
+
+- **In-app Widgets**: Vue.js is lightweight and flexible enough to be embedded into existing applications. It can easily be integrated into larger applications due to its modular and incremental nature.
+- **Interactive User Interfaces**: Vue.js ‘s fast response rate due to its virtual DOM and responsive features suits applications with real-time data updates like dashboards.
 
 <ins><br>**Angular**<br></ins>
 **Description:** <br>
 Angular is an open-source framework used to develop web applications created by Google. It is a TypeScript based framework, which is an extended version of JavaScript. Its main use is to build single-page web applications.
 <br>**Rationale:** <br>
-Angular provides a wide-ranging toolkit and may be too complex for our car rental web application. Furthermore, considering the front-end developers of our team, Angular is not the best option due to its unfamiliarity. 
+Angular provides a wide-ranging toolkit and may be too complex for our car rental web application. Furthermore, considering the front-end developers of our team, Angular is not the best option due to its unfamiliarity.
 <br>**Strengths:** <br>
 Angular provides a wide variety of tools, libraries, and third-party integrations, which can facilitate and accelerate the development of the web application. It has a reduced need for manipulating the DOM manually, due to its data binding feature, which simplifies the synchronization between the data model and the UI. Additionally, Angular is still being updated regularly by its large community of developers, meaning that there is a vast amount of ressources to provide support to the user.
 <br>**Weaknesses:** <br>
-If not optimized properly, Angular’s features may lead to performance overhead, which could affect the loading time and the responsiveness of the website, especially for smaller applications. It is also very complex and not ideal for simple and small web applications. 
+If not optimized properly, Angular’s features may lead to performance overhead, which could affect the loading time and the responsiveness of the website, especially for smaller applications. It is also very complex and not ideal for simple and small web applications.
 <br>**Use Cases:** <br>
-- Single-page applications: Angular provides the necessities for building dynamic and interactive UX without page reloads.
-- Real-time applications: Due to Angular’s data binding and reactive programming features, it can be used to build applications such as chat applications, dashboards, etc.
 
-
+- **Single-page applications**: Angular provides the necessities for building dynamic and interactive UX without page reloads.
+- **Real-time applications**: Due to Angular’s data binding and reactive programming features, it can be used to build applications such as chat applications, dashboards, etc.
 
 ### Integration and Interoperability
 
@@ -177,4 +184,5 @@ The Matter-soen341projectW2024 project leverages Django and Vue.js to offer a se
 4. As a user, I want to be able to modify my profile so that I can update my information relevant to the application.
 5. As an administrator, I want to be able to add new cars from new companies that I sign contracts with so that the user sees that they are now available.
 6. As a user, I want to make a reservation on a chosen car so that I can use it for my personal use.
+
 ---
