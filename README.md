@@ -88,8 +88,25 @@ Overall, Node.js is a powerful tool for web development, but it has some weaknes
 ASP.NET is an open-source web framework used for building the most modern dynamic web applications and services with .Net by Microsoft. It accommodates different programming styles like Web Forms, MVC, and Web API.
 ASP.NET enhances the .NET platform with components for building specific types of apps. It offers a new comprehensive framework that processes web requests  in languages like C# and F#.
 
-Rationale: 
-ASP.NET  offers developers a seamless integration with other Microsoft technologies, like Visual Studio, SQL Server, and Azure. ASP.NET provides a rich set of features and libraries for building web applications and also includes support for model-view-controller architecture. Caching, web APIs, and authentication and authorization are examples of more technologies that ASP.NET offers. 
+**Rationale:** 
+ASP.NET  offers developers a seamless integration with other Microsoft technologies, like Visual Studio, SQL Server, and Azure. ASP.NET is known for providing a rich set of features and libraries for building web applications and also includes support for model-view-controller architecture. Caching, web APIs, authentication, and authorization are examples of more technologies that ASP.NET offers.
+
+Qualitative Assessment:
+
+**Strengths:**
+
+
+
+**Weakness:**
+The main weaknesses of using ASP.NET come from its environment. While being great for Microsoft technologies, using ASP.NET with a non-Windows environment can be relatively challenging. Furthermore, ASP.NET could present a difficulty in the learning curve for those who are not familiar with .Net languages such as C#, F#, and VB.NET
+
+**Use cases:**
+-E-commerce website: The scalability and integration with Microsoft Technologies make ASP.NET a common choice of web application framework for CRM systems, ERP software, and supply chain management systems. 
+-Enterprise Applications: ASP.NET is well suited to accommodate E-commerce websites that require features like browsing, filtering, shopping carts, processing payments, and customer accounts. 
+
+
+
+
 
 
 #### Frontend Framework Evaluation
