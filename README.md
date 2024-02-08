@@ -1,10 +1,26 @@
 # Matter-soen341projectW2024
 
+## Table of Contents
+
+- [Project Description](#project-description)
+- [Primary Users and Use Cases](#primary-users-and-use-cases)
+- [Team Member Roles](#team_member-roles)
+- [Project Approach and Technology](#project-approach-and-technology)
+  - [Backend Framework Evaluation](#backend-framework-evaluation)
+  - [Frontend Framework Evaluation](#frontend-framework-evaluation)
+- [Integration and Interoperability](#integration-and-interoperability)
+- [Security Considerations](#security-considerations)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [User Stories](#user-stories)
+- [Conclusion](#conclusion)
+
 ## Project Description
 
 Our project, a cutting-edge Car Rental Platform, aims to revolutionize the way users rent cars for personal use. By leveraging the latest web technologies, we offer a seamless, intuitive, and comprehensive car rental experience. Users can effortlessly browse a wide selection of vehicles, read detailed reviews from previous customers, and choose the perfect car that suits their needs and preferences. Our secure and straightforward payment process ensures a hassle-free rental experience from start to finish.
 
-### Primary Users and Main Use Cases
+## Primary Users and Use Cases
 
 #### Customers
 
@@ -172,6 +188,20 @@ Our car rental platform leverages the robust backend capabilities of Django with
 ### Security Considerations
 
 For security considerations in our car rental platform, we prioritize safeguarding user data and interactions. By integrating Auth0, we implement robust authentication and authorization processes, utilizing JWT (JSON Web Tokens) for secure communication between our Django backend and Vue.js frontend. This setup ensures that sensitive operations and data access are strictly reserved for authenticated users. Furthermore, we enforce HTTPS protocols for encrypted data transmission and adhere to CORS policies in Django to manage cross-origin requests safely. These measures, alongside diligent input validation and regular security updates, form a comprehensive security strategy that upholds the integrity and confidentiality of user information and interactions across our platform.
+
+## Getting Started
+
+### Prerequisites
+
+- Python (3.x is recommended)
+- Node.js and npm
+- Git
+
+### Instalation
+
+### Setting Up the Django Backend
+
+### Setting Up the Vue.js Frontend
 
 ### Conclusion
 
