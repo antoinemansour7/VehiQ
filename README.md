@@ -33,14 +33,14 @@ Julia enhances user experience, bringing her extensive experience with HTML, CSS
 
 #### Cristina - Frontend Lead
 
-Cristina ensures that the implemented UI is coherent in every view and that it is easy for the user to interact with the platform. Her experience with the chosen frontend framework, Vue.js and her meticulous approach to implementation makes her an asset in the team
+Cristina ensures that the implemented UI is coherent in every view and that it is easy for the user to interact with the platform. Her experience with the chosen frontend framework, Vue.js and her meticulous approach to implementation makes her an asset to the team
 
 #### Jackson- Frontend Integration Developer
 
-Jackson's previous work involves creating a Animal Adoption Agency Website and Financial Counseling Website from scratch using HTML,CSS, JavaScript and PHP. He ensures that the website not only looks great but also provides a seamless experience for our users. From designing layouts to implementing interactive features with JavaScript, he's passionate about creating engaging web experiences. His familarity with backend development such as PHP will allow him connect the frontend of the car rental website with the backend systems responsible for managing and storing data related to car inventory, availability, and bookings.
+Jackson's previous work involves creating an Animal Adoption Agency Website and Financial Counseling Website from scratch using HTML,CSS, JavaScript and PHP. He ensures that the website not only looks great but also provides a seamless experience for our users. From designing layouts to implementing interactive features with JavaScript, he's passionate about creating engaging web experiences. His familarity with backend development such as PHP will allow him to connect the front end of the car rental website with the backend systems responsible for managing and storing data related to car inventory, availability, and bookings.
 
 #### Antoine - Backend Developer
-Antoine's role envolves developing server-side applications. He will focus on integrating Django, along side other backend technologies to create a solid core for the car rental platform. His goal is to maintain a flawless application logic to ensure the system's efficiency and reliability. Furthermore, he will work closely with front-end developers to maintain the desired user experience  by providing the necessary backend functionnalities.
+Antoine's role involves developing server-side applications. He will focus on integrating Django, along side other backend technologies to create a solialongside the car rental platform. His goal is to maintain flawless application logic to ensure the system's efficiency and reliability. Furthermore, he will work closely with front-end developers to maintain the desired user experience  by providing the necessary backend functionalities.
 
 #### André
 
@@ -68,15 +68,19 @@ Our Agile methodology allows us to adapt to changes quickly, focusing on iterati
 
 
 Description:
-Node.js is an open-source, cross-platform JavaScript runtime environment that allows the execution of JavaScript code server-side, allowing for the development of backend applications using the same language familiar to many developers from frontend development.
+Node.js is an open-source, cross-platform JavaScript runtime environment that allows the execution of JavaScript code server-side, allowing for the development of backend applications using the same language familiar to many developers from frontend development. It is built on Google Chrome's V8 JavaScript Engine.
 Rationale:
-Node.js is known for building efficient, scalable applications because of it's non-broken, event driven architecure making it highly scalable and suitable for real life applications.
-Due to it's simple integration with web technologies, this JavaScript based framework was chosen and will be a great fit for our project. It is also worth mentionning that all the developers in the project are well-familiarzed with this language.
-
-Qualitive Assessment:
+Node.js is known for building efficient, scalable applications because of its non-broken, event-driven architecture making it highly scalable and suitable for real-life applications.
+Due to its simple integration with web technologies, this JavaScript-based framework was chosen and will be a great fit for our project. Additionally, It is also worth mentioning that all the developers in the project are well-familiarized with this language.
+Qualitative Assessment:
 Strengths:
+Node.js possesses multiple strengths that make it a preferred choice for the development of web applications. First of all, Node.js can handle multiple operations in the background without blocking the main thread due to its asynchronous architecture. This model is a perfect match for web applications that require a lot of I/O operations, thus increasing the throughput of the system. Unlike other traditional processing models, I/O operations don't halt the execution of subsequent operations. 
+While using Node.js, developers can maintain unity within their frontend and backend scripting structures with of a single language, JavaScript. Such a unified environment reduces the workflow and learning curve of both front and back teams. Hence, The development process gains greater efficiency and organization.
 Weakness:
+Overall, Node.js is a powerful tool for web development, but it has some weaknesses that make it less suitable for certain projects. As explicitly said, Node.js operates on a single-threaded loop. This is great for I/O tasks, but not for CPU-intensive operations. The single-threaded nature can become a bottleneck  when it has to deal with these operations. As the event loop is frequently busy operating I/O requests, other incoming requests get delayed, which reduces the overall performance of the system. Another weakness is the extensive nesting of callback functions, necessary for any asynchronous architecture.                        
 Uses Cases:
+-Collaborative Tools: Node.js provides extensive tools for collaborative applications such as document editing platforms which let multiple users collaborate and edit the same document in real-time. Node.js handles WebSockets which facilitates real-time event base communication.
+-IoT Applications: The Node.js non-blocking I/O model is a perfect match for IoT Applications, those that handle concurrent connections from various devices at the same time. The ability to process a large amount of data aligns well with the lightweight data-intensive requirements of IoT models.
 
 
 
@@ -87,30 +91,30 @@ Uses Cases:
 - **Angular**: A full-fledged framework providing a wide range of features, suitable for enterprise-level applications.
 
 Description:
-React is a front-end framework. It is an open-source JavaScript library developed and create by Meta Platforms formerly known as Facebook. It’s a component-based framework meaning developers can create reusable self-contained piece of code that defines a specific UI component.
+React is a front-end framework. It is an open-source JavaScript library developed and created by Meta Platforms formerly known as Facebook. It’s a component-based framework meaning developers can create reusable self-contained code that defines a specific UI component.
 Rationale:
 Qualitative Assessment:
 Strengths:
-As previously mentioned, React has a component-architecture which makes it easier to manage large and complex applications due to its encapsulated nature. React ahs a virtual Dom which is a lighter version of the actual DOM in the memory. Thus, React has faster and more efficient DOM updates and Browser re-renders since it updates the virtual DOM then optimize when updating the real DOM. React is the most in-demand web framework as such it has a large and ever-growing community provides an abundance of resources such as tutorials, forums and online communities. 
+As previously mentioned, React has a component architecture that makes it easier to manage large and complex applications due to its encapsulated nature. React has a virtual DOM which is a lighter version of the actual DOM in the memory. Thus, React has faster and more efficient DOM updates and Browser re-renders since it updates the virtual DOM and then optimizes when updating the real DOM. React is the most in-demand web framework as such it has a large and ever-growing community and provides an abundance of resources such as tutorials, forums, and online communities. 
 Weakness:
-React is based on a flux architecture which can prove hard to learn for developers. New concepts such as Actions, Dispatchers, Views, and Stores are hard to understand for beginners. Indeed, the Flux architecture can introduce scalability challenges due to growing set of dependencies between the aforementioned concepts. Also, React’s flux architecture forces developers to write many repetitive codes known as boilerplate code to set up the Flux pattern.  
+React is based on a flux architecture which can prove hard to learn for developers. New concepts such as Actions, Dispatchers, Views, and Stores are hard to understand for beginners. Indeed, the Flux architecture can introduce scalability challenges due to a growing set of dependencies between the aforementioned concepts. Also, React’s flux architecture forces developers to write many repetitive codes known as boilerplate code to set up the Flux pattern.  
 Uses Cases:
--React Native allows developers to build mobile applications using JavaScript and React, thus enabling code sharing between the web and mobile platform.
--Large-Scale Web Applications: React’s modular architecture and vast tools like Redux and React Router is a great asset to build large-scale web applications with multiples UI requirements.
+-React Native allows developers to build mobile applications using JavaScript and React, thus enabling code sharing between the web and mobile platforms.
+-Large-Scale Web Applications: React’s modular architecture and vast tools like Redux and React Router a great assets for building large-scale web applications with multiple UI requirements.
 
 
 Description:
 Vue.js is a JavaScript framework for building interactive web interfaces. It focuses on the view layer and provides a simple API. It’s very approachable since its syntax is a blend of HTML and JavaScript. Vue.js is known for its vast ecosystems of libraries and tools making it a popular framework for both small and big projects alike.
 Rationale:
-Vue.js was chosen due to its simple nature. When we considered our front-end developers technological background, we found that Vue.js ’s ease of integration and incremental approach was the right fit for our team. Indeed, we are more familiar with HTML, CSS, and JavaScript thus Vue.js similar syntax is a great asset. Also, its component-based architecture and incremental philosophy enables us to modularize the code which help us scale harmoniously.
+Vue.js was chosen due to its simple nature. When we considered our front-end developers' technological background, we found that Vue.js ’s ease of integration and incremental approach were the right fit for our team. Indeed, we are more familiar with HTML, CSS, and JavaScript thus Vue.js similar syntax is a great asset. Also, its component-based architecture and incremental philosophy enable us to modularize the code which helps us scale harmoniously.
 Qualitative Assessment:
 Strengths:
-As we previously mentioned, Vue.js has a simple syntax and has HTML-based templates which makes it friendly to developers already comfortable with HTML, CSS and JavaScript. Vue.js, through its virtual DOM, efficiently updates the DOM when a data property is changed in a Vue component. Also, Vue.js provided reactive features such as computed properties and watchers which allows faster responses to changing data. Vue.js encourages component-based architecture. Thus, the encapsulated components promote easy communication between parent-child, code reuse, modularity and maintainability.
+As previously mentioned, Vue.js has a simple syntax and HTML-based templates, making it friendly to developers already comfortable with HTML, CSS, and JavaScript. Vue.js, through its virtual DOM, efficiently updates the DOM when a data property is changed in a Vue component. Also, Vue.js provided reactive features such as computed properties and watchers which allow faster responses to changing data. Vue.js encourages component-based architecture. Thus, the encapsulated components promote easy communication between parent-child, code reuse, modularity, and maintainability.
 Weakness:
-Vue.js is a relatively newer framework, thus it faces challenges in enterprise adoptions compare to its older peers such as React and Angular. Indeed, to the lack of enterprise adoption, Vue.js doesn’t have the same level of studies and documentation. Also, its ecosystem of libraries and tools may not be as vast as React or Angular. Some developers may not find a library or the set of tools specific to their unique needs. Furthermore, Vue.js official tooling named Vue CLI is very limited. Indeed, it doesn’t offer as many features as React’s Create React App nor Angular’s Angular CLI. For example, Vue CLI does not offer built-in support for server-side rendering while React has Next.js and Angular has a built-in option.
+Vue.js is a relatively newer framework, thus it faces challenges in enterprise adoption compared to its older peers such as React and Angular. Indeed, due to the lack of enterprise adoption, Vue.js doesn’t have the same level of studies and documentation. Also, its ecosystem of libraries and tools may not be as vast as React or Angular. Some developers may not find a library or a set of tools specific to their unique needs. Furthermore, Vue.js official tooling named Vue CLI is very limited. Indeed, it doesn’t offer as many features as React’s Create React App or Angular’s Angular CLI. For example, Vue CLI does not offer built-in support for server-side rendering while React has Next.js and Angular has a built-in option.
 Uses Cases:
--In-app Widgets: Vue.js is lightweight and flexible enough to be embedded into existing applications. It can easily be integrated to larger application due to its modular and incremental nature.
--Interactive User Interfaces: Vue.js ‘s fast response rate due to its virtual DOM and responsive features is well suited for application with real-time data updates like dashboards. 
+-In-app Widgets: Vue.js is lightweight and flexible enough to be embedded into existing applications. It can easily be integrated into larger applications due to its modular and incremental nature.
+-Interactive User Interfaces: Vue.js ‘s fast response rate due to its virtual DOM and responsive features suits applications with real-time data updates like dashboards. 
 
 
 
@@ -128,10 +132,10 @@ The Matter-soen341projectW2024 project leverages Django and Vue.js to offer a se
 
 ## User Stories
 
-1. As a user, I want to log into my account so that i can book a car for rental.
-2. As a user, I want to filter my car search so that i can rent the one that interests me the most.
-3. As a user, I want to be able to modify my reservation so that i can have flexibility.
-4. As a user, I want to be able to modify my profile so that i can update my information relevant to the application.
-5. As an administrator, I want to be able to add new car from new companies that i sign contracts with so that the user sees that they are now available.
-6. As a user, I want to make a reservation on a chosen car so that i can use it for my personal use.
+1. As a user, I want to log into my account so that I can book a car for rental.
+2. As a user, I want to filter my car search so that I can rent the one that interests me the most.
+3. As a user, I want to be able to modify my reservation so that I can have flexibility.
+4. As a user, I want to be able to modify my profile so that I can update my information relevant to the application.
+5. As an administrator, I want to be able to add new cars from new companies that I sign contracts with so that the user sees that they are now available.
+6. As a user, I want to make a reservation on a chosen car so that I can use it for my personal use.
 ---
