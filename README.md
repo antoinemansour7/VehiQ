@@ -67,7 +67,7 @@ Our Agile methodology allows us to adapt to changes quickly, focusing on iterati
 - **Node.js**: Offers great performance for I/O intensive operations, suitable for real-time features.
 - **ASP.NET**: Known for its robustness in enterprise scenarios, it provides strong security and performance.
 
-#### Node.js
+<ins><br>**Node.js**<br></ins>
 **Description:** <br>
 Node.js is an open-source, cross-platform JavaScript runtime environment that allows the execution of JavaScript code server-side, allowing for the development of backend applications using the same language familiar to many developers from frontend development. It is built on Google Chrome's V8 JavaScript Engine.
 <br>**Rationale:** <br>
@@ -83,7 +83,7 @@ Overall, Node.js is a powerful tool for web development, but it has some weaknes
 - Collaborative Tools: Node.js provides extensive tools for collaborative applications such as document editing platforms which let multiple users collaborate and edit the same document in real-time. Node.js handles WebSockets which facilitates real-time event base communication.
 - IoT Applications: The Node.js non-blocking I/O model is a perfect match for IoT Applications, those that handle concurrent connections from various devices at the same time. The ability to process a large amount of data aligns well with the lightweight data-intensive requirements of IoT models.
 
-<br>**ASP.NET**<br>
+<ins><br>**ASP.NET**<br></ins>
 **Description:**
 ASP.NET is an open-source web framework used for building the most modern dynamic web applications and services with .Net by Microsoft. It accommodates different programming styles like Web Forms, MVC, and Web API.
 ASP.NET enhances the .NET platform with components for building specific types of apps. It offers a new comprehensive framework that processes web requests  in languages like C# and F#.
@@ -98,7 +98,7 @@ ASP.NET  offers developers a seamless integration with other Microsoft technolog
 - **React**: Offers a vast ecosystem and high performance, ideal for complex UIs.
 - **Angular**: A full-fledged framework providing a wide range of features, suitable for enterprise-level applications.
 
-#### React
+<ins><br>**React**<br></ins>
 **Description:** <br>
 React is a front-end framework. It is an open-source JavaScript library developed and created by Meta Platforms formerly known as Facebook. It’s a component-based framework meaning developers can create reusable self-contained code that defines a specific UI component.
 <br>**Rationale:** <br>
@@ -111,7 +111,7 @@ React is based on a flux architecture which can prove hard to learn for develope
 - React Native allows developers to build mobile applications using JavaScript and React, thus enabling code sharing between the web and mobile platforms.
 - Large-Scale Web Applications: React’s modular architecture and vast tools like Redux and React Router a great assets for building large-scale web applications with multiple UI requirements.
 
-#### Vue.js
+<ins><br>**Vue.js**<br></ins>
 **Description:** <br>
 Vue.js is a JavaScript framework for building interactive web interfaces. It focuses on the view layer and provides a simple API. It’s very approachable since its syntax is a blend of HTML and JavaScript. Vue.js is known for its vast ecosystems of libraries and tools making it a popular framework for both small and big projects alike.
 <br>**Rationale:** <br>
@@ -124,6 +124,17 @@ Vue.js is a relatively newer framework, thus it faces challenges in enterprise a
 <br>**Use Cases:** <br>
 - In-app Widgets: Vue.js is lightweight and flexible enough to be embedded into existing applications. It can easily be integrated into larger applications due to its modular and incremental nature.
 - Interactive User Interfaces: Vue.js ‘s fast response rate due to its virtual DOM and responsive features suits applications with real-time data updates like dashboards. 
+
+<ins><br>**Angular**<br></ins>
+**Description:** <br>
+Angular is an open-source framework used to develop web applications created by Google. It is a TypeScript based framework, which is an extended version of JavaScript. Its main use is to build single-page web applications.
+<br>**Strengths:** <br>
+Angular provides a wide variety of tools, libraries, and third-party integrations, which can facilitate and accelerate the development of the web application. It has a reduced need for manipulating the DOM manually, due to its data binding feature, which simplifies the synchronization between the data model and the UI. Additionally, Angular is still being updated regularly by its large community of developers, meaning that there is a vast amount of ressources to provide support to the user.
+<br>**Weaknesses:** <br>
+If not optimized properly, Angular’s features may lead to performance overhead, which could affect the loading time and the responsiveness of the website, especially for smaller applications. It is also very complex and not ideal for simple and small web applications. 
+<br>**Use Cases:** <br>
+- Single-page applications: Angular provides the necessities for building dynamic and interactive UX without page reloads.
+- Real-time applications: Due to Angular’s data binding and reactive programming features, it can be used to build applications such as chat applications, dashboards, etc.
 
 
 
