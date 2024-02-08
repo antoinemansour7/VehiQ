@@ -167,11 +167,11 @@ If not optimized properly, Angular’s features may lead to performance overhead
 
 ### Integration and Interoperability
 
-Our application employs RESTful APIs for seamless communication between the frontend and backend, ensuring a fluid user experience.
+Our car rental platform leverages the robust backend capabilities of Django with the dynamic and responsive frontend framework Vue.js, creating a seamless and efficient user experience. Django serves as the powerful backend, utilizing its ORM for database abstraction and its migration system for secure database changes, while Vue.js enhances the frontend with its component-based architecture and reactive data binding. This integration is facilitated through RESTful API endpoints created with Django, which Vue.js accesses using Axios for smooth data exchange. Together, Django and Vue.js enable a modular, scalable, and maintainable architecture, ensuring our platform is both user-friendly and technically sound.
 
 ### Security Considerations
 
-We prioritize application and data security through encryption, secure API endpoints, and adherence to best practices.
+For security considerations in our car rental platform, we prioritize safeguarding user data and interactions. By integrating Auth0, we implement robust authentication and authorization processes, utilizing JWT (JSON Web Tokens) for secure communication between our Django backend and Vue.js frontend. This setup ensures that sensitive operations and data access are strictly reserved for authenticated users. Furthermore, we enforce HTTPS protocols for encrypted data transmission and adhere to CORS policies in Django to manage cross-origin requests safely. These measures, alongside diligent input validation and regular security updates, form a comprehensive security strategy that upholds the integrity and confidentiality of user information and interactions across our platform.
 
 ### Conclusion
 
