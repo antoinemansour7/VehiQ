@@ -53,7 +53,7 @@ Cristina ensures that the implemented UI is coherent in every view and that it i
 
 #### Jackson- Frontend Integration Developer
 
-Jackson's previous work involves creating an Animal Adoption Agency Website and Financial Counseling Website from scratch using HTML,CSS, JavaScript and PHP. He ensures that the website not only looks great but also provides a seamless experience for our users. From designing layouts to implementing interactive features with JavaScript, he's passionate about creating engaging web experiences. His familarity with backend development such as PHP will allow him to connect the front end of the car rental website with the backend systems responsible for managing and storing data related to car inventory, availability, and bookings.
+Jackson's previous work involves creating websites from scratch using HTML,CSS, JavaScript and PHP. He ensures that the website not only looks great but also provides a seamless experience for our users. From designing layouts to implementing interactive features with JavaScript, he's passionate about creating engaging web experiences. His familarity with backend development such as PHP will allow him to connect the front end of the car rental website with the backend systems responsible for managing and storing data related to car inventory, availability, and bookings.
 
 #### Antoine - Backend Developer
 
@@ -140,8 +140,9 @@ The main weaknesses of using ASP.NET come from its environment. While being grea
 <ins><br>**React**<br></ins>
 **Description:** <br>
 React is a front-end framework. It is an open-source JavaScript library developed and created by Meta Platforms formerly known as Facebook. It’s a component-based framework meaning developers can create reusable self-contained code that defines a specific UI component.
-<br>**Rationale:** <br>
-<br>**Qualitative Assessment:** <br>
+ <br>
+React's component-based architecture, virtual DOM, and JSX syntax streamline UI development, offering fast rendering and easy state management. Its large ecosystem provides extensive libraries and community support, making it ideal for building scalable and maintainable web applications.
+<br>**Qualitative Assessment:** 
 <br>**Strengths:** <br>
 As previously mentioned, React has a component architecture that makes it easier to manage large and complex applications due to its encapsulated nature. React has a virtual DOM which is a lighter version of the actual DOM in the memory. Thus, React has faster and more efficient DOM updates and Browser re-renders since it updates the virtual DOM and then optimizes when updating the real DOM. React is the most in-demand web framework as such it has a large and ever-growing community and provides an abundance of resources such as tutorials, forums, and online communities.
 <br>**Weakness:** <br>
