@@ -53,7 +53,7 @@
 - [ ] Provide a qualitative assessment of 3 frontend and 3 backend frameworks.
 - [ ] Excellent organization presentation and detailed to detil.
 
-**In Project:**
+**In Issues:**
 
 - [ ] 6 user stories with exceptional clarity, well defined acceptance criteria, and realistic priorities. (Use Github issues)
 - [ ] Task breakdown with clear assignments, dependancies and estimated effort
