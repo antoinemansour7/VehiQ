@@ -4,6 +4,7 @@
 
 - [Project Description](#project-description)
 - [Primary Users and Use Cases](#primary-users-and-use-cases)
+- [User Stories](#user-stories)
 - [Team Member Roles](#team-member-roles)
 - [Project Approach and Technology](#project-approach-and-technology)
   - [Backend Framework Evaluation](#backend-framework-evaluation)
@@ -14,7 +15,7 @@
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
 - [Conclusion](#conclusion)
-- [User Stories](#user-stories)
+
 
 ## Project Description
 
@@ -40,6 +41,15 @@ Our project, a cutting-edge Car Rental Platform, aims to revolutionize the way u
 - **CRUD Operations on Vehicles**: Manage vehicle inventory.
 - **CRUD Operations on User Accounts**: Handle user account management.
 - **CRUD Operations on Reservations**: Oversee reservation records.
+
+## User Stories
+
+1. As a user, I want to log into my account so that I can book a car for rental.
+2. As a user, I want to filter my car search so that I can rent the one that interests me the most.
+3. As a user, I want to be able to modify my reservation so that I can have flexibility.
+4. As a user, I want to be able to modify my profile so that I can update my information relevant to the application.
+5. As an administrator, I want to be able to add new cars from new companies that I sign contracts with so that the user sees that they are now available.
+6. As a user, I want to make a reservation on a chosen car so that I can use it for my personal use.
 
 ## Team Member Roles
 
@@ -277,13 +287,6 @@ Once you are done with all these steps, you can now open you browser and go to t
 
 The Matter-soen341projectW2024 project leverages Django and Vue.js to offer a seamless car rental experience. Our choice of technologies, based on detailed evaluations, positions us to meet our objectives effectively and provide a platform that is both user-friendly and robust.
 
-## User Stories
 
-1. As a user, I want to log into my account so that I can book a car for rental.
-2. As a user, I want to filter my car search so that I can rent the one that interests me the most.
-3. As a user, I want to be able to modify my reservation so that I can have flexibility.
-4. As a user, I want to be able to modify my profile so that I can update my information relevant to the application.
-5. As an administrator, I want to be able to add new cars from new companies that I sign contracts with so that the user sees that they are now available.
-6. As a user, I want to make a reservation on a chosen car so that I can use it for my personal use.
 
 ---
