@@ -207,12 +207,14 @@ To set up the project on your local machine, follow these steps:
    ```
 
 2. **Install Django Backend Dependencies:**
+   
    Now, navigate to the project root and install the required Python packages for the Django backend using the following command:
    ```bash
    pip install -r requirements.txt
    ```
 
-3. **Install Vue.js Frontend Dependencies:**
+4. **Install Vue.js Frontend Dependencies:**
+   
    Move to the `frontend` directory and install the necessary Node.js packages for the Vue.js frontend:
    ```bash
    cd frontend
@@ -224,18 +226,21 @@ To set up the project on your local machine, follow these steps:
 Once the dependencies are installed, you can proceed with setting up the Django backend:
 
 1. **Apply Database Migrations:**
+   
    In the project root, run the following command to apply migrations and create the database:
    ```bash
    python manage.py migrate
    ```
 
-2. **Create a Superuser (Optional):**
+3. **Create a Superuser (Optional):**
+   
    If you want to create a superuser for the Django admin interface, type the following command:
    ```bash
    python manage.py createsuperuser
    ```
 
-3. **Run the Development Server:**
+5. **Run the Development Server:**
+   
    Once everything is correctly set up, you can launch the Django development server:
    ```bash
    python manage.py runserver
@@ -247,6 +252,7 @@ Once the dependencies are installed, you can proceed with setting up the Django 
 Once the Django installation is complete, let's set up the Vue.js frontend:
 
 1. **Start the Vue.js Development Server:**
+   
    In the project’s`frontend` directory, run the following command to start the Vue.js development server:
    ```bash
    cd frontend
@@ -254,7 +260,8 @@ Once the Django installation is complete, let's set up the Vue.js frontend:
    ```
    The Vue.js frontend will be available at [http://localhost:8080/](http://localhost:8080/).
 
-2. **Connect to the Django Backend:**
+3. **Connect to the Django Backend:**
+   
    Update the API endpoint in the Vue.js code to point to your Django backend. 
 
 Once you are done with all these steps, you can now open you browser and go to the following URL [http://localhost:8080/](http://localhost:8080/) to explore the project!
