@@ -87,22 +87,15 @@ André's role is to focus on the backend side of the car rental web application.
 
 As a Backend Developer, I am focused on developing robust and scalable server-side applications. My work involves integrating Django with other backend technologies to create a solid foundation for our car rental platform.
 
-## Project Approach and Technology
+# 3. Technology Stack
 
-### Project Overview
-
-We aim to create a user-friendly Car Rental Application that serves as an interface between customers and rental services, streamlining the rental process.
-
-
-### Technology Stack
-
-#### Backend Framework Evaluation
+## 3.1 Backend Frameworks
 
 - **Django**: Chosen for its comprehensive features and rapid development capabilities, ideal for our secure and scalable web application
 - **Node.js**: Offers great performance for I/O intensive operations, suitable for real-time features.
 - **ASP.NET**: Known for its robustness in enterprise scenarios, it provides strong security and performance.
 
-<ins><br>**Django**<br></ins>
+### 3.1.1 Django
 <br>**Description:** <br>
 Django is a free open-source Python-based web framework that runs on a web server. It was developed to make the web developement process fast and easy.
 Build by experienced developers, it takes care of much of the hassle of web developement, so you can focus on writting your app without needing to reinvent the wheel.<br>
@@ -118,7 +111,7 @@ Django's monolitic structure can be cumbersome for smaller projects or when a mo
 - **Rapid Development:** Django's "batteries-included" approach for rapid development of features without the need for extensive setup.
 - **Data-Driven Applications:** With its powerful ORM, Django is well-suited for applications that require complex data processing and storage, such as car rental platform.
 
-<ins><br>**Node.js**<br></ins>
+### 3.1.2 Node.js
 <br>**Description:** <br>
 Node.js is an open-source, cross-platform JavaScript runtime environment that allows the execution of JavaScript code server-side, allowing for the development of backend applications using the same language familiar to many developers from frontend development. It is built on Google Chrome's V8 JavaScript Engine.
 <br>**Rationale:** <br>
@@ -135,7 +128,7 @@ Overall, Node.js is a powerful tool for web development, but it has some weaknes
 - **Collaborative Tools**: Node.js provides extensive tools for collaborative applications such as document editing platforms which let multiple users collaborate and edit the same document in real-time. Node.js handles WebSockets which facilitates real-time event base communication.
 - **IoT Applications**: The Node.js non-blocking I/O model is a perfect match for IoT Applications, those that handle concurrent connections from various devices at the same time. The ability to process a large amount of data aligns well with the lightweight data-intensive requirements of IoT models.
 
-<ins><br>**ASP.NET**<br></ins>
+### 3.1.3 ASP.NET
 <br>**Description:**<br>
 ASP.NET is an open-source web framework used for building the most modern dynamic web applications and services with .Net by Microsoft. It accommodates different programming styles like Web Forms, MVC, and Web API.
 ASP.NET enhances the .NET platform with components for building specific types of apps. It offers a new comprehensive framework that processes web requests in languages like C# and F#.
@@ -152,7 +145,7 @@ The scalability and integration with Microsoft Technologies make ASP.NET a commo
 <br>**Enterprise Applications**: <br>
 ASP.NET is well suited to accommodate E-commerce websites that require features like browsing, filtering, shopping carts, processing payments, and customer accounts.
 
-#### Frontend Framework Evaluation
+## 3.2 Frontend Frameworks
 
 - **Vue.js**: Selected for its ease of learning and integration, Vue.js enables us to develop a dynamic UI efficiently.
 - **React**: Offers a vast ecosystem and high performance, ideal for complex UIs.
