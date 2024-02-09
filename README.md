@@ -50,12 +50,16 @@ To develop a compelling middle-fidelity prototype following Agile Scrum methodol
 # 2. Project Approach
 
 ## 2.1 Development Methodolody
-Agile
+Agile methodology is the best suitable development methodology for this project. Indeed, we chose Agile for its iterative nature which enables us to add features incrementally. Its incremental nature allows us to easily modify the code to respect evolving requirements. Indeed, our car rental website will be updated frequently with new features with each sprint. Agile is a methodology founded on team collaboration and open dialogue. Indeed, our use of GitHub allows up to cooperates on coding the features in small components then adding it together with our teammate’s components. Since we have multiple sprints, Agile’s risk management style based on addressing issues quickly is very advantageous. Also, our daily meetings and sprint planning works harmoniously with Agile’s philosophy of partnership. Indeed, our small team size of 6 members allows for easy communication and collaboration.
+
 
 ## 2.2 Project Timeline
 
 ## 2.3 Collaboration and Communication
-Discord, Github
+We mainly use discord as our communication channel. It provides real-time messaging and serves as the main platform for our team collaboration, discussions, and meetings.
+GitHub provides features like branching, merging, and pull requests for seamless collaboration and code review. It helps tracking code changes, enabling concurrent work without conflicts.
+GitHub Wikis serve as a centralized repository for additional team rules, including git rules for managing labels and repository. It promotes knowledge sharing and helps onboard new team members efficiently. Wikis can be edited collaboratively by team members, keeping documentation up to date. Also, the wikis hold information planning for upcoming sprints, information of each task with their objectives, timelines and dependencies.
+
 
 ## 2.4 Team Member Roles
 
@@ -89,9 +93,6 @@ As a Backend Developer, I am focused on developing robust and scalable server-si
 
 We aim to create a user-friendly Car Rental Application that serves as an interface between customers and rental services, streamlining the rental process.
 
-### Development Methodology
-
-Agile methodology is the best suitable development methodology for this project. Indeed, we chose Agile for its iterative nature which enables us to add features incrementally. Its incremental nature allows us to easily modify the code to respect evolving requirements. Indeed, our car rental website will be updated frequently with new features with each sprint. Agile is a methodology founded on team collaboration and open dialogue. Indeed, our use of GitHub allows up to cooperates on coding the features in small components then adding it together with our teammate’s components. Since we have multiple sprints, Agile’s risk management style based on addressing issues quickly is very advantageous. Also, our daily meetings and sprint planning works harmoniously with Agile’s philosophy of partnership. Indeed, our small team size of 6 members allows for easy communication and collaboration.
 
 ### Technology Stack
 
