@@ -4,7 +4,9 @@
 
 | Time (h) | Task                                                                                                               |
 | :------: | ------------------------------------------------------------------------------------------------------------------ |
-|    1     | added more to the README file and categorized the tasks to be done, depending on the location of its documentation |
+|    1     | Added more to the README file and categorized the tasks to be done, depending on the location of its documentation |
+|    0.5   | Finished Description/Rationale/Qualitative Assessment for Angular                                                  |
+|    0.5   | Created and added Meeting Minutes files                                                                            |
 
 ### Cristina :
 
