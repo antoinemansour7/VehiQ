@@ -17,14 +17,14 @@
 - [Conclusion](#conclusion)
 
 
-## Project Description
+# 1. Project Overview
 
 Our project, a cutting-edge Car Rental Platform, aims to revolutionize the way users rent cars for personal use. By leveraging the latest web technologies, we offer a seamless, intuitive, and comprehensive car rental experience. Users can effortlessly browse a wide selection of vehicles, read detailed reviews from previous customers, and choose the perfect car that suits their needs and preferences. Our secure and straightforward payment process ensures a hassle-free rental experience from start to finish.
 
-## Objective
+## 1.1 Project Objectives
 To develop a compelling middle-fidelity prototype following Agile Scrum methodology, utilizing GitHub for version control, bug tracking, task management, and continuous integration. The project duration is 10 weeks, with 4 iterations (sprints). The first 2 weeks of Sprint 1 are for training and setting up the development environment.
 
-## Primary Users and Use Cases
+## 1.2 Scope - Primary Users and Use Cases
 
 #### Customers
 
@@ -44,6 +44,10 @@ To develop a compelling middle-fidelity prototype following Agile Scrum methodol
 - **CRUD Operations on Vehicles**: Manage vehicle inventory.
 - **CRUD Operations on User Accounts**: Handle user account management.
 - **CRUD Operations on Reservations**: Oversee reservation records.
+
+## 1.3 Target Audience
+
+# 2. Project Approach
 
 ## User Stories
 
