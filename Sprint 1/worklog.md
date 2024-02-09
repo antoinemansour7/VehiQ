@@ -43,7 +43,8 @@
 
 **In README:**
 
-- [ ] Names and description of roles and background
+- [x] Names and description of roles and background
+- [ ] 
 - [x] Project description
 - [ ] Installation instructions and user guidelines
 - [ ] References to the wiki for additional team rules nd management
