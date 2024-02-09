@@ -68,5 +68,5 @@
 
 **In Minutes Meeting Files:**
 
-- [ ] Meetings Minutes file (minutes files should be named <teamName_Sprint#\_meetingnumber_meeting_date>
-- [ ] One file for each meeting.
+- [x] Meetings Minutes file (minutes files should be named <teamName_Sprint#\_meetingnumber_meeting_date>
+- [x] One file for each meeting.
