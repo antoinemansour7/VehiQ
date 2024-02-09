@@ -53,7 +53,7 @@ Our project, a cutting-edge Car Rental Platform, aims to revolutionize the way u
 
 ## Team Member Roles
 
-#### Julia - UI/UX Designer
+#### Julia - UI/UX Designer & Frontend Developer
 
 Julia enhances user experience, bringing her extensive experience with HTML, CSS, and JavaScript to the table. Her creativity and innovative approach drive the aesthetic and functional design of our user interface, all while making sure that the user requirements are met.
 
@@ -183,9 +183,9 @@ Angular is an open-source framework used to develop web applications created by 
 <br>**Rationale:** <br>
 Angular provides a wide-ranging toolkit and may be too complex for our car rental web application. Furthermore, considering the front-end developers of our team, Angular is not the best option due to its unfamiliarity.
 <br>**Strengths:** <br>
-Angular provides a wide variety of tools, libraries, and third-party integrations, which can facilitate and accelerate the development of the web application. It has a reduced need for manipulating the DOM manually, due to its data binding feature, which simplifies the synchronization between the data model and the UI. Additionally, Angular is still being updated regularly by its large community of developers, meaning that there is a vast amount of ressources to provide support to the user.
+Angular provides a wide variety of tools, libraries, and third-party integrations, which can facilitate and accelerate the development of the web application. In other words, it has more reusable components, which requires less coding. It has a reduced need for manipulating the DOM manually, due to its data binding feature, which simplifies the synchronization between the data model and the UI. Additionally, Angular is still being updated regularly by its large community of developers, meaning that there is a vast amount of ressources to provide support to the user.
 <br>**Weaknesses:** <br>
-If not optimized properly, Angular’s features may lead to performance overhead, which could affect the loading time and the responsiveness of the website, especially for smaller applications. It is also very complex and not ideal for simple and small web applications.
+If not optimized properly, Angular’s features may lead to performance overhead, which could affect the loading time and the responsiveness of the website, especially for smaller applications. It is also very complex and not ideal for simple and small web applications, since it has a steeper learning curve. 
 <br>**Use Cases:** <br>
 
 - **Single-page applications**: Angular provides the necessities for building dynamic and interactive UX without page reloads.
