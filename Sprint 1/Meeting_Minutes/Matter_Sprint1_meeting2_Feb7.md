@@ -12,3 +12,4 @@ Julia, Cristina, Jackson, Antoine, André, Leiticia
 - check on what tasks are left
 - discuss and add user stories
 
+
