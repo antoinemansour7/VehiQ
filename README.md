@@ -205,8 +205,13 @@ To set up the project on your local machine, follow these steps:
    git clone https://github.com/username/project-name
    cd project-name
    ```
+2. **Create a virtual environment:**
+  ```bash
+  python -m venv venv
+  source venv/bin/activate
+  ```
 
-2. **Install Django Backend Dependencies:**
+3. **Install Django Backend Dependencies:**
    
    Now, navigate to the project root and install the required Python packages for the Django backend using the following command:
    ```bash
