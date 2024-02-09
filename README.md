@@ -85,7 +85,7 @@ We aim to create a user-friendly Car Rental Application that serves as an interf
 
 ### Development Methodology
 
-Our Agile methodology allows us to adapt to changes quickly, focusing on iterative development and customer feedback.
+Agile methodology is the best suitable development methodology for this project. Indeed, we chose Agile for its iterative nature which enables us to add features incrementally. Its incremental nature allows us to easily modify the code to respect evolving requirements. Indeed, our car rental website will be updated frequently with new features with each sprint. Agile is a methodology founded on team collaboration and open dialogue. Indeed, our use of GitHub allows up to cooperates on coding the features in small components then adding it together with our teammate’s components. Since we have multiple sprints, Agile’s risk management style based on addressing issues quickly is very advantageous. Also, our daily meetings and sprint planning works harmoniously with Agile’s philosophy of partnership. Indeed, our small team size of 6 members allows for easy communication and collaboration.
 
 ### Technology Stack
 
