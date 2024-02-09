@@ -96,16 +96,16 @@ Agile methodology is the best suitable development methodology for this project.
 - **ASP.NET**: Known for its robustness in enterprise scenarios, it provides strong security and performance.
 
 <ins><br>**Django**<br></ins>
-**Description:** <br>
+<br>**Description:** <br>
 Django is a free open-source Python-based web framework that runs on a web server. It was developed to make the web developement process fast and easy.
-Build by experienced developers, it takes care of much of the hassle of web developement, so you can focus on writting your app without needing to reinvent the wheel.
+Build by experienced developers, it takes care of much of the hassle of web developement, so you can focus on writting your app without needing to reinvent the wheel.<br>
 <br>**Rationale:** <br>
-Django was chosen for its robust set of features that enable building secure, scalable, and maintainable web applications quickly. Its built-in admin panel, ORM (Object-Relational Mapping), and class-based views are particularly beneficial for our project's backend development needs.
+Django was chosen for its robust set of features that enable building secure, scalable, and maintainable web applications quickly. Its built-in admin panel, ORM (Object-Relational Mapping), and class-based views are particularly beneficial for our project's backend development needs.<br>
 <br>**Strengths:** <br>
 Django includes a comprehensive standard library, an automatic admin interface, and a tight security model to help developers avoid common security mistakes such as SQL injection, cross-site request forgery, and clickjacking.
-Its scalability and flexibility make it suitable for projects of any size.
+Its scalability and flexibility make it suitable for projects of any size.<br>
 <br>**Weaknesses:** <br>
-Django's monolitic structure can be cumbersome for smaller projects or when a more microservices-oriented architecture is preffered. Its ORM may not be the most efficient for handling complex queries massive datasets.
+Django's monolitic structure can be cumbersome for smaller projects or when a more microservices-oriented architecture is preffered. Its ORM may not be the most efficient for handling complex queries massive datasets.<br>
 <br>**Use Cases:** <br>
 
 - **Rapid Development:** Django's "batteries-included" approach for rapid development of features without the need for extensive setup.
