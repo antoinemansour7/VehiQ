@@ -13,7 +13,3 @@ Julia, Cristina, Jackson, Antoine, André, Leiticia
 - deciding on what are each of the teammates tasks
 - deciding on the front-end and back-end separation
 
-
-## Meeting 2 - February 9th 2024
-
-
