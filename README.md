@@ -112,7 +112,7 @@ Django's monolitic structure can be cumbersome for smaller projects or when a mo
 - **Data-Driven Applications:** With its powerful ORM, Django is well-suited for applications that require complex data processing and storage, such as car rental platform.
 
 <ins><br>**Node.js**<br></ins>
-**Description:** <br>
+<br>**Description:** <br>
 Node.js is an open-source, cross-platform JavaScript runtime environment that allows the execution of JavaScript code server-side, allowing for the development of backend applications using the same language familiar to many developers from frontend development. It is built on Google Chrome's V8 JavaScript Engine.
 <br>**Rationale:** <br>
 Node.js is known for building efficient, scalable applications because of its non-broken, event-driven architecture making it highly scalable and suitable for real-life applications.
@@ -129,17 +129,21 @@ Overall, Node.js is a powerful tool for web development, but it has some weaknes
 - **IoT Applications**: The Node.js non-blocking I/O model is a perfect match for IoT Applications, those that handle concurrent connections from various devices at the same time. The ability to process a large amount of data aligns well with the lightweight data-intensive requirements of IoT models.
 
 <ins><br>**ASP.NET**<br></ins>
-**Description:**
+<br>**Description:**<br>
 ASP.NET is an open-source web framework used for building the most modern dynamic web applications and services with .Net by Microsoft. It accommodates different programming styles like Web Forms, MVC, and Web API.
 ASP.NET enhances the .NET platform with components for building specific types of apps. It offers a new comprehensive framework that processes web requests in languages like C# and F#.
 
-**Rationale:**
+<br>**Rationale:**<br>
 ASP.NET offers developers a seamless integration with other Microsoft technologies, like Visual Studio, SQL Server, and Azure. ASP.NET is known for providing a rich set of features and libraries for building web applications and also includes support for model-view-controller architecture. Caching, web APIs, authentication, and authorization are examples of more technologies that ASP.NET offers.
-**Strengths:**
-**Weakness:**
+<br>**Strengths:**<br>
+<br>**Weakness:**<br>
 The main weaknesses of using ASP.NET come from its environment. While being great for Microsoft technologies, using ASP.NET with a non-Windows environment can be relatively challenging. Furthermore, ASP.NET could present a difficulty in the learning curve for those who are not familiar with .Net languages such as C#, F#, and VB.NET.
 
-**Use cases:** -**E-commerce website**: The scalability and integration with Microsoft Technologies make ASP.NET a common choice of web application framework for CRM systems, ERP software, and supply chain management systems. -**Enterprise Applications**: ASP.NET is well suited to accommodate E-commerce websites that require features like browsing, filtering, shopping carts, processing payments, and customer accounts.
+<br>**Use cases:** <br>
+<br>**E-commerce website:** <br>
+The scalability and integration with Microsoft Technologies make ASP.NET a common choice of web application framework for CRM systems, ERP software, and supply chain management systems. 
+<br>**Enterprise Applications**: <br>
+ASP.NET is well suited to accommodate E-commerce websites that require features like browsing, filtering, shopping carts, processing payments, and customer accounts.
 
 #### Frontend Framework Evaluation
 
