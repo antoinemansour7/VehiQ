@@ -34,7 +34,11 @@
 | Time (h) | Time Stamp            | Task                                                                                                                          |
 | :------: |-----------------------|-------------------------------------------------------------------------------------------------------------------------------|  
 
-**Total Time (h):** -                        
+
+|    1.5     | Feb 4th - 22:00-23:30              |Finished Description/Rationale/Qualitative Assessment/Use cases for ASP.NET and Node.js             |
+
+
+**Total Time (h):** - 1.5                    
 
 ### André :
 
