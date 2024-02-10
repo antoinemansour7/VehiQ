@@ -6,6 +6,25 @@
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
 
+## Project Description 
+
+Our project, a cutting-edge Car Rental Platform, aims to revolutionize the way users rent cars for
+personal use. By leveraging the latest web technologies, we offer a seamless, intuitive, and comprehensive car
+rental experience. Users can effortlessly browse a wide selection of vehicles, read detailed reviews from previous
+customers, and choose the perfect car that suits their needs and preferences. Our secure and straightforward
+payment process ensures a hassle-free rental experience from start to finish.
+
+## Team Members and Roles
+
+**Front end :** <br>
+- Cristina Trofimov 
+- Jackson Amirthalingam
+- Julia Trinh
+
+**Back end :**<br>
+- Leiticia Taleb
+- André Assaad
+- Antoine Mansour
 
 ## Getting Started
 
