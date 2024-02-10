@@ -2,6 +2,8 @@
 
 ## Table of Contents
 
+- [Project Description](#project-description)
+- [Team Members and Roles](#team-members-and-roles)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
