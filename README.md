@@ -136,6 +136,7 @@ ASP.NET enhances the .NET platform with components for building specific types o
 <br>**Rationale:**<br>
 ASP.NET offers developers a seamless integration with other Microsoft technologies, like Visual Studio, SQL Server, and Azure. ASP.NET is known for providing a rich set of features and libraries for building web applications and also includes support for model-view-controller architecture. Caching, web APIs, authentication, and authorization are examples of more technologies that ASP.NET offers.
 <br>**Strengths:**<br>
+ASP.NET is known for it's high performance nature. It uses compiled code which is faster then interpreted code used in many other web applications frameworks because of features like caching, JIT compilation, and native optimzation. 
 <br>**Weakness:**<br>
 The main weaknesses of using ASP.NET come from its environment. While being great for Microsoft technologies, using ASP.NET with a non-Windows environment can be relatively challenging. Furthermore, ASP.NET could present a difficulty in the learning curve for those who are not familiar with .Net languages such as C#, F#, and VB.NET.
 
