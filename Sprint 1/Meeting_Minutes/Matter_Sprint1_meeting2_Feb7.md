@@ -31,6 +31,6 @@
 ## Next Steps:
 - set up the wiki and uniform the documentation
 
-The meeting was adjourned at 12:30 PM.
+<br>The meeting was adjourned at 12:30 PM.
 
 
