@@ -32,7 +32,7 @@
   - Leiticia has experience in back-end development and has worked with React.
 
 - **Discussing the availability of each member:**
-After comparing everyone's schedules, we decided to have our weekly meetings on MOnday at 8:00 PM and Friday at 5:00 PM.
+After comparing everyone's schedules, we decided to have our weekly meetings on Monday at 8:00 PM and Friday at 5:00 PM.
 
 - **Deciding on the backend and frontend frameworks:**
   - We decided to use Django for the backend and Vue.js for the frontend.
@@ -41,4 +41,4 @@ After comparing everyone's schedules, we decided to have our weekly meetings on 
 ## Next Steps:
 - We will start working on the project documentation and the project setup.
 
-The meeting was adjourned at 9:00 PM.
+<br> The meeting was adjourned at 9:00 PM.
