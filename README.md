@@ -17,11 +17,14 @@
 - [Conclusion](#conclusion)
 
 
-## Project Description
+# 1. Project Overview
 
 Our project, a cutting-edge Car Rental Platform, aims to revolutionize the way users rent cars for personal use. By leveraging the latest web technologies, we offer a seamless, intuitive, and comprehensive car rental experience. Users can effortlessly browse a wide selection of vehicles, read detailed reviews from previous customers, and choose the perfect car that suits their needs and preferences. Our secure and straightforward payment process ensures a hassle-free rental experience from start to finish.
 
-## Primary Users and Use Cases
+## 1.1 Project Objectives
+To develop a compelling middle-fidelity prototype following Agile Scrum methodology, utilizing GitHub for version control, bug tracking, task management, and continuous integration. The project duration is 10 weeks, with 4 iterations (sprints). The first 2 weeks of Sprint 1 are for training and setting up the development environment.
+
+## 1.2 Scope - Primary Users and Use Cases
 
 #### Customers
 
@@ -42,16 +45,23 @@ Our project, a cutting-edge Car Rental Platform, aims to revolutionize the way u
 - **CRUD Operations on User Accounts**: Handle user account management.
 - **CRUD Operations on Reservations**: Oversee reservation records.
 
-## User Stories
+## 1.3 Target Audience
 
-1. As a user, I want to log into my account so that I can book a car for rental.
-2. As a user, I want to filter my car search so that I can rent the one that interests me the most.
-3. As a user, I want to be able to modify my reservation so that I can have flexibility.
-4. As a user, I want to be able to modify my profile so that I can update my information relevant to the application.
-5. As an administrator, I want to be able to add new cars from new companies that I sign contracts with so that the user sees that they are now available.
-6. As a user, I want to make a reservation on a chosen car so that I can use it for my personal use.
+# 2. Project Approach
 
-## Team Member Roles
+## 2.1 Development Methodolody
+Agile methodology is the best suitable development methodology for this project. Indeed, we chose Agile for its iterative nature which enables us to add features incrementally. Its incremental nature allows us to easily modify the code to respect evolving requirements. Indeed, our car rental website will be updated frequently with new features with each sprint. Agile is a methodology founded on team collaboration and open dialogue. Indeed, our use of GitHub allows up to cooperates on coding the features in small components then adding it together with our teammate’s components. Since we have multiple sprints, Agile’s risk management style based on addressing issues quickly is very advantageous. Also, our daily meetings and sprint planning works harmoniously with Agile’s philosophy of partnership. Indeed, our small team size of 6 members allows for easy communication and collaboration.
+
+
+## 2.2 Project Timeline
+
+## 2.3 Collaboration and Communication
+We mainly use discord as our communication channel. It provides real-time messaging and serves as the main platform for our team collaboration, discussions, and meetings.
+GitHub provides features like branching, merging, and pull requests for seamless collaboration and code review. It helps tracking code changes, enabling concurrent work without conflicts.
+GitHub Wikis serve as a centralized repository for additional team rules, including git rules for managing labels and repository. It promotes knowledge sharing and helps onboard new team members efficiently. Wikis can be edited collaboratively by team members, keeping documentation up to date. Also, the wikis hold information planning for upcoming sprints, information of each task with their objectives, timelines and dependencies.
+
+
+## 2.4 Team Member Roles
 
 #### Julia - UI/UX Designer & Frontend Developer
 
@@ -77,41 +87,31 @@ André's role is to focus on the backend side of the car rental web application.
 
 As a Backend Developer, I am focused on developing robust and scalable server-side applications. My work involves integrating Django with other backend technologies to create a solid foundation for our car rental platform.
 
-## Project Approach and Technology
+# 3. Technology Stack
 
-### Project Overview
-
-We aim to create a user-friendly Car Rental Application that serves as an interface between customers and rental services, streamlining the rental process.
-
-### Development Methodology
-
-Agile methodology is the best suitable development methodology for this project. Indeed, we chose Agile for its iterative nature which enables us to add features incrementally. Its incremental nature allows us to easily modify the code to respect evolving requirements. Indeed, our car rental website will be updated frequently with new features with each sprint. Agile is a methodology founded on team collaboration and open dialogue. Indeed, our use of GitHub allows up to cooperates on coding the features in small components then adding it together with our teammate’s components. Since we have multiple sprints, Agile’s risk management style based on addressing issues quickly is very advantageous. Also, our daily meetings and sprint planning works harmoniously with Agile’s philosophy of partnership. Indeed, our small team size of 6 members allows for easy communication and collaboration.
-
-### Technology Stack
-
-#### Backend Framework Evaluation
+## 3.1 Backend Frameworks
 
 - **Django**: Chosen for its comprehensive features and rapid development capabilities, ideal for our secure and scalable web application
 - **Node.js**: Offers great performance for I/O intensive operations, suitable for real-time features.
 - **ASP.NET**: Known for its robustness in enterprise scenarios, it provides strong security and performance.
 
-<ins><br>**Django**<br></ins>
-**Description:** <br>
+### 3.1.1 Django
+<br>**Description:** <br>
 Django is a free open-source Python-based web framework that runs on a web server. It was developed to make the web developement process fast and easy.
-Build by experienced developers, it takes care of much of the hassle of web developement, so you can focus on writting your app without needing to reinvent the wheel.
+Build by experienced developers, it takes care of much of the hassle of web developement, so you can focus on writting your app without needing to reinvent the wheel.<br>
 <br>**Rationale:** <br>
-Django was chosen for its robust set of features that enable building secure, scalable, and maintainable web applications quickly. Its built-in admin panel, ORM (Object-Relational Mapping), and class-based views are particularly beneficial for our project's backend development needs.
+Django was chosen for its robust set of features that enable building secure, scalable, and maintainable web applications quickly. Its built-in admin panel, ORM (Object-Relational Mapping), and class-based views are particularly beneficial for our project's backend development needs.<br>
 <br>**Strengths:** <br>
 Django includes a comprehensive standard library, an automatic admin interface, and a tight security model to help developers avoid common security mistakes such as SQL injection, cross-site request forgery, and clickjacking.
-Its scalability and flexibility make it suitable for projects of any size.
+Its scalability and flexibility make it suitable for projects of any size.<br>
 <br>**Weaknesses:** <br>
-Django's monolitic structure can be cumbersome for smaller projects or when a more microservices-oriented architecture is preffered. Its ORM may not be the most efficient for handling complex queries massive datasets.
+Django's monolitic structure can be cumbersome for smaller projects or when a more microservices-oriented architecture is preffered. Its ORM may not be the most efficient for handling complex queries massive datasets.<br>
 <br>**Use Cases:** <br>
 
 - **Rapid Development:** Django's "batteries-included" approach for rapid development of features without the need for extensive setup.
 - **Data-Driven Applications:** With its powerful ORM, Django is well-suited for applications that require complex data processing and storage, such as car rental platform.
 
-<ins><br>**Node.js**<br></ins>
+### 3.1.2 Node.js
 <br>**Description:** <br>
 Node.js is an open-source, cross-platform JavaScript runtime environment that allows the execution of JavaScript code server-side, allowing for the development of backend applications using the same language familiar to many developers from frontend development. It is built on Google Chrome's V8 JavaScript Engine.
 <br>**Rationale:** <br>
@@ -128,7 +128,7 @@ Overall, Node.js is a powerful tool for web development, but it has some weaknes
 - **Collaborative Tools**: Node.js provides extensive tools for collaborative applications such as document editing platforms which let multiple users collaborate and edit the same document in real-time. Node.js handles WebSockets which facilitates real-time event base communication.
 - **IoT Applications**: The Node.js non-blocking I/O model is a perfect match for IoT Applications, those that handle concurrent connections from various devices at the same time. The ability to process a large amount of data aligns well with the lightweight data-intensive requirements of IoT models.
 
-<ins><br>**ASP.NET**<br></ins>
+### 3.1.3 ASP.NET
 <br>**Description:**<br>
 ASP.NET is an open-source web framework used for building the most modern dynamic web applications and services with .Net by Microsoft. It accommodates different programming styles like Web Forms, MVC, and Web API.
 ASP.NET enhances the .NET platform with components for building specific types of apps. It offers a new comprehensive framework that processes web requests in languages like C# and F#.
@@ -146,7 +146,7 @@ The scalability and integration with Microsoft Technologies make ASP.NET a commo
 <br>**Enterprise Applications**: <br>
 ASP.NET is well suited to accommodate E-commerce websites that require features like browsing, filtering, shopping carts, processing payments, and customer accounts.
 
-#### Frontend Framework Evaluation
+## 3.2 Frontend Frameworks
 
 - **Vue.js**: Selected for its ease of learning and integration, Vue.js enables us to develop a dynamic UI efficiently.
 - **React**: Offers a vast ecosystem and high performance, ideal for complex UIs.
@@ -293,5 +293,14 @@ Once you are done with all these steps, you can now open you browser and go to t
 The Matter-soen341projectW2024 project leverages Django and Vue.js to offer a seamless car rental experience. Our choice of technologies, based on detailed evaluations, positions us to meet our objectives effectively and provide a platform that is both user-friendly and robust.
 
 
+
+## User Stories
+
+1. As a user, I want to log into my account so that I can book a car for rental.
+2. As a user, I want to filter my car search so that I can rent the one that interests me the most.
+3. As a user, I want to be able to modify my reservation so that I can have flexibility.
+4. As a user, I want to be able to modify my profile so that I can update my information relevant to the application.
+5. As an administrator, I want to be able to add new cars from new companies that I sign contracts with so that the user sees that they are now available.
+6. As a user, I want to make a reservation on a chosen car so that I can use it for my personal use.
 
 ---
