@@ -26,10 +26,11 @@
 
 | Time (h) | Time Stamp            | Task                                                                                                                          |
 | :------: | ----------------------|------------------------------------------------------------------------------------------------------------------------------ |
-|    1     |                       |Finished Description/Rationale/Qualitative Assessment for Vue.js and Description/Qualitative Assessment for React              |
-|   0.5    |                       |Created the Acceptance Criterias for the 6 user stories                                                                        |
+|    1     | Feb 4th - 12:00-13:00 |Finished Description/Rationale/Qualitative Assessment for Vue.js and React                                                     |
+|   0.5    | Feb 5th - 14:30-15:00 |Created the Acceptance Criterias for the 6 user stories                                                                        |
+|   0.5    | Feb 9th - 17:00-17:30 |Added Development methodology,Collaboration and Communication                                                                  |
 
-**Total Time (h):** 1.5
+**Total Time (h):** 2.0
  
 ### Antoine :
 
