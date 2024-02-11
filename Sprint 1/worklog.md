@@ -8,8 +8,9 @@
 |    0.5   | Feb 7th - 21:00-21:30 |Finished Description/Rationale/Qualitative Assessment for Angular                                                              |
 |    0.5   | Feb 9th - 15:00-15:30 |Created and added Meeting Minutes files and fixed the format of the Project information and Technology Stack                   |
 |    1     | Feb 10th - 16:00-17:00|Broke down US_#3 and US_#4 into smaller tasks                                                                                  |
+|    0.5   | Feb 10th - 20:00-20:30|Created sub issues for user stories 1, 2, 3, and 4                                                                             |
 
-**Total Time (h):** 3
+**Total Time (h):** 3.5
 
 ### Cristina :
 
