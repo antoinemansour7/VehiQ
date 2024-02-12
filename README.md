@@ -29,6 +29,8 @@ payment process ensures a hassle-free rental experience from start to finish.
 - André Assaad
 - Antoine Mansour
 
+For more details on our members, please visit our [Wiki](https://github.com/cristina-trofimov/Matter-soen341projectW2024/wiki) page
+
 ## Getting Started
 
 ### Prerequisites
