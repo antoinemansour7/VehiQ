@@ -1,7 +1,7 @@
 ## Meeting Minutes Sprint 1 Meeting 4 - February 11th 2024
 
 **Date:** February 11th, 2024
-**Duration:** 
+**Duration:** 1 hour 30 minutes
 **Meeting Mode:** on Discord voice meeting
 
 ### Members
