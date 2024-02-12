@@ -57,35 +57,3 @@
 
 **Total Time (h):** 2
 
-### TASKS:
-
-- [x] create private repository and add everyone.
-- [x] create Sprint 1-4 folders.
-
-**In README:**
-
-- [x] Names and description of roles and background
-- [ ] 
-- [x] Project description
-- [ ] Installation instructions and user guidelines
-- [ ] References to the wiki for additional team rules nd management
-- [ ] Provide a qualitative assessment of 3 frontend and 3 backend frameworks.
-- [ ] Excellent organization presentation and detailed to detil.
-
-**In Issues:**
-
-- [ ] 6 user stories with exceptional clarity, well defined acceptance criteria, and realistic priorities. (Use Github issues)
-- [ ] Task breakdown with clear assignments, dependancies and estimated effort
-
-**In Wiki:**
-
-- [ ] Detailed and comprehensive sprint plan with timelines, objectives and dependancies for the next sprint
-
-**In Log Document:**
-
-- [ ] Log with time stamps, activity details and time spend by each team member
-
-**In Minutes Meeting Files:**
-
-- [x] Meetings Minutes file (minutes files should be named <teamName_Sprint#\_meetingnumber_meeting_date>
-- [x] One file for each meeting.
