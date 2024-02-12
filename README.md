@@ -7,6 +7,7 @@
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
+- [Mopre Information](#more-information)
 
 ## Project Description 
 
