@@ -37,5 +37,5 @@
 ## Next Steps:
 - We will set up the project code and start working on our respective tasks.
 
-The meeting was adjourned at 19:00 PM.
+<br>The meeting was adjourned at 19:00 PM.
 

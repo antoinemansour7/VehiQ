@@ -25,12 +25,12 @@
   - We discussed the tasks that were left and assigned them to the team members.
 
 - **Discussing and adding user stories:**
-- we established the user stories and added them to the project board as well as the tasks that are associated with them.
+  - we established the user stories and added them to the project board as well as the tasks that are associated with them.
 
 
 ## Next Steps:
 - set up the wiki and uniform the documentation
 
-The meeting was adjourned at 12:30 PM.
+<br>The meeting was adjourned at 12:30 PM.
 
 
