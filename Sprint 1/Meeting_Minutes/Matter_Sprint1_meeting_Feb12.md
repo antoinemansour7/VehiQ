@@ -1,6 +1,6 @@
-## Meeting Minutes Sprint 1 Meeting 3 - February 9th 2024
+## Meeting Minutes Sprint 1 Meeting 3 - February 12th 2024
 
-**Date:** February 9th, 2024
+**Date:** February 12th, 2024
 **Duration:** 2 hours
 **Meeting Mode:** in person at Concordia University
 
