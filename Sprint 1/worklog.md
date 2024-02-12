@@ -4,13 +4,14 @@
 
 | Time (h) | Time Stamp            | Task                                                                                                                          |
 | :------: | ----------------------|------------------------------------------------------------------------------------------------------------------------------ |
-|    1     | Feb 4th - 16:00-17:00 |Added more to the README file and organized the tasks to be done, depending on the location of its documentation               |
+|    0.5   | Feb 4th - 16:00-16:30 |Added more to the README file and organized the tasks to be done, depending on the location of its documentation               |
 |    0.5   | Feb 7th - 21:00-21:30 |Finished Description/Rationale/Qualitative Assessment for Angular                                                              |
 |    0.5   | Feb 9th - 15:00-15:30 |Created and added Meeting Minutes files and fixed the format of the Project information and Technology Stack                   |
 |    1     | Feb 10th - 16:00-17:00|Broke down US_#3 and US_#4 into smaller tasks                                                                                  |
-|    0.5   | Feb 10th - 20:00-20:30|Created sub issues for user stories 1, 2, 3, and 4                                                                             |
+|    0.5   | Feb 10th - 20:00-20:30|Created sub-issues for user stories 1, 2, 3, and 4                                                                             |
+|    1.5   | Feb 10th - 20:00-20:30|Created sub-issues for user story 6, added some issues along with their due dates in the spreadsheet                           |
 
-**Total Time (h):** 3.5
+**Total Time (h):** 4.5
 
 ### Cristina :
 
