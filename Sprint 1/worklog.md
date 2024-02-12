@@ -37,10 +37,11 @@
 
 | Time (h) | Time Stamp            | Task                                                                                                                          |
 | :------: |-----------------------|-------------------------------------------------------------------------------------------------------------------------------|  
-|    1.5     | Feb 4th - 22:00-23:30              |Finished Description/Rationale/Qualitative Assessment/Use cases for ASP.NET and Node.js                         |
+|    1.5   | Feb 4th - 22:00-23:30 |Finished Description/Rationale/Qualitative Assessment/Use cases for ASP.NET and Node.js                         |
+|    1     | Feb 10th - 18:00-19:00|Broke down US_#5 and US_#6 into smaller tasks and added tasks and acceptance criterias                             |
 
 
-**Total Time (h):** 1.5                    
+**Total Time (h):** 2.5                    
 
 ### André :
 
