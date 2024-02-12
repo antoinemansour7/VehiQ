@@ -111,6 +111,10 @@ Once the Django installation is complete, let's set up the Vue.js frontend:
 
 Once you are done with all these steps, you can now open you browser and go to the following URL [http://localhost:8080/](http://localhost:8080/) to explore the project!
 
+## More information 
+
+For more information on our project, please visit our [Wiki](https://github.com/cristina-trofimov/Matter-soen341projectW2024/wiki) page
+
 
 
 
