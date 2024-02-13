@@ -56,9 +56,7 @@
 |    0.5   | Feb 11th - 19:30-21:30| Added sub issues in the sprint 2 spreadsheet                           |
 |    0.5   | Feb 12th - 21:00-21:30| Added Story Points in the repository and Sprints Plan issues and uploaded requirements.txt file                           |
 
-**Total Time (h):** 2.5
-
-**Total Time (h):** -
+**Total Time (h):** 3
 
 ### Leiticia :
 
