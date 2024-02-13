@@ -19,9 +19,9 @@
 | :------: | ----------------------|------------------------------------------------------------------------------------------------------------------------------ |
 |    1     | Feb 3rd - 22:00-23:00 |Setting up the folders and starting up on the README file                                                                      |
 |    1.5   | Feb 10th - 23:00-00:40|Setting up the Wiki, and making sure that all issues created to date follow the naming conventions. Rewriting the project information from the README.md file to a pdf|
-|          |                       |                                                                                                                               |
+|    1.5   | Feb 11th - 17:00-18:00|Uniformized teh issues, assigned to respective group memebers and filled up the sprint 2 planning with the ranking and difficulty properties |
 
-**Total Time (h):** 2.5
+**Total Time (h):** 4
 
 ### Jackson :
 
