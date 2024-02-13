@@ -57,7 +57,7 @@ To set up the project on your local machine, follow these steps:
 3. **Install Django Backend Dependencies:**
    As of sprint 1, the requirements.txt file is not finalized but the current version of the file has been   uploaded to sprint1
 
-  Now, navigate to the project root and install the required Python packages for the Django backend using    the following command:
+    Now, navigate to the project root and install the required Python packages for the Django backend          using the following command:
    ```bash
    pip install -r requirements.txt
    ```
