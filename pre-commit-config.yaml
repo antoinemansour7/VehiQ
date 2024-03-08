@@ -1,0 +1,19 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v2.3.0 # Use the latest version
+    hooks:
+      - id: trailing-whitespace
+      - id: check-yaml
+      - id: end-of-file-fixer
+    # Add other hooks here as needed
+
+  - repo: https://github.com/pycqa/flake8
+    rev: "7.0.0" # Specify the version you're using
+    hooks:
+      - id: flake8
+
+  - repo: https://github.com/psf/black
+    rev: 24.2.0 # Use the latest version of black
+    hooks:
+      - id: black
+        language_version: python3 # Ensure black uses the correct Python version
