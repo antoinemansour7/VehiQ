@@ -1,8 +1,13 @@
 <template>
-    <div class="home">
-      <HelloWorld msg="Welcome to Your Vue.js App" />
-    </div>
-  </template>
-  
-  <script>
-  </script>
+  <h1>Home</h1>
+</template>
+
+<script>
+import { collapsed, toggleSidebar } from '@/components/sidebar/state'
+
+export default {
+  setup() {
+    return { collapsed, toggleSidebar }
+  }
+}
+</script>

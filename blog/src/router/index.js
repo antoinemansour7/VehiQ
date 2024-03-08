@@ -3,6 +3,11 @@ import HomePage from '../components/views/HomePage.vue'
 
 const routes = [
   {
+    path: '/AccountProfile',
+    name: 'AccountProfile',
+    component: () => import('../components/views/AccountProfile.vue')
+  },
+  {
     path: '/',
     name: 'Home',
     component: HomePage
@@ -13,10 +18,11 @@ const routes = [
     component: () => import('../components/views/DashboardPage.vue')
   },
   {
-    path: '/AboutPage',
-    name: 'AboutPage',
-    component: () => import('../components/views/AboutPage.vue')
+    path: '/CarListing',
+    name: 'CarListing',
+    component: () => import('../components/CarListing.vue')
   }
+  
 ]
 
 const router = createRouter({

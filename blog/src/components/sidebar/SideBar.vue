@@ -15,17 +15,17 @@ export default {
   <div class="sidebar" :style="{ width: sidebarWidth }">
     <h1>
       <span v-if="collapsed">
-        <div>V</div>
-        <div>Q</div>
+        <div><img class="VehiQLogo1" src="@/assets/VEHIQ_logo.png" alt="VehiQLogo" /></div>
       </span>
-      <span v-else>VehiQ</span>
+      <span v-else>
+        <img class="VehiQLogo2" src="@/assets/VEHIQ_logo.png" alt="VehiQLogo" />
+        <div>VehiQ</div>
+      </span>
     </h1>
 
     <SidebarLink to="/" icon="fas fa-home">Home</SidebarLink>
-    <SidebarLink to="/dashboard" icon="fas fa-columns">Dashboard</SidebarLink>
-    <SidebarLink to="/analytics" icon="fas fa-chart-bar">Analytics</SidebarLink>
-    <SidebarLink to="/friends" icon="fas fa-users">Friends</SidebarLink>
-    <SidebarLink to="/image" icon="fas fa-image">Images</SidebarLink>
+    <SidebarLink to="/AccountProfile" icon="fa-solid fa-user">Account</SidebarLink>
+    <SidebarLink to="/CarListing" icon="fas fa-columns">Car Listing</SidebarLink>
 
     <span
       class="collapse-icon"
@@ -39,9 +39,9 @@ export default {
 
 <style>
 :root {
-  --sidebar-bg-color: #2f855a;
-  --sidebar-item-hover: #38a169;
-  --sidebar-item-active: #276749;
+  --sidebar-bg-color: #ada3b8;
+  --sidebar-item-hover: #d6cde0;
+  --sidebar-item-active: #91859e;
 }
 </style>
 
@@ -81,5 +81,16 @@ export default {
 .rotate-180 {
   transform: rotate(180deg);
   transition: 0.2s linear;
+}
+
+.VehiQLogo1 {
+  padding-right: 10px;
+  width: 40px; 
+  height: auto;
+}
+
+.VehiQLogo2 {
+  width: 60px; 
+  height: auto;
 }
 </style>

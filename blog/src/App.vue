@@ -3,21 +3,18 @@
   <div :style="{'margin-left': sidebarWidth}">
     <router-view/>
   </div>
-  <CarListing/>
 
 </template>
 
 <script>
 import SideBar from '@/components/sidebar/SideBar'
 import { sidebarWidth } from '@/components/sidebar/state'
-import CarListing from './components/CarListing.vue'
 
 
 export default {
   name: 'App',
   components: {
-    SideBar,
-    CarListing
+    SideBar
 
   },
   setup(){
