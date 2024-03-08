@@ -1,20 +1,24 @@
 <template>
-  <HeaderSection msg="VehiQ"/>
-  <CarListing/>
+  <SideBar/>
+  <div :style="{'margin-left': sidebarWidth}">
+    <router-view/>
+  </div>
 
 </template>
 
 <script>
-import HeaderSection from './components/HeaderSection.vue'
-import CarListing from './components/CarListing.vue'
+import SideBar from '@/components/sidebar/SideBar'
+import { sidebarWidth } from '@/components/sidebar/state'
 
 
 export default {
   name: 'App',
   components: {
-    HeaderSection,
-    CarListing
+    SideBar
 
+  },
+  setup(){
+    return {sidebarWidth}
   }
 }
 </script>
@@ -27,5 +31,18 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+#nav {
+  padding: 30px;
+}
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#nav a.router-link-exact-active {
+  color: #42b983;
 }
 </style>

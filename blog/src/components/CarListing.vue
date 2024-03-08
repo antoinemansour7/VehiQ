@@ -77,7 +77,7 @@ export default {
 }
 .features{
     display: flex;
-    align-items: end;
+    align-items: flex-end;
 }
 .features img{
     height: 50px;
