@@ -1,0 +1,17 @@
+<!-- vehicles/templates/vehicles/view_available_vehicles.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Available Vehicles</h2>
+    <ul>
+        {% for vehicle in available_vehicles %}
+            <li>
+                {{ vehicle.company.name }} - {{ vehicle }}
+                <a href="{% url 'make_reservation' vehicle.id %}">Reserve</a>
+            </li>
+        {% endfor %}
+    </ul>
+    {% if not available_vehicles %}
+        <p>No available vehicles at the moment.</p>
+    {% endif %}
+{% endblock %}
