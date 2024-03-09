@@ -1,6 +1,5 @@
 argcomplete==3.2.2
 asgiref==3.7.2
-backports.zoneinfo==0.2.1
 charset-normalizer==3.3.2
 colorama==0.4.6
 commitizen==3.16.0
