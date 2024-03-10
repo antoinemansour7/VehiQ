@@ -12,11 +12,12 @@ class Car(models.Model):
     is_electric = models.BooleanField(default=False)
     is_all_wheel_drive = models.BooleanField(default=False)
     
-    def _str_(self):
+    def __str__(self):  # Fixed typo here
         return f'{self.year} {self.make} {self.model}'
     
     def get_image(self):
         if self.image:
-             return 'http://127.0.0.1:800'+self.image.url
+             return 'http://127.0.0.1:8000'+self.image.url  # Added the port number in the URL
         return ''
+
 
