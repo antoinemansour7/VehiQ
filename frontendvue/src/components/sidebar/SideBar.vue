@@ -24,8 +24,8 @@ export default {
     </h1>
 
     <SidebarLink to="/" icon="fas fa-home">Home</SidebarLink>
-    <SidebarLink to="/AccountProfile" icon="fa-solid fa-user">Account</SidebarLink>
-    <SidebarLink to="/CarListing" icon="fas fa-columns">Car Listing</SidebarLink>
+    <SidebarLink to="/profile" icon="fa-solid fa-user">Profile</SidebarLink>
+    <SidebarLink to="/carListing" icon="fas fa-columns">Car Listing</SidebarLink>
 
     <span
       class="collapse-icon"

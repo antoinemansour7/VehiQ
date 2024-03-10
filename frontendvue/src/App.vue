@@ -1,16 +1,48 @@
 <template>
-  <div id="wrapper">
-  <nav class="navbar is-dark">
-    <div class="navbar-brand">
-      <router-link to="/" class="navbar-item">Home</router-link>
-      <router-link to="/about" class="navbar-item">About</router-link>
-    </div>
-    
-  </nav>
-  <router-view/>
-</div>
+  <SideBar/>
+  <div :style="{'margin-left': sidebarWidth}">
+    <router-view/>
+  </div>
+
 </template>
 
-<style lang="scss">
-@import '../node_modules/bulma';
+<script>
+import SideBar from '@/components/sidebar/SideBar'
+import { sidebarWidth } from '@/components/sidebar/state'
+
+
+export default {
+  name: 'App',
+  components: {
+    SideBar
+
+  },
+  setup(){
+    return {sidebarWidth}
+  }
+}
+</script>
+
+<style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+
+#nav {
+  padding: 30px;
+}
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#nav a.router-link-exact-active {
+  color: #42b983;
+}
 </style>

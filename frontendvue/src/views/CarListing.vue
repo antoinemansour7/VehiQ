@@ -1,11 +1,12 @@
 <template>
+  <h1>Available Cars</h1>
     <div class="rental-car-list">
         <div v-for="car in cars" :key="car.id" class="rental-car">
-            <img :src="require(`@/assets/${car.image}`)" alt="Car Image">
+            <img :src="car.get_image" alt="Car Image">
             <div class="details">
                 <h3>{{ car.make }} {{ car.model }}</h3>
                 <p>{{ car.year }}</p>
-                <p>{{ car.price }}.00$</p>
+                <p>{{ car.price }}</p>
             </div>
             <div class="features">
                 <img v-if="car.isElectric" src='../assets/lightning.png' class="icon">
@@ -16,35 +17,33 @@
 </template>
 
 <script>
-export default {
-    name: 'CarListing',
-    data() {
-        return {
-            cars: [
-                {
-                    id: 1,
-                    make: 'Toyota',
-                    model: 'Corolla',
-                    year: 2020,
-                    price: 50.00,
-                    image: 'toyota_corolla.png',
-                    isElectric:true,
-                    isAllWheelDrive: true
-                },
-                {
-                    id: 3,
-                    make: 'Toyota',
-                    model: 'Corolla',
-                    year: 2020,
-                    price: 50.00,
-                    image: 'toyota_corolla.png',
-                    isElectric:false,
-                    isAllWheelDrive: false
-                }
+import axios from 'axios'
 
-            ]
-        }
+export default {
+  name: 'HomeView',
+  data() {
+    return {
+      cars: []
     }
+  },
+  components: {
+  },
+  mounted(){
+    this.getCars()
+  },
+  methods:
+  {
+    getCars(){
+      axios
+        .get('http://127.0.0.1:8000/api/v1/browse/')
+        .then(response => {
+          this.cars = response.data
+      })
+      .catch(error => {
+          console.log(error)
+      })
+    }
+  }
 }
 </script>
 
@@ -85,4 +84,3 @@ export default {
     margin-right: 10px;
 }
 </style>
-
