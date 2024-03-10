@@ -38,10 +38,16 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'rest_framework', # new
+    'rest_framework.authtoken', # new
+    'corsheaders', # new
+    'djoser', # new
     'accounts',
     'vehicles'
     
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
