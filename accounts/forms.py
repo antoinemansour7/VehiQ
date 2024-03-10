@@ -1,5 +1,5 @@
 from django import forms
-from .models import Profile
+from .models import Profile, Reservation
 from django.core.validators import RegexValidator
 from django.forms import ValidationError
 
@@ -16,3 +16,8 @@ class ProfileForm(forms.ModelForm):
         if 'badword' in bio:
             raise ValidationError("Please do not use bad words in your bio.")
         return bio
+    
+class ReservationForm(forms.ModelForm):
+    class Meta:
+        model = Reservation
+        fields = ['car', 'start_date', 'end_date',] 

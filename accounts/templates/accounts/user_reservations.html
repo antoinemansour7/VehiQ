@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Your Reservations</h2>
+    {% if user_reservations %}
+        <ul>
+            {% for reservation in user_reservations %}
+                <li>
+                    {{ reservation.car }} - 
+                    Reserved from {{ reservation.start_date|date:"F j, Y H:i" }} to {{ reservation.end_date|date:"F j, Y H:i" }}
+                    {% if reservation.is_modification_allowed %}
+                        - <a href="{% url 'modify_reservation' reservation.id %}">Modify/Delete</a>
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No reservations yet.</p>
+    {% endif %}
+    <a href="{% url 'view_available_vehicles' %}">Browse Available Vehicles</a>
+{% endblock %}
