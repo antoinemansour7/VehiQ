@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Your Cars</h2>
+    {% if company_cars %}
+        <ul>
+            {% for car in company_cars %}
+                <li>
+                    {{ car }}
+                    <a href="{% url 'edit_car' car.id %}">Edit</a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No cars added yet.</p>
+    {% endif %}
+    <a href="{% url 'company_dashboard' %}">Back to Dashboard</a>
+{% endblock %}
