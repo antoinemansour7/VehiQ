@@ -7,20 +7,22 @@
     </div>
     <div v-if="activeTab === 'profile'">
       <form @submit.prevent="saveProfile" class="signup-form">
-        <div class="form-group">
+        <div class="form-row">
           <label for="username">Username:</label>
           <input type="text" id="username" v-model="formData.username" :disabled="!isEditMode" required>
         </div>
-        <div class="form-group">
+        <div class="form-row">
           <label for="email">Email:</label>
           <input type="email" id="email" v-model="formData.email" :disabled="!isEditMode" required>
         </div>
-        <div class="form-group">
+        <div class="form-row">
           <label for="password">Password:</label>
           <input type="password" id="password" v-model="formData.password" :disabled="!isEditMode" required>
         </div>
-        <button v-if="!isEditMode" type="button" @click="toggleEditMode">Edit</button>
-        <button v-else type="submit" class="save-button">Save Profile</button>
+        <div class="form-row">
+          <button v-if="!isEditMode" type="button" class="save-button" @click="toggleEditMode">Edit</button>
+          <button v-else type="submit" class="save-button">Save Profile</button>
+        </div>
       </form>
     </div>
     <div v-else-if="activeTab === 'reservations'">
@@ -110,6 +112,10 @@ button {
   border-radius: 5px;
 }
 
+.save-button{
+  width: 340px;
+}
+
 button {
   background-color: #ada3b8;
   color: #fff;
@@ -120,7 +126,21 @@ button:hover {
   background-color: #90839c;
 }
 
-.save-button {
-  margin-top: 10px;
+.signup-form {
+  display: flex;
+  flex-direction: column;
 }
+
+.form-row {
+  display: flex;
+  align-items: center;
+  margin-left: 80px;
+  margin-bottom: 15px; /* Adjust as needed */
+}
+
+.form-row label {
+  width: 120px; /* Set a fixed width for labels to ensure consistent alignment */
+  margin-right: 10px; /* Adjust as needed */
+}
+
 </style>
