@@ -27,9 +27,13 @@
 
 | Time (h) | Time Stamp            | Task                                                                                                                          |
 | :------: | ----------------------|------------------------------------------------------------------------------------------------------------------------------ |
-|    ...     | ... - ... |...|
+|    0.5   | Mar   2 - 15:00-15:30 |Created the vehicleListing component                                                                                           |
+|    3     | Mar   4 - 15:00-18:00 |Research and Test on how to use Axios library and Django REST framework                                                        |
+|    6     | Mar   5 - 7:00-14:30  |Linked the backend and frontend for vehicles listing using Axios and DRF                                                       |
+|    0.5   | Mar   6 - 15:00-15:30 |Created a image folder to share between Django and Vue                                                                         |
+|    2     | Mar   11 - 15:00-17:00|Research how to send data from Vue to Django abd add sign up as admin fucntionality with Julia    
 
-**Total Time (h):** ...
+**Total Time (h):** 12
  
 ### Antoine :
 
@@ -56,4 +60,5 @@
 | :------: | ----------------------|------------------------------------------------------------------------------------------------------------------------------ |
 |    2.5   | March 5 - 14:20-16:50 |Created Accnouts App for authentication. Created Profile model for CRUD operations for user profile|
 |    2     | March 7 - 15:00-17:00 |Implemented the CI pipeline | 
+
 **Total Time (h):** 4.5
