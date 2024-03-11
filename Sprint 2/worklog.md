@@ -44,7 +44,6 @@
 
 | Time (h) | Time Stamp            | Task                                                                                                                          |
 | :------: | ----------------------|------------------------------------------------------------------------------------------------------------------------------ |
-|    ...     | ... - ... |...|
-
-**Total Time (h):** ...
-
+|    2.5   | March 5 - 14:20-16:50 |Created Accnouts App for authentication. Created Profile model for CRUD operations for user profile|
+|    2     | March 7 - 15:00-17:00 |Implemented the CI pipeline | 
+**Total Time (h):** 4.5
