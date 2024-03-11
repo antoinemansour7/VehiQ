@@ -48,9 +48,9 @@
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
-    border: 1px solid #ada3b8; /* Primary color */
+    border: 1px solid #ada3b8; 
     border-radius: 5px;
-    background-color: #eae7ed; /* Background color */
+    background-color: #eae7ed;
   }
   
   .signup-form {
@@ -64,7 +64,7 @@
   
   label {
     font-weight: bold;
-    color: #544e63; /* Dark text color */
+    color: #544e63;
   }
   
   input[type="text"],
@@ -72,18 +72,18 @@
   input[type="password"],
   button {
     padding: 8px;
-    border: 1px solid #ada3b8; /* Primary color */
+    border: 1px solid #ada3b8;
     border-radius: 5px;
   }
   
   button {
-    background-color: #ada3b8; /* Primary color */
-    color: #fff; /* Text color */
+    background-color: #ada3b8; 
+    color: #fff;
     cursor: pointer;
   }
   
   button:hover {
-    background-color: #90839c; /* Darker hover color */
+    background-color: #90839c;
   }
   
   </style>

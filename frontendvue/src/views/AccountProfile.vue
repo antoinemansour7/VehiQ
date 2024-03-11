@@ -1,75 +1,67 @@
 <template>
-  <div>
-    <h1>Profile</h1>
+  <div class="signup-container">
+    <h1>Account Profile</h1>
     <div class="tabs">
-      <button class="tab" :class="{ 'active': activeTab === 'information' }" @click="activeTab = 'information'">My Information</button>
+      <button class="tab" :class="{ 'active': activeTab === 'profile' }" @click="activeTab = 'profile'">My Profile</button>
       <button class="tab" :class="{ 'active': activeTab === 'reservations' }" @click="activeTab = 'reservations'">My Reservations</button>
     </div>
-    <div v-if="activeTab === 'information'">
-      <!-- Content for My Information tab -->
-      <form v-if="!isEditMode" @submit.prevent="saveInformation">
-        <label for="username">Username:</label>
-        <input type="text" id="username" v-model="userInfo.username" disabled>
-        <br>
-        <label for="email">Email:</label>
-        <input type="email" id="email" v-model="userInfo.email" disabled>
-        <br>
-        <button class="edit-button" @click="toggleEditMode">Edit</button>
-      </form>
-      <form v-else @submit.prevent="saveInformation">
-        <label for="username">Username:</label>
-        <input type="text" id="username" v-model="userInfo.username">
-        <br>
-        <label for="email">Email:</label>
-        <input type="email" id="email" v-model="userInfo.email">
-        <br>
-        <button class="save-button">Save</button>
+    <div v-if="activeTab === 'profile'">
+      <form @submit.prevent="saveProfile" class="signup-form">
+        <div class="form-group">
+          <label for="username">Username:</label>
+          <input type="text" id="username" v-model="formData.username" :disabled="!isEditMode" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" v-model="formData.email" :disabled="!isEditMode" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" v-model="formData.password" :disabled="!isEditMode" required>
+        </div>
+        <button v-if="!isEditMode" type="button" @click="toggleEditMode">Edit</button>
+        <button v-else type="submit" class="save-button">Save Profile</button>
       </form>
     </div>
     <div v-else-if="activeTab === 'reservations'">
-      <!-- Content for My Reservations tab -->
       <p>Your reservation details go here.</p>
     </div>
   </div>
 </template>
 
 <script>
-import { ref } from 'vue'; // Importing ref from Vue
-
 export default {
-  setup() {
-    const activeTab = ref('information'); // Using ref to create reactive variable
-    const isEditMode = ref(false); // Indicates whether the form is in edit mode
-
-    const userInfo = ref({
-      username: 'JohnDoe', // Sample username
-      email: 'johndoe@example.com' // Sample email
-    });
-
-    // Function to toggle between edit mode and read-only mode
-    const toggleEditMode = () => {
-      isEditMode.value = !isEditMode.value;
-    };
-
-    // Function to save user information
-    const saveInformation = () => {
-      // Logic to save user information
-      toggleEditMode(); // Toggle back to read-only mode after saving
-    };
-
+  data() {
     return {
-      activeTab,
-      isEditMode,
-      userInfo,
-      toggleEditMode,
-      saveInformation
+      formData: {
+        username: 'JohnDoe',
+        email: 'johndoe@example.com',
+        password: '******'
+      },
+      isEditMode: false,
+      activeTab: 'profile'
     };
+  },
+  methods: {
+    saveProfile() {
+      console.log('Profile saved with data:', this.formData);
+      this.isEditMode = false;
+    },
+    toggleEditMode() {
+      this.isEditMode = !this.isEditMode;
+    }
   }
 };
 </script>
 
 <style scoped>
-/* CSS for tabs */
+.signup-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 5px;
+}
+
 .tabs {
   margin-bottom: 20px;
   font-size: 20px;
@@ -84,30 +76,51 @@ export default {
   padding: 15px 30px;
   margin: 0 10px;
   border-radius: 5px 5px 0 0;
-  transition: background-color 0.3s; /* Add transition for smooth color change */
+  transition: background-color 0.3s;
 }
 
 .tab:hover {
-  background-color: #8c7aa7; /* Change color on hover */
+  background-color: #8c7aa7;
 }
 
 .tab.active {
-  background-color: #ada3b8; /* Change color for active tab */
+  background-color: #ada3b8;
 }
 
-/* Other styles remain the same */
-.save-button {
-  background-color: #ada3b8; /* Match with the color scheme */
-  color: white;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 10px 20px;
+.signup-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: bold;
+  color: #544e63;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+button {
+  padding: 6px 12px;
+  border: 1px solid #ada3b8;
   border-radius: 5px;
-  transition: background-color 0.3s; /* Add transition for smooth color change */
 }
 
-.save-button:hover {
-  background-color: #91859e; /* Change color on hover */
+button {
+  background-color: #ada3b8;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #90839c;
+}
+
+.save-button {
+  margin-top: 10px;
 }
 </style>
