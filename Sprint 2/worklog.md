@@ -5,8 +5,15 @@
 | Time (h) | Time Stamp            | Task                                                                                                                          |
 | :------: | ----------------------|------------------------------------------------------------------------------------------------------------------------------ |
 |    0.5   | Feb 29th - 15:00-15:30 |Created a logo and added the worklog document for sprint 2|
+|    0.5   | Mar 1rst - 19:00-19:30 |Created a header on Vue.js for the frontend|
+|    1   | Mar 8th - 10:00-11:00 |Created a sidebar and added a router on Vue.js for the frontend. Created pages to link to the sidebar such as the Home page and the account profile. Linked the Car Listings component that Jackson did as well.|
+|    3   | Mar 9th - 14:00-17:00 |Researched on how to link Django with Vue.js.|
+|    1   | Mar 10th - 13:00-14:00 |Researched on how to link Django with Vue.js.|
+|    2   | Mar 11th - 14:00-16:00 |Added more to the pages on the frontend, such as the Sign Up form, Home page, and the account profile. Peer programmed with Cristina.|
 
-**Total Time (h):** 0.5
+
+
+**Total Time (h):** 8
 
 ### Cristina :
 
