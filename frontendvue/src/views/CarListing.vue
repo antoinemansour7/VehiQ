@@ -38,15 +38,15 @@
     <!-- Car list -->
     <div class="rental-car-list">
       <div v-for="car in filteredCars" :key="car.id" class="rental-car">
+        <img :src="car.get_image" alt="Car Image">
         <div class="details">
           <h3>{{ car.make }} {{ car.model }}</h3>
           <p>{{ car.year }}</p>
           <p>{{ car.price }}</p>
         </div>
         <div class="features">
-          <span v-if="car.is_electric" class="feature">Electric</span>
-          <span v-if="car.is_hybrid" class="feature">Hybrid</span>
-          <span v-if="car.fuel_type === 'gas'" class="feature">Gas</span>
+          <img v-if="car.is_electric" src='../assets/lightning.png' class="icon">
+          <img v-if="car.is_all_wheel_drive" src='../assets/wheels.png' class="icon">
         </div>
       </div>
     </div>
@@ -158,6 +158,11 @@ export default {
   width: 300px;
   position: relative;
 }
+.rental-car img{
+    width:100%;
+    height: auto;
+    border-radius: 5px;
+}
 
 .details h3 {
   color: #ada3b8;
@@ -177,4 +182,10 @@ export default {
   color: #ada3b8;
   font-size: 14px;
 }
+.features img{
+    height: 50px;
+    width:50px ;
+    margin-right: 10px;
+}
 </style>
+
