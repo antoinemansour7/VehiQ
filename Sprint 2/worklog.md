@@ -30,7 +30,7 @@
 | :------: |-----------------------|-------------------------------------------------------------------------------------------------------------------------------|  
 |    1.5   | March 1st - 21:00-22:30| Implemented account editing functionnality|
 |    1     | March 2nd - 13:00-14:00| Implemented reservations update functionnality|
-|    1.5   | March 3rd - 15:30-5:00 | Implemented the delete account functionnality|
+|    1.5   | March 3rd - 15:30-17:00 | Implemented the delete account functionnality|
 
 
 **Total Time (h):** 4               
