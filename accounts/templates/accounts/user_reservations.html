@@ -11,6 +11,11 @@
                     {% if reservation.is_modification_allowed %}
                         - <a href="{% url 'modify_reservation' reservation.id %}">Modify/Delete</a>
                     {% endif %}
+                    {% if reservation.car.image %}
+                        <img src="{{ reservation.car.image.url }}" alt="{{ reservation.car }}" style="max-width: 100px; max-height: 100px;">
+                    {% else %}
+                        <img src="{% static 'media/car_images/default.jpg' %}" alt="Default Image" style="max-width: 100px; max-height: 100px;">
+                    {% endif %}
                 </li>
             {% endfor %}
         </ul>
