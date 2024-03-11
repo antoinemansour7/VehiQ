@@ -15,6 +15,7 @@
           <input type="password" id="password" v-model="formData.password" required>
         </div>
         <button type="submit">Sign Up</button>
+        <button type="button" @click="signUpAsAdmin">Sign Up as Admin</button>
       </form>
     </div>
   </template>
@@ -38,6 +39,15 @@
           email: '',
           password: ''
         };
+      },
+      signUpAsAdmin() {
+        // Logic to handle signing up as admin
+        console.log('Signing up as admin with data:', this.formData);
+        this.formData = {
+          username: '',
+          email: '',
+          password: ''
+        };
       }
     }
   };
@@ -48,7 +58,7 @@
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
-    border: 1px solid #ada3b8; 
+    border: 1px solid #ada3b8;
     border-radius: 5px;
     background-color: #eae7ed;
   }
@@ -77,14 +87,14 @@
   }
   
   button {
-    background-color: #ada3b8; 
+    background-color: #ada3b8;
     color: #fff;
     cursor: pointer;
+    margin-top: 10px; /* Added margin to separate the buttons */
   }
   
   button:hover {
     background-color: #90839c;
   }
-  
   </style>
   
