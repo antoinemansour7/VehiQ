@@ -9,8 +9,9 @@
                 <p>{{ car.price }}</p>
             </div>
             <div class="features">
-                <img v-if="car.isElectric" src='../assets/lightning.png' class="icon">
-                <img v-if="car.isAllWheelDrive" src='../assets/wheels.png' class="icon">
+              <img v-if="car.is_electric" src='../assets/lightning.png' class="icon">
+              <img v-if="car.is_all_wheel_drive" src='../assets/wheels.png' class="icon">
+
             </div>
         </div>
     </div>
