@@ -67,8 +67,9 @@
 |    2     | March 10th - 14:00-16:00 | Worked on reservation logic |
 |    2     | March 10th - 19:00-21:00 | Created and edited a range of HTML files |
 |    6     | March 11th - 15:00-21:00 | Worked on register/login functionality, worked on add/edit/delete/view for reservations and cars |
+|    2.5     | March 12th - 00:30-03:00 | Trying to fix registration |
 
-**Total Time (h):** 18
+**Total Time (h):** 20.5
 
 ### Leiticia :
 
