@@ -17,9 +17,19 @@
 
 ### Cristina :
 
-| Time (h) | Time Stamp            | Task                                                                                                                          |
-| :------: | ----------------------|------------------------------------------------------------------------------------------------------------------------------ |
-|    ...     | ... - ... |...|
+| Time (h) | Time Stamp               | Task                                                                          |
+| :------: | ------------------------ | ------------------------------------------------------------------------------ |
+|   2.0    | Feb 25th - 08:15 - 10:15| Researched on Vue.js and Django                                              |
+|   0.5    | Feb 29th - 14:30 - 15:00| Created a header (later deleted to exchange for a sidebar)                   |
+|   4.0    | Mar 1st - 10:45 - 14:45 | Peer programming with Julia and Jackson                                      |
+|   1.0    | Mar 2nd - 16:20 - 17:20 | Created user stories on GitHub with corresponding tasks                      |
+|   1.0    | Mar 8th - 09:00 - 10:00 | Added acceptance criteria to user stories from Sprint 1                       |
+|   2.0    | Mar 9th - 13:55 - 15:55 | Helped each other set up environments                                        |
+|   4.0    | Mar 10th - 11:10 - 15:10| Peer programming with Julia on the frontend                                  |
+|   1.0    | Mar 11th - 17:30 - 18:30| Completed the sprint 3 planning and minute meetings                          |
+|   2.0    | Mar 11th - 14:00 - 16:00| Added more to the pages on the frontend, such as the Sign Up form, Home page, and the account profile. Peer programmed with Julia. |
+
+
 
 **Total Time (h):** ...
 
