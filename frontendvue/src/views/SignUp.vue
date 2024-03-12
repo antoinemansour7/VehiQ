@@ -15,7 +15,7 @@
         <input type="password" id="password" v-model="formData.password" required>
       </div>
       <button type="submit">Sign Up</button>
-      <button type="button" @click="logInAsAdmin">Log Inn</button>
+      <button type="button" @click="logInAsAdmin">Log In as Admin</button>
     </form>
   </div>
 </template>
