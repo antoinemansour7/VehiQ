@@ -39,13 +39,15 @@
 
 | Time (h) | Time Stamp            | Task                                                                                                                          |
 | :------: | ----------------------|------------------------------------------------------------------------------------------------------------------------------ |
+|   4.0    | Mar 1st - 10:45 - 14:45 | Peer programming with Julia and Jackson                                      |
 |    0.5   | Mar   2 - 15:00-15:30 |Created the vehicleListing component                                                                                           |
 |    3     | Mar   4 - 15:00-18:00 |Research and Test on how to use Axios library and Django REST framework                                                        |
-|    6     | Mar   5 - 7:00-14:30  |Linked the backend and frontend for vehicles listing using Axios and DRF                                                       |
+|    6     | Mar   5 - 7:00-14:30  |Linked the backend and frontend for vehicles listing using Axios and DRF mainly Django URL containing info for Vue fetch/GET   |
 |    0.5   | Mar   6 - 15:00-15:30 |Created a image folder to share between Django and Vue                                                                         |
-|    2     | Mar   11 - 15:00-17:00|Research how to send data from Vue to Django abd add sign up as admin fucntionality with Julia    
+|    2     | Mar   11 - 15:00-17:00|Research how to send data from Vue to Django abd add sign up as admin fucntionality with Julia                                 |
+|    2     | Mar   11 - 19:00-21:00|Created a Django endpoint for Vue POST request                                                                                 |
 
-**Total Time (h):** 12
+**Total Time (h):** 18
  
 ### Antoine :
 
