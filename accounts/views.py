@@ -108,6 +108,8 @@ def modify_or_delete_reservation(request, reservation_id):
 
     return render(request, 'accounts/modify_or_delete_reservation.html', {'form': form, 'reservation': reservation})
 
+
+######################################################################
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
@@ -157,3 +159,14 @@ def login_view(request):
     # Handle other HTTP methods (e.g., GET) or invalid requests
     return JsonResponse({'error': 'Method not allowed'}, status=405)
 
+from django.shortcuts import render
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from .models import Reservation
+from .serializers import ReservationSerializer
+
+class AllReservations(APIView):
+    def get(self, request, format=None):
+        reservations = Reservation.objects.all()
+        serializer = ReservationSerializer(reservations, many=True)
+        return Response(serializer.data)

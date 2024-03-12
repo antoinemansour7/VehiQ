@@ -2,6 +2,7 @@ from io import BytesIO
 from PIL import Image
 from django.db import models
 
+
 class Car(models.Model):
     id = models.AutoField(primary_key=True)
     make = models.CharField(max_length=100, default='')

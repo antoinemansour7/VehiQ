@@ -1,7 +1,8 @@
-from django.urls import path
+from django.urls import path, include
 from . import views
 from django.contrib.auth import views as auth_views
 from .views import CreateUserAPIView
+from accounts.models import Reservation
 
 app_name = 'accounts'
 
@@ -15,4 +16,6 @@ urlpatterns = [
     path('user_reservations/modify/<int:reservation_id>/', views.modify_or_delete_reservation, name='modify_reservation'),
     path('create_user/', CreateUserAPIView.as_view(), name='create_user'),
     path('accounts/login/', views.login_view, name='login'),
+    path('reservations/', views.AllReservations.as_view(), name='reservations')
 ]
+

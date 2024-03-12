@@ -1,191 +1,105 @@
 <template>
-  <div>
-    <h1 class="title">Available Cars</h1>
-
-    <!-- Dropdowns for filtering -->
-    <div class="filter-dropdowns">
-      <!-- Make -->
-      <select v-model="selectedMake" @change="filterCars" class="select-box">
-        <option value="">Select Make</option>
-        <option v-for="make in uniqueMakes" :key="make" :value="make">{{ make }}</option>
-      </select>
-
-      <!-- Price Range -->
-      <select v-model="selectedPriceRange" @change="filterCars" class="select-box">
-        <option value="">Select Price Range</option>
-        <option value="0-10000">$0 - $10,000</option>
-        <option value="10001-20000">$10,001 - $20,000</option>
-        <!-- Add more options as needed -->
-      </select>
-
-      <!-- Mileage -->
-      <select v-model="selectedMileage" @change="filterCars" class="select-box">
-        <option value="">Select Mileage</option>
-        <option value="0-5000">0 - 5,000 miles</option>
-        <option value="5001-10000">5,001 - 10,000 miles</option>
-        <!-- Add more options as needed -->
-      </select>
-
-      <!-- Fuel Type -->
-      <select v-model="selectedFuelType" @change="filterCars" class="select-box">
-        <option value="">Select Fuel Type</option>
-        <option value="hybrid">Hybrid</option>
-        <option value="electric">Electric</option>
-        <option value="gas">Gas</option>
-      </select>
+  <div class="reservations-container">
+    <input type="text" v-model="username" placeholder="Enter username" class="input-field">
+    <button @click="getAllReservations" class="btn-get-reservations">Get Reservations</button>
+    <div v-if="reservations.length > 0" class="reservation-list">
+      <h2 class="reservation-title">Reservations for {{ username }}</h2>
+      <ul>
+        <li v-for="reservation in reservations" :key="reservation.id" class="reservation-item">
+          <span class="reservation-info">
+            <span class="reservation-label">Car:</span> {{ reservation.car_name }},
+            <span class="reservation-label">Profile:</span> {{ reservation.profile_name }},
+            <span class="reservation-label">Start Date:</span> {{ reservation.start_date }},
+            <span class="reservation-label">End Date:</span> {{ reservation.end_date }},
+            <span class="reservation-label">Reservation Date:</span> {{ reservation.reservation_date }}
+          </span>
+        </li>
+      </ul>
     </div>
-
-    <!-- Car list -->
-    <div class="rental-car-list">
-      <div v-for="car in filteredCars" :key="car.id" class="rental-car">
-        <img :src="car.get_image" alt="Car Image">
-        <div class="details">
-          <h3>{{ car.make }} {{ car.model }}</h3>
-          <p>{{ car.year }}</p>
-          <p>{{ car.price }}</p>
-        </div>
-        <div class="features">
-          <img v-if="car.is_electric" src='../assets/lightning.png' class="icon">
-          <img v-if="car.is_all_wheel_drive" src='../assets/wheels.png' class="icon">
-        </div>
-      </div>
+    <div v-else class="no-reservations">
+      <p>No reservations found for {{ username }}.</p>
     </div>
   </div>
 </template>
 
 <script>
-import axios from 'axios'
+import axios from 'axios';
 
 export default {
-  name: 'HomeView',
+  name: 'Reservations',
   data() {
     return {
-      cars: [],
-      selectedMake: '',
-      selectedPriceRange: '',
-      selectedMileage: '',
-      selectedFuelType: ''
-    }
-  },
-  computed: {
-    uniqueMakes() {
-      return [...new Set(this.cars.map(car => car.make))];
-    },
-    filteredCars() {
-      let filtered = this.cars;
-
-      // Filter by selected make
-      if (this.selectedMake) {
-        filtered = filtered.filter(car => car.make === this.selectedMake);
-      }
-
-      // Filter by selected price range
-      if (this.selectedPriceRange) {
-        const [min, max] = this.selectedPriceRange.split('-').map(Number);
-        filtered = filtered.filter(car => car.price >= min && car.price <= max);
-      }
-
-      // Filter by selected mileage
-      if (this.selectedMileage) {
-        const [minMileage, maxMileage] = this.selectedMileage.split('-').map(Number);
-        // Assuming mileage is a property of the car object
-        filtered = filtered.filter(car => car.mileage >= minMileage && car.mileage <= maxMileage);
-      }
-
-      // Filter by selected fuel type
-      if (this.selectedFuelType) {
-        filtered = filtered.filter(car => car.fuelType === this.selectedFuelType);
-      }
-
-      return filtered;
-    }
-  },
-  mounted() {
-    this.getCars();
+      username: '',
+      reservations: []
+    };
   },
   methods: {
-    getCars() {
-      axios
-        .get('http://127.0.0.1:8000/api/v1/browse/')
+    getAllReservations() {
+      axios.get('http://127.0.0.1:8000/accounts/reservations/', {
+        params: { username: this.username }
+      })
         .then(response => {
-          this.cars = response.data;
+          this.reservations = response.data.filter(reservation => reservation.profile_name === this.username);
         })
         .catch(error => {
-          console.log(error);
+          console.error('Error fetching reservations:', error);
         });
-    },
-    filterCars() {
-      // Triggered when any filter changes
-      // No need to do anything here as computed property 'filteredCars' handles the filtering
     }
   }
 }
 </script>
 
-<style scoped>
-.title {
-  color: #ada3b8;
-  font-size: 24px;
-  margin-bottom: 20px;
-  text-align: center;
+<style>
+.reservations-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ada3b8;
+  border-radius: 8px;
 }
 
-.filter-dropdowns {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-.select-box {
+.input-field {
+  width: 200px;
   padding: 8px;
-  margin-right: 10px;
-  border: 1px solid #ada3b8;
-  border-radius: 5px;
-  background-color: white;
-  color: #ada3b8;
+  margin-bottom: 10px;
 }
 
-.rental-car-list {
-  display: flex;
-  flex-wrap: wrap;
+.btn-get-reservations {
+  padding: 8px 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-.rental-car {
-  margin: 10px;
+.reservation-title {
+  color: #333;
+}
+
+.reservation-list {
+  margin-top: 20px;
+}
+
+.reservation-item {
+  margin-bottom: 10px;
   padding: 10px;
-  border: 1px solid #ada3b8;
-  border-radius: 5px;
-  width: 300px;
-  position: relative;
-}
-.rental-car img{
-    width:100%;
-    height: auto;
-    border-radius: 5px;
+  background-color: #fff;
+  border-radius: 4px;
 }
 
-.details h3 {
-  color: #ada3b8;
-}
-
-.features {
-  display: flex;
-  align-items: center;
-  margin-top: 10px;
-}
-
-.feature {
-  padding: 5px 10px;
-  border: 1px solid #ada3b8;
-  border-radius: 20px;
-  margin-right: 5px;
-  color: #ada3b8;
+.reservation-info {
   font-size: 14px;
 }
-.features img{
-    height: 50px;
-    width:50px ;
-    margin-right: 10px;
+
+.reservation-label {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.no-reservations {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 16px;
 }
 </style>
-

@@ -27,6 +27,7 @@ export default {
     <SidebarLink to="/profile" icon="fas fa-user">Profile</SidebarLink>
     <SidebarLink to="/carListing" icon="fas fa-columns">Car Listing</SidebarLink>
     <SidebarLink to="/signUp" icon="fas fa-arrow-right">Sign Up</SidebarLink>
+    <SidebarLink to="/reservations" icon="fas fa-calendar">Reservations</SidebarLink>
 
     <span
       class="collapse-icon"
