@@ -132,4 +132,28 @@ class CreateUserAPIView(APIView):
         user = User.objects.create_superuser(username=username, email=email, password=password)
         
         return Response({'message': 'User created successfully'}, status=status.HTTP_201_CREATED)
+    
+
+from django.contrib.auth import authenticate, login
+from django.http import JsonResponse
+
+def login_view(request):
+    if request.method == 'POST':
+        # Retrieve username/email and password from request data
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+
+        # Authenticate user
+        user = authenticate(request, username=username, password=password)
+
+        if user is not None:
+            # Login successful
+            login(request, user)
+            return JsonResponse({'message': 'Login successful'})
+        else:
+            # Login failed
+            return JsonResponse({'error': 'Invalid username/email or password'}, status=400)
+
+    # Handle other HTTP methods (e.g., GET) or invalid requests
+    return JsonResponse({'error': 'Method not allowed'}, status=405)
 

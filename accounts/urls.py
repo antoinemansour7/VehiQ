@@ -14,4 +14,5 @@ urlpatterns = [
     path('make_reservation/<int:car_id>/', views.make_reservation, name='make_reservation'),
     path('user_reservations/modify/<int:reservation_id>/', views.modify_or_delete_reservation, name='modify_reservation'),
     path('create_user/', CreateUserAPIView.as_view(), name='create_user'),
+    path('accounts/login/', views.login_view, name='login'),
 ]

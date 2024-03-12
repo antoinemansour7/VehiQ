@@ -15,13 +15,14 @@
         <input type="password" id="password" v-model="formData.password" required>
       </div>
       <button type="submit">Sign Up</button>
-      <button type="button" @click="signUpAsAdmin">Sign Up as Admin</button>
+      <button type="button" @click="logInAsAdmin">Log Inn</button>
     </form>
   </div>
 </template>
 
 <script>
 import axios from 'axios';
+
 export default {
   data() {
     return {
@@ -38,15 +39,13 @@ export default {
         .then(response => {
           console.log('User signed up:', response.data);
           alert('User signed up successfully!'); 
-          
         })
         .catch(error => {
           console.error('There was an error!', error);
           alert('User signed up successfully!'); 
         });
-      }
     },
-    signUpAsAdmin() {
+    logInAsAdmin() {
       // Logic to handle signing up as admin
       console.log('Signing up as admin with data:', this.formData);
       // Reset form data after submission
@@ -56,10 +55,10 @@ export default {
         password: ''
       };
       // Redirect to login page
-      window.location.href = 'http://127.0.0.1:8000/admin/login/?next=/admin//';
+      window.location.href = 'http://127.0.0.1:8000/admin/';
     }
   }
-
+}
 </script>
 
 <style scoped>
