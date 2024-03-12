@@ -8,6 +8,7 @@ urlpatterns = [
     path('api/v1/', include('djoser.urls')), # new
     path('api/v1/', include('djoser.urls.authtoken')), # new
     path('api/v1/', include('vehicles.urls')), # new
+    
 
 
 

@@ -21,6 +21,7 @@
 </template>
 
 <script>
+import axios from 'axios';
 export default {
   data() {
     return {
@@ -33,13 +34,17 @@ export default {
   },
   methods: {
     submitForm() {
-      console.log('Form submitted with data:', this.formData);
-      // Reset form data after submission
-      this.formData = {
-        username: '',
-        email: '',
-        password: ''
-      };
+      axios.post('http://127.0.0.1:8000/accounts/create_user/', this.formData)
+        .then(response => {
+          console.log('User signed up:', response.data);
+          alert('User signed up successfully!'); 
+          
+        })
+        .catch(error => {
+          console.error('There was an error!', error);
+          alert('User signed up successfully!'); 
+        });
+      }
     },
     signUpAsAdmin() {
       // Logic to handle signing up as admin
@@ -54,7 +59,7 @@ export default {
       window.location.href = 'http://127.0.0.1:8000/admin/login/?next=/admin//';
     }
   }
-};
+
 </script>
 
 <style scoped>

@@ -107,3 +107,29 @@ def modify_or_delete_reservation(request, reservation_id):
         form = ReservationForm(instance=reservation)
 
     return render(request, 'accounts/modify_or_delete_reservation.html', {'form': form, 'reservation': reservation})
+
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework import status
+from django.contrib.auth.models import User
+from rest_framework.response import Response
+from rest_framework import status
+
+class CreateUserAPIView(APIView):
+    def post(self, request):
+        username = request.data.get('username')
+        email = request.data.get('email')
+        password = request.data.get('password')
+
+        if not (username and email and password):
+            return Response({'error': 'Please provide username, email, and password'}, status=status.HTTP_400_BAD_REQUEST)
+        
+        # Check if username or email already exists
+        if User.objects.filter(username=username).exists() or User.objects.filter(email=email).exists():
+            return Response({'error': 'Username or email already exists'}, status=status.HTTP_400_BAD_REQUEST)
+
+        # Create user
+        user = User.objects.create_superuser(username=username, email=email, password=password)
+        
+        return Response({'message': 'User created successfully'}, status=status.HTTP_201_CREATED)
+
