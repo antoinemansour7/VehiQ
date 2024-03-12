@@ -1,4 +1,4 @@
-## Meeting Minutes Sprint 2 Meeting 4 - March 9th 2024
+## Meeting Minutes Sprint 2 Meeting 5 - March 10th 2024
 
 **Date:** February 11th, 2024
 **Duration:** 4 hours 30 minutes
