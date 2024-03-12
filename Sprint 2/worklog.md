@@ -60,9 +60,15 @@
 
 | Time (h) | Time Stamp            | Task                                                                                                                          |
 | :------: | ----------------------|------------------------------------------------------------------------------------------------------------------------------ |
-|    ...     | ... - ... |...|
+|    1.5   | March 5th - 18:00-19:30 | Changed and modified requirements.txt, venv, and .gitignore files |
+|    3     | March 8th - 18:00-21:00 | Added login template, browse vehicles, and ability to check user reservations |
+|   2.0    | Mar 9th - 13:55 - 15:55 | Helped frontend set up Django environment |
+|    1.5   | March 9th - 18:00-19:30 | Worked on register functionality |
+|    2     | March 10th - 14:00-16:00 | Worked on reservation logic |
+|    2     | March 10th - 19:00-21:00 | Created and edited a range of HTML files |
+|    6     | March 11th - 15:00-21:00 | Worked on register/login functionality, worked on add/edit/delete/view for reservations and cars |
 
-**Total Time (h):** ...
+**Total Time (h):** 18
 
 ### Leiticia :
 
