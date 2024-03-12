@@ -1,4 +1,3 @@
-<!-- vehicles/templates/vehicles/view_available_vehicles.html -->
 {% extends 'base.html' %}
 
 {% block content %}
@@ -7,6 +6,12 @@
         {% for vehicle in available_vehicles %}
             <li>
                 {{ vehicle.company.name }} - {{ vehicle }}
+                {% if vehicle.image %}
+                    <img src="{{ vehicle.image.url }}" alt="{{ vehicle }}" style="max-width: 100px; max-height: 100px;">
+                {% else %}
+                    <!-- Provide a default image or placeholder if no image is available -->
+                    <img src="{% static 'media/car_images/default.jpg' %}" alt="Default Image" style="max-width: 100px; max-height: 100px;">
+                {% endif %}
                 <a href="{% url 'make_reservation' vehicle.id %}">Reserve</a>
             </li>
         {% endfor %}

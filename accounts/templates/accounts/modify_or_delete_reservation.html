@@ -3,7 +3,14 @@
 {% block content %}
     <h2>Modify or Delete Reservation</h2>
     <p>{{ reservation.car }} - Reserved from {{ reservation.start_date|date:"F j, Y H:i" }} to {{ reservation.end_date|date:"F j, Y H:i" }}</p>
-    
+
+    {% if reservation.car.image %}
+        <img src="{{ reservation.car.image.url }}" alt="{{ reservation.car }}" style="max-width: 100px; max-height: 100px;">
+    {% else %}
+        <!-- Provide a default image or placeholder if no image is available -->
+        <img src="{% static 'media/car_images/default.jpg' %}" alt="Default Image" style="max-width: 100px; max-height: 100px;">
+    {% endif %}
+
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}

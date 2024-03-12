@@ -1,29 +1,60 @@
 from django.shortcuts import get_object_or_404, render, redirect 
 from django.contrib.auth.decorators import login_required
-
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth import login
 from vehicles.models import Car
-from .models import Profile, Reservation
-from .forms import ProfileForm, ReservationForm 
+from .models import Reservation, Profile
+from .forms import ProfileForm, RegistrationForm, ReservationForm 
+from django.shortcuts import render, redirect
+from django.utils import timezone
+from django.db import IntegrityError
+from django.contrib import messages
 
-# Create your views here.
+@login_required
+def user_dashboard(request):
+    return render(request, 'accounts/user_dashboard.html')
+@login_required
+def company_dashboard(request):
+    return render(request, 'accounts/company_dashboard.html')
+
+def register(request):
+    if request.method == 'POST':
+        form = RegistrationForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+
+            try:
+                profile, created = Profile.objects.get_or_create(
+                    user=user, defaults={'user_type': form.cleaned_data['user_type']}
+                )
+            except IntegrityError:
+                messages.error(request, 'An error occurred while creating the profile. Please try again.')
+                return redirect('registration_error')
+
+            if not created:
+                profile.user_type = form.cleaned_data['user_type']
+                profile.save()
+
+            login(request, user)
+            return redirect('user_reservations')
+    else:
+        form = RegistrationForm()
+
+    return render(request, 'registration/register.html', {'form': form})
+
+
 @login_required
 def edit_profile(request):
     if request.method == 'POST':
         form = ProfileForm(request.POST, instance=request.user.profile)
         if form.is_valid():
             form.save()
-            return redirect('profile')  # Redirect to a view where users can see their profile
+            return redirect('profile')
     else:
         form = ProfileForm(instance=request.user.profile)
     return render(request, 'accounts/edit_profile.html', {'form': form})
 
 
-# vehicles/views.py
-from django.shortcuts import render, redirect
-from django.contrib.auth.decorators import login_required
-from django.utils import timezone
-from .models import Car, Reservation
-from .forms import ReservationForm
 
 @login_required
 def make_reservation(request, car_id):
