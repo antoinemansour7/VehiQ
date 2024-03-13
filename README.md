@@ -46,7 +46,7 @@ To set up the project on your local machine, follow these steps:
 1. **Clone the Repository:**
    ```bash
    git clone https://github.com/cristina-trofimov/Matter-soen341projectW2024.git
-   cd project-name
+   cd Matter-soen341projectW2024
    ```
 2. **Create a virtual environment:**
     ```bash
