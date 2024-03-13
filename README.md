@@ -85,6 +85,7 @@ Once the dependencies are installed, you can proceed with setting up the Django 
    
    In the project root, run the following command to apply migrations and create the database:
    ```bash
+   python manage.py makemigrations
    python manage.py migrate
    ```
 
