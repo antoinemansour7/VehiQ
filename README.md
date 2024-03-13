@@ -60,6 +60,11 @@ To set up the project on your local machine, follow these steps:
     Now, navigate to the project root and install the required Python packages for the Django backend          using the following command:
    ```bash
    pip install -r requirements.txt
+   pip install django
+   pip install djangorestframework
+   pip install pillow
+   pip install djoser
+   pip install django-cors-headers
    ```
 
 5. **Install Vue.js Frontend Dependencies:**
@@ -68,6 +73,8 @@ To set up the project on your local machine, follow these steps:
    ```bash
    cd frontend
    npm install
+   npm install axios
+   npm install bulma
    ```
 
 ### Setting Up the Django Backend
