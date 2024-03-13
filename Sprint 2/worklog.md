@@ -46,8 +46,9 @@
 |    0.5   | Mar   6 - 15:00-15:30 |Created a image folder to share between Django and Vue                                                                         |
 |    2     | Mar   11 - 15:00-17:00|Research how to send data from Vue to Django abd add sign up as admin fucntionality with Julia                                 |
 |    2     | Mar   11 - 19:00-21:00|Created a Django endpoint for Vue POST request                                                                                 |
+|    3     | Mar   12 - 14:00-17:00|Created a Reservation page and linked with backend                                 |
 
-**Total Time (h):** 18
+**Total Time (h):** 21
  
 ### Antoine :
 
