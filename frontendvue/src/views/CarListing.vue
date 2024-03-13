@@ -1,105 +1,87 @@
 <template>
-  <div class="reservations-container">
-    <input type="text" v-model="username" placeholder="Enter username" class="input-field">
-    <button @click="getAllReservations" class="btn-get-reservations">Get Reservations</button>
-    <div v-if="reservations.length > 0" class="reservation-list">
-      <h2 class="reservation-title">Reservations for {{ username }}</h2>
-      <ul>
-        <li v-for="reservation in reservations" :key="reservation.id" class="reservation-item">
-          <span class="reservation-info">
-            <span class="reservation-label">Car:</span> {{ reservation.car_name }},
-            <span class="reservation-label">Profile:</span> {{ reservation.profile_name }},
-            <span class="reservation-label">Start Date:</span> {{ reservation.start_date }},
-            <span class="reservation-label">End Date:</span> {{ reservation.end_date }},
-            <span class="reservation-label">Reservation Date:</span> {{ reservation.reservation_date }}
-          </span>
-        </li>
-      </ul>
+  <h1>Available Cars</h1>
+    <div class="rental-car-list">
+        <div v-for="car in cars" :key="car.id" class="rental-car">
+            <img :src="car.get_image" alt="Car Image">
+            <div class="details">
+                <h3>{{ car.make }} {{ car.model }}</h3>
+                <p>{{ car.year }}</p>
+                <p>{{ car.price }}</p>
+            </div>
+            <div class="features">
+              <img v-if="car.is_electric" src='../assets/lightning.png' class="icon">
+              <img v-if="car.is_all_wheel_drive" src='../assets/wheels.png' class="icon">
+
+            </div>
+        </div>
     </div>
-    <div v-else class="no-reservations">
-      <p>No reservations found for {{ username }}.</p>
-    </div>
-  </div>
 </template>
 
 <script>
-import axios from 'axios';
+import axios from 'axios'
 
 export default {
-  name: 'Reservations',
+  name: 'HomeView',
   data() {
     return {
-      username: '',
-      reservations: []
-    };
+      cars: []
+    }
   },
-  methods: {
-    getAllReservations() {
-      axios.get('http://127.0.0.1:8000/accounts/reservations/', {
-        params: { username: this.username }
-      })
+  components: {
+  },
+  mounted(){
+    this.getCars()
+  },
+  methods:
+  {
+    getCars(){
+      axios
+        .get('http://127.0.0.1:8000/api/v1/browse/')
         .then(response => {
-          this.reservations = response.data.filter(reservation => reservation.profile_name === this.username);
-        })
-        .catch(error => {
-          console.error('Error fetching reservations:', error);
-        });
+          this.cars = response.data
+      })
+      .catch(error => {
+          console.log(error)
+      })
     }
   }
 }
 </script>
 
-<style>
-.reservations-container {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #ada3b8;
-  border-radius: 8px;
+<style scoped>
+.rental-car-list {
+    display: flex;
+    flex-wrap: wrap;
 }
-
-.input-field {
-  width: 200px;
-  padding: 8px;
-  margin-bottom: 10px;
+.rental-car {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 300px;
+    position: relative;
 }
-
-.btn-get-reservations {
-  padding: 8px 16px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+.rental-car img{
+    width:100%;
+    height: auto;
+    border-radius: 5px;
 }
+.details p:last-child {
+    position: absolute  ;
+    margin-top: 10px;
+    bottom: 5px;
+    right: 20px;
+    font: bold 20px Arial, sans-serif;
 
-.reservation-title {
-  color: #333;
+    
 }
-
-.reservation-list {
-  margin-top: 20px;
+.features{
+    display: flex;
+    align-items: flex-end;
 }
-
-.reservation-item {
-  margin-bottom: 10px;
-  padding: 10px;
-  background-color: #fff;
-  border-radius: 4px;
-}
-
-.reservation-info {
-  font-size: 14px;
-}
-
-.reservation-label {
-  font-weight: bold;
-  margin-right: 5px;
-}
-
-.no-reservations {
-  margin-top: 20px;
-  text-align: center;
-  font-size: 16px;
+.features img{
+    height: 50px;
+    width:50px ;
+    margin-right: 10px;
 }
 </style>
