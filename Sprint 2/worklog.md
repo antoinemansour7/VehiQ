@@ -39,7 +39,7 @@
 
 | Time (h) | Time Stamp            | Task                                                                                                                          |
 | :------: | ----------------------|------------------------------------------------------------------------------------------------------------------------------ |
-|   4.0    | Mar 1st - 10:45 - 14:45 | Peer programming with Julia and Jackson                                      |
+|   4.0    | Mar 1st - 10:45 - 14:45 | Peer programming with Julia and Cristina                                      |
 |    0.5   | Mar   2 - 15:00-15:30 |Created the vehicleListing component                                                                                           |
 |    3     | Mar   4 - 15:00-18:00 |Research and Test on how to use Axios library and Django REST framework                                                        |
 |    3     | Mar   4 - 20:00-23:00 |Created vehicule models,serializers,views.py and admin registration.               |
