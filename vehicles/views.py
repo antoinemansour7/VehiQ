@@ -9,6 +9,7 @@ def view_available_vehicles(request):
     available_vehicles = Car.objects.filter(reserved=False)
     return render(request, 'vehicles/view_available_vehicles.html', {'available_vehicles': available_vehicles})
 
+
 @login_required
 def add_car(request):
     if request.method == 'POST':
@@ -30,6 +31,7 @@ def list_company_cars(request):
     company_cars = Car.objects.filter(company_uuid=company_uuid)
     return render(request, 'vehicles/list_company_cars.html', {'company_cars': company_cars})
 
+
 @login_required
 def edit_car(request, car_id):
     car = get_object_or_404(Car, id=car_id, company_uuid=request.user.profile.company_uuid)
@@ -43,6 +45,7 @@ def edit_car(request, car_id):
         form = EditCarForm(instance=car)
 
     return render(request, 'vehicles/edit_car.html', {'form': form, 'car': car})
+
 
 @login_required
 def delete_car(request, car_id):

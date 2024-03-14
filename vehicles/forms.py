@@ -3,6 +3,7 @@ from django.utils import timezone
 from django import forms
 from .models import Car
 
+
 class AddCarForm(forms.ModelForm):
     class Meta:
         model = Car
@@ -20,7 +21,7 @@ class AddCarForm(forms.ModelForm):
 
         if year > current_year:
             raise forms.ValidationError("Invalid year. Please enter a valid year.")
-        
+
         return year
 
     def clean_price(self):
@@ -38,7 +39,7 @@ class AddCarForm(forms.ModelForm):
             raise forms.ValidationError("Mileage cannot be negative.")
 
         return mileage
-    
+
 
 class EditCarForm(forms.ModelForm):
     class Meta:
@@ -50,14 +51,14 @@ class EditCarForm(forms.ModelForm):
         self.fields['price'].required = True
         self.fields['mileage'].required = True
         self.fields['company_uuid'].widget = forms.HiddenInput()
-        
+
     def clean_year(self):
         year = self.cleaned_data['year']
         current_year = timezone.now().year
 
         if year > current_year:
             raise forms.ValidationError("Invalid year. Please enter a valid year.")
-        
+
         return year
 
     def clean_price(self):

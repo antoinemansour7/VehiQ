@@ -1,7 +1,8 @@
 from django.db import models
 
 # Create your models here.
-    
+
+
 class Car(models.Model):
     make = models.CharField(max_length=50, default='unknown')
     model = models.CharField(max_length=50, default='unknown')
