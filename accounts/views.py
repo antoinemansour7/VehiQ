@@ -1,21 +1,24 @@
-from django.shortcuts import get_object_or_404, render, redirect 
+from django.shortcuts import get_object_or_404, render, redirect
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import UserCreationForm  # noqa: F401
 from django.contrib.auth import login
 from vehicles.models import Car
 from .models import Reservation, Profile
-from .forms import ProfileForm, RegistrationForm, ReservationForm 
-from django.shortcuts import render, redirect
+from .forms import ProfileForm, RegistrationForm, ReservationForm
 from django.utils import timezone
 from django.db import IntegrityError
 from django.contrib import messages
 
+
 @login_required
 def user_dashboard(request):
     return render(request, 'accounts/user_dashboard.html')
+
+
 @login_required
 def company_dashboard(request):
     return render(request, 'accounts/company_dashboard.html')
+
 
 def register(request):
     if request.method == 'POST':
@@ -55,7 +58,6 @@ def edit_profile(request):
     return render(request, 'accounts/edit_profile.html', {'form': form})
 
 
-
 @login_required
 def make_reservation(request, car_id):
     car = get_object_or_404(Car, pk=car_id)
@@ -83,6 +85,7 @@ def user_reservations(request):
     user_reservations = Reservation.objects.filter(profile=request.user.profile)
     return render(request, 'accounts/user_reservations.html', {'user_reservations': user_reservations})
 
+
 @login_required
 def modify_or_delete_reservation(request, reservation_id):
     reservation = get_object_or_404(Reservation, id=reservation_id, profile=request.user.profile)
@@ -99,7 +102,7 @@ def modify_or_delete_reservation(request, reservation_id):
                 return redirect('user_reservations')
         elif 'delete' in request.POST:
             reservation.delete()
-            return redirect('user_reservations') 
+            return redirect('user_reservations')
     else:
         form = ReservationForm(instance=reservation)
 

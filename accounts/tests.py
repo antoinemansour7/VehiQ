@@ -1,10 +1,11 @@
 from django.test import TestCase
 from django.contrib.auth.models import User
 from .models import Profile
-from django.db.models.signals import post_save
-from django.dispatch import receiver
+from django.db.models.signals import post_save  # noqa: F401
+from django.dispatch import receiver  # noqa: F401
 from .forms import ProfileForm
 from django.urls import reverse
+
 
 class ProfileModelTests(TestCase):
 
@@ -32,7 +33,8 @@ class ProfileModelTests(TestCase):
         user_id = self.user.id
         self.user.delete()
         self.assertFalse(Profile.objects.filter(user_id=user_id).exists(), "Profile was not deleted when the User was deleted.")
-    
+
+
 class ProfileFormTests(TestCase):
 
     def test_phone_field_validation(self):
@@ -45,6 +47,7 @@ class ProfileFormTests(TestCase):
         form = ProfileForm(data=form_data)
         self.assertFalse(form.is_valid())
 
+
 class ProfileViewTests(TestCase):
 
     def setUp(self):
@@ -55,4 +58,3 @@ class ProfileViewTests(TestCase):
         response = self.client.get(reverse('accounts:edit_profile'))
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, 'form')
-

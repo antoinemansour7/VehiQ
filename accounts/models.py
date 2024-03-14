@@ -2,20 +2,21 @@ import uuid
 from django.utils import timezone
 from django.db import models
 from django.contrib.auth.models import User
-from django.db.models.signals import post_save, post_delete
-from django.dispatch import receiver
+from django.db.models.signals import post_save, post_delete  # noqa: F401
+from django.dispatch import receiver  # noqa: F401
 from vehicles.models import Car
+
 
 class Profile(models.Model):
     VISIBILITY_CHOICES = (
-        ('public', 'Public'), 
-        ('private', 'Private'), 
+        ('public', 'Public'),
+        ('private', 'Private'),
     )
 
     USER_TYPE_CHOICES = [
         ('individual', 'Individual'),
         ('company', 'Company'),
-    ]    
+    ]
 
     user = models.OneToOneField(User, on_delete=models.CASCADE, unique=True)
     user_type = models.CharField(max_length=10, choices=USER_TYPE_CHOICES, default='individual')
@@ -30,7 +31,7 @@ class Profile(models.Model):
     def __str__(self):
         return self.user.username
 
-    def profile_completion_status(self): 
+    def profile_completion_status(self):
         fields_filled = sum(bool(getattr(self, field.name)) for field in self._meta.fields)
         total_fields = len(self._meta.fields)
         completion_percentage = int((fields_filled / total_fields) * 100)
@@ -47,6 +48,6 @@ class Reservation(models.Model):
 
     def __str__(self):
         return f"{self.profile.user.username} has reserved {self.car} at {self.reservation_date}. "
-    
+
     def is_modification_allowed(self):
         return timezone.now <= self.modification_allowed_until

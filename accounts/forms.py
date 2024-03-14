@@ -4,12 +4,12 @@ from .models import Profile, Reservation
 from django.core.validators import RegexValidator
 from django.forms import ValidationError
 from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth.models import User
-from .models import Profile
+from django.contrib.auth.models import User  # noqa: F401
+
 
 class ProfileForm(forms.ModelForm):
     phone = forms.CharField(validators=[RegexValidator(regex=r'^\+?1?\d{9,15}$', message="Phone number must be entered in the format: '+999999999'. Up to 15 digits allowed.")])
-    
+
     class Meta:
         model = Profile
         fields = ['bio', 'phone']
@@ -19,16 +19,18 @@ class ProfileForm(forms.ModelForm):
         if 'badword' in bio:
             raise ValidationError("Please do not use bad words in your bio.")
         return bio
-    
+
+
 class ReservationForm(forms.ModelForm):
     class Meta:
         model = Reservation
-        fields = ['car', 'start_date', 'end_date',] 
+        fields = ['car', 'start_date', 'end_date',]
 
 
 def validate_no_special_characters(value):
     if any(char not in string.ascii_letters + string.digits for char in value):
         raise ValidationError("Special characters are not allowed.")
+
 
 class RegistrationForm(UserCreationForm):
     email = forms.EmailField()
