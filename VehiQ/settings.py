@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 import os
+import environ
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -38,9 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.gis'
     'accounts',
-    'vehicles'
-    
+    'vehicles',
+    'branch'
 ]
 
 MIDDLEWARE = [
@@ -75,12 +77,17 @@ WSGI_APPLICATION = 'VehiQ.wsgi.application'
 
 
 # Database
+env = environ.Env()
+environ.Env.read_env()  # Read .env file
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
+        'NAME': 'branch',
+        'USER': 'posgres',
+        'PASSWORD': env('DB_PASSWORD'),
+        'HOST': 'localhost',  # Or the IP address of your PostgreSQL server
+        'PORT': '5432',  # Default PostgreSQL port
     }
 }
 

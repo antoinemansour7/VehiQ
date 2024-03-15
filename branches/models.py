@@ -1,3 +1,9 @@
-from django.db import models  # noqa: F401
+from django.contrib.gis.db import models as geomodels
 
-# Create your models here.
+class Branch(geomodels.Model):
+    name = geomodels.CharField(max_length=255)
+    location = geomodels.PointField()
+    address = geomodels.CharField(max_length=255)
+
+    def __str__(self):
+        return self.name
