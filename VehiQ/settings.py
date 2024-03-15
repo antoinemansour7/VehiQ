@@ -11,12 +11,16 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 import os
-import environ
+from dotenv import load_dotenv
 from pathlib import Path
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# load the .env file
+dotenv_path = os.path.join(BASE_DIR, '.env')
+load_dotenv(dotenv_path)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
@@ -39,10 +43,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.contrib.gis'
+    'django.contrib.gis',
     'accounts',
     'vehicles',
-    'branch'
+    'branches'
 ]
 
 MIDDLEWARE = [
@@ -77,17 +81,15 @@ WSGI_APPLICATION = 'VehiQ.wsgi.application'
 
 
 # Database
-env = environ.Env()
-environ.Env.read_env()  # Read .env file
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 DATABASES = {
     'default': {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
-        'NAME': 'branch',
-        'USER': 'posgres',
-        'PASSWORD': env('DB_PASSWORD'),
-        'HOST': 'localhost',  # Or the IP address of your PostgreSQL server
-        'PORT': '5432',  # Default PostgreSQL port
+        'NAME': os.getenv('DB_NAME'),
+        'USER': os.getenv('DB_USER'),
+        'PASSWORD': os.getenv('DB_PASSWORD'),
+        'HOST': os.getenv('DB_HOST'),  # Or the IP address of your PostgreSQL server
+        'PORT': os.getenv('DB_PORT'),  # Default PostgreSQL port
     }
 }
 
