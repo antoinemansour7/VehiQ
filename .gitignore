@@ -11,6 +11,5 @@ local_settings.py
 # Virtual environment
 venv/
 
-# Environment variables
+# Environment Vaiables
 .env
-
