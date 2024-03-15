@@ -1,3 +1,7 @@
-from django.contrib import admin  # noqa: F401
+from django.contrib import admin
+from django.contrib.gis.admin import OSMGeoAdmin
+from .models import Branch
 
-# Register your models here.
+@admin.register(Branch)
+class BranchAdmin(OSMGeoAdmin):
+    list_display = ('name', 'location', 'address', 'city')

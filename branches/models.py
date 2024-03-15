@@ -5,6 +5,7 @@ class Branch(geomodels.Model):
     name = geomodels.CharField(max_length=255)
     location = geomodels.PointField()
     address = geomodels.CharField(max_length=255)
+    city = geomodels.CharField(max_length=50)
 
     def __str__(self):
         return self.name
