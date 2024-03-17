@@ -12,7 +12,7 @@
         <img v-if="car.is_electric" src="../assets/lightning.png" class="icon">
         <img v-if="car.is_all_wheel_drive" src="../assets/wheels.png" class="icon">
         <button @click="deleteCar(car.id)">Delete</button>
-        <button>Modify</button> #Create form Modify and link it onclick and Create form Create and link it onclick
+        <button>Modify</button><!--Create form Modify and link it onclick and Create form Create and link it onclick -->
         <button>Create</button>
       </div>
     </div>
@@ -47,6 +47,7 @@ export default {
         .then(() => {
           // Remove the deleted car from the local list
           this.cars = this.cars.filter(car => car.id !== id)
+          alert('Car deleted successfully')
         })
         .catch(error => {
           console.log(error)
