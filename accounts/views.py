@@ -107,3 +107,73 @@ def modify_or_delete_reservation(request, reservation_id):
         form = ReservationForm(instance=reservation)
 
     return render(request, 'accounts/modify_or_delete_reservation.html', {'form': form, 'reservation': reservation})
+
+
+######################################################################
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework import status
+from django.contrib.auth.models import User
+from rest_framework.response import Response
+from rest_framework import status
+
+class CreateUserAPIView(APIView):
+    def post(self, request):
+        username = request.data.get('username')
+        email = request.data.get('email')
+        password = request.data.get('password')
+
+        if not (username and email and password):
+            return Response({'error': 'Please provide username, email, and password'}, status=status.HTTP_400_BAD_REQUEST)
+        
+        # Check if username or email already exists
+        if User.objects.filter(username=username).exists() or User.objects.filter(email=email).exists():
+            return Response({'error': 'Username or email already exists'}, status=status.HTTP_400_BAD_REQUEST)
+
+        # Create user
+        user = User.objects.create_superuser(username=username, email=email, password=password)
+        
+        return Response({'message': 'User created successfully'}, status=status.HTTP_201_CREATED)
+    
+
+from django.contrib.auth import authenticate, login
+from django.http import JsonResponse
+
+def login_view(request):
+    if request.method == 'POST':
+        # Retrieve username/email and password from request data
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+
+        # Authenticate user
+        user = authenticate(request, username=username, password=password)
+
+        if user is not None:
+            # Login successful
+            login(request, user)
+            return JsonResponse({'message': 'Login successful'})
+        else:
+            # Login failed
+            return JsonResponse({'error': 'Invalid username/email or password'}, status=400)
+
+    # Handle other HTTP methods (e.g., GET) or invalid requests
+    return JsonResponse({'error': 'Method not allowed'}, status=405)
+
+from django.shortcuts import render
+
+
+from rest_framework.response import Response
+
+from .models import Reservation, Profile
+from .serializers import ProfileSerializer, ReservationSerializer
+
+from rest_framework import viewsets
+
+
+class AllReservations(viewsets.ModelViewSet):
+    queryset = Reservation.objects.all()
+    serializer_class = ReservationSerializer
+
+class AllProfiles(viewsets.ModelViewSet):
+    queryset = Profile.objects.all()
+    serializer_class = ProfileSerializer
