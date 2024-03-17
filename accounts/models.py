@@ -13,14 +13,8 @@ class Profile(models.Model):
         ('private', 'Private'),
     )
 
-    USER_TYPE_CHOICES = [
-        ('individual', 'Individual'),
-        ('company', 'Company'),
-    ]
-
-    user = models.OneToOneField(User, on_delete=models.CASCADE, unique=True)
-    user_type = models.CharField(max_length=10, choices=USER_TYPE_CHOICES, default='individual')
-    # Example additional fields
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    id = models.AutoField(primary_key=True)
     bio = models.TextField(blank=True, null=True)
     phone = models.CharField(max_length=20, blank=True, null=True)
     visibility = models.CharField(max_length=7, choices=VISIBILITY_CHOICES, default='public')
@@ -39,6 +33,7 @@ class Profile(models.Model):
 
 
 class Reservation(models.Model):
+    id = models.AutoField(primary_key=True)
     car = models.OneToOneField(Car, on_delete=models.CASCADE)
     profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
     start_date = models.DateTimeField(default=timezone.now)

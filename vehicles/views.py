@@ -3,20 +3,20 @@ from vehicles.forms import AddCarForm, EditCarForm
 from django.contrib.auth.decorators import login_required
 from .models import Car
 
-from rest_framework.views import APIView
+
 from rest_framework.response import Response
 
 from .models import Car
 from .serializer import CarSerializer
 
+from rest_framework import viewsets
 
 
 
-class AvailableVehicles(APIView):
-    def get(self, request, format=None):
-        cars = Car.objects.all()
-        serializer = CarSerializer(cars, many=True)
-        return Response(serializer.data)
+
+class AvailableVehicles(viewsets.ModelViewSet):
+    queryset = Car.objects.all()
+    serializer_class = CarSerializer
     
 
     

@@ -17,6 +17,18 @@ class ReservationSerializer(serializers.ModelSerializer):
     def get_profile_name(self, obj):
         return obj.profile.user.username if obj.profile else None
     
+from rest_framework import serializers
+from .models import Profile
+
+class ProfileSerializer(serializers.ModelSerializer):
+    user = serializers.SerializerMethodField()
+
+    class Meta:
+        model = Profile
+        fields = ("id", "user", "bio", "phone", "visibility", "profile_completion_status")
+
+    def get_user(self, obj):
+        return obj.user.username if obj.user else None
 
 
 

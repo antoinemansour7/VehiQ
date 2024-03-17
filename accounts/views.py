@@ -160,13 +160,20 @@ def login_view(request):
     return JsonResponse({'error': 'Method not allowed'}, status=405)
 
 from django.shortcuts import render
-from rest_framework.views import APIView
-from rest_framework.response import Response
-from .models import Reservation
-from .serializers import ReservationSerializer
 
-class AllReservations(APIView):
-    def get(self, request, format=None):
-        reservations = Reservation.objects.all()
-        serializer = ReservationSerializer(reservations, many=True)
-        return Response(serializer.data)
+
+from rest_framework.response import Response
+
+from .models import Reservation, Profile
+from .serializers import ProfileSerializer, ReservationSerializer
+
+from rest_framework import viewsets
+
+
+class AllReservations(viewsets.ModelViewSet):
+    queryset = Reservation.objects.all()
+    serializer_class = ReservationSerializer
+
+class AllProfiles(viewsets.ModelViewSet):
+    queryset = Profile.objects.all()
+    serializer_class = ProfileSerializer
