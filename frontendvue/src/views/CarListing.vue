@@ -1,5 +1,6 @@
 <template>
   <h1>Available Cars</h1>
+  <button @click="openCreateCarForm">Create</button>
   <div class="rental-car-list">
     <div v-for="car in cars" :key="car.id" class="rental-car">
       <img :src="car.get_image" alt="Car Image">
@@ -13,7 +14,6 @@
         <img v-if="car.is_all_wheel_drive" src="../assets/wheels.png" class="icon">
         <button @click="deleteCar(car.id)">Delete</button>
         <button>Modify</button><!--Create form Modify and link it onclick and Create form Create and link it onclick -->
-        <button>Create</button>
       </div>
     </div>
   </div>
@@ -52,6 +52,9 @@ export default {
         .catch(error => {
           console.log(error)
         })
+    },
+    openCreateCarForm() {
+      this.$router.push('/createCar')
     }
   }
 }
