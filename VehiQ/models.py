@@ -1,5 +1,4 @@
 from django.db import models  # noqa: F401
-from accounts.models import Profile  # noqa: F401
 
 # class Company(models.Model):
 #     name = models.CharField(max_length=100)

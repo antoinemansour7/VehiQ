@@ -7,13 +7,12 @@ from .models import Car
 class AddCarForm(forms.ModelForm):
     class Meta:
         model = Car
-        fields = ['make', 'model', 'year', 'price', 'mileage', 'image', 'company_uuid']
+        fields = ['make', 'model', 'year', 'price', 'mileage', 'image', ]
 
     def __init__(self, *args, **kwargs):
         super(AddCarForm, self).__init__(*args, **kwargs)
         self.fields['price'].required = True
         self.fields['mileage'].required = True
-        self.fields['company_uuid'].widget = forms.HiddenInput()
 
     def clean_year(self):
         year = self.cleaned_data['year']
@@ -44,13 +43,12 @@ class AddCarForm(forms.ModelForm):
 class EditCarForm(forms.ModelForm):
     class Meta:
         model = Car
-        fields = ['make', 'model', 'year', 'price', 'mileage', 'image', 'company_uuid']
+        fields = ['make', 'model', 'year', 'price', 'mileage', 'image', ]
 
     def __init__(self, *args, **kwargs):
         super(EditCarForm, self).__init__(*args, **kwargs)
         self.fields['price'].required = True
         self.fields['mileage'].required = True
-        self.fields['company_uuid'].widget = forms.HiddenInput()
 
     def clean_year(self):
         year = self.cleaned_data['year']
