@@ -7,6 +7,7 @@ class Car(models.Model):
     id = models.AutoField(primary_key=True)
     make = models.CharField(max_length=100, default='')
     model = models.CharField(max_length=100, default='')
+    mileage = models.PositiveIntegerField(default=0)
     year = models.IntegerField(default=0)
     price = models.DecimalField(max_digits=10, decimal_places=2, default=0.0)
     image = models.ImageField(upload_to='uploads/', blank=True, null=True)
