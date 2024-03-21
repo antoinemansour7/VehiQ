@@ -9,8 +9,8 @@ class CustomUserAdmin(BaseUserAdmin):
     search_fields = ('username', 'email')
 
 # Re-register UserAdmin
-admin.site.unregister(User)
-admin.site.register(User, UserAdmin)
+# admin.site.unregister(User)
+# admin.site.register(User, UserAdmin)
 
 # Register CustomUserAdmin for CustomUser model
 admin.site.register(CustomUser, CustomUserAdmin)
