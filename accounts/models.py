@@ -12,6 +12,11 @@ class Profile(models.Model):
         ('public', 'Public'),
         ('private', 'Private'),
     )
+    
+    USER_TYPE_CHOICES = (
+        ('customer', 'Customer'),
+        ('admin', 'Admin'),
+    )
 
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     id = models.AutoField(primary_key=True)
