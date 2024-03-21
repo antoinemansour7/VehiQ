@@ -4,6 +4,8 @@ import CarListing from '../views/CarListing.vue'
 import AccountProfile from '../views/AccountProfile.vue'
 import SignUp from '../views/SignUp.vue'
 import Reservations from '../views/Reservations.vue'
+import LogIn from '../views/LogIn.vue'
+import LogOut from '../views/LogOut.vue'
 const routes = [
   {
     path: '/',
@@ -29,6 +31,17 @@ const routes = [
     path: '/reservations',
     name: 'Reservations',
     component: Reservations
+  },
+  {
+    path: '/logIn',
+    name: 'LogIn',
+    component: LogIn
+  }
+  ,
+  {
+    path: '/logOut',
+    name: 'LogOut',
+    component: LogOut
   }
 ]
 

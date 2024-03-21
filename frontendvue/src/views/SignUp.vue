@@ -15,7 +15,6 @@
         <input type="password" id="password" v-model="formData.password" required>
       </div>
       <button type="submit">Sign Up</button>
-      <button type="button" @click="logInAsAdmin">Log In as Admin</button>
     </form>
   </div>
 </template>
@@ -44,24 +43,16 @@ export default {
           console.error('There was an error!', error);
           alert('User signed up successfully!'); 
         });
-    },
-    logInAsAdmin() {
-      // Logic to handle signing up as admin
-      console.log('Signing up as admin with data:', this.formData);
-      // Reset form data after submission
-      this.formData = {
-        username: '',
-        email: '',
-        password: ''
-      };
-      // Redirect to login page
-      window.location.href = 'http://127.0.0.1:8000/admin/';
     }
   }
 }
 </script>
 
 <style scoped>
+h1, p{
+  color: #544e63;
+}
+
 .signup-container {
   max-width: 400px;
   margin: 0 auto;

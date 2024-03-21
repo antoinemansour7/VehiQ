@@ -41,18 +41,13 @@ export default {
   height: auto;
 }
 
-h1 {
-  color: #333;
-}
-
-h3 {
-  color: #333;
+h1, h3, p{
+  color: #544e63;
 }
 
 .welcome-text {
   font-size: 18px;
   line-height: 1.6;
-  color: #555;
 }
 
 .firework {
