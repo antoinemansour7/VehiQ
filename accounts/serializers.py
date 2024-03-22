@@ -23,7 +23,7 @@ class UserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = CustomUser
-        fields = ("id", "user", "phone", "visibility")
+        fields = ("id", "user", "phone", "visibility", "email", "first_name", "last_name", "is_staff", "is_active", "date_joined")
 
     def get_user(self, obj):
         return obj.username if obj else None
