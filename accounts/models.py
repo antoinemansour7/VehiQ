@@ -1,4 +1,4 @@
-import uuid
+
 from django.utils import timezone
 from django.db import models
 from django.contrib.auth.models import AbstractUser
@@ -11,6 +11,11 @@ class CustomUser(AbstractUser):
     VISIBILITY_CHOICES = (
         ('public', 'Public'),
         ('private', 'Private'),
+    )
+    
+    USER_TYPE_CHOICES = (
+        ('customer', 'Customer'),
+        ('admin', 'Admin'),
     )
 
     phone = models.CharField(max_length=10, blank=True, null=True)

@@ -7,6 +7,11 @@ export default {
   components: { SidebarLink },
   setup() {
     return { collapsed, toggleSidebar, sidebarWidth }
+  },
+  methods: {
+    handleLogout(){
+      
+    }
   }
 }
 </script>
@@ -25,11 +30,12 @@ export default {
 
     <SidebarLink to="/" icon="fas fa-home">Home</SidebarLink>
     <SidebarLink to="/profile" icon="fas fa-user">Profile</SidebarLink>
-    <SidebarLink to="/carListing" icon="fas fa-columns">Car Listing</SidebarLink>
-    <SidebarLink to="/signUp" icon="fas fa-arrow-right">Sign Up</SidebarLink>
+    <SidebarLink to="/carListing" icon="fas fa-car">Car Listing</SidebarLink>
     <SidebarLink to="/reservations" icon="fas fa-calendar">Reservations</SidebarLink>
-    <SidebarLink to="/blankPage" icon="fas fa-calendar">Blank Page</SidebarLink>
-    <SidebarLink to="/viewUsers" icon="fas fa-calendar">View Users</SidebarLink>
+    <SidebarLink to="/viewReservations" icon="fas fa-list-alt">View Reservations</SidebarLink>
+    <SidebarLink to="/signUp" icon="fas fa-user-plus">Sign Up</SidebarLink>
+    <SidebarLink to="/logIn" icon="fas fa-sign-in-alt">Log In</SidebarLink>
+    <SidebarLink to="/logOut" icon="fas fa-sign-out-alt" @click="handleLogout">Log Out</SidebarLink>
 
     <span
       class="collapse-icon"
@@ -97,4 +103,5 @@ export default {
   width: 60px; 
   height: auto;
 }
+
 </style>
