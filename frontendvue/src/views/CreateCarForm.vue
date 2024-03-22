@@ -170,6 +170,8 @@ button:hover {
 
 
 <script>
+import axios from 'axios';
+
 export default {
   data() {
     return {
@@ -192,8 +194,25 @@ export default {
       }
     },
     submitForm() {
-      // You can handle form submission logic here
-      console.log(this.car);
+      axios.post('http://127.0.0.1:8000/vehicles/cars/', this.car)
+        .then(response => {
+          console.log("Car added successfully", response.data);
+          this.resetForm();
+        })
+        .catch(error => {
+          console.error('Error adding car:', error);
+        });
+    },
+    resetForm() {
+      this.car = {
+        make: '',
+        model: '',
+        year: null,
+        price: null,
+        electric: false,
+        allWheelDrive: false,
+        image: null
+      };
     }
   }
 };
