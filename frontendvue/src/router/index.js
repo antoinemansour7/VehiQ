@@ -5,6 +5,7 @@ import AccountProfile from '../views/AccountProfile.vue'
 import SignUp from '../views/SignUp.vue'
 import Reservations from '../views/Reservations.vue'
 import BlankPage from '../views/BlankPage.vue'
+import ViewUsers from '../views/ViewUsers.vue'
 const routes = [
   {
     path: '/',
@@ -35,6 +36,11 @@ const routes = [
     path: '/blankPage',
     name: 'BlankPage',
     component: BlankPage
+  },
+  {
+    path: '/viewUsers',
+    name: 'ViewUsers',
+    component: ViewUsers
   }
 ]
 

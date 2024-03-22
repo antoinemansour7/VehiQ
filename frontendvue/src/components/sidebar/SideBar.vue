@@ -29,6 +29,7 @@ export default {
     <SidebarLink to="/signUp" icon="fas fa-arrow-right">Sign Up</SidebarLink>
     <SidebarLink to="/reservations" icon="fas fa-calendar">Reservations</SidebarLink>
     <SidebarLink to="/blankPage" icon="fas fa-calendar">Blank Page</SidebarLink>
+    <SidebarLink to="/viewUsers" icon="fas fa-calendar">View Users</SidebarLink>
 
     <span
       class="collapse-icon"
