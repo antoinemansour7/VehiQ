@@ -4,8 +4,15 @@ import CarListing from '../views/CarListing.vue'
 import AccountProfile from '../views/AccountProfile.vue'
 import SignUp from '../views/SignUp.vue'
 import Reservations from '../views/Reservations.vue'
+<<<<<<< Updated upstream
 import BlankPage from '../views/BlankPage.vue'
 import ViewUsers from '../views/ViewUsers.vue'
+=======
+import LogIn from '../views/LogIn.vue'
+import LogOut from '../views/LogOut.vue'
+import ViewReservations from '../views/ViewReservations.vue'
+
+>>>>>>> Stashed changes
 const routes = [
   {
     path: '/',
@@ -33,6 +40,7 @@ const routes = [
     component: Reservations
   },
   {
+<<<<<<< Updated upstream
     path: '/blankPage',
     name: 'BlankPage',
     component: BlankPage
@@ -41,6 +49,21 @@ const routes = [
     path: '/viewUsers',
     name: 'ViewUsers',
     component: ViewUsers
+=======
+    path: '/logIn',
+    name: 'LogIn',
+    component: LogIn
+  },
+  {
+    path: '/logOut',
+    name: 'LogOut',
+    component: LogOut
+  },
+  {
+    path: '/viewReservations',
+    name: 'ViewReservations',
+    component: ViewReservations
+>>>>>>> Stashed changes
   }
 ]
 
