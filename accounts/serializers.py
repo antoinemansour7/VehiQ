@@ -9,7 +9,7 @@ class ReservationSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Reservation
-        fields = ("car_name", "user_name", "start_date", "end_date", "reservation_date")
+        fields = ('id',"car_name", "user_name", "start_date", "end_date", "reservation_date")
     
     def get_car_name(self, obj):
         return f"{obj.car.make} {obj.car.model}" if obj.car else None
