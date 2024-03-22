@@ -34,7 +34,7 @@ export default {
   },
   methods: {
     submitForm() {
-      axios.post('http://127.0.0.1:8000/accounts/create_user/', this.formData)
+      axios.post('http://127.0.0.1:8000/accounts/user/', this.formData)
         .then(response => {
           console.log('User signed up:', response.data);
           alert('User signed up successfully!'); 

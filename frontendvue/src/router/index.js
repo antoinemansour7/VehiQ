@@ -6,6 +6,8 @@ import SignUp from '../views/SignUp.vue'
 import Reservations from '../views/Reservations.vue'
 import LogIn from '../views/LogIn.vue'
 import LogOut from '../views/LogOut.vue'
+import BlankPage from '../views/BlankPage.vue'
+
 const routes = [
   {
     path: '/',
@@ -36,12 +38,16 @@ const routes = [
     path: '/logIn',
     name: 'LogIn',
     component: LogIn
-  }
-  ,
+  },
   {
     path: '/logOut',
     name: 'LogOut',
     component: LogOut
+  },
+  {
+    path: '/blankPage',
+    name: 'BlankPage',
+    component: BlankPage
   }
 ]
 

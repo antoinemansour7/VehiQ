@@ -32,6 +32,7 @@ export default {
     <SidebarLink to="/profile" icon="fas fa-user">Profile</SidebarLink>
     <SidebarLink to="/carListing" icon="fas fa-car">Car Listing</SidebarLink>
     <SidebarLink to="/reservations" icon="fas fa-calendar">Reservations</SidebarLink>
+    <SidebarLink to="/blankPage" icon="fas fa-calendar">Blank Page</SidebarLink>
     <SidebarLink to="/signUp" icon="fas fa-user-plus">Sign Up</SidebarLink>
     <SidebarLink to="/logIn" icon="fas fa-sign-in-alt">Log In</SidebarLink>
     <SidebarLink to="/logOut" icon="fas fa-sign-out-alt" @click="handleLogout">Log Out</SidebarLink>
