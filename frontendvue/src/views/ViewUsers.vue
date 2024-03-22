@@ -80,5 +80,17 @@
       display: flex;
       align-items: flex-end;
   }
+  button {
+  background-color: #ada3b8;
+  color: #fff;
+  cursor: pointer;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #90839c;
+}
   </style>
   

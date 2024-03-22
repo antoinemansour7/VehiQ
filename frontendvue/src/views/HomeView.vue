@@ -41,10 +41,6 @@ export default {
   height: auto;
 }
 
-h1, h3, p{
-  color: #544e63;
-}
-
 .welcome-text {
   font-size: 18px;
   line-height: 1.6;
