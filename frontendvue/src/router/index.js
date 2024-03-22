@@ -4,7 +4,10 @@ import CarListing from '../views/CarListing.vue'
 import AccountProfile from '../views/AccountProfile.vue'
 import SignUp from '../views/SignUp.vue'
 import Reservations from '../views/Reservations.vue'
-import BlankPage from '../views/BlankPage.vue'
+import LogIn from '../views/LogIn.vue'
+import LogOut from '../views/LogOut.vue'
+import ViewReservations from '../views/ViewReservations.vue'
+
 const routes = [
   {
     path: '/',
@@ -32,9 +35,19 @@ const routes = [
     component: Reservations
   },
   {
-    path: '/blankPage',
-    name: 'BlankPage',
-    component: BlankPage
+    path: '/logIn',
+    name: 'LogIn',
+    component: LogIn
+  },
+  {
+    path: '/logOut',
+    name: 'LogOut',
+    component: LogOut
+  },
+  {
+    path: '/viewReservations',
+    name: 'ViewReservations',
+    component: ViewReservations
   }
 ]
 

@@ -57,6 +57,10 @@ export default {
 </script>
 
 <style scoped>
+h1, p{
+  color: #544e63;
+}
+
 .signup-container {
   max-width: 500px;
   margin: 0 auto;
