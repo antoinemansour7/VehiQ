@@ -4,11 +4,22 @@ import CarListing from '../views/CarListing.vue'
 import AccountProfile from '../views/AccountProfile.vue'
 import SignUp from '../views/SignUp.vue'
 import Reservations from '../views/Reservations.vue'
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+import BlankPage from '../views/BlankPage.vue'
+import ViewUsers from '../views/ViewUsers.vue'
+=======
+=======
 import CreateCarForm from '../views/CreateCarForm.vue'
+>>>>>>> ee0176d520bd9686f1ec9a99823133d2f0e716f0
 import LogIn from '../views/LogIn.vue'
 import LogOut from '../views/LogOut.vue'
 import ViewReservations from '../views/ViewReservations.vue'
 
+<<<<<<< HEAD
+>>>>>>> Stashed changes
+=======
+>>>>>>> ee0176d520bd9686f1ec9a99823133d2f0e716f0
 const routes = [
   {
     path: '/',
@@ -36,11 +47,24 @@ const routes = [
     component: Reservations
   },
   {
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+    path: '/blankPage',
+    name: 'BlankPage',
+    component: BlankPage
+  },
+  {
+    path: '/viewUsers',
+    name: 'ViewUsers',
+    component: ViewUsers
+=======
+=======
     path: '/createCar',
     name: 'createCar',
     component: CreateCarForm
   },
   {
+>>>>>>> ee0176d520bd9686f1ec9a99823133d2f0e716f0
     path: '/logIn',
     name: 'LogIn',
     component: LogIn
@@ -54,6 +78,10 @@ const routes = [
     path: '/viewReservations',
     name: 'ViewReservations',
     component: ViewReservations
+<<<<<<< HEAD
+>>>>>>> Stashed changes
+=======
+>>>>>>> ee0176d520bd9686f1ec9a99823133d2f0e716f0
   }
 ]
 
