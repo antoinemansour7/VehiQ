@@ -8,7 +8,4 @@
 </script>
 
 <style scoped>
-h1, p{
-    color: #544e63;
-}
 </style>

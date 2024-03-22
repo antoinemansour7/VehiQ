@@ -69,9 +69,6 @@ export default {
 </script>
 
 <style scoped>
-h1, h3, p{
-  color: #544e63;
-}
 .rental-car-list {
     display: flex;
     flex-wrap: wrap;
