@@ -5,6 +5,10 @@ import AccountProfile from '../views/AccountProfile.vue'
 import SignUp from '../views/SignUp.vue'
 import Reservations from '../views/Reservations.vue'
 import CreateCarForm from '../views/CreateCarForm.vue'
+import LogIn from '../views/LogIn.vue'
+import LogOut from '../views/LogOut.vue'
+import ViewReservations from '../views/ViewReservations.vue'
+
 const routes = [
   {
     path: '/',
@@ -35,6 +39,21 @@ const routes = [
     path: '/createCar',
     name: 'createCar',
     component: CreateCarForm
+  },
+  {
+    path: '/logIn',
+    name: 'LogIn',
+    component: LogIn
+  },
+  {
+    path: '/logOut',
+    name: 'LogOut',
+    component: LogOut
+  },
+  {
+    path: '/viewReservations',
+    name: 'ViewReservations',
+    component: ViewReservations
   }
 ]
 
