@@ -4,6 +4,7 @@ import CarListing from '../views/CarListing.vue'
 import AccountProfile from '../views/AccountProfile.vue'
 import SignUp from '../views/SignUp.vue'
 import Reservations from '../views/Reservations.vue'
+import BlankPage from '../views/BlankPage.vue'
 const routes = [
   {
     path: '/',
@@ -29,6 +30,11 @@ const routes = [
     path: '/reservations',
     name: 'Reservations',
     component: Reservations
+  },
+  {
+    path: '/blankPage',
+    name: 'BlankPage',
+    component: BlankPage
   }
 ]
 

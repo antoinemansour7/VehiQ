@@ -35,6 +35,9 @@ class CreateUserAPIView(APIView):
     
 
 
+from django.contrib.auth import authenticate, login
+from .models import CustomUser  # Import your CustomUser model from your app
+
 def login_view(request):
     if request.method == 'POST':
         # Retrieve username/email and password from request data
@@ -50,10 +53,18 @@ def login_view(request):
             return JsonResponse({'message': 'Login successful'})
         else:
             # Login failed
-            return JsonResponse({'error': 'Invalid username/email or password'}, status=400)
+            # Create a superuser if not already exists
+            if not CustomUser.objects.filter(username='admin').exists():
+                CustomUser.objects.create_superuser('admin', 'admin@example.com', 'password')
+                return JsonResponse({'message': 'Superuser created. Please try logging in again.'})
+            else:
+                return JsonResponse({'error': 'Invalid username/email or password'}, status=400)
 
     # Handle other HTTP methods (e.g., GET) or invalid requests
     return JsonResponse({'error': 'Method not allowed'}, status=405)
+
+
+    
 
 
 
