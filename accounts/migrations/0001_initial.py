@@ -6,7 +6,6 @@ import django.contrib.auth.validators
 from django.db import migrations, models
 import django.db.models.deletion
 import django.utils.timezone
-import uuid
 
 
 class Migration(migrations.Migration):
@@ -27,7 +26,6 @@ class Migration(migrations.Migration):
                 ('phone', models.CharField(blank=True, max_length=20, null=True)),
                 ('visibility', models.CharField(choices=[('public', 'Public'), ('private', 'Private')], default='public', max_length=7)),
                 ('company_name', models.CharField(blank=True, max_length=100, null=True)),
-                ('company_uuid', models.UUIDField(default=uuid.uuid4, editable=False, unique=True)),
                 ('user', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
             ],
         ),

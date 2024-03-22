@@ -11,7 +11,6 @@ class Car(models.Model):
     year = models.IntegerField(default=0)
     price = models.DecimalField(max_digits=10, decimal_places=2, default=0.0)
     image = models.ImageField(upload_to='uploads/', blank=True, null=True)
-    company_uuid = models.CharField(max_length=100, default='')
     is_electric = models.BooleanField(default=False)
     is_all_wheel_drive = models.BooleanField(default=False)
     
