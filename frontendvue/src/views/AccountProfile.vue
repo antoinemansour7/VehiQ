@@ -7,25 +7,28 @@
     </div>
     <div v-if="activeTab === 'profile'">
       <form @submit.prevent="saveProfile" class="signup-form">
-        <div class="form-row">
+        <div class="form-group">
           <label for="username">Username:</label>
           <input type="text" id="username" v-model="formData.username" :disabled="!isEditMode" required>
         </div>
-        <div class="form-row">
+        <div class="form-group">
           <label for="email">Email:</label>
           <input type="email" id="email" v-model="formData.email" :disabled="!isEditMode" required>
         </div>
-        <div class="form-row">
+        <div class="form-group">
           <label for="password">Password:</label>
           <input type="password" id="password" v-model="formData.password" :disabled="!isEditMode" required>
         </div>
-        <div class="form-row">
-          <button v-if="!isEditMode" type="button" class="save-button" @click="toggleEditMode">Edit</button>
-          <button v-else type="submit" class="save-button">Save Profile</button>
-        </div>
       </form>
+      <div class="button-container">
+        <button v-if="!isEditMode" type="button" class="save-button" @click="toggleEditMode" style="width: 340px;">Edit</button>
+        <button v-else type="submit" class="save-button" @click="saveProfile">Save Profile</button>
+      </div>
     </div>
     <div v-else-if="activeTab === 'reservations'">
+      <button class="report-button" @click="redirectToUserReport">
+        Report Something <span class="icon"><i class="fas fa-flag"></i></span>
+      </button>
       <p>Your reservation details go here.</p>
     </div>
   </div>
@@ -47,30 +50,35 @@ export default {
   methods: {
     saveProfile() {
       console.log('Profile saved with data:', this.formData);
-      this.isEditMode = false;
+      this.isEditMode = !this.isEditMode;
     },
     toggleEditMode() {
       this.isEditMode = !this.isEditMode;
+    },
+    redirectToUserReport() {
+      this.$router.push('/userReport');
     }
   }
 };
 </script>
 
 <style scoped>
-
 .signup-container {
   max-width: 500px;
   margin: 0 auto;
   padding: 20px;
   border-radius: 5px;
+  background-color: #f1eff3;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .tabs {
+  display: flex;
   margin-bottom: 20px;
-  font-size: 20px;
 }
 
 .tab {
+  flex: 1;
   background-color: #d8d2de;
   color: white;
   border: none;
@@ -108,40 +116,54 @@ input[type="text"],
 input[type="email"],
 input[type="password"],
 button {
-  padding: 6px 12px;
+  padding: 10px;
   border: 1px solid #ada3b8;
   border-radius: 5px;
 }
 
-.save-button{
-  width: 340px;
-}
-
-button {
+button.save-button {
   background-color: #ada3b8;
   color: #fff;
   cursor: pointer;
 }
 
-button:hover {
+button.save-button.edit-mode {
+  width: auto;
+}
+
+button.save-button:hover {
   background-color: #90839c;
 }
 
-.signup-form {
-  display: flex;
-  flex-direction: column;
-}
-
-.form-row {
+.form-group {
   display: flex;
   align-items: center;
-  margin-left: 80px;
-  margin-bottom: 15px; /* Adjust as needed */
 }
 
-.form-row label {
-  width: 120px; /* Set a fixed width for labels to ensure consistent alignment */
-  margin-right: 10px; /* Adjust as needed */
+.form-group label {
+  min-width: 120px;
+  margin-right: 10px;
 }
 
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.button-container button {
+  margin: 10px;
+}
+
+.report-button {
+  background-color: #ada3b8;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.report-button:hover {
+  background-color: #90839c;
+}
 </style>
