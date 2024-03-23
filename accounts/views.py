@@ -1,73 +1,50 @@
-from django.contrib.auth import authenticate, login
-from django.http import JsonResponse
-from django.shortcuts import render
-
-
-from rest_framework.response import Response
-
-from .models import CustomUser, Reservation
-from .serializers import UserSerializer, ReservationSerializer
-
-from rest_framework import viewsets
-
-from rest_framework.views import APIView
+from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
+from django.http import JsonResponse
+from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
-
+from .models import CustomUser, Reservation
+from .serializers import UserSerializer, ReservationSerializer
+from rest_framework import viewsets
 class CreateUserAPIView(APIView):
     def post(self, request):
         username = request.data.get('username')
-        email = request.data.get('email')
+        password = request.data.get('password')
+        user_type = request.data.get('user_type') 
+
+        if not (username and password and user_type):
+            return Response({'error': 'Please provide username, password, and user_type'}, status=status.HTTP_400_BAD_REQUEST)
+
+        if CustomUser.objects.filter(username=username).exists():
+            return Response({'error': 'Username already exists'}, status=status.HTTP_400_BAD_REQUEST)
+
+        # Create user based on user_type
+        user = CustomUser.objects.create_user(username=username, password=password, user_type=user_type)
+
+        return Response({'message': 'User created successfully'}, status=status.HTTP_201_CREATED)
+
+class LoginAPIView(APIView):
+    def post(self, request):
+        username = request.data.get('username')
         password = request.data.get('password')
 
-        if not (username and email and password):
-            return Response({'error': 'Please provide username, email, and password'}, status=status.HTTP_400_BAD_REQUEST)
-        
-        # Check if username or email already exists
-        if User.objects.filter(username=username).exists() or User.objects.filter(email=email).exists():
-            return Response({'error': 'Username or email already exists'}, status=status.HTTP_400_BAD_REQUEST)
+        if not (username and password):
+            return Response({'error': 'Please provide username and password'}, status=status.HTTP_400_BAD_REQUEST)
 
-        # Create user
-        user = User.objects.create_superuser(username=username, email=email, password=password)
-        
-        return Response({'message': 'User created successfully'}, status=status.HTTP_201_CREATED)
-    
-
-
-from django.contrib.auth import authenticate, login
-from .models import CustomUser  # Import your CustomUser model from your app
-
-def login_view(request):
-    if request.method == 'POST':
-        # Retrieve username/email and password from request data
-        username = request.POST.get('username')
-        password = request.POST.get('password')
-
-        # Authenticate user
         user = authenticate(request, username=username, password=password)
-
+        
         if user is not None:
-            # Login successful
             login(request, user)
-            return JsonResponse({'message': 'Login successful'})
+            return Response({'message': 'Login successful'})
         else:
-            # Login failed
-            # Create a superuser if not already exists
-            if not CustomUser.objects.filter(username='admin').exists():
-                CustomUser.objects.create_superuser('admin', 'admin@example.com', 'password')
-                return JsonResponse({'message': 'Superuser created. Please try logging in again.'})
-            else:
-                return JsonResponse({'error': 'Invalid username/email or password'}, status=400)
+            return Response({'error': 'Invalid username or password'}, status=status.HTTP_401_UNAUTHORIZED)
 
-    # Handle other HTTP methods (e.g., GET) or invalid requests
-    return JsonResponse({'error': 'Method not allowed'}, status=405)
-
-
+class LogoutAPIView(APIView):
+    def post(self, request):
+        logout(request)
+        return Response({'message': 'Logout successful'}, status=status.HTTP_200_OK)
     
-
-
-
 
 class AllReservations(viewsets.ModelViewSet):
     queryset = Reservation.objects.all()

@@ -16,6 +16,7 @@ class CustomUser(AbstractUser):
     USER_TYPE_CHOICES = (
         ('customer', 'Customer'),
         ('admin', 'Admin'),
+        ('csr', 'CSR'),
     )
 
     phone = models.CharField(max_length=10, blank=True, null=True)
