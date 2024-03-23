@@ -6,7 +6,8 @@
 | :------: | ----------------------|------------------------------------------------------------------------------------------------------------------------ |
 |   1.5     | Mar 20 19:30-21:00 |Created a login UI for both users and admins. Also create a logout button.|
 |   0.25     | Mar 21 17:00-17:15 |Created a new page for "View Reservations" and connected it to the router as well as the sidebar.|
-|   0.25     | Mar 22 14:00-14:15 |Created a new page for "View Users" and connected it to the router as well as the sidebar.|
+|   0.75     | Mar 22 14:00-14:45 |Created a new page for "View Users" and connected it to the router as well as the sidebar. Modified the CSS of some components.|
+|   1     | Mar 23 13:30-14:30 |Modified the CSS of some components to make the website look more coherent. Created a report button for the user to use during the check-in.|
 
 **Total Time (h):** 2
 
@@ -17,7 +18,7 @@
 
 
 
-**Total Time (h):** 15.5
+**Total Time (h):** 
 
 ### Jackson :
 
@@ -35,7 +36,7 @@
 
 
 
-**Total Time (h):** 8.5               
+**Total Time (h):**              
 
 ### André :
 
