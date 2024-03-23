@@ -9,6 +9,7 @@ import CreateCarForm from '../views/CreateCarForm.vue'
 import LogIn from '../views/LogIn.vue'
 import LogOut from '../views/LogOut.vue'
 import ViewReservations from '../views/ViewReservations.vue'
+import UserReport from '../views/UserReport.vue'
 
 const routes = [
   {
@@ -61,6 +62,11 @@ const routes = [
     path: '/viewReservations',
     name: 'ViewReservations',
     component: ViewReservations
+  },
+  {
+    path: '/userReport',
+    name: 'UserReport',
+    component: UserReport
   }
 ]
 
