@@ -1,12 +1,12 @@
 <template>
-  <div class="signup-container">
+  <div class="profile-container">
     <h1>Account Profile</h1>
     <div class="tabs">
       <button class="tab" :class="{ 'active': activeTab === 'profile' }" @click="activeTab = 'profile'">My Profile</button>
       <button class="tab" :class="{ 'active': activeTab === 'reservations' }" @click="activeTab = 'reservations'">My Reservations</button>
     </div>
     <div v-if="activeTab === 'profile'">
-      <form @submit.prevent="saveProfile" class="signup-form">
+      <form @submit.prevent="saveProfile" class="profile-form">
         <div class="form-group">
           <label for="username">Username:</label>
           <input type="text" id="username" v-model="formData.username" :disabled="!isEditMode" required>
@@ -19,22 +19,51 @@
           <label for="password">Password:</label>
           <input type="password" id="password" v-model="formData.password" :disabled="!isEditMode" required>
         </div>
+        <div class="button-container">
+          <button v-if="!isEditMode" type="button" class="save-button" @click="toggleEditMode" style="width: 340px;">Edit</button>
+          <button v-else type="submit" class="save-button" @click="saveProfile" style="width: 340px;">Save Profile</button>
+        </div>
       </form>
-      <div class="button-container">
-        <button v-if="!isEditMode" type="button" class="save-button" @click="toggleEditMode" style="width: 340px;">Edit</button>
-        <button v-else type="submit" class="save-button" @click="saveProfile">Save Profile</button>
-      </div>
+      
     </div>
     <div v-else-if="activeTab === 'reservations'">
       <button class="report-button" @click="redirectToUserReport">
         Report Something <span class="icon"><i class="fas fa-flag"></i></span>
       </button>
-      <p>Your reservation details go here.</p>
+      
+      <div class="rental-car-list">
+        <div v-for="car in cars" :key="car.id" class="rental-car">
+          <div class="button-container">
+            <!-- Delete button -->
+            <button class="button-looking small-button" @click="deleteCar(car.id)">
+              <span class="icon"><i class="fas fa-trash"></i></span>
+            </button>
+            <!-- Edit button -->
+            <button class="button-looking small-button">
+              <span class="icon"><i class="fas fa-edit"></i></span>
+            </button>
+          </div>
+          <img :src="car.get_image" alt="Car Image">
+          <div class="details">
+            <h3>{{ car.make }} {{ car.model }}</h3>
+            <p>{{ car.year }}</p>
+            <p>{{ car.price }}</p>
+          </div>
+          <div class="features">
+            <img v-if="car.is_electric" src="../assets/lightning.png" class="icon">
+            <img v-if="car.is_all_wheel_drive" src="../assets/wheels.png" class="icon">
+          </div>
+        </div>
+      </div>
+
+
     </div>
   </div>
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
   data() {
     return {
@@ -44,8 +73,12 @@ export default {
         password: '******'
       },
       isEditMode: false,
-      activeTab: 'profile'
-    };
+      activeTab: 'profile',
+      cars: []
+    }
+  },
+  mounted() {
+    this.getCars()
   },
   methods: {
     saveProfile() {
@@ -57,13 +90,36 @@ export default {
     },
     redirectToUserReport() {
       this.$router.push('/userReport');
+    },
+    getCars() {
+      axios.get('http://127.0.0.1:8000/vehicles/cars/')
+        .then(response => {
+          this.cars = response.data
+        })
+        .catch(error => {
+          console.log(error)
+        })
+    },
+    deleteCar(id) {
+      axios.delete(`http://127.0.0.1:8000/vehicles/cars/${id}/`)
+        .then(() => {
+          // Remove the deleted car from the local list
+          this.cars = this.cars.filter(car => car.id !== id)
+          alert('Car deleted successfully')
+        })
+        .catch(error => {
+          console.log(error)
+        })
+    },
+    openCreateCarForm() {
+      this.$router.push('/createCar')
     }
   }
 };
 </script>
 
 <style scoped>
-.signup-container {
+.profile-container {
   max-width: 500px;
   margin: 0 auto;
   padding: 20px;
@@ -98,13 +154,15 @@ export default {
   background-color: #ada3b8;
 }
 
-.signup-form {
+.profile-form {
   display: flex;
   flex-direction: column;
+  justify-content: space-between; 
+  height: 100%; 
 }
 
 .form-group {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 label {
@@ -119,6 +177,7 @@ button {
   padding: 10px;
   border: 1px solid #ada3b8;
   border-radius: 5px;
+  box-sizing: border-box;
 }
 
 button.save-button {
@@ -148,6 +207,9 @@ button.save-button:hover {
 .button-container {
   display: flex;
   justify-content: center;
+  align-items: center; 
+  margin-top: 20px;
+  margin: 0 auto;
 }
 
 .button-container button {
@@ -165,5 +227,74 @@ button.save-button:hover {
 
 .report-button:hover {
   background-color: #90839c;
+}
+
+
+.rental-car-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.rental-car {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 300px;
+    position: relative;
+}
+.rental-car img{
+    width:100%;
+    height: auto;
+    border-radius: 5px;
+}
+.details p:last-child {
+    position: absolute;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    bottom: 5px;
+    right: 20px;
+    font: bold 20px Arial, sans-serif;
+}
+.features {
+    display: flex;
+    align-items: flex-end;
+    
+}
+.features img {
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+}
+.button-looking {
+  background-color: #ada3b8; 
+  color: #fff; 
+  cursor: pointer;
+  padding: 15px 32px;
+  border: none;
+  font-size: 16px;
+  border-radius: 5px;
+  margin: 4px 2px;
+  transition: background-color 0.3s;
+}
+
+/* Hover effect */
+.button-looking:hover {
+  background-color: #90839c; 
+}
+
+.button-container {
+  align-self: flex-end;
+  margin-top: 20px;
+}
+
+.small-button {
+  margin: 2px;
+  font-size: 10px;
+}
+
+/* Additional styles for Bulma icons */
+.icon {
+  vertical-align: middle; /* Align the icon vertically with button text */
 }
 </style>
