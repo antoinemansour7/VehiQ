@@ -61,17 +61,17 @@ export default {
 .signup-form {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center align the form items */
+  align-items: center;
 }
 
 .form-group {
   margin-bottom: 15px;
   display: flex;
-  align-items: center; /* Align items vertically */
+  align-items: center;
 }
 
 .left-label {
-  width: 100px; /* Set a fixed width for the labels */
+  width: 100px;
   margin-right: 10px;
   font-weight: bold;
   color: #544e63;
@@ -90,7 +90,7 @@ button {
   background-color: #ada3b8;
   color: #fff;
   cursor: pointer;
-  margin-top: 10px; /* Added margin to separate the buttons */
+  margin-top: 10px;
 }
 
 button:hover {
