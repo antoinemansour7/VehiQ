@@ -3,19 +3,16 @@ from .models import Reservation
 from vehicles.models import Car
 from accounts.models import CustomUser
 
-class ReservationSerializer(serializers.ModelSerializer):
-    car_name = serializers.SerializerMethodField()
-    user_name = serializers.SerializerMethodField()
+from rest_framework import serializers
+from .models import Reservation
 
+class ReservationSerializer(serializers.ModelSerializer):
     class Meta:
         model = Reservation
-        fields = ('id',"car_name", "user_name", "start_date", "end_date", "reservation_date")
-    
-    def get_car_name(self, obj):
-        return f"{obj.car.make} {obj.car.model}" if obj.car else None
-    
-    def get_user_name(self, obj):
-        return obj.user.username if obj.user else None
+        fields = ['id', 'car', 'user', 'start_date', 'end_date', 'reservation_date', 'pickup_location', 'dropoff_location']
+
+    # Optionally, you can add extra fields or customize the serializer behavior here
+
 
 
 class UserSerializer(serializers.ModelSerializer):
