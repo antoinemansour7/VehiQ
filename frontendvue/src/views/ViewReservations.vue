@@ -19,7 +19,7 @@
           <button @click="deleteReservation(reservation.id)">Delete</button>
           <button>Modify</button>
           <button>Create</button>
-          <button @click="confirmReservation(reservation.id)">Confirm</button>
+          <button @click="confirmReservation(reservation.id,reservation.pickup_location)">Confirm</button>
         </div>
       </div>
     </div>
@@ -84,12 +84,17 @@ export default {
           console.error("Error deleting reservation:", error);
         });
     },
-    confirmReservation(id) {
-  this.$router.push({ name: 'home', params: { reservationId: id } });
+    confirmReservation(id,pickup_location) {
+  alert(`Reservation ID: ${id}`); 
+  this.$router.push({ name: 'paymentPage', query: { id: id, pickup_location:pickup_location } });
+
+}
+
+
 }
 
   }
-}
+
 </script>
 
 

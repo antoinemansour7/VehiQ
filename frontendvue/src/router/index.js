@@ -12,6 +12,7 @@ import ViewReservations from '../views/ViewReservations.vue'
 import UserReport from '../views/UserReport.vue'
 import CarPage from '../views/CarPage.vue'
 import ReservationPage from '../views/ReservationPage.vue'
+import paymentPage from '../views/paymentPage.vue'
 
 const routes = [
   {
@@ -54,6 +55,7 @@ const routes = [
     name: 'carPage',
     component: CarPage
   },  
+  
   {
     path: '/ReservationPage/:reservationId', 
     name: 'ReservationPage', 
@@ -80,6 +82,12 @@ const routes = [
     path: '/userReport',
     name: 'UserReport',
     component: UserReport
+  },
+  {
+    path: '/paymentPage',
+    name: 'paymentPage',
+    component: paymentPage
+  
   }
 ]
 
