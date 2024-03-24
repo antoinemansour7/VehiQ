@@ -27,9 +27,6 @@
       
     </div>
     <div v-else-if="activeTab === 'reservations'">
-      <button class="report-button" @click="redirectToUserReport">
-        Report Something <span class="icon"><i class="fas fa-flag"></i></span>
-      </button>
       
       <div class="rental-car-list">
         <div v-for="car in cars" :key="car.id" class="rental-car">
@@ -41,6 +38,10 @@
             <!-- Edit button -->
             <button class="button-looking small-button">
               <span class="icon"><i class="fas fa-edit"></i></span>
+            </button>
+            <!-- Report button -->
+            <button class="button-looking small-button" @click="redirectToUserReport">
+              <span class="icon"><i class="fas fa-flag"></i></span>
             </button>
           </div>
           <img :src="car.get_image" alt="Car Image">

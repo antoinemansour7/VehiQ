@@ -10,6 +10,9 @@ import LogIn from '../views/LogIn.vue'
 import LogOut from '../views/LogOut.vue'
 import ViewReservations from '../views/ViewReservations.vue'
 import UserReport from '../views/UserReport.vue'
+import CSRViewReservations from '../views/CSRViewReservations.vue'
+import CSRReport from '../views/CSRReport.vue'
+import Payment from '../views/Payment.vue'
 
 const routes = [
   {
@@ -67,6 +70,22 @@ const routes = [
     path: '/userReport',
     name: 'UserReport',
     component: UserReport
+  },
+  ,
+  {
+    path: '/CSRViewReservations',
+    name: 'CSRViewReservations',
+    component: CSRViewReservations
+  },
+  {
+    path: '/CSRReport',
+    name: 'CSRReport',
+    component: CSRReport
+  },
+  {
+    path: '/payment',
+    name: 'Payment',
+    component: Payment
   }
 ]
 
