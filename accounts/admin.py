@@ -19,4 +19,4 @@ admin.site.register(CustomUser, CustomUserAdmin)
 @admin.register(Reservation)
 
 class ReservationAdmin(admin.ModelAdmin):
-    list_display = ('user', 'car', 'start_date', 'end_date', 'modification_allowed_until', 'reservation_date')  # Display fields in admin list view
+    list_display = ('user', 'car', 'start_date', 'end_date', 'reservation_date')  # Display fields in admin list view
