@@ -1,5 +1,6 @@
 <script>
 import SidebarLink from './SidebarLink'
+
 import { collapsed, toggleSidebar, sidebarWidth } from './state'
 
 export default {
@@ -38,6 +39,7 @@ export default {
     <SidebarLink to="/signUp" icon="fas fa-user-plus">Sign Up</SidebarLink>
     <SidebarLink to="/logIn" icon="fas fa-sign-in-alt">Log In</SidebarLink>
     <SidebarLink to="/logOut" icon="fas fa-sign-out-alt" @click="handleLogout">Log Out</SidebarLink>
+    <SidebarLink to="/PickUp" icon="fas fa-car-side">Pick Up</SidebarLink>
 
     <span
       class="collapse-icon"
