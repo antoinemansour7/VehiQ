@@ -29,10 +29,10 @@
     <div v-else-if="activeTab === 'reservations'">
       
       <div class="rental-car-list">
-        <div v-for="car in cars" :key="car.id" class="rental-car">
+        <div v-for="(reservation, index) in reservations" :key="index" class="rental-car">
           <div class="button-container">
             <!-- Delete button -->
-            <button class="button-looking small-button" @click="deleteCar(car.id)">
+            <button class="button-looking small-button" @click="deleteReservation(reservation.id)">
               <span class="icon"><i class="fas fa-trash"></i></span>
             </button>
             <!-- Edit button -->
@@ -44,15 +44,11 @@
               <span class="icon"><i class="fas fa-flag"></i></span>
             </button>
           </div>
-          <img :src="car.get_image" alt="Car Image">
           <div class="details">
-            <h3>{{ car.make }} {{ car.model }}</h3>
-            <p>{{ car.year }}</p>
-            <p>{{ car.price }}</p>
-          </div>
-          <div class="features">
-            <img v-if="car.is_electric" src="../assets/lightning.png" class="icon">
-            <img v-if="car.is_all_wheel_drive" src="../assets/wheels.png" class="icon">
+            <h3>{{ reservation.car_name }}</h3>
+            <p><strong>Start Date:</strong> {{ reservation.start_date }}</p>
+            <p><strong>End Date:</strong> {{ reservation.end_date }}</p>
+            <p><strong>Reserved By:</strong> {{ reservation.user_name }}</p>
           </div>
         </div>
       </div>
@@ -79,7 +75,7 @@ export default {
     }
   },
   mounted() {
-    this.getCars()
+    this.getReservations()
   },
   methods: {
     saveProfile() {
@@ -92,28 +88,23 @@ export default {
     redirectToUserReport() {
       this.$router.push('/userReport');
     },
-    getCars() {
-      axios.get('http://127.0.0.1:8000/vehicles/cars/')
+    getReservations() {
+      axios.get('http://127.0.0.1:8000/accounts/reservations/')
         .then(response => {
-          this.cars = response.data
+          this.reservations = response.data
         })
         .catch(error => {
           console.log(error)
         })
     },
-    deleteCar(id) {
-      axios.delete(`http://127.0.0.1:8000/vehicles/cars/${id}/`)
+    deleteReservation(id) {
+      axios.delete(`http://127.0.0.1:8000/accounts/reservations/${id}/`)
         .then(() => {
-          // Remove the deleted car from the local list
-          this.cars = this.cars.filter(car => car.id !== id)
-          alert('Car deleted successfully')
+          this.reservations = this.reservations.filter(reservation => reservation.id !== id);
         })
         .catch(error => {
-          console.log(error)
-        })
-    },
-    openCreateCarForm() {
-      this.$router.push('/createCar')
+          console.error("Error deleting reservation:", error);
+        });
     }
   }
 };
