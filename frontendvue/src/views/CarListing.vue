@@ -4,13 +4,16 @@
   <div class="rental-car-list">
     <div v-for="car in cars" :key="car.id" class="rental-car">
       <div class="button-container">
-        <!-- Delete button -->
+        
         <button class="button-looking small-button" @click="deleteCar(car.id)">
           <span class="icon"><i class="fas fa-trash"></i></span>
         </button>
-        <!-- Edit button -->
+        
         <button class="button-looking small-button">
           <span class="icon"><i class="fas fa-edit"></i></span>
+        </button>
+        <button class="button-looking small-button" @click="openCreateCarPage(car.id)">
+          <span class="icon"><i class="fas fa-calendar"></i></span>
         </button>
       </div>
       <img :src="car.get_image" alt="Car Image">
@@ -64,6 +67,11 @@ export default {
     openCreateCarForm() {
       this.$router.push('/createCar')
     }
+    ,
+    openCreateCarPage(id) {
+    this.$router.push({ name: 'carPage', params: { id: id} })
+    }
+
   }
 }
 </script>
