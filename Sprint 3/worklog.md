@@ -34,7 +34,11 @@
 
 | Time (h) | Time Stamp            | Task                                                                                                                          |
 | :------: |-----------------------|-------------------------------------------------------------------------------------------------------------------------------|  
-|        | | | 
+|    1.5    | Mar 22 12:00-13:30   | Helped with the implementation of finding nearest branch locations
+|    .5     | Mar 20 15:00-15:30   | Code Refactoring
+|    .5     | Mar 19 19:00-19:30   | Code Refactoring
+|    .75    | Mar 18 13:00-13:45   | Code Refactoring
+|     2     | Mar 21 18:00-20:00   | Implementation of signature process
 
 
 
