@@ -1,0 +1,56 @@
+[
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$LgnYlpXWIP4lPG36YvIWFV$JnzjPzYqFf5fKz/9e8NQ3EtPK5rVXuJZgWV8foZf4bY=",
+    "last_login": "2024-03-11T21:42:15.053Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "admin@live.ca",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2024-03-10T07:43:01.577Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$qBeWCybjcd7QEumGsTCbnL$GFWofX3KCCbkku6NoBxL0kzyeELjELCx/GqKQ2LJGpw=",
+    "last_login": null,
+    "is_superuser": true,
+    "username": "jackson",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2024-03-10T20:19:10.843Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$S38s2DYhLm6t8Kd7I1ZKno$LgE7KqH8S1pjPQvEy3Gj0H79IMmmhMCsFDWhUhcSJ+4=",
+    "last_login": null,
+    "is_superuser": true,
+    "username": "jacks",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2024-03-11T16:49:32.446Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]
