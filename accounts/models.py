@@ -25,11 +25,6 @@ class CustomUser(AbstractUser):
     def __str__(self):
         return self.username
 
-    # def profile_completion_status(self):
-    #     fields_filled = sum(bool(getattr(self, field.name)) for field in self._meta.fields)
-    #     total_fields = len(self._meta.fields)
-    #     completion_percentage = int((fields_filled / total_fields) * 100)
-    #     return completion_percentage
 
 
 class Reservation(models.Model):
@@ -38,8 +33,11 @@ class Reservation(models.Model):
     user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)  # Use CustomUser instead of Profile
     start_date = models.DateTimeField(default=timezone.now)
     end_date = models.DateTimeField()
-    modification_allowed_until = models.DateTimeField()
     reservation_date = models.DateTimeField(default=timezone.now)
+    pickup_location = models.CharField(max_length=100,default='')  
+    dropoff_location = models.CharField(max_length=100,default='')
+    card_number = models.CharField(max_length=16, default='')
+    confirmation_number = models.CharField(max_length=10, default='')
 
     def __str__(self):
         return f"{self.user.username} has reserved {self.car} at {self.reservation_date}. "

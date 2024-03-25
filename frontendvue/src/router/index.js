@@ -10,10 +10,14 @@ import LogIn from '../views/LogIn.vue'
 import LogOut from '../views/LogOut.vue'
 import ViewReservations from '../views/ViewReservations.vue'
 import UserReport from '../views/UserReport.vue'
+import CarPage from '../views/CarPage.vue'
+import ReservationPage from '../views/ReservationPage.vue'
+import paymentPage from '../views/paymentPage.vue'
 import CSRViewReservations from '../views/CSRViewReservations.vue'
 import CSRReport from '../views/CSRReport.vue'
 import Payment from '../views/Payment.vue'
 import CarInspection from '../views/CarInspection.vue'
+import PickUp from '../views/PickUp.vue'
 
 const routes = [
   {
@@ -52,6 +56,18 @@ const routes = [
     component: CreateCarForm
   },
   {
+    path: '/carPage/:id',
+    name: 'carPage',
+    component: CarPage
+  },  
+  
+  {
+    path: '/ReservationPage/:reservationId', 
+    name: 'ReservationPage', 
+    component: ReservationPage, 
+    props: true 
+  },
+  {
 
     path: '/logIn',
     name: 'LogIn',
@@ -72,6 +88,11 @@ const routes = [
     name: 'UserReport',
     component: UserReport
   },
+  {
+    path: '/paymentPage',
+    name: 'paymentPage',
+    component: paymentPage
+  }
   ,
   {
     path: '/CSRViewReservations',
@@ -92,6 +113,11 @@ const routes = [
     path: '/carInspection',
     name: 'CarInspection',
     component: CarInspection
+  },
+  {
+    path: '/PickUp',
+    name: 'PickUp',
+    component: PickUp
   }
 ]
 
