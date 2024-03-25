@@ -13,6 +13,7 @@ import UserReport from '../views/UserReport.vue'
 import CSRViewReservations from '../views/CSRViewReservations.vue'
 import CSRReport from '../views/CSRReport.vue'
 import Payment from '../views/Payment.vue'
+import CarInspection from '../views/CarInspection.vue'
 
 const routes = [
   {
@@ -86,6 +87,11 @@ const routes = [
     path: '/payment',
     name: 'Payment',
     component: Payment
+  },
+  {
+    path: '/carInspection',
+    name: 'CarInspection',
+    component: CarInspection
   }
 ]
 

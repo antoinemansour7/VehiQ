@@ -39,6 +39,7 @@ export default {
     <SidebarLink to="/logIn" icon="fas fa-sign-in-alt">Log In</SidebarLink>
     <SidebarLink to="/logOut" icon="fas fa-sign-out-alt" @click="handleLogout">Log Out</SidebarLink>
     <SidebarLink to="/payment" icon="fas fa-sign-in-alt">Payment</SidebarLink> <!--To be removed from the sidebar-->
+    <SidebarLink to="/carInspection" icon="fas fa-plus">Car Inspection</SidebarLink>
 
     <span
       class="collapse-icon"
