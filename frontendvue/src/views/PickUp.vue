@@ -7,7 +7,7 @@
             <label for="creditCardNumber">Credit Card Number:</label>
             <input type="text" id="creditCardNumber" v-model="creditCardNumber" maxlength="16" required>
 
-            <button type="submit">Submit</button>
+            <button type="submit">Submited</button>
         </form>
     </div>
 </template>
