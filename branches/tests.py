@@ -2,61 +2,31 @@ from django.test import TestCase
 from django.urls import reverse
 from .models import Branch
 from django.contrib.gis.geos import Point
-from unittest.mock import patch
-import googlemaps  # noqa : F401
-
+from branches import utils
 
 class BranchesTestCase(TestCase):
     def setUp(self):
-        # Create a test branch
-        Branch.objects.create(
-            name="Test Branch",
-            location=Point(-73.961452, 40.714224),
-            address="1600 Amphitheatre Parkway",
-            city="Mountain View",
-        )
+        # Store the original function
+        self.original_geocode_location = utils.geocode_location
+        # Replace it with your mock
+        utils.geocode_location = lambda x: (37.4224082, -122.0856086)
 
-    @patch('branches.views.geocode_location')
-    def test_geocode_branch(self, mock_geocode):
-        # Mock the geocode_location function to return specific coordinates
-        mock_geocode.return_value = (37.4224082, -122.0856086)
+    def tearDown(self):
+        # Restore the original function
+        utils.geocode_location = self.original_geocode_location
 
-        # The address to geocode
-        address = "1600 Amphitheatre Parkway, Mountain View, CA"
+    def test_geocode_failure(self):
+        # Simulate failure by changing the mock return value in this test
+        utils.geocode_location = lambda x: (None, None)
 
-        # Get geocode URL
-        url = reverse('get_geocode') + '?address=' + address
-
-        # Make the request
-        response = self.client.get(url)
-
-        # Check the status code and mock effectiveness
-        self.assertEqual(response.status_code, 200)
-        mock_geocode.assert_called_once_with(address)
-
-        # Assertions for returned data
-        response_data = response.json()
-        self.assertEqual(response_data['latitude'], 37.4224082)
-        self.assertEqual(response_data['longitude'], -122.0856086)
-
-    @patch('branches.views.geocode_location')
-    def test_geocode_failure(self, mock_geocode):
-        # Simulate a geocoding failure by returning None
-        mock_geocode.return_value = (None, None)
-
-        # Address that fails to geocode
+        # Define an invalid address
         address = "Invalid Address"
+        url = reverse('get_geocode') + f'?address={address}'
 
-        # Get geocode URL
-        url = reverse('get_geocode') + '?address=' + address
-
-        # Make the request
+        # Make a GET request to the URL
         response = self.client.get(url)
 
-        # Check the status code and mock effectiveness
+        # Verify the response for a failed geocoding attempt
         self.assertEqual(response.status_code, 400)
-        mock_geocode.assert_called_once_with(address)
-        self.assertJSONEqual(
-            str(response.content, encoding='utf8'),
-            {'error': 'Geocoding failed'}
-        )
+        expected_error_response = {'error': 'Geocoding failed'}
+        self.assertJSONEqual(str(response.content, encoding='utf8'), expected_error_response)

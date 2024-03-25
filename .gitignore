@@ -13,3 +13,6 @@ venv/
 
 # Environment Vaiables
 .env
+
+# node modules
+node_modules/
