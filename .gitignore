@@ -16,3 +16,6 @@ venv/
 
 # node modules
 node_modules/
+
+# migration
+branches/migrations/0002_*
