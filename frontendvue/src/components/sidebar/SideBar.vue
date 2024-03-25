@@ -33,10 +33,12 @@ export default {
     <SidebarLink to="/carListing" icon="fas fa-car">Car Listing</SidebarLink>
     <SidebarLink to="/reservations" icon="fas fa-calendar">Reservations</SidebarLink>
     <SidebarLink to="/viewReservations" icon="fas fa-list-alt">View Reservations</SidebarLink>
+    <SidebarLink to="/CSRViewReservations" icon="fas fa-list-alt">View Reservations as a CSR</SidebarLink> <!--can change name to "View Reservations"-->
     <SidebarLink to="/viewUsers" icon="fas fa-users">View Users</SidebarLink>
     <SidebarLink to="/signUp" icon="fas fa-user-plus">Sign Up</SidebarLink>
     <SidebarLink to="/logIn" icon="fas fa-sign-in-alt">Log In</SidebarLink>
     <SidebarLink to="/logOut" icon="fas fa-sign-out-alt" @click="handleLogout">Log Out</SidebarLink>
+    <SidebarLink to="/payment" icon="fas fa-sign-in-alt">Payment</SidebarLink> <!--To be removed from the sidebar-->
 
     <span
       class="collapse-icon"

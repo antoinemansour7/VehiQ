@@ -13,6 +13,9 @@ import UserReport from '../views/UserReport.vue'
 import CarPage from '../views/CarPage.vue'
 import ReservationPage from '../views/ReservationPage.vue'
 import paymentPage from '../views/paymentPage.vue'
+import CSRViewReservations from '../views/CSRViewReservations.vue'
+import CSRReport from '../views/CSRReport.vue'
+import Payment from '../views/Payment.vue'
 
 const routes = [
   {
@@ -87,7 +90,22 @@ const routes = [
     path: '/paymentPage',
     name: 'paymentPage',
     component: paymentPage
-  
+  }
+  ,
+  {
+    path: '/CSRViewReservations',
+    name: 'CSRViewReservations',
+    component: CSRViewReservations
+  },
+  {
+    path: '/CSRReport',
+    name: 'CSRReport',
+    component: CSRReport
+  },
+  {
+    path: '/payment',
+    name: 'Payment',
+    component: Payment
   }
 ]
 
