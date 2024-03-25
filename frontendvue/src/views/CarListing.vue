@@ -1,8 +1,44 @@
 <template>
   <h1>Available Cars</h1>
+
+  <!--Create new car-->
   <button class="button-looking" @click="openCreateCarForm">Create</button>
+  
+  <!-- Filter dropdowns -->
+  <div class="filter-container">
+    <select class="filter-select" v-model="search.make">
+      <option value="">Select Make</option>
+      <option v-for="make in uniqueMakes" :key="make" :value="make">{{ make }}</option>
+    </select>
+    <select class="filter-select" v-model="search.model">
+      <option value="">Select Model</option>
+      <option v-for="model in uniqueModels" :key="model" :value="model">{{ model }}</option>
+    </select>
+    <select class="filter-select" v-model="search.year">
+      <option value="">Select Year</option>
+      <option v-for="year in uniqueYears" :key="year" :value="year">{{ year }}</option>
+    </select>
+    <select class="filter-select" v-model="search.price">
+      <option value="">Select Price</option>
+      <option value="0-10000">$0 - $10,000</option>
+      <option value="10001-20000">$10,001 - $20,000</option>
+      <!-- Add more options as needed -->
+    </select>
+    <select class="filter-select" v-model="search.isElectric">
+      <option value="">Electric?</option>
+      <option value="true">Yes</option>
+      <option value="false">No</option>
+    </select>
+    <select class="filter-select" v-model="search.isAllWheelDrive">
+      <option value="">All-Wheel Drive?</option>
+      <option value="true">Yes</option>
+      <option value="false">No</option>
+    </select>
+  </div>
+
+
   <div class="rental-car-list">
-    <div v-for="car in cars" :key="car.id" class="rental-car">
+    <div v-for="car in filteredCars" :key="car.id" class="rental-car">
       <div class="button-container">
         
         <button class="button-looking small-button" @click="deleteCar(car.id)">
@@ -37,8 +73,16 @@ export default {
   name: 'HomeView',
   data() {
     return {
-      cars: []
-    }
+      cars: [],
+      search: {
+        make: '',
+        model: '',
+        year: '',
+        price: '',
+        isElectric: '',
+        isAllWheelDrive: ''
+      }
+    };
   },
   mounted() {
     this.getCars()
@@ -72,14 +116,52 @@ export default {
     this.$router.push({ name: 'carPage', params: { id: id} })
     }
 
-  }
+  },
+  computed: {
+    uniqueMakes() {
+      return [...new Set(this.cars.map(car => car.make))];
+    },
+    uniqueModels() {
+      return [...new Set(this.cars.map(car => car.model))];
+    },
+    uniqueYears() {
+      return [...new Set(this.cars.map(car => car.year))];
+    },
+    filteredCars() {
+  return this.cars.filter(car => {
+    // Check if car make, model, and year match the search criteria
+    const makeMatch = car.make.toLowerCase().includes(this.search.make.toLowerCase());
+    const modelMatch = car.model.toLowerCase().includes(this.search.model.toLowerCase());
+    const yearMatch = car.year.toString().includes(this.search.year);
+
+    // Check if car price falls within the selected price range
+    let priceMatch = true;
+    if (this.search.price) {
+      const [minPrice, maxPrice] = this.search.price.split('-').map(Number);
+      priceMatch = car.price >= minPrice && car.price <= maxPrice;
+    }
+
+    // Check if car is electric matches the selected filter
+    const isElectricMatch = this.search.isElectric === '' || car.is_electric.toString() === this.search.isElectric;
+
+    // Check if car is all-wheel drive matches the selected filter
+    const isAllWheelDriveMatch = this.search.isAllWheelDrive === '' || car.is_all_wheel_drive.toString() === this.search.isAllWheelDrive;
+
+    // Return true if all criteria match
+    return makeMatch && modelMatch && yearMatch && priceMatch && isElectricMatch && isAllWheelDriveMatch;
+  });
 }
+
+
+  }
+};
 </script>
 
 <style scoped>
 .rental-car-list {
     display: flex;
     flex-wrap: wrap;
+    padding: 0 20px;
 }
 .rental-car {
     margin: 10px;
@@ -144,5 +226,20 @@ export default {
 /* Additional styles for Bulma icons */
 .icon {
   vertical-align: middle; /* Align the icon vertically with button text */
+}
+
+.filter-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 5px 30px;
+}
+
+.filter-select {
+  width: calc(14% - 10px);
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc1d7;
+  color: #ada3b8;
 }
 </style>
