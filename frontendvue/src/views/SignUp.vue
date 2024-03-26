@@ -3,15 +3,15 @@
     <h1>Sign Up</h1>
     <form @submit.prevent="submitForm" class="signup-form">
       <div class="form-group">
-        <label for="username">Username:</label>
+        <label for="username" class="left-label">Username:</label>
         <input type="text" id="username" v-model="formData.username" required>
       </div>
       <div class="form-group">
-        <label for="email">Email:</label>
+        <label for="email" class="left-label">Email:</label>
         <input type="email" id="email" v-model="formData.email" required>
       </div>
       <div class="form-group">
-        <label for="password">Password:</label>
+        <label for="password" class="left-label">Password:</label>
         <input type="password" id="password" v-model="formData.password" required>
       </div>
       <button type="submit">Sign Up</button>
@@ -49,26 +49,30 @@ export default {
 </script>
 
 <style scoped>
-
 .signup-container {
   max-width: 400px;
   margin: 0 auto;
   padding: 20px;
-  border: 1px solid #ada3b8;
   border-radius: 5px;
-  background-color: #eae7ed;
+  background-color: #f1eff3;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .signup-form {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .form-group {
   margin-bottom: 15px;
+  display: flex;
+  align-items: center;
 }
 
-label {
+.left-label {
+  width: 100px;
+  margin-right: 10px;
   font-weight: bold;
   color: #544e63;
 }
@@ -86,7 +90,7 @@ button {
   background-color: #ada3b8;
   color: #fff;
   cursor: pointer;
-  margin-top: 10px; /* Added margin to separate the buttons */
+  margin-top: 10px;
 }
 
 button:hover {

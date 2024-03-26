@@ -50,11 +50,19 @@
     },
     methods: {
       getAllReservations() {
-        axios.get('http://127.0.0.1:8000/accounts/reservations/', {
-          params: { username: this.username }
+        axios.get('http://127.0.0.1:8000/accounts/user/', {
+          params: { user: this.username }
         })
-          .then(response => {
-            this.reservations = response.data.filter(reservation => reservation.profile_name === this.username);
+          .then(userResponse => {
+            const userId = userResponse.data.id;
+            axios.get(`http://127.0.0.1:8000/accounts/reservations/`)
+            
+            .then(reservationResponse => {
+              this.reservations = reservationResponse.data.filter(reservation => reservation.profile_name === userId);
+            })
+            .catch(error => {
+              console.error('Error fetching reservations:', error);
+            });
           })
           .catch(error => {
             console.error('Error fetching reservations:', error);

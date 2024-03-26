@@ -15,6 +15,7 @@
     <SidebarLink to="/carListing" icon="fas fa-car">Car Listing</SidebarLink>
     <SidebarLink to="/reservations" icon="fas fa-calendar">Reservations</SidebarLink>
     <SidebarLink to="/viewReservations" icon="fas fa-list-alt">View Reservations</SidebarLink>
+    <SidebarLink to="/CSRViewReservations" icon="fas fa-list-alt">View Reservations as a CSR</SidebarLink> <!--can change name to "View Reservations"-->
     <SidebarLink to="/viewUsers" icon="fas fa-users">View Users</SidebarLink>
     
     <!-- Show Sign Up link only if not logged in -->
@@ -31,6 +32,9 @@
       {{ notification }}
       <button @click="clearNotification">Close</button> <!-- Close button to clear notification -->
     </div>
+
+    <SidebarLink to="/PickUp" icon="fas fa-car-side">Pick Up</SidebarLink>
+
 
     <span
       class="collapse-icon"

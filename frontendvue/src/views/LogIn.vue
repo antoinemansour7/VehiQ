@@ -1,38 +1,41 @@
 <template>
-    <div class="logIn-container">
+  <div class="signup-container">
     <h1>Log In</h1>
     <div class="tabs">
       <button class="tab" :class="{ 'active': activeTab === 'logInAdmin' }" @click="activeTab = 'logInAdmin'">Log In as an Admin</button>
-      <button class="tab" :class="{ 'active': activeTab === 'logInUser' }" @click="activeTab = 'logInUser'">Log In as an User</button>
+      <button class="tab" :class="{ 'active': activeTab === 'logInUser' }" @click="activeTab = 'logInUser'">Log In as a User</button>
     </div>
     <div v-if="activeTab === 'logInAdmin'">
       <form class="login-form">
-        <div class="form-row">
+        <div class="form-group">
           <label for="username">Username:</label>
           <input type="text" id="username" required>
         </div>
-        <div class="form-row">
+        <div class="form-group">
           <label for="password">Password:</label>
           <input type="password" id="password" required>
         </div>
+        <div class="button-container">
+          <button type="button" @click="logInAsAdmin">Log In as an Admin</button>
+        </div>
       </form>
-      <button type="button" @click="logInAsAdmin">Log In</button>
     </div>
     <div v-else-if="activeTab === 'logInUser'">
-        <form class="login-form">
-        <div class="form-row">
+      <form class="login-form">
+        <div class="form-group">
           <label for="username">Username:</label>
           <input type="text" id="username" required>
         </div>
-        <div class="form-row">
+        <div class="form-group">
           <label for="password">Password:</label>
           <input type="password" id="password" required>
         </div>
+        <div class="button-container">
+          <button type="button" @click="logInAsUser">Log In as a User</button>
+        </div>
       </form>
-      <button type="button" @click="logInAsUser">Log In</button>
     </div>
   </div>
-     
 </template>
 
 <script>
@@ -77,17 +80,19 @@ export default {
 </script>
 
 <style scoped>
-
-.logIn-container {
+.signup-container {
   max-width: 500px;
   margin: 0 auto;
   padding: 20px;
   border-radius: 5px;
+  background-color: #f1eff3;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .tabs {
+  display: flex;
+  justify-content: center;
   margin-bottom: 20px;
-  font-size: 20px;
 }
 
 .tab {
@@ -117,23 +122,22 @@ export default {
 
 .form-group {
   margin-bottom: 15px;
+  display: flex;
+  align-items: center;
 }
 
 label {
   font-weight: bold;
   color: #544e63;
+  min-width: 120px; /* Adjust as needed */
 }
 
 input[type="text"],
 input[type="password"],
 button {
-  padding: 6px 12px;
+  padding: 10px;
   border: 1px solid #ada3b8;
   border-radius: 5px;
-}
-
-.save-button{
-  width: 340px;
 }
 
 button {
@@ -146,21 +150,9 @@ button:hover {
   background-color: #90839c;
 }
 
-.signup-form {
+.button-container {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  margin-top: 20px;
 }
-
-.form-row {
-  display: flex;
-  align-items: center;
-  margin-left: 80px;
-  margin-bottom: 15px; /* Adjust as needed */
-}
-
-.form-row label {
-  width: 120px; /* Set a fixed width for labels to ensure consistent alignment */
-  margin-right: 10px; /* Adjust as needed */
-}
-
 </style>
