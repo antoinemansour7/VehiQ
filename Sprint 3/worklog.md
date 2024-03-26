@@ -70,9 +70,12 @@
 
 | Time (h) | Time Stamp            | Task                                                                                                                          |
 | :------: | ----------------------|------------------------------------------------------------------------------------------------------------------------------ |
-|       |  | 
+|    4     | March 17 13:00-17:00 | Revamped models for better vue implementation |
+|    3     | March 19 10:30-13:30 | Fixed faulty code and further changes to user model |
+|    3     | March 20 17:30-20:30 | Added register,login, logout and operations on reservations|
+|    10     | March 25 10:30-20:30 | Remade and fixed all of the frontend and backend to assure successful implementation of the register, login and logout features |
 
-**Total Time (h):** 
+**Total Time (h):** 20
 
 ### Leiticia :
 
