@@ -2,6 +2,8 @@
   <SideBar/>
   <div :style="{'margin-left': sidebarWidth}">
     <router-view/>
+    <router-view name="login-form"/>
+    <router-view name="register-form"/>
   </div>
 
 </template>
