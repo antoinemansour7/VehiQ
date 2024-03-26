@@ -39,10 +39,11 @@
 |    .5     | Mar 19 19:00-19:30   | Code Refactoring
 |    .75    | Mar 18 13:00-13:45   | Code Refactoring
 |     2     | Mar 21 18:00-20:00   | Implementation of signature process
+|     2     | Mar 25 15:00-17h00   | Implementation of the 500$ deposit
 
 
 
-**Total Time (h):**              
+**Total Time (h):** 7.25             
 
 ### André :
 
