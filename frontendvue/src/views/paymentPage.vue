@@ -37,12 +37,10 @@
         pickupLocation: '',
         reservation: {}
       };
-
     },
     methods: {
       async submitPayment() {
         try {
-
           alert(this.$route.query.price);
           // Fetch reservation details
           const reservationId = this.$route.query.id;
@@ -71,8 +69,10 @@
   
           // Update confirmation number after successful submission
           this.confirmationNumber = payload.confirmation_number;
-
-          this.$router.push({ name: 'ReservationPage', params: { reservationId: response.data.id } });
+  
+          setTimeout(() => {
+        this.$router.push({ name: 'ReservationPage', params: { reservationId: response.data.id } });
+      }, 30000); // 30 seconds delay (30,000 milliseconds)
         } catch (error) {
           console.error('Error updating reservation:', error);
         }
