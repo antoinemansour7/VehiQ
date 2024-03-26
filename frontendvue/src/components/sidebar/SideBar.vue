@@ -1,26 +1,30 @@
 <script>
-import SidebarLink from './SidebarLink'
-import { collapsed, toggleSidebar, sidebarWidth } from './state'
+import SidebarLink from "./SidebarLink";
+import { collapsed, toggleSidebar, sidebarWidth } from "./state";
 
 export default {
   props: {},
   components: { SidebarLink },
   setup() {
-    return { collapsed, toggleSidebar, sidebarWidth }
+    return { collapsed, toggleSidebar, sidebarWidth };
   },
   methods: {
-    handleLogout(){
-      
-    }
-  }
-}
+    handleLogout() {},
+  },
+};
 </script>
 
 <template>
   <div class="sidebar" :style="{ width: sidebarWidth }">
     <h1>
       <span v-if="collapsed">
-        <div><img class="VehiQLogo1" src="@/assets/VEHIQ_logo.png" alt="VehiQLogo" /></div>
+        <div>
+          <img
+            class="VehiQLogo1"
+            src="@/assets/VEHIQ_logo.png"
+            alt="VehiQLogo"
+          />
+        </div>
       </span>
       <span v-else>
         <img class="VehiQLogo2" src="@/assets/VEHIQ_logo.png" alt="VehiQLogo" />
@@ -31,13 +35,53 @@ export default {
     <SidebarLink to="/" icon="fas fa-home">Home</SidebarLink>
     <SidebarLink to="/profile" icon="fas fa-user">Profile</SidebarLink>
     <SidebarLink to="/carListing" icon="fas fa-car">Car Listing</SidebarLink>
-    <SidebarLink to="/reservations" icon="fas fa-calendar">Reservations</SidebarLink>
-    <SidebarLink to="/viewReservations" icon="fas fa-list-alt">View Reservations</SidebarLink>
-    <SidebarLink to="/CSRViewReservations" icon="fas fa-list-alt">View Reservations as a CSR</SidebarLink> <!--can change name to "View Reservations"-->
+    <SidebarLink to="/reservations" icon="fas fa-calendar"
+      >Reservations</SidebarLink
+    >
+    <SidebarLink to="/viewReservations" icon="fas fa-list-alt"
+      >View Reservations</SidebarLink
+    >
+    <SidebarLink to="/CSRViewReservations" icon="fas fa-list-alt"
+      >View Reservations as a CSR</SidebarLink
+    >
+    <!--can change name to "View Reservations"-->
     <SidebarLink to="/viewUsers" icon="fas fa-users">View Users</SidebarLink>
     <SidebarLink to="/signUp" icon="fas fa-user-plus">Sign Up</SidebarLink>
     <SidebarLink to="/logIn" icon="fas fa-sign-in-alt">Log In</SidebarLink>
-    <SidebarLink to="/logOut" icon="fas fa-sign-out-alt" @click="handleLogout">Log Out</SidebarLink>
+    <SidebarLink to="/logOut" icon="fas fa-sign-out-alt" @click="handleLogout"
+      >Log Out</SidebarLink
+    >
+    <SidebarLink to="/carInspection" icon="fas fa-car-crash"
+      >Check Out</SidebarLink
+    >
+
+    <!-- Show Sign Up link only if not logged in -->
+    <SidebarLink v-if="!isLoggedIn" to="/register" icon="fas fa-user-plus"
+      >Sign Up</SidebarLink
+    >
+
+    <!-- Show Log In link only if not logged in -->
+    <SidebarLink v-if="!isLoggedIn" to="/logIn" icon="fas fa-sign-in-alt"
+      >Log In</SidebarLink
+    >
+
+    <!-- Show Log Out link only if logged in -->
+    <SidebarLink
+      v-if="isLoggedIn"
+      to="/logOut"
+      icon="fas fa-sign-out-alt"
+      @click="handleLogout"
+      >Log Out</SidebarLink
+    >
+
+    <!-- Notification -->
+    <div v-if="notification" class="notification">
+      {{ notification }}
+      <button @click="clearNotification">Close</button>
+      <!-- Close button to clear notification -->
+    </div>
+
+    <SidebarLink to="/PickUp" icon="fas fa-car-side">Pick Up</SidebarLink>
 
     <span
       class="collapse-icon"
@@ -97,13 +141,12 @@ export default {
 
 .VehiQLogo1 {
   padding-right: 10px;
-  width: 40px; 
+  width: 40px;
   height: auto;
 }
 
 .VehiQLogo2 {
-  width: 60px; 
+  width: 60px;
   height: auto;
 }
-
 </style>

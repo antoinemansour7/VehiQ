@@ -52,6 +52,10 @@
 
 | Time (h) | Time Stamp            | Task                                                                                                                          |
 | :------: | ----------------------|------------------------------------------------------------------------------------------------------------------------------ |
-|       |  | 
+|    4     | March 14 15:00-17:30 | Research about Geolocalosation, API, Geodjango dependecies installations |
+|    5     | March 15 10:45-16:20 | Create a branch for the find nearest branches feature |
+|    5     | March 18 10:45-15:45 | Start implement the Google Map API |
+|    2     | March 22 17:00-19:00 | Completing the implementation of Google Map API and test the conversion into latitude and longeitude coordinates |
+|    6     | March 25 10:00-16:00 | Finilizing the branch feature, Created Sequense Diagrams for user stories and Integrate Branch Location Map in Vue.js Frontend |
 
-**Total Time (h):** 
+**Total Time (h):** 22

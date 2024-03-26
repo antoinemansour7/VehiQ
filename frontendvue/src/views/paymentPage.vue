@@ -36,11 +36,14 @@
         confirmationNumber: '',
         pickupLocation: ''
       };
-
     },
     methods: {
       async submitPayment() {
         try {
+<<<<<<< HEAD
+=======
+          alert(this.$route.query.price);
+>>>>>>> c46eec8da24488ea62be39b177d955a566d292e2
           // Fetch reservation details
           const reservationId = this.$route.query.id;
           const reservationResponse = await axios.get(`http://127.0.0.1:8000/accounts/reservations/${reservationId}/`);
@@ -64,6 +67,13 @@
   
           // Update confirmation number after successful submission
           this.confirmationNumber = payload.confirmation_number;
+<<<<<<< HEAD
+=======
+  
+          setTimeout(() => {
+        this.$router.push({ name: 'ReservationPage', params: { reservationId: response.data.id } });
+      }, 30000); // 30 seconds delay (30,000 milliseconds)
+>>>>>>> c46eec8da24488ea62be39b177d955a566d292e2
         } catch (error) {
           console.error('Error updating reservation:', error);
         }
