@@ -13,8 +13,6 @@
         <input type="datetime-local" id="startDate" v-model="startDate" required>
         <label for="endDate">End Date:</label>
         <input type="datetime-local" id="endDate" v-model="endDate" required>
-        <label for="reservationDate">Reservation Date:</label>
-        <input type="datetime-local" id="reservationDate" v-model="reservationDate" required>
         <label for="pickupLocation">Pickup Location:</label>
         <select id="pickupLocation" v-model="pickupLocation" required>
           <option value="option1">Option 1</option>
@@ -82,7 +80,6 @@
           user: 1, // Hardcoded user ID for now
           start_date: new Date(this.startDate).toISOString(),
           end_date: new Date(this.endDate).toISOString(),
-          reservation_date: new Date(this.reservationDate).toISOString(),
           pickup_location: this.pickupLocation,
           dropoff_location: this.dropoffLocation,
           price: this.calculateRentalCost()
@@ -91,7 +88,7 @@
         axios.post('http://127.0.0.1:8000/accounts/reservations/', reservation)
           .then(response => {
             alert('Reservation created successfully');
-            this.$router.push({ name: 'ReservationPage', params: { reservationId: response.data.id } });
+            this.$router.push({ name: 'paymentPage', query: { id: response.data.id, price: response.data.price } });
           })
           .catch(error => {
             alert('Error creating reservation');
