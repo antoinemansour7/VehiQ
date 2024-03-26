@@ -37,19 +37,19 @@
 
 | Time (h) | Time Stamp            | Task                                                                                                                          |
 | :------: | ----------------------|------------------------------------------------------------------------------------------------------------------------------ |
-|   1      | Mar 16 17:00-18:00 |    Created worklog+Improved endpoint migrated from APIView to viewsets for CRUD ops efficiency                                   |
-|     2   | Mar 16 20:00-21:00 |    Bring the delete,view function into Vue for car,user,reservation                                   |
-|    1.5    | Mar 17 17:00-18:00 |    Added CarDetails Page for each specific car and added reservation form to create a reservation                                |
-|    1     | Mar 18 17:00-18:00 |    Added new attributes such as pickup,dropoff locations in reservation django db and updated the serializers                    |
-|    2     | Mar 19 20:00-18:00 |    Linked the reservation form to django db to have the newly created reservation in it                                          |
+|   2      | Mar 16 17:00-18:00 |    Created worklog+Improved endpoint migrated from APIView to viewsets for CRUD ops efficiency                                   |
+|     3   | Mar 16 20:00-21:00 |    Bring the delete,view function into Vue for car,user,reservation                                   |
+|    3    | Mar 17 17:00-18:00 |    Added CarDetails Page for each specific car and added reservation form to create a reservation                                |
+|    1.5     | Mar 18 17:00-18:00 |    Added new attributes such as pickup,dropoff locations in reservation django db and updated the serializers                    |
+|    6    | Mar 19 20:00-18:00 |    Linked the reservation form to django db to have the newly created reservation in it                                          |
 |    3    | Mar 21 17:00-18:00 |    Created a confirmation page to summarize their reservation details                                   |
-|    1     | Mar 21 17:00-18:00 |    Created payment form to insert credit card number and updated that attribute to reservation and send them a bookingreservation number and updated the reservation with confirmation number attribute|
-|     1    | Mar 22 17:00-18:00 |    Created Pickup Page asking for credit card number,booking confirmation number and seeing if there's a reservation with those information and liked to report page if succesful|
+|    2    | Mar 21 17:00-18:00 |    Created payment form to insert credit card number and updated that attribute to reservation and send them a bookingreservation number and updated the reservation with confirmation number attribute|
+|     1.5    | Mar 22 17:00-18:00 |    Created Pickup Page asking for credit card number,booking confirmation number and seeing if there's a reservation with those information and liked to report page if succesful|
 |   2      | Mar 25 12:00-14:00 |    Created the activity diagrams for the 9 user stories with Julia.|
 
                                 
 
-**Total Time (h):** 
+**Total Time (h):** 24
  
 ### Antoine :
 
