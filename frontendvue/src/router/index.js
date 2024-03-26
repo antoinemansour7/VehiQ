@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import CarListing from '../views/CarListing.vue'
 import AccountProfile from '../views/AccountProfile.vue'
-import SignUp from '../views/SignUp.vue'
+// import SignUp from '../views/SignUp.vue'
 import Reservations from '../views/Reservations.vue'
 import ViewUsers from '../views/ViewUsers.vue'
 import CreateCarForm from '../views/CreateCarForm.vue'
@@ -16,7 +16,10 @@ import paymentPage from '../views/paymentPage.vue'
 import CSRViewReservations from '../views/CSRViewReservations.vue'
 import CSRReport from '../views/CSRReport.vue'
 import CarInspection from '../views/CarInspection.vue'
+import RegisterForm from '../components/RegisterForm.vue'
+import LoginForm from '../components/LoginForm.vue'
 import PickUp from '../views/PickUp.vue'
+
 
 const routes = [
   {
@@ -34,11 +37,11 @@ const routes = [
     name: 'profile',
     component: AccountProfile
   },
-  {
-    path: '/signUp',
-    name: 'signUp',
-    component: SignUp
-  },
+  // {
+  //   path: '/signUp',
+  //   name: 'signUp',
+  //   component: SignUp
+  // },
   {
     path: '/reservations',
     name: 'Reservations',
@@ -67,15 +70,14 @@ const routes = [
     props: true 
   },
   {
-
-    path: '/logIn',
-    name: 'LogIn',
-    component: LogIn
+    path: '/register',
+    name: 'Register',
+    component: RegisterForm
   },
   {
-    path: '/logOut',
-    name: 'LogOut',
-    component: LogOut
+    path: '/login',
+    name: 'Login',
+    component: LoginForm
   },
   {
     path: '/viewReservations',

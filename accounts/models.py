@@ -30,7 +30,7 @@ class CustomUser(AbstractUser):
 class Reservation(models.Model):
     id = models.AutoField(primary_key=True)
     car = models.OneToOneField(Car, on_delete=models.CASCADE)
-    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)  # Use CustomUser instead of Profile
+    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
     start_date = models.DateTimeField(default=timezone.now)
     end_date = models.DateTimeField()
     reservation_date = models.DateTimeField(default=timezone.now)
