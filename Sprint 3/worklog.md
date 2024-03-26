@@ -18,8 +18,16 @@
 
 ### Cristina :
 
-| Time (h) | Time Stamp               | Task                                                                          |
-| :------: | ------------------------ | ------------------------------------------------------------------------------ |
+| Time (h) | Time Stamp               | Task                                                                                                      |
+| :------: | ------------------------ | --------------------------------------------------------------------------------------------------------- |
+|   2    | Mar 20th - 12:30 - 14:30| Worked on implementing "Return the Car" functionality, including drop-off location and return instructions.|
+|   4   | Mar 23rd - 12:00 - 16:00| Collaborated with team on "createReservation" process transaction.|
+|   2   | Mar 24rd - 12:45 -14:45| Implemented "Make Payment" feature, allowing customers to complete payment using various methods.          |
+|   3.5    | Mar 24th - 17:00 - 20:30| Configured system to send request to customer's bank entity for taking a deposit of 500 CAD. Trouble shooting the make payment option              |
+|   2.5    | Mar 25th - 17:00 - 19:30| Worked on the checkout process to endure that the right amount of money is deduces based on the damages found.                              |
+|   7    | Mar 25th - 17:00 - 00:00| Peer programming trying to finihs up on eveyone's branches and fixing last minutes                             |
+
+**Total Time (h):** 20.5
 
 
 
