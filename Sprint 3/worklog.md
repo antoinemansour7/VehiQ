@@ -41,9 +41,9 @@
 |     3   | Mar 16 20:00-23:00 |    Bring the delete,view function into Vue for car,user,reservation                                   |
 |    3    | Mar 17 17:00-20:00 |    Added CarDetails Page for each specific car and added reservation form to create a reservation in django db                                |
 |    1.5     | Mar 18 17:00-18:30 |    Added new attributes such as pickup,dropoff locations in reservation django db and updated the serializers                    |
-|    3    | Mar 19 12:00-18:00 |    Linked the reservation form to django db to have the newly created reservation in it                                          |
-|    3    | Mar 21 15:00-18:00 |    Created a confirmation page to summarize their reservation details                                   |
-|    5    | Mar 21 16:00-18:00 |    Created payment form to insert credit card number and updated that attribute to reservation and send them a bookingreservation number and updated the reservation with confirmation number attribute|
+|    3    | Mar 19 15:00-18:00 |    Linked the reservation form to django db to have the newly created reservation in it                                          |
+|    3    | Mar 20 15:00-18:00 |    Created a confirmation page to summarize their reservation details                                   |
+|    5    | Mar 21 13:00-18:00 |    Created payment form to insert credit card number and updated that attribute to reservation and send them a bookingreservation number and updated the reservation with confirmation number attribute|
 |     1.5    | Mar 22 16:30-18:00 |    Created Pickup Page asking for credit card number,booking confirmation number and seeing if there's a reservation with those information and liked to report page if succesful|
 |   2      | Mar 25 12:00-14:00 |    Created the activity diagrams for the 9 user stories with Julia.|
 |4         | Mar 25 19:00-00:00 | Reconfigured payment page to accomodate Cristina's pricing calculation and created the CSR View reservation page+confirmation function|
