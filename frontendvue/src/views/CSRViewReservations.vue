@@ -18,7 +18,7 @@
         <div class="features">
           <button @click="deleteReservation(reservation.id)">Delete</button>
           <button>Modify</button>
-          <button>Create</button>
+          <button @click="confirmReservation(reservation.id,reservation.pickup_location)">Confirm</button>
           <button @click="redirectToCSRReport">
               <span class="icon"><i class="fas fa-flag"></i></span>
           </button>
