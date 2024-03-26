@@ -38,6 +38,8 @@ class Reservation(models.Model):
     dropoff_location = models.CharField(max_length=100,default='')
     card_number = models.CharField(max_length=16, default='')
     confirmation_number = models.CharField(max_length=10, default='')
+    price = models.CharField(max_length=100, default='')
+    deposit = models.CharField(max_length=100, default='')  
 
     def __str__(self):
         return f"{self.user.username} has reserved {self.car} at {self.reservation_date}. "

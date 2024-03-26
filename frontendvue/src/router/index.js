@@ -15,6 +15,7 @@ import ReservationPage from '../views/ReservationPage.vue'
 import paymentPage from '../views/paymentPage.vue'
 import CSRViewReservations from '../views/CSRViewReservations.vue'
 import CSRReport from '../views/CSRReport.vue'
+import CarInspection from '../views/CarInspection.vue'
 import RegisterForm from '../components/RegisterForm.vue'
 import LoginForm from '../components/LoginForm.vue'
 import PickUp from '../views/PickUp.vue'
@@ -103,6 +104,11 @@ const routes = [
     path: '/CSRReport',
     name: 'CSRReport',
     component: CSRReport
+  },
+  {
+    path: '/carInspection',
+    name: 'CarInspection',
+    component: CarInspection
   },
   {
     path: '/PickUp',
