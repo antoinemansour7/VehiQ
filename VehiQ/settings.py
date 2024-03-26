@@ -11,12 +11,22 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 import os
+from dotenv import load_dotenv
 from pathlib import Path
 
-import accounts
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+# load the .env file
+dotenv_path = os.path.join(BASE_DIR, '.env')
+load_dotenv(dotenv_path)
+
+# Google Map API
+GMAPS_API_KEY = os.getenv('GMAPS_API_KEY')
+
+# Debugging
+print("Google Maps API Key:", os.getenv('GMAPS_API_KEY'))
 
 
 # Quick-start development settings - unsuitable for production
@@ -40,33 +50,26 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.gis',
     'rest_framework', # new
     'rest_framework.authtoken', # new
     'corsheaders', # new
     'djoser', # new
     'accounts',
-    'vehicles'
-    
+    'vehicles',
+    'branches'
 ]
-CORS_ALLOW_ALL_ORIGINS = True
-CORS_ALLOWED_ORIGINS = [
-    'http://localhost:8000',
-    'http://localhost:8080',
-    'http://localhost:8081',
-]
-ALLOWED_HOSTS = [
-    'localhost',
-    '127.0.0.1',
 
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:8080",
 ]
-CSRF_TRUSTED_ORIGINS = []
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'corsheaders.middleware.CorsMiddleware', # new
     'django.middleware.common.CommonMiddleware',
-    'accounts.disable.DisableCSRF',
+    'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -95,14 +98,19 @@ WSGI_APPLICATION = 'VehiQ.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
+        'NAME': os.getenv('DB_NAME'),
+        'USER': os.getenv('DB_USER'),
+        'PASSWORD': os.getenv('DB_PASSWORD'),
+        'HOST': os.getenv('DB_HOST'),  # Or the IP address of your PostgreSQL server
+        'PORT': os.getenv('DB_PORT'),  # Default PostgreSQL port
     }
 }
 
+#Debugging
+print("Database Name:", os.getenv('DB_NAME'))
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -122,7 +130,30 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# Check for Logs
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console'],
+            'level': 'DEBUG',
+        },
+    },
+}
 
+# caching to reduce number of API calls
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
+        'LOCATION': '/var/tmp/django_cache',
+    }
+}
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 

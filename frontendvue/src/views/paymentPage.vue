@@ -1,7 +1,6 @@
 <template>
     <div class="payment-container">
       <h1>Payment Information</h1>
-      <p>this is price : {{ this.$route.query.price }}</p>
       <form @submit.prevent="submitPayment" class="payment-form">
         <div class="form-group">
           <label for="cardNumber" class="left-label">Card Number (16 digits):</label>
@@ -17,6 +16,7 @@
         </div>
         <button type="submit">Submit Payment</button>
       </form>
+  
       <div v-if="confirmationNumber" class="confirmation">
         <h2>Booking Confirmation</h2>
         <p>Your booking has been confirmed. Confirmation Number: {{ confirmationNumber }}</p>
@@ -34,23 +34,20 @@
         expirationDate: '',
         cvv: '',
         confirmationNumber: '',
-        pickupLocation: '',
-        reservation: {}
+        pickupLocation: ''
       };
 
     },
     methods: {
       async submitPayment() {
         try {
-
-          alert(this.$route.query.price);
           // Fetch reservation details
           const reservationId = this.$route.query.id;
           const reservationResponse = await axios.get(`http://127.0.0.1:8000/accounts/reservations/${reservationId}/`);
           const reservationData = reservationResponse.data;
   
           // Extract necessary data
-          const { car, user, end_date, price, pickup_location, dropoff_location } = reservationData;
+          const { car, user, end_date } = reservationData;
   
           // Construct the payload for the PUT request
           const payload = {
@@ -58,11 +55,7 @@
             confirmation_number: (Math.floor(Math.random() * 9000000000) + 1000000000).toString(),
             car,
             user,
-            end_date,
-            price,
-            pickup_location,
-            dropoff_location,
-            deposit : 500
+            end_date
           };
   
           // Perform the PUT request to update the reservation
@@ -71,8 +64,6 @@
   
           // Update confirmation number after successful submission
           this.confirmationNumber = payload.confirmation_number;
-
-          this.$router.push({ name: 'ReservationPage', params: { reservationId: response.data.id } });
         } catch (error) {
           console.error('Error updating reservation:', error);
         }
@@ -80,8 +71,6 @@
     }
   };
   </script>
-
-
   <style scoped>
   .payment-container {
     max-width: 400px;

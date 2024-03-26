@@ -1,11 +1,15 @@
-import { createApp } from 'vue'
-import App from './App.vue'
-import router from './router'
-import VueCookies from 'vue-cookies'
-import store from './store'
+import { createApp } from "vue";
+import App from "./App.vue";
+import router from "./router";
+import store from "./store";
+import VueGoogleMaps from "@fawmi/vue-google-maps";
 
-const app = createApp(App)
-app.use(store)
-app.use(router)
-app.use(VueCookies)
-app.mount('#app')
+createApp(App)
+  .use(store)
+  .use(router)
+  .use(VueGoogleMaps, {
+    load: {
+      key: process.env.VUE_APP_GMAPS_API_KEY,
+    },
+  })
+  .mount("#app");
