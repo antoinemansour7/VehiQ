@@ -39,7 +39,7 @@ export default {
     <SidebarLink to="/signUp" icon="fas fa-user-plus">Sign Up</SidebarLink>
     <SidebarLink to="/logIn" icon="fas fa-sign-in-alt">Log In</SidebarLink>
     <SidebarLink to="/logOut" icon="fas fa-sign-out-alt" @click="handleLogout">Log Out</SidebarLink>
-    <SidebarLink to="/payment" icon="fas fa-sign-in-alt">Payment</SidebarLink> <!--To be removed from the sidebar-->
+    <SidebarLink to="/paymentPage" icon="fas fa-sign-in-alt">Payment Page</SidebarLink> <!--To be removed from the sidebar-->
     <SidebarLink to="/carInspection" icon="fas fa-plus">Car Inspection</SidebarLink>
     <SidebarLink to="/PickUp" icon="fas fa-car-side">Pick Up</SidebarLink>
 
