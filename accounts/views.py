@@ -3,48 +3,105 @@ from rest_framework.permissions import IsAuthenticated
 from django.contrib.auth.models import User
 from django.http import JsonResponse
 from rest_framework.views import APIView
+from rest_framework.decorators import api_view, permission_classes
+from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
 from rest_framework import status
 from .models import CustomUser, Reservation
 from .serializers import UserSerializer, ReservationSerializer
 from rest_framework import viewsets
-class CreateUserAPIView(APIView):
-    def post(self, request):
-        username = request.data.get('username')
-        password = request.data.get('password')
-        user_type = request.data.get('user_type') 
+from django.views.decorators.csrf import csrf_exempt
+import json
+from django.contrib.auth import get_user_model
+from django.contrib.auth.hashers import check_password
 
-        if not (username and password and user_type):
-            return Response({'error': 'Please provide username, password, and user_type'}, status=status.HTTP_400_BAD_REQUEST)
 
-        if CustomUser.objects.filter(username=username).exists():
-            return Response({'error': 'Username already exists'}, status=status.HTTP_400_BAD_REQUEST)
+def custom_authenticate(email, password):
+    User = get_user_model()
+    try:
+        user = User.objects.get(email=email)
+        if check_password(password, user.password):
+            return user
+    except User.DoesNotExist:
+        pass
+    return None
 
-        # Create user based on user_type
-        user = CustomUser.objects.create_user(username=username, password=password, user_type=user_type)
+@csrf_exempt
+@api_view(['POST'])
+@permission_classes([AllowAny])
+def register_user(request):
+    username = request.data.get('username')
+    password = request.data.get('password')
+    email = request.data.get('email')
 
-        return Response({'message': 'User created successfully'}, status=status.HTTP_201_CREATED)
+    if not username or not password or not email:
+        return JsonResponse({'error': 'Username, password, and email are required'}, status=400)
 
-class LoginAPIView(APIView):
-    def post(self, request):
-        username = request.data.get('username')
-        password = request.data.get('password')
+    if CustomUser.objects.filter(username=username).exists():
+        return JsonResponse({'error': 'Username already exists'}, status=400)
 
-        if not (username and password):
-            return Response({'error': 'Please provide username and password'}, status=status.HTTP_400_BAD_REQUEST)
+    # Create a new CustomUser instance with the provided details
+    user = CustomUser.objects.create_user(username=username, email=email, password=password)
 
-        user = authenticate(request, username=username, password=password)
-        
-        if user is not None:
-            login(request, user)
-            return Response({'message': 'Login successful'})
-        else:
-            return Response({'error': 'Invalid username or password'}, status=status.HTTP_401_UNAUTHORIZED)
+    # Populate the "user" field with the username
+    user_data = {
+        "id": user.id,
+        "username": user.username,  # Corrected field name to "username"
+        "visibility": user.visibility,
+        "email": user.email,
+        "is_staff": user.is_staff,
+        "is_active": user.is_active,
+        "date_joined": user.date_joined
+    }
 
-class LogoutAPIView(APIView):
-    def post(self, request):
-        logout(request)
-        return Response({'message': 'Logout successful'}, status=status.HTTP_200_OK)
+    return JsonResponse(user_data, status=201)
+
+from django.contrib.auth import authenticate, login
+from django.http import JsonResponse
+
+@csrf_exempt
+@api_view(['POST'])
+@permission_classes([AllowAny])
+def login_user(request):
+    email = request.data.get('email')
+    password = request.data.get('password')
+
+    if not email or not password:
+        return JsonResponse({'error': 'Email and password are required'}, status=400)
+
+    # Debug print to check email and password
+    print("Email:", email)
+    print("Password:", password)
+
+    # Authenticate user using email and password
+    user = custom_authenticate( email=email, password=password)
+
+    if user is not None:
+        # User authenticated, log them in
+        login(request, user)
+
+        user_data = {
+            "id": user.id,
+            "username": user.username,
+            "email": user.email,
+            "is_staff": user.is_staff,
+            "is_active": user.is_active,
+            "date_joined": user.date_joined,
+            "isLoggedIn": True
+        }
+
+        return JsonResponse({'success': 'User logged in successfully', 'user': user_data})
+    else:
+        # Invalid credentials
+        print("Authentication failed for email:", email)
+        return JsonResponse({'error': 'Invalid credentials'}, status=401)
+
+@csrf_exempt
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
+def logout_user(request):
+    logout(request)
+    return JsonResponse({'success': 'User logged out successfully'})
     
 
 class AllReservations(viewsets.ModelViewSet):
@@ -62,19 +119,19 @@ class UserReservationsViewSet(viewsets.ModelViewSet):
         serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         serializer.save(user=self.request.user)
-        return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return JsonResponse(serializer.data, status=status.HTTP_201_CREATED)
 
     def update(self, request, *args, **kwargs):
         instance = self.get_object()
         serializer = self.get_serializer(instance, data=request.data)
         serializer.is_valid(raise_exception=True)
         serializer.save()
-        return Response(serializer.data)
+        return JsonResponse(serializer.data)
 
     def destroy(self, request, *args, **kwargs):
         instance = self.get_object()
         self.perform_destroy(instance)
-        return Response(status=status.HTTP_204_NO_CONTENT)
+        return JsonResponse(status=status.HTTP_204_NO_CONTENT)
 
 class AllUsers(viewsets.ModelViewSet):
     queryset = CustomUser.objects.all() 
