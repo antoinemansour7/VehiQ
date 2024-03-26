@@ -11,10 +11,10 @@
 |   1.5     | Mar 23 16:00-17:30 |Added a list of reservations in the user's "View my Reservations" page and implemented the report button to each of these reservations.|
 |   1     | Mar 24 13:00-14:00 |Created a "View Reservations" page for CSRs with a report button linked to a report form for each reservation. Created a payment page.|
 |   3     | Mar 24 18:00-21:00 |Combined the "Payment" page that I made with the one that Jackson made. Fixed the logic of "Reservations" page to make it functional. Added back the filtering options in "Car Listing". Added the meeting minutes for sprint 3.|
-|   2     | Mar 25 12:00-14:00 |Created the activity diagrams for the 9 user stories with Jackson.|
-|   1.5     | Mar 25 16:00-17:30 |Created issues for the user stories and tasks of sprint 4. Did the sprint 4 planning in Google sheets.|
+|   4    | Mar 25 12:00-16:00 |Created the activity diagrams for the 9 user stories with Jackson. Created issues for the user stories and tasks of sprint 4. Did the sprint 4 planning in Google sheets.|
+|   7    | Mar 25th - 17:00 - 00:00| Peer programming trying to finish up on eveyone's branches and fixing last minutes                             |
 
-**Total Time (h):** 12.5
+**Total Time (h):** 20
 
 ### Cristina :
 
@@ -25,7 +25,7 @@
 |   2   | Mar 24rd - 12:45 -14:45| Implemented "Make Payment" feature, allowing customers to complete payment using various methods.          |
 |   3.5    | Mar 24th - 17:00 - 20:30| Configured system to send request to customer's bank entity for taking a deposit of 500 CAD. Trouble shooting the make payment option              |
 |   2.5    | Mar 25th - 17:00 - 19:30| Worked on the checkout process to endure that the right amount of money is deduces based on the damages found.                              |
-|   7    | Mar 25th - 17:00 - 00:00| Peer programming trying to finihs up on eveyone's branches and fixing last minutes                             |
+|   7    | Mar 25th - 17:00 - 00:00| Peer programming trying to finish up on eveyone's branches and fixing last minutes                             |
 
 **Total Time (h):** 20.5
 
