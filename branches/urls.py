@@ -4,7 +4,7 @@ from . import views
 import pprint
 
 router = SimpleRouter()
-router.register(r'branches', views.BranchViewSet)
+router.register(r'', views.BranchViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),

@@ -30,6 +30,7 @@ export default {
     getBranches() {
       axios.get('http://localhost:8000/branches/')
         .then(response => {
+          console.log('Branches fetched:', response.data);
           this.branches = response.data;
         })
         .catch(error => {

@@ -1,4 +1,5 @@
 import googlemaps
+import re
 from django.conf import settings
 from django.contrib.gis.db.models.functions import Distance
 from django.contrib.gis.geos import Point
@@ -9,6 +10,11 @@ import logging
 
 logger = logging.getLogger(__name__)
 
+# Utility function to sanitize cache keys
+def sanitize_cache_key(key):
+    """Sanitize the cache key by replacing disallowed characters."""
+    return re.sub(r'[^a-zA-Z0-9_]', '_', key)
+
 def get_gmaps_client():
     """Lazy load the Google Maps Client."""
     logger.debug(f"Using API Key: {settings.GMAPS_API_KEY}")
@@ -17,6 +23,7 @@ def get_gmaps_client():
 def geocode_location(address_or_code):
     print("geocode_location called")
     """Converts an address or code to geolocation with caching."""
+    address_or_code = sanitize_cache_key(address_or_code)
     cache_key = f'geocode_{address_or_code}'
     cached_result = cache.get(cache_key)
     if cached_result:
@@ -38,7 +45,7 @@ def geocode_location(address_or_code):
 
 def get_nearest_branch(request):
     address_or_code = request.GET.get('address')
-    max_distance = request.GET.get('max_distance', 20)  # Optional max distance in kilometers
+    max_distance = request.GET.get('max_distance', 100)  # Optional max distance in kilometers
 
     if address_or_code:
         user_lat, user_lng = geocode_location(address_or_code)
