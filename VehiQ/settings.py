@@ -24,6 +24,7 @@ load_dotenv(dotenv_path)
 
 # Google Map API
 GMAPS_API_KEY = os.getenv('GMAPS_API_KEY')
+VUE_APP_GMAPS_API_KEY = os.getenv('VUE_APP_GMAPS_API_KEY')
 
 # Debugging
 print("Google Maps API Key:", os.getenv('GMAPS_API_KEY'))
@@ -62,6 +63,7 @@ INSTALLED_APPS = [
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:8080",
+    "http://172.30.32.150:8080",
 ]
 
 MIDDLEWARE = [
