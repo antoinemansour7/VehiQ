@@ -33,12 +33,10 @@
 
 ### Jackson :
 
-| Time (h) | Time Stamp | Task |
-| :------: | ---------- | ---- |
 
-<<<<<<< HEAD
+| Time (h) | Time Stamp               | Task                                                                                                                                  |
+| :------: | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------- |
 | 1 | Mar 16 17:00-18:00 | Created worklog+Improved endpoint migrated from APIView to viewsets for CRUD ops efficiency |
-=======
 | 2 | Mar 16 17:00-19:00 | Created worklog+Improved endpoint migrated from APIView to viewsets for CRUD ops efficiency |
 | 3 | Mar 16 20:00-23:00 | Bring the delete,view function into Vue for car,user,reservation |
 | 3 | Mar 17 17:00-20:00 | Added CarDetails Page for each specific car and added reservation form to create a reservation in django db |
