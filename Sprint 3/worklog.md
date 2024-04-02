@@ -54,7 +54,7 @@
 
 | Time (h) | Time Stamp | Task |
 | :------: | ---------- | ---- |
-|          |            |      |
+| 8        | Mar 20 15:00-18:00 | Created signature feature and maps feature |
 
 **Total Time (h):**
 
