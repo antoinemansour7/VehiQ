@@ -1,0 +1,43 @@
+version: "3.1"
+
+stories:
+  - story: happy path
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_great
+      - action: utter_happy
+
+  - story: sad path 1
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_unhappy
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+      - intent: affirm
+      - action: utter_happy
+
+  - story: sad path 2
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_unhappy
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+      - intent: deny
+      - action: utter_goodbye
+
+  - story: Complete sign in and find branch
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: user_sign_in
+        entities:
+          - email: "user@example.com"
+          - password: "password123"
+      - action: action_sign_in
+      - intent: find_branch
+        entities:
+          - location: "Montreal"
+      - action: action_find_nearest_branch

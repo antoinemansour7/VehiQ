@@ -1,0 +1,148 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - hey
+      - hello
+      - hi
+      - hello there
+      - good morning
+      - good evening
+      - moin
+      - hey there
+      - let's go
+      - hey dude
+      - goodmorning
+      - goodevening
+      - good afternoon
+
+  - intent: goodbye
+    examples: |
+      - cu
+      - good by
+      - cee you later
+      - good night
+      - bye
+      - goodbye
+      - have a nice day
+      - see you around
+      - bye bye
+      - see you later
+
+  - intent: affirm
+    examples: |
+      - yes
+      - y
+      - indeed
+      - of course
+      - that sounds good
+      - correct
+
+  - intent: deny
+    examples: |
+      - no
+      - n
+      - never
+      - I don't think so
+      - don't like that
+      - no way
+      - not really
+
+  - intent: mood_great
+    examples: |
+      - perfect
+      - great
+      - amazing
+      - feeling like a king
+      - wonderful
+      - I am feeling very good
+      - I am great
+      - I am amazing
+      - I am going to save the world
+      - super stoked
+      - extremely good
+      - so so perfect
+      - so good
+      - so perfect
+
+  - intent: mood_unhappy
+    examples: |
+      - my day was horrible
+      - I am sad
+      - I don't feel very well
+      - I am disappointed
+      - super sad
+      - I'm so sad
+      - sad
+      - very sad
+      - unhappy
+      - not good
+      - not very good
+      - extremly sad
+      - so saad
+      - so sad
+
+  - intent: bot_challenge
+    examples: |
+      - are you a bot?
+      - are you a human?
+      - am I talking to a bot?
+      - am I talking to a human?
+
+  - intent: user_sign_in
+    examples: |
+      - I want to sign in using my email [john.doe@example.com](email) and password [password1234](password)
+      - Sign in with [jane.doe@example.com](email) and [secret](password)
+      - Log in
+      - Start session
+      - sign in
+      - sign
+      - start a reservation
+
+  - intent: find_branch
+    examples: |
+      - Where is the nearest branch?
+      - Find a branch near me
+      - Locate a branch in [Montreal](location)
+      - I'm looking for a branch in [Laval](location)
+
+  - intent: select_car
+    examples: |
+      - I need to rent a car
+      - Show me available cars
+      - I want to book an [SUV](car_type)
+      - What cars do you have?
+      - How can i see the available cars?
+
+  - intent: complete_payment
+    examples: |
+      - I want to pay
+      - complete the payment
+      - How do i pay?
+
+  - intent: check_in
+    examples: |
+      - I want to check in
+      - Start my reservation now
+      - Activate my booking
+      - How do i check in
+
+  - intent: report_issue
+    examples: |
+      - I have a problem
+      - Resport an issue
+      - Something went wrong with my reservation
+      - i have an issue with my check in
+
+entities:
+  - email
+  - password
+  - location
+  - car_type
+  - start_date
+  - end_date
+  - pickup_location
+  - dropoff_location
+  - payment_info
+  - confirmation_number
