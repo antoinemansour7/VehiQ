@@ -59,7 +59,7 @@ export default {
 
     const isLoggedIn = computed(() => store.state.isLoggedIn);
     const collapsed = computed(() => store.state.collapsed);
-    const sidebarWidth = computed(() => '11%');
+    const sidebarWidth = computed(() => '12%');
 
     const toggleSidebar = () => store.commit('toggleSidebar');
     const handleLogout = () => store.dispatch('logout');
