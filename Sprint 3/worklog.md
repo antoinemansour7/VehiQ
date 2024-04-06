@@ -54,9 +54,11 @@
 
 | Time (h) | Time Stamp | Task |
 | :------: | ---------- | ---- |
-| 8        | Mar 20 15:00-18:00 | Created signature feature and maps feature |
+| 8        | Mar 20 15:00-18:00 | Created signature feature |
+| 3        | Mar 21 17:00-20:00 | Helped with the implemenation of finding the nearest branch feature | 
+| 2        | Mar 20 10:00-12:00 | Code Refactoring | 
 
-**Total Time (h):**
+**Total Time (h):** 13
 
 ### André :
 
