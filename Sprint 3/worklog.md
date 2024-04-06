@@ -29,36 +29,36 @@
 
 **Total Time (h):** 20.5
 
-**Total Time (h):**
-
 ### Jackson :
 
-| Time (h) | Time Stamp | Task |
-| :------: | ---------- | ---- |
-
-<<<<<<< HEAD
-| 1 | Mar 16 17:00-18:00 | Created worklog+Improved endpoint migrated from APIView to viewsets for CRUD ops efficiency |
-=======
-| 2 | Mar 16 17:00-19:00 | Created worklog+Improved endpoint migrated from APIView to viewsets for CRUD ops efficiency |
-| 3 | Mar 16 20:00-23:00 | Bring the delete,view function into Vue for car,user,reservation |
-| 3 | Mar 17 17:00-20:00 | Added CarDetails Page for each specific car and added reservation form to create a reservation in django db |
-| 1.5 | Mar 18 17:00-18:30 | Added new attributes such as pickup,dropoff locations in reservation django db and updated the serializers |
-| 3 | Mar 19 15:00-18:00 | Linked the reservation form to django db to have the newly created reservation in it |
-| 3 | Mar 20 15:00-18:00 | Created a confirmation page to summarize their reservation details |
-| 5 | Mar 21 13:00-18:00 | Created payment form to insert credit card number and updated that attribute to reservation and send them a bookingreservation number and updated the reservation with confirmation number attribute|
-| 1.5 | Mar 22 16:30-18:00 | Created Pickup Page asking for credit card number,booking confirmation number and seeing if there's a reservation with those information and liked to report page if succesful|
-| 2 | Mar 25 12:00-14:00 | Created the activity diagrams for the 9 user stories with Julia.|
-|4 | Mar 25 19:00-00:00 | Reconfigured payment page to accomodate Cristina's pricing calculation and created the CSR View reservation page+confirmation function|
+| Time (h) | Time Stamp         | Task                                                                                                                                                                                                 |
+| :------: | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|    1     | Mar 16 17:00-18:00 | Created worklog+Improved endpoint migrated from APIView to viewsets for CRUD ops efficiency                                                                                                          |
+|    2     | Mar 16 17:00-19:00 | Created worklog+Improved endpoint migrated from APIView to viewsets for CRUD ops efficiency                                                                                                          |
+|    3     | Mar 16 20:00-23:00 | Bring the delete,view function into Vue for car,user,reservation                                                                                                                                     |
+|    3     | Mar 17 17:00-20:00 | Added CarDetails Page for each specific car and added reservation form to create a reservation in django db                                                                                          |
+|   1.5    | Mar 18 17:00-18:30 | Added new attributes such as pickup,dropoff locations in reservation django db and updated the serializers                                                                                           |
+|    3     | Mar 19 15:00-18:00 | Linked the reservation form to django db to have the newly created reservation in it                                                                                                                 |
+|    3     | Mar 20 15:00-18:00 | Created a confirmation page to summarize their reservation details                                                                                                                                   |
+|    5     | Mar 21 13:00-18:00 | Created payment form to insert credit card number and updated that attribute to reservation and send them a bookingreservation number and updated the reservation with confirmation number attribute |
+|   1.5    | Mar 22 16:30-18:00 | Created Pickup Page asking for credit card number,booking confirmation number and seeing if there's a reservation with those information and liked to report page if succesful                       |
+|    2     | Mar 25 12:00-14:00 | Created the activity diagrams for the 9 user stories with Julia.                                                                                                                                     |
+|    4     | Mar 25 19:00-00:00 | Reconfigured payment page to accomodate Cristina's pricing calculation and created the CSR View reservation page+confirmation function                                                               |
 
 **Total Time (h):** 28
 
 ### Antoine :
 
-| Time (h) | Time Stamp | Task |
-| :------: | ---------- | ---- |
-|          |            |      |
+| Time (h) | Time Stamp         | Task                                                               |
+| :------: | ------------------ | ------------------------------------------------------------------ |
+|   1.5    | Mar 22 12:00-13:30 | Helped with the implementation of finding nearest branch locations |
+|    .5    | Mar 20 15:00-15:30 | Code Refactoring                                                   |
+|    .5    | Mar 19 19:00-19:30 | Code Refactoring                                                   |
+|   .75    | Mar 18 13:00-13:45 | Code Refactoring                                                   |
+|    2     | Mar 21 18:00-20:00 | Implementation of signature process                                |
+|    2     | Mar 25 15:00-17h00 | Implementation of the 500$ deposit                                 |
 
-**Total Time (h):**
+**Total Time (h):** 7.25
 
 ### André :
 
