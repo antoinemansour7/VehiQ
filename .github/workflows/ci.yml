@@ -5,6 +5,21 @@ on: [push, pull_request]
 jobs:
   build:
     runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:12
+        env:
+          POSTGRES_USER: youruser
+          POSTGRES_PASSWORD: yourpassword
+          POSTGRES_DB: yourdbname
+        ports:
+          - 5432:5432
+        # Set health checks to wait until postgres is ready
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
     strategy:
       matrix:
         python-version: [3.8, 3.9]
@@ -36,6 +51,8 @@ jobs:
           pip install -r requirements.txt
 
       - name: Apply Migrations
+        env:
+          DATABASE_URL: postgres://youruser:yourpassword@localhost:5432/yourdbname
         run: python manage.py migrate
 
       - name: Run Tests
