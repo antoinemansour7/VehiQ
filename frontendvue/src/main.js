@@ -9,7 +9,6 @@ createApp(App)
   .use(router)
   .use(VueGoogleMaps, {
     load: {
-      console.log(process.env.VUE_APP_GMAPS_API_KEY),
       key: process.env.VUE_APP_GMAPS_API_KEY,
     },
   })
