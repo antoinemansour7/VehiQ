@@ -29,12 +29,8 @@
 
 **Total Time (h):** 20.5
 
-**Total Time (h):**
-
 ### Jackson :
 
-
-| Time (h) | Time Stamp               | Task                                                                                                                                  |
 | :------: | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------- |
 | 1 | Mar 16 17:00-18:00 | Created worklog+Improved endpoint migrated from APIView to viewsets for CRUD ops efficiency |
 | 2 | Mar 16 17:00-19:00 | Created worklog+Improved endpoint migrated from APIView to viewsets for CRUD ops efficiency |
@@ -52,11 +48,11 @@
 
 ### Antoine :
 
-| Time (h) | Time Stamp | Task |
-| :------: | ---------- | ---- |
-| 8        | Mar 20 15:00-18:00 | Created signature feature |
-| 3        | Mar 21 17:00-20:00 | Helped with the implemenation of finding the nearest branch feature | 
-| 2        | Mar 20 10:00-12:00 | Code Refactoring | 
+| Time (h) | Time Stamp         | Task                                                                |
+| :------: | ------------------ | ------------------------------------------------------------------- |
+|    8     | Mar 20 15:00-18:00 | Created signature feature                                           |
+|    3     | Mar 21 17:00-20:00 | Helped with the implemenation of finding the nearest branch feature |
+|    2     | Mar 20 10:00-12:00 | Code Refactoring                                                    |
 
 **Total Time (h):** 13
 

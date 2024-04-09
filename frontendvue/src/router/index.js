@@ -43,6 +43,11 @@ const routes = [
     name: "Reservations",
     component: Reservations,
   },
+  {
+    path: "/register",
+    name: "Register",
+    component: RegisterForm,
+  },
 
   {
     path: "/nearest-branch",
@@ -82,11 +87,25 @@ const routes = [
     name: "LogOut",
     component: LogOut,
   },
+
+  {
+    path: "/carInspection",
+    name: "CarInspection",
+    component: CarInspection,
+  },
+
+  {
+    path: "/PickUp",
+    name: "PickUp",
+    component: PickUp,
+  },
+
   {
     path: "/viewReservations",
     name: "ViewReservations",
     component: ViewReservations,
   },
+
   {
     path: "/userReport",
     name: "UserReport",

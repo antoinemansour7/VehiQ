@@ -48,7 +48,7 @@
         <button class="button-looking small-button">
           <span class="icon"><i class="fas fa-edit"></i></span>
         </button>
-        <button class="button-looking small-button" @click="openCreateCarPage(car.id)">
+        <button class="button-looking small-button" @click="openReserveCarPage(car.id)">
           <span class="icon"><i class="fas fa-calendar"></i></span>
         </button>
       </div>
@@ -112,7 +112,7 @@ export default {
       this.$router.push('/createCar')
     }
     ,
-    openCreateCarPage(id) {
+    openReserveCarPage(id) {
     this.$router.push({ name: 'carPage', params: { id: id} })
     }
 
@@ -198,7 +198,7 @@ export default {
   background-color: #ada3b8; 
   color: #fff; 
   cursor: pointer;
-  padding: 15px 32px;
+  padding: 15px 15px;
   border: none;
   font-size: 16px;
   border-radius: 5px;
@@ -214,8 +214,8 @@ export default {
 .button-container {
   display: flex;
   position: absolute;
-  top: 10px; /* Adjust as needed */
-  right: 10px; /* Adjust as needed */
+  bottom: 10px; /* Adjust as needed */
+  left: 110px; /* Adjust as needed */
 }
 
 .small-button {
