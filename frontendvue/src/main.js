@@ -1,17 +1,15 @@
 import { createApp } from "vue";
 import App from "./App.vue";
 import router from "./router";
-import VueCookies from "vue-cookies";
 import store from "./store";
-
-// log the API key to the console
-console.log("Google Maps API Key:", process.env.VUE_APP_GMAPS_API_KEY);
+import VueGoogleMaps from "@fawmi/vue-google-maps";
 
 createApp(App)
   .use(store)
   .use(router)
   .use(VueGoogleMaps, {
     load: {
+      console.log(process.env.VUE_APP_GMAPS_API_KEY),
       key: process.env.VUE_APP_GMAPS_API_KEY,
     },
   })

@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 import os
 from pathlib import Path
+from dotenv import load_dotenv
 
 import accounts
 
@@ -56,7 +57,8 @@ INSTALLED_APPS = [
     'corsheaders', # new
     'djoser', # new
     'accounts',
-    'vehicles'
+    'vehicles',
+    'branches'
 
 ]
 CORS_ALLOW_ALL_ORIGINS = True
@@ -109,11 +111,14 @@ WSGI_APPLICATION = 'VehiQ.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
+        'NAME': os.getenv('DB_NAME'),
+        'USER': os.getenv('DB_USER'),
+        'PASSWORD': os.getenv('DB_PASSWORD'),
+        'HOST': os.getenv('DB_HOST'),  # Or the IP address of your PostgreSQL server
+        'PORT': os.getenv('DB_PORT'),  # Default PostgreSQL port
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
