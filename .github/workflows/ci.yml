@@ -9,9 +9,9 @@ jobs:
       postgres:
         image: postgres:12
         env:
-          POSTGRES_USER: youruser
-          POSTGRES_PASSWORD: yourpassword
-          POSTGRES_DB: yourdbname
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: matterbranch
+          POSTGRES_DB: branch
         ports:
           - 5432:5432
         # Set health checks to wait until postgres is ready
