@@ -18,6 +18,17 @@ import accounts
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# load the .env file
+dotenv_path = os.path.join(BASE_DIR, '.env')
+load_dotenv(dotenv_path)
+
+# Google Map API
+GMAPS_API_KEY = os.getenv('GMAPS_API_KEY')
+VUE_APP_GMAPS_API_KEY = os.getenv('VUE_APP_GMAPS_API_KEY')
+
+# Debugging
+print("Google Maps API Key:", os.getenv('GMAPS_API_KEY'))
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
@@ -46,13 +57,13 @@ INSTALLED_APPS = [
     'djoser', # new
     'accounts',
     'vehicles'
-    
+
 ]
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:8000',
-    'http://localhost:8080',
     'http://localhost:8081',
+    "http://localhost:8080",
+    "http://172.30.32.150:8080",
 ]
 ALLOWED_HOSTS = [
     'localhost',

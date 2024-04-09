@@ -41,6 +41,11 @@ export default {
     <SidebarLink to="/viewReservations" icon="fas fa-list-alt"
       >View Reservations</SidebarLink
     >
+    <!-- Branch link-->
+    <SidebarLink to="/nearest-branch" icon="fas fa-map-marker-alt"
+      >Find Branch</SidebarLink
+    >
+
     <SidebarLink to="/CSRViewReservations" icon="fas fa-list-alt"
       >View Reservations as a CSR</SidebarLink
     >

@@ -132,4 +132,8 @@ For more information on our project, please visit our [Wiki](https://github.com/
 ### Sprint 3
 https://drive.google.com/file/d/1-8lARi5JvND1p-XKBRDeVjnmupWTn6xs/view?usp=drive_link
 
+
+## Presentation PowerPoint
+https://docs.google.com/presentation/d/1OGLO96EMgr3ac41A4HGVJbYkBul9TXRHPT5a6y4SYxI/edit?usp=sharing
+
 ---
