@@ -25,6 +25,7 @@
 | Time (h) | Time Stamp               | Task                                                                                                      |
 | :------: | ------------------------ | --------------------------------------------------------------------------------------------------------- |
 |   3    | Apr 6th - 14:00 - 17:00| Tried to research and download dependencies for the Google API to make the Main branch runnable.|
+|4      | apr 10th - 21:00-01:00|   Transfer all project files to Ubunty, fix vue installation in Ubuntu, added Google API and GeoDjango instllations file via Ubuntu|
 
 
-**Total Time (h):** 3
+**Total Time (h):** 7
