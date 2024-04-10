@@ -16,6 +16,11 @@ nlu:
       - goodmorning
       - goodevening
       - good afternoon
+      - hiya
+      - howdy
+      - what's up
+      - hi there, how can I help you?
+      - nice to meet you
 
   - intent: goodbye
     examples: |
@@ -29,6 +34,14 @@ nlu:
       - see you around
       - bye bye
       - see you later
+      - take care
+      - see you soon
+      - catch you later
+      - until next time
+      - farewell
+      - have a good one
+      - bye for now
+      - talk to you later
 
   - intent: affirm
     examples: |
@@ -38,6 +51,17 @@ nlu:
       - of course
       - that sounds good
       - correct
+      - absolutely
+      - definitely
+      - sure thing
+      - you bet
+      - for sure
+      - no doubt
+      - affirmative
+      - yep
+      - yeah
+      - sure
+      - absolutely
 
   - intent: deny
     examples: |
@@ -48,6 +72,13 @@ nlu:
       - don't like that
       - no way
       - not really
+      - I disagree
+      - I'm afraid not
+      - I beg to differ
+      - definitely not
+      - absolutely not
+      - not at all
+      - I'm not sure about that
 
   - intent: mood_great
     examples: |
@@ -65,6 +96,12 @@ nlu:
       - so so perfect
       - so good
       - so perfect
+      - fantastic
+      - splendid
+      - superb
+      - marvelous
+      - excellent
+      - outstanding
 
   - intent: mood_unhappy
     examples: |
@@ -82,6 +119,12 @@ nlu:
       - extremly sad
       - so saad
       - so sad
+      - terrible
+      - awful
+      - dreadful
+      - miserable
+      - depressed
+      - upset
 
   - intent: bot_challenge
     examples: |
@@ -89,6 +132,11 @@ nlu:
       - are you a human?
       - am I talking to a bot?
       - am I talking to a human?
+      - prove that you're not a bot
+      - what's 2+2?
+      - can you pass the Turing test?
+      - tell me a joke
+      - do you have feelings?
 
   - intent: user_sign_in
     examples: |
@@ -99,6 +147,9 @@ nlu:
       - sign in
       - sign
       - start a reservation
+      - login to my account
+      - create an account
+      - register with my email and password
 
   - intent: find_branch
     examples: |
@@ -106,6 +157,11 @@ nlu:
       - Find a branch near me
       - Locate a branch in [Montreal](location)
       - I'm looking for a branch in [Laval](location)
+      - which branch is closest to my location?
+      - where can I find your branch in [Toronto](location)?
+      - what's the address of your branch in [Vancouver](location)?
+      - find the nearest office
+      - show me your branches on the map
 
   - intent: select_car
     examples: |
@@ -114,12 +170,23 @@ nlu:
       - I want to book an [SUV](car_type)
       - What cars do you have?
       - How can i see the available cars?
+      - I'm interested in renting a [sedan](car_type)
+      - can I get a list of cars for rent?
+      - which vehicles are available for rent?
+      - give me options for renting a car
 
   - intent: complete_payment
     examples: |
       - I want to pay
       - complete the payment
       - How do i pay?
+      - what are the payment options?
+      - how can I make a payment?
+      - pay for my reservation
+      - I'd like to finalize my payment
+      - can I pay online?
+      - what's your payment policy?
+      - how much do I need to pay?
 
   - intent: check_in
     examples: |
@@ -127,6 +194,12 @@ nlu:
       - Start my reservation now
       - Activate my booking
       - How do i check in
+      - can I check in online?
+      - how do I confirm my reservation?
+      - check me in for my reservation
+      - I'm ready to pick up my car
+      - start my rental
+      - what's the check-in process?
 
   - intent: report_issue
     examples: |
@@ -134,6 +207,63 @@ nlu:
       - Resport an issue
       - Something went wrong with my reservation
       - i have an issue with my check in
+      - I need assistance with my booking
+      - there's an issue with my rental
+      - I'm experiencing problems with my reservation
+      - can you help me with a problem?
+      - I encountered an issue
+      - I'd like to report a problem
+      - what do I do if I have a problem?
+      - how can I resolve an issue?
+      - who can I contact if I have an issue?
+
+  - intent: faq_payment_methods
+    examples: |
+      - What payment methods do you accept?
+      - Can I pay with PayPal?
+      - Do you accept bank transfers?
+
+  - intent: faq_cancellation
+    examples: |
+      - How can I cancel my reservation?
+      - What is your cancellation policy?
+      - Can I get a refund if I cancel my booking?
+
+  - intent: faq_car_availability
+    examples: |
+      - Are there any cars available for rent?
+      - Can I check the availability of a specific car model?
+      - Do you have any SUVs available for rent?
+
+  - intent: faq_insurance_coverage
+    examples: |
+      - What type of insurance coverage is included in my rental?
+      - Can I purchase additional insurance coverage?
+      - Do you offer collision damage waiver (CDW)?
+
+  - intent: faq_reservation_modification
+    examples: |
+      - How can I change my reservation details?
+      - Can I modify my pickup location?
+      - Is it possible to extend my rental period?
+
+  - intent: faq_additional_driver
+    examples: |
+      - Can I add another driver to my reservation?
+      - How much does it cost to add an additional driver?
+      - What are the requirements for adding an extra driver?
+
+  - intent: faq_age_requirements
+    examples: |
+      - What is the minimum age to rent a car?
+      - Are there any age restrictions for renting a car?
+      - Can someone under 25 rent a car?
+
+  - intent: faq_fuel_policy
+    examples: |
+      - How does your fuel policy work?
+      - Do I need to return the car with a full tank of gas?
+      - What happens if I return the car without refueling?
 
 entities:
   - email
