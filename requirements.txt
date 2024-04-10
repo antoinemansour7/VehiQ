@@ -22,12 +22,12 @@ MarkupSafe==2.1.5
 oauthlib==3.2.2
 packaging<21.0
 pillow==10.2.0
-prompt-toolkit==3.0.36
+prompt-toolkit
 pycparser==2.21
 PyJWT==2.8.0
 python3-openid==3.2.0
 PyYAML==6.0.1
-questionary==2.0.1
+questionary
 requests==2.31.0
 requests-oauthlib==1.4.0
 social-auth-app-django==5.4.0
