@@ -4,7 +4,7 @@ certifi==2024.2.2
 cffi==1.16.0
 charset-normalizer==3.3.2
 colorama==0.4.6
-commitizen==3.15.0
+commitizen
 cryptography==42.0.5
 decli==0.6.1
 defusedxml==0.8.0rc2
@@ -27,7 +27,7 @@ pycparser==2.21
 PyJWT==2.8.0
 python3-openid==3.2.0
 PyYAML==6.0.1
-#questionary
+questionary
 requests==2.31.0
 requests-oauthlib==1.4.0
 social-auth-app-django==5.4.0
