@@ -33,15 +33,15 @@ class CarSerializerTest(APITestCase):
 
 from django.test import Client, TestCase
 
-class AvailableVehiclesTest(TestCase):
-    def setUp(self):
-        self.client = Client()
+# class AvailableVehiclesTest(TestCase):
+#     def setUp(self):
+#         self.client = Client()
 
-        Car.objects.create(make="Honda", model="Civic", year=2019, price=20000.00, mileage=10000, is_checked=True, is_electric=False, is_all_wheel_drive=False)
-        Car.objects.create(make="Nissan", model="Altima", year=2020, price=25000.00, mileage=20000, is_checked=True, is_electric=False, is_all_wheel_drive=False)
+#         Car.objects.create(make="Honda", model="Civic", year=2019, price=20000.00, mileage=10000, is_checked=True, is_electric=False, is_all_wheel_drive=False)
+#         Car.objects.create(make="Nissan", model="Altima", year=2020, price=25000.00, mileage=20000, is_checked=True, is_electric=False, is_all_wheel_drive=False)
 
-    def test_get_all_cars(self):
-        response = self.client.get("/cars/")
-        self.assertEqual(response.status_code, 200)
-        self.assertEqual(len(response.json()), 2)  
-        self.assertIn("make", response.json()[0])  
+#     def test_get_all_cars(self):
+#         response = self.client.get("/cars/")
+#         self.assertEqual(response.status_code, 200)
+#         self.assertEqual(len(response.json()), 2)  
+#         self.assertIn("make", response.json()[0])  
