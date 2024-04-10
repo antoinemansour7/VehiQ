@@ -1,19 +1,3 @@
-<script>
-import SidebarLink from "./SidebarLink";
-import { collapsed, toggleSidebar, sidebarWidth } from "./state";
-
-export default {
-  props: {},
-  components: { SidebarLink },
-  setup() {
-    return { collapsed, toggleSidebar, sidebarWidth };
-  },
-  methods: {
-    handleLogout() {},
-  },
-};
-</script>
-
 <template>
   <div class="sidebar" :style="{ width: sidebarWidth }">
     <h1>

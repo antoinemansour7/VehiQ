@@ -38,15 +38,13 @@ export default {
     const mapCenter = ref({ lat: 45.5017, lng: -73.5673 });
 
     const getLatLng = (branch) => {
-      console.log(branch); // Debugging
-
-      if (branch && branch.location && branch.location.coordinates) {
+      console.log(branch); // Debugging to inspect the structure of branch object
+      if (branch.location && branch.location.coordinates) {
         return {
           lat: branch.location.coordinates[1],
           lng: branch.location.coordinates[0],
         };
       } else {
-        // Fallback or error handling if the expected structure is not found
         console.error("Unexpected branch structure:", branch);
         return { lat: 0, lng: 0 }; // Return a default or handle the error appropriately
       }
@@ -74,7 +72,6 @@ export default {
   methods: {
     selectBranch(branch) {
       this.$emit("branch-selected", branch);
-      // logic to handle when a branch marker is clicked
     },
   },
 };

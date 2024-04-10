@@ -16,6 +16,10 @@ import paymentPage from "../views/paymentPage.vue";
 import CSRViewReservations from "../views/CSRViewReservations.vue";
 import CSRReport from "../views/CSRReport.vue";
 import NearestBranchView from "../views/NearestBranchView.vue";
+import LoginForm from "../components/LoginForm.vue";
+import RegisterForm from "../components/RegisterForm.vue";
+import CarInspection from "../views/CarInspection.vue";
+import PickUp from "../views/PickUp.vue";
 
 const routes = [
   {
@@ -43,6 +47,13 @@ const routes = [
     name: "Reservations",
     component: Reservations,
   },
+
+  {
+    path: "/login",
+    name: "login",
+    component: LoginForm,
+  },
+
   {
     path: "/register",
     name: "Register",
