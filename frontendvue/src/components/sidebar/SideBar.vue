@@ -35,9 +35,9 @@
     >
     <!--can change name to "View Reservations"-->
     <SidebarLink to="/viewUsers" icon="fas fa-users">View Users</SidebarLink>
-    <SidebarLink to="/carInspection" icon="fas fa-car-crash"
-      >Check Out</SidebarLink
-    >
+    <SidebarLink to="/carInspection" icon="fas fa-car-crash">Check Out</SidebarLink>
+    <SidebarLink to="/chatBot" icon="fas fa-robot">Chatbot</SidebarLink>
+    
     <!-- Show Sign Up link only if not logged in -->
     <SidebarLink v-if="!isLoggedIn" to="/register" icon="fas fa-user-plus"
       >Sign Up</SidebarLink
@@ -88,7 +88,7 @@ export default {
 
     const isLoggedIn = computed(() => store.state.isLoggedIn);
     const collapsed = computed(() => store.state.collapsed);
-    const sidebarWidth = computed(() => "11%");
+    const sidebarWidth = computed(() => '12%');
 
     const toggleSidebar = () => store.commit("toggleSidebar");
     const handleLogout = () => store.dispatch("logout");
