@@ -1,19 +1,15 @@
 from django.contrib.auth import authenticate, login, logout
-from rest_framework.permissions import IsAuthenticated
-from django.contrib.auth.models import User
 from django.http import JsonResponse
-from rest_framework.views import APIView
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import AllowAny, IsAuthenticated
-from rest_framework.response import Response
 from rest_framework import status
 from .models import CustomUser, Reservation
 from .serializers import UserSerializer, ReservationSerializer
 from rest_framework import viewsets
 from django.views.decorators.csrf import csrf_exempt
-import json
 from django.contrib.auth import get_user_model
 from django.contrib.auth.hashers import check_password
+from django.http import JsonResponse
 
 
 def custom_authenticate(email, password):
@@ -56,8 +52,7 @@ def register_user(request):
 
     return JsonResponse(user_data, status=201)
 
-from django.contrib.auth import authenticate, login
-from django.http import JsonResponse
+
 
 @csrf_exempt
 @api_view(['POST'])
