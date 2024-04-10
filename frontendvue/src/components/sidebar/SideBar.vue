@@ -18,6 +18,7 @@
     <SidebarLink to="/CSRViewReservations" icon="fas fa-list-alt">View Reservations as a CSR</SidebarLink> <!--can change name to "View Reservations"-->
     <SidebarLink to="/viewUsers" icon="fas fa-users">View Users</SidebarLink>
     <SidebarLink to="/carInspection" icon="fas fa-car-crash">Check Out</SidebarLink>
+    <SidebarLink to="/chatBot" icon="fas fa-robot">Chatbot</SidebarLink>
     
     <!-- Show Sign Up link only if not logged in -->
     <SidebarLink v-if="!isLoggedIn" to="/register" icon="fas fa-user-plus">Sign Up</SidebarLink>
