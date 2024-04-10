@@ -3,6 +3,7 @@ from django.utils import timezone
 from .models import RentalAgreement, Reservation
 from .utils import take_deposit
 
+
 def sign_agreement(request, agreement_id):
     if request.method == 'POST':
         try:
@@ -13,6 +14,7 @@ def sign_agreement(request, agreement_id):
             return JsonResponse({'success': True, 'message': 'Agreement signed.'})
         except RentalAgreement.DoesNotExist:
             return JsonResponse({'success': False, 'message': 'Agreement not found or already signed.'})
+
 
 def process_deposit(request, reservation_id):
     if request.method == 'POST':

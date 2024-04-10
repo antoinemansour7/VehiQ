@@ -1,17 +1,12 @@
-from django.contrib.auth import authenticate, login, logout
-from rest_framework.permissions import IsAuthenticated
-from django.contrib.auth.models import User
+from django.contrib.auth import login, logout
 from django.http import JsonResponse
-from rest_framework.views import APIView
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import AllowAny, IsAuthenticated
-from rest_framework.response import Response
 from rest_framework import status
 from .models import CustomUser, Reservation
 from .serializers import UserSerializer, ReservationSerializer
 from rest_framework import viewsets
 from django.views.decorators.csrf import csrf_exempt
-import json
 from django.contrib.auth import get_user_model
 from django.contrib.auth.hashers import check_password
 
@@ -25,6 +20,7 @@ def custom_authenticate(email, password):
     except User.DoesNotExist:
         pass
     return None
+
 
 @csrf_exempt
 @api_view(['POST'])
@@ -56,8 +52,6 @@ def register_user(request):
 
     return JsonResponse(user_data, status=201)
 
-from django.contrib.auth import authenticate, login
-from django.http import JsonResponse
 
 @csrf_exempt
 @api_view(['POST'])
@@ -74,7 +68,7 @@ def login_user(request):
     print("Password:", password)
 
     # Authenticate user using email and password
-    user = custom_authenticate( email=email, password=password)
+    user = custom_authenticate(email=email, password=password)
 
     if user is not None:
         # User authenticated, log them in
@@ -96,6 +90,7 @@ def login_user(request):
         print("Authentication failed for email:", email)
         return JsonResponse({'error': 'Invalid credentials'}, status=401)
 
+
 @csrf_exempt
 @api_view(['POST'])
 @permission_classes([IsAuthenticated])
@@ -107,6 +102,7 @@ def logout_user(request):
 class AllReservations(viewsets.ModelViewSet):
     queryset = Reservation.objects.all()
     serializer_class = ReservationSerializer
+
 
 class UserReservationsViewSet(viewsets.ModelViewSet):
     serializer_class = ReservationSerializer
@@ -133,14 +129,11 @@ class UserReservationsViewSet(viewsets.ModelViewSet):
         self.perform_destroy(instance)
         return JsonResponse(status=status.HTTP_204_NO_CONTENT)
 
+
 class AllUsers(viewsets.ModelViewSet):
     queryset = CustomUser.objects.all() 
-    serializer_class = UserSerializer 
-    
-    
-    
-    
-    
+    serializer_class = UserSerializer
+
     # from django.shortcuts import get_object_or_404, render, redirect
 # from django.contrib.auth.decorators import login_required
 # from django.contrib.auth.forms import UserCreationForm  # noqa: F401
@@ -263,6 +256,3 @@ class AllUsers(viewsets.ModelViewSet):
 #         form = ReservationForm(instance=reservation)
 
 #     return render(request, 'accounts/modify_or_delete_reservation.html', {'form': form, 'reservation': reservation})
-
-
-

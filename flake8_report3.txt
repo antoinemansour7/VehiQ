@@ -1,0 +1,94 @@
+./VehiQ/rentals/models.py:17:1: E302 expected 2 blank lines, found 1
+./VehiQ/rentals/models.py:23:1: W293 blank line contains whitespace
+./VehiQ/rentals/models.py:24:1: W293 blank line contains whitespace
+./VehiQ/rentals/models.py:32:55: W292 no newline at end of file
+./VehiQ/rentals/views.py:31:114: W292 no newline at end of file
+./VehiQ/urls.py:7:55: W291 trailing whitespace
+./VehiQ/urls.py:8:47: W291 trailing whitespace
+./accounts/admin.py:7:1: E302 expected 2 blank lines, found 1
+./accounts/admin.py:19:1: E302 expected 2 blank lines, found 1
+./accounts/admin.py:21:1: E304 blank lines found after function decorator
+./accounts/disable.py:8:1: W293 blank line contains whitespace
+./accounts/disable.py:8:5: W292 no newline at end of file
+./accounts/models.py:5:1: F401 'django.db.models.signals.post_save' imported but unused
+./accounts/models.py:5:1: F401 'django.db.models.signals.post_delete' imported but unused
+./accounts/models.py:5:60: W291 trailing whitespace
+./accounts/models.py:6:1: F401 'django.dispatch.receiver' imported but unused
+./accounts/models.py:6:37: W291 trailing whitespace
+./accounts/models.py:9:1: E302 expected 2 blank lines, found 1
+./accounts/models.py:14:1: W293 blank line contains whitespace
+./accounts/models.py:35:54: E231 missing whitespace after ','
+./accounts/models.py:35:66: W291 trailing whitespace
+./accounts/models.py:36:55: E231 missing whitespace after ','
+./accounts/models.py:40:59: W291 trailing whitespace
+./accounts/serializers.py:5:1: E302 expected 2 blank lines, found 1
+./accounts/serializers.py:8:123: E231 missing whitespace after ','
+./accounts/serializers.py:14:1: E303 too many blank lines (3)
+./accounts/serializers.py:23:1: W293 blank line contains whitespace
+./accounts/serializers.py:28:1: W391 blank line at end of file
+./accounts/signals.py:1:1: F401 'django.db.models.signals.post_save' imported but unused
+./accounts/signals.py:1:1: F401 'django.db.models.signals.post_delete' imported but unused
+./accounts/signals.py:2:1: F401 'django.dispatch.receiver' imported but unused
+./accounts/signals.py:3:1: F401 'django.contrib.auth.models.User' imported but unused
+./accounts/signals.py:4:1: W293 blank line contains whitespace
+./accounts/signals.py:7:1: E303 too many blank lines (3)
+./accounts/tests.py:3:1: W293 blank line contains whitespace
+./accounts/urls.py:3:1: F811 redefinition of unused 'views' from line 2
+./accounts/urls.py:17:6: E131 continuation line unaligned for hanging indent
+./accounts/views.py:1:1: F401 'django.contrib.auth.authenticate' imported but unused
+./accounts/views.py:12:1: F811 redefinition of unused 'JsonResponse' from line 2
+./accounts/views.py:25:1: E302 expected 2 blank lines, found 1
+./accounts/views.py:57:1: E303 too many blank lines (3)
+./accounts/views.py:72:32: E201 whitespace after '('
+./accounts/views.py:94:1: E302 expected 2 blank lines, found 1
+./accounts/views.py:100:1: W293 blank line contains whitespace
+./accounts/views.py:106:1: E302 expected 2 blank lines, found 1
+./accounts/views.py:131:1: E302 expected 2 blank lines, found 1
+./accounts/views.py:132:40: W291 trailing whitespace
+./accounts/views.py:133:38: W291 trailing whitespace
+./accounts/views.py:134:1: W293 blank line contains whitespace
+./accounts/views.py:135:1: W293 blank line contains whitespace
+./accounts/views.py:136:1: W293 blank line contains whitespace
+./accounts/views.py:137:1: W293 blank line contains whitespace
+./accounts/views.py:138:1: W293 blank line contains whitespace
+./accounts/views.py:139:5: E303 too many blank lines (5)
+./accounts/views.py:164:1: E303 too many blank lines (3)
+./accounts/views.py:263:1: W391 blank line at end of file
+./branches/management/commands/load_branches.py:5:1: E302 expected 2 blank lines, found 1
+./branches/serializers.py:4:1: E302 expected 2 blank lines, found 1
+./branches/tests.py:3:1: F401 '.models.Branch' imported but unused
+./branches/tests.py:4:1: F401 'django.contrib.gis.geos.Point' imported but unused
+./branches/tests.py:6:1: F401 '.utils.geocode_location' imported but unused
+./branches/tests.py:9:1: E302 expected 2 blank lines, found 1
+./branches/tests.py:36:1: E302 expected 2 blank lines, found 1
+./branches/utils.py:14:1: E302 expected 2 blank lines, found 1
+./branches/utils.py:18:1: E302 expected 2 blank lines, found 1
+./branches/utils.py:23:1: E302 expected 2 blank lines, found 1
+./branches/utils.py:46:1: E302 expected 2 blank lines, found 1
+./branches/views.py:11:1: E302 expected 2 blank lines, found 1
+./branches/views.py:29:1: E302 expected 2 blank lines, found 1
+./branches/views.py:40:1: E302 expected 2 blank lines, found 1
+./vehicles/models.py:1:1: F401 'io.BytesIO' imported but unused
+./vehicles/models.py:2:1: F401 'PIL.Image' imported but unused
+./vehicles/models.py:17:1: W293 blank line contains whitespace
+./vehicles/models.py:20:1: W293 blank line contains whitespace
+./vehicles/models.py:23:14: E111 indentation is not a multiple of 4
+./vehicles/models.py:23:14: E117 over-indented
+./vehicles/models.py:23:44: E226 missing whitespace around arithmetic operator
+./vehicles/models.py:26:1: W391 blank line at end of file
+./vehicles/serializer.py:4:1: E302 expected 2 blank lines, found 1
+./vehicles/serializer.py:7:70: E231 missing whitespace after ','
+./vehicles/urls.py:2:1: F401 'django.contrib.admin' imported but unused
+./vehicles/urls.py:11:1: W293 blank line contains whitespace
+./vehicles/urls.py:13:1: W391 blank line at end of file
+./vehicles/views.py:1:1: F401 'django.shortcuts.get_object_or_404' imported but unused
+./vehicles/views.py:1:1: F401 'django.shortcuts.redirect' imported but unused
+./vehicles/views.py:1:1: F401 'django.shortcuts.render' imported but unused
+./vehicles/views.py:2:1: F401 'vehicles.forms.AddCarForm' imported but unused
+./vehicles/views.py:2:1: F401 'vehicles.forms.EditCarForm' imported but unused
+./vehicles/views.py:3:1: F401 'django.contrib.auth.decorators.login_required' imported but unused
+./vehicles/views.py:7:1: F401 'rest_framework.response.Response' imported but unused
+./vehicles/views.py:9:1: F811 redefinition of unused 'Car' from line 4
+./vehicles/views.py:17:1: E303 too many blank lines (4)
+./vehicles/views.py:20:1: W293 blank line contains whitespace
+./vehicles/views.py:24:1: W293 blank line contains whitespace
