@@ -1,4 +1,4 @@
-from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth import login, logout
 from django.http import JsonResponse
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import AllowAny, IsAuthenticated
@@ -9,7 +9,6 @@ from rest_framework import viewsets
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth import get_user_model
 from django.contrib.auth.hashers import check_password
-from django.http import JsonResponse
 
 
 def custom_authenticate(email, password):
@@ -131,10 +130,6 @@ class UserReservationsViewSet(viewsets.ModelViewSet):
 class AllUsers(viewsets.ModelViewSet):
     queryset = CustomUser.objects.all() 
     serializer_class = UserSerializer 
-    
-    
-    
-    
     
     # from django.shortcuts import get_object_or_404, render, redirect
 # from django.contrib.auth.decorators import login_required
@@ -258,6 +253,4 @@ class AllUsers(viewsets.ModelViewSet):
 #         form = ReservationForm(instance=reservation)
 
 #     return render(request, 'accounts/modify_or_delete_reservation.html', {'form': form, 'reservation': reservation})
-
-
 
