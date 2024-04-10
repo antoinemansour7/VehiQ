@@ -2,7 +2,13 @@
   <div class="sidebar" :style="{ width: sidebarWidth }">
     <h1>
       <span v-if="collapsed">
-        <div><img class="VehiQLogo1" src="@/assets/VEHIQ_logo.png" alt="VehiQLogo" /></div>
+        <div>
+          <img
+            class="VehiQLogo1"
+            src="@/assets/VEHIQ_logo.png"
+            alt="VehiQLogo"
+          />
+        </div>
       </span>
       <span v-else>
         <img class="VehiQLogo2" src="@/assets/VEHIQ_logo.png" alt="VehiQLogo" />
@@ -13,30 +19,52 @@
     <SidebarLink to="/" icon="fas fa-home">Home</SidebarLink>
     <SidebarLink to="/profile" icon="fas fa-user">Profile</SidebarLink>
     <SidebarLink to="/carListing" icon="fas fa-car">Car Listing</SidebarLink>
-    <SidebarLink to="/reservations" icon="fas fa-calendar">Reservations</SidebarLink>
-    <SidebarLink to="/viewReservations" icon="fas fa-list-alt">View Reservations</SidebarLink>
-    <SidebarLink to="/CSRViewReservations" icon="fas fa-list-alt">View Reservations as a CSR</SidebarLink> <!--can change name to "View Reservations"-->
+    <SidebarLink to="/reservations" icon="fas fa-calendar"
+      >Reservations</SidebarLink
+    >
+    <SidebarLink to="/viewReservations" icon="fas fa-list-alt"
+      >View Reservations</SidebarLink
+    >
+    <!-- Branch link-->
+    <SidebarLink to="/nearest-branch" icon="fas fa-map-marker-alt"
+      >Find Branch</SidebarLink
+    >
+
+    <SidebarLink to="/CSRViewReservations" icon="fas fa-list-alt"
+      >View Reservations as a CSR</SidebarLink
+    >
+    <!--can change name to "View Reservations"-->
     <SidebarLink to="/viewUsers" icon="fas fa-users">View Users</SidebarLink>
     <SidebarLink to="/carInspection" icon="fas fa-car-crash">Check Out</SidebarLink>
     <SidebarLink to="/chatBot" icon="fas fa-robot">Chatbot</SidebarLink>
     
     <!-- Show Sign Up link only if not logged in -->
-    <SidebarLink v-if="!isLoggedIn" to="/register" icon="fas fa-user-plus">Sign Up</SidebarLink>
-    
+    <SidebarLink v-if="!isLoggedIn" to="/register" icon="fas fa-user-plus"
+      >Sign Up</SidebarLink
+    >
+
     <!-- Show Log In link only if not logged in -->
-    <SidebarLink v-if="!isLoggedIn" to="/logIn" icon="fas fa-sign-in-alt">Log In</SidebarLink>
-    
+    <SidebarLink v-if="!isLoggedIn" to="/logIn" icon="fas fa-sign-in-alt"
+      >Log In</SidebarLink
+    >
+
     <!-- Show Log Out link only if logged in -->
-    <SidebarLink v-if="isLoggedIn" to="/logOut" icon="fas fa-sign-out-alt" @click="handleLogout">Log Out</SidebarLink>
+    <SidebarLink
+      v-if="isLoggedIn"
+      to="/logOut"
+      icon="fas fa-sign-out-alt"
+      @click="handleLogout"
+      >Log Out</SidebarLink
+    >
 
     <!-- Notification -->
     <div v-if="notification" class="notification">
       {{ notification }}
-      <button @click="clearNotification">Close</button> <!-- Close button to clear notification -->
+      <button @click="clearNotification">Close</button>
+      <!-- Close button to clear notification -->
     </div>
 
     <SidebarLink to="/PickUp" icon="fas fa-car-side">Pick Up</SidebarLink>
-
 
     <span
       class="collapse-icon"
@@ -49,9 +77,9 @@
 </template>
 
 <script>
-import SidebarLink from './SidebarLink'
-import { computed } from 'vue'
-import { useStore } from 'vuex'
+import SidebarLink from "./SidebarLink";
+import { computed } from "vue";
+import { useStore } from "vuex";
 
 export default {
   components: { SidebarLink },
@@ -62,21 +90,28 @@ export default {
     const collapsed = computed(() => store.state.collapsed);
     const sidebarWidth = computed(() => '12%');
 
-    const toggleSidebar = () => store.commit('toggleSidebar');
-    const handleLogout = () => store.dispatch('logout');
+    const toggleSidebar = () => store.commit("toggleSidebar");
+    const handleLogout = () => store.dispatch("logout");
     const notification = computed(() => store.state.notification);
 
     const clearNotification = () => {
-      store.dispatch('clearNotification');
+      store.dispatch("clearNotification");
     };
 
-    return { isLoggedIn, collapsed, sidebarWidth, toggleSidebar, handleLogout, notification, clearNotification };
-  }
+    return {
+      isLoggedIn,
+      collapsed,
+      sidebarWidth,
+      toggleSidebar,
+      handleLogout,
+      notification,
+      clearNotification,
+    };
+  },
 };
 </script>
 
 <style>
-
 :root {
   --sidebar-bg-color: #ada3b8;
   --sidebar-item-hover: #d6cde0;
@@ -122,15 +157,14 @@ export default {
 
 .VehiQLogo1 {
   padding-right: 10px;
-  width: 40px; 
+  width: 40px;
   height: auto;
 }
 
 .VehiQLogo2 {
-  width: 60px; 
+  width: 60px;
   height: auto;
 }
-
 
 .notification {
   position: fixed;

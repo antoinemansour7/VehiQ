@@ -12,11 +12,24 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 import os
 from pathlib import Path
+from dotenv import load_dotenv
 
 import accounts
+from dotenv import load_dotenv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+# load the .env file
+dotenv_path = os.path.join(BASE_DIR, '.env')
+load_dotenv(dotenv_path)
+
+# Google Map API
+GMAPS_API_KEY = os.getenv('GMAPS_API_KEY')
+VUE_APP_GMAPS_API_KEY = os.getenv('VUE_APP_GMAPS_API_KEY')
+
+# Debugging
+print("Google Maps API Key:", os.getenv('GMAPS_API_KEY'))
 
 
 # Quick-start development settings - unsuitable for production
@@ -45,14 +58,14 @@ INSTALLED_APPS = [
     'corsheaders', # new
     'djoser', # new
     'accounts',
-    'vehicles'
-    
+    'vehicles',
+    'branches'
+
 ]
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:8000',
-    'http://localhost:8080',
-    'http://localhost:8081',
+    "http://localhost:8080",
+    "http://172.30.20.92:8080",
 ]
 ALLOWED_HOSTS = [
     'localhost',
@@ -98,11 +111,14 @@ WSGI_APPLICATION = 'VehiQ.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
+        'NAME': os.getenv('DB_NAME'),
+        'USER': os.getenv('DB_USER'),
+        'PASSWORD': os.getenv('DB_PASSWORD'),
+        'HOST': os.getenv('DB_HOST'),  # Or the IP address of your PostgreSQL server
+        'PORT': os.getenv('DB_PORT'),  # Default PostgreSQL port
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators

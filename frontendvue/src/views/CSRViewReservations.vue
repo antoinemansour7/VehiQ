@@ -2,25 +2,44 @@
   <div class="reservation-container">
     <h1>Available Reservations</h1>
     <div class="rental-car-list">
-      <div v-for="(reservation, index) in reservations" :key="index" class="rental-car">
+      <div
+        v-for="(reservation, index) in reservations"
+        :key="index"
+        class="rental-car"
+      >
         <div class="details">
-          
           <p><strong>Car Make:</strong> {{ reservation.car_details.make }}</p>
           <p><strong>Car Model:</strong> {{ reservation.car_details.model }}</p>
           <p><strong>Start Date:</strong> {{ reservation.start_date }}</p>
           <p><strong>End Date:</strong> {{ reservation.end_date }}</p>
-          <p><strong>Reservation Date:</strong> {{ reservation.reservation_date }}</p>
-          <p><strong>Picking Up at:</strong> {{ reservation.pickup_location}}</p>
-          <p><strong>Dropping Off at:</strong> {{ reservation.dropoff_location}}</p>
-         
-          <p><strong>Reserved By:</strong> {{ reservation.user_details.user }}</p>
+          <p>
+            <strong>Reservation Date:</strong>
+            {{ reservation.reservation_date }}
+          </p>
+          <p>
+            <strong>Picking Up at:</strong> {{ reservation.pickup_location }}
+          </p>
+          <p>
+            <strong>Dropping Off at:</strong> {{ reservation.dropoff_location }}
+          </p>
+
+          <p>
+            <strong>Reserved By:</strong> {{ reservation.user_details.user }}
+          </p>
         </div>
         <div class="features">
           <button @click="deleteReservation(reservation.id)">Delete</button>
           <button>Modify</button>
-          <button @click="confirmReservation(reservation.id,reservation.pickup_location)">Confirm</button>
+          <<<<<<< HEAD
+          <button
+            @click="
+              confirmReservation(reservation.id, reservation.pickup_location)
+            "
+          >
+            Confirm
+          </button>
           <button @click="redirectToCSRReport">
-              <span class="icon"><i class="fas fa-flag"></i></span>
+            <span class="icon"><i class="fas fa-flag"></i></span>
           </button>
         </div>
       </div>
@@ -28,80 +47,81 @@
   </div>
 </template>
 
-
 <script>
-import axios from 'axios'
+import axios from "axios";
 
 export default {
-  name: 'HomeView',
+  name: "HomeView",
   data() {
     return {
-      reservations: []
-    }
+      reservations: [],
+    };
   },
   mounted() {
-    this.getReservations()
+    this.getReservations();
   },
   methods: {
     redirectToCSRReport() {
-      this.$router.push('/CSRReport');
+      this.$router.push("/CSRReport");
     },
     getReservations() {
-      axios.get('http://127.0.0.1:8000/accounts/reservations/')
-        .then(response => {
-          const reservationsWithDetails = response.data.map(async reservation => {
- 
-      const carResponse = await axios.get(`http://127.0.0.1:8000/vehicles/cars/${reservation.car}`);
-      const carDetails = carResponse.data;
+      axios
+        .get("http://127.0.0.1:8000/accounts/reservations/")
+        .then((response) => {
+          const reservationsWithDetails = response.data.map(
+            async (reservation) => {
+              const carResponse = await axios.get(
+                `http://127.0.0.1:8000/vehicles/cars/${reservation.car}`
+              );
+              const carDetails = carResponse.data;
 
-      const userResponse = await axios.get(`http://127.0.0.1:8000/accounts/user/${reservation.user}`);
-      const userDetails = userResponse.data;
+              const userResponse = await axios.get(
+                `http://127.0.0.1:8000/accounts/user/${reservation.user}`
+              );
+              const userDetails = userResponse.data;
 
- 
-      return {
-        ...reservation,
-        car_details: carDetails,
-        user_details: userDetails
-    
-        };
-});
+              return {
+                ...reservation,
+                car_details: carDetails,
+                user_details: userDetails,
+              };
+            }
+          );
 
-
-        
           Promise.all(reservationsWithDetails)
-            .then(reservations => {
+            .then((reservations) => {
               this.reservations = reservations;
             })
-            .catch(error => {
-              console.error('Error fetching reservation details:', error);
+            .catch((error) => {
+              console.error("Error fetching reservation details:", error);
             });
         })
-        .catch(error => {
-          console.error('Error fetching reservations:', error);
+        .catch((error) => {
+          console.error("Error fetching reservations:", error);
         });
     },
     deleteReservation(id) {
-      axios.delete(`http://127.0.0.1:8000/accounts/reservations/${id}/`)
+      axios
+        .delete(`http://127.0.0.1:8000/accounts/reservations/${id}/`)
         .then(() => {
-          this.reservations = this.reservations.filter(reservation => reservation.id !== id);
+          this.reservations = this.reservations.filter(
+            (reservation) => reservation.id !== id
+          );
         })
-        .catch(error => {
+        .catch((error) => {
           console.error("Error deleting reservation:", error);
         });
     },
-    confirmReservation(id,pickup_location) {
-  alert(`Reservation ID: ${id}`); 
-  this.$router.push({ name: 'paymentPage', query: { id: id, pickup_location:pickup_location } });
-
-}
-
-
-}
-
-  }
-
+    confirmReservation(id, pickup_location) {
+      alert(`Reservation ID: ${id}`);
+      this.$router.push({
+        name: "paymentPage",
+        query: { id: id, pickup_location: pickup_location },
+      });
+    },
+  },
+};
 </script>
-
 
 <style scoped>
 .reservation-container {
@@ -143,5 +163,4 @@ button {
 button:hover {
   background-color: #90839c;
 }
-
 </style>

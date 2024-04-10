@@ -10,5 +10,9 @@
     "@vue/vue2-jest": "^27.0.0-alpha.2",
     "babel-jest": "^27.5.1",
     "jest": "^27.0.5"
+  },
+  "dependencies": {
+    "@fawmi/vue-google-maps": "^0.9.79",
+    "vue3-google-maps": "^0.0.1"
   }
 }

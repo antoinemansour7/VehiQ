@@ -128,7 +128,12 @@ Once you are done with all these steps, you can now open you browser and go to t
 For more information on our project, please visit our [Wiki](https://github.com/cristina-trofimov/Matter-soen341projectW2024/wiki) page
 
 
+## Demo
+### Sprint 3
+https://drive.google.com/file/d/1-8lARi5JvND1p-XKBRDeVjnmupWTn6xs/view?usp=drive_link
 
 
+## Presentation PowerPoint
+https://docs.google.com/presentation/d/1OGLO96EMgr3ac41A4HGVJbYkBul9TXRHPT5a6y4SYxI/edit?usp=sharing
 
 ---

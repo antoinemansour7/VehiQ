@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import CarListing from '../views/CarListing.vue'
 import AccountProfile from '../views/AccountProfile.vue'
-// import SignUp from '../views/SignUp.vue'
+import SignUp from '../views/SignUp.vue'
 import Reservations from '../views/Reservations.vue'
 import ViewUsers from '../views/ViewUsers.vue'
 import CreateCarForm from '../views/CreateCarForm.vue'
@@ -15,6 +15,7 @@ import ReservationPage from '../views/ReservationPage.vue'
 import paymentPage from '../views/paymentPage.vue'
 import CSRViewReservations from '../views/CSRViewReservations.vue'
 import CSRReport from '../views/CSRReport.vue'
+import NearestBranchView from "../views/NearestBranchView.vue";
 import CarInspection from '../views/CarInspection.vue'
 import RegisterForm from '../components/RegisterForm.vue'
 import LoginForm from '../components/LoginForm.vue'
@@ -24,92 +25,119 @@ import ChatBot from '../views/ChatBot.vue'
 
 const routes = [
   {
-    path: '/',
-    name: 'home',
-    component: HomeView
+    path: "/",
+    name: "home",
+    component: HomeView,
   },
   {
-    path: '/carListing',
-    name: 'carListing',
-    component: CarListing
+    path: "/carListing",
+    name: "carListing",
+    component: CarListing,
   },
   {
-    path: '/profile',
-    name: 'profile',
-    component: AccountProfile
-  },
-  // {
-  //   path: '/signUp',
-  //   name: 'signUp',
-  //   component: SignUp
-  // },
-  {
-    path: '/reservations',
-    name: 'Reservations',
-    component: Reservations
+    path: "/profile",
+    name: "profile",
+    component: AccountProfile,
   },
   {
-    path: '/viewUsers',
-    name: 'ViewUsers',
-    component: ViewUsers
-  },	
-  {
-    path: '/createCar',
-    name: 'createCar',
-    component: CreateCarForm
+    path: "/signUp",
+    name: "signUp",
+    component: SignUp,
   },
   {
-    path: '/carPage/:id',
-    name: 'carPage',
-    component: CarPage
-  },  
-  
+    path: "/reservations",
+    name: "Reservations",
+    component: Reservations,
+  },
+
   {
-    path: '/ReservationPage/:reservationId', 
-    name: 'ReservationPage', 
-    component: ReservationPage, 
-    props: true 
+    path: "/login",
+    name: "login",
+    component: LoginForm,
+  },
+
+  {
+    path: "/register",
+    name: "Register",
+    component: RegisterForm,
+  },
+
+  {
+    path: "/nearest-branch",
+    name: "nearestBranch",
+    component: NearestBranchView,
+  },
+
+  {
+    path: "/viewUsers",
+    name: "ViewUsers",
+    component: ViewUsers,
   },
   {
-    path: '/register',
-    name: 'Register',
-    component: RegisterForm
+    path: "/createCar",
+    name: "createCar",
+    component: CreateCarForm,
   },
   {
-    path: '/login',
-    name: 'Login',
-    component: LoginForm
+    path: "/carPage/:id",
+    name: "carPage",
+    component: CarPage,
+  },
+
+  {
+    path: "/ReservationPage/:reservationId",
+    name: "ReservationPage",
+    component: ReservationPage,
+    props: true,
   },
   {
-    path: '/viewReservations',
-    name: 'ViewReservations',
-    component: ViewReservations
+    path: "/logIn",
+    name: "LogIn",
+    component: LogIn,
   },
   {
-    path: '/userReport',
-    name: 'UserReport',
-    component: UserReport
+    path: "/logOut",
+    name: "LogOut",
+    component: LogOut,
+  },
+
+  {
+    path: "/carInspection",
+    name: "CarInspection",
+    component: CarInspection,
+  },
+
+  {
+    path: "/PickUp",
+    name: "PickUp",
+    component: PickUp,
+  },
+
+  {
+    path: "/viewReservations",
+    name: "ViewReservations",
+    component: ViewReservations,
+  },
+
+  {
+    path: "/userReport",
+    name: "UserReport",
+    component: UserReport,
   },
   {
-    path: '/paymentPage',
-    name: 'paymentPage',
-    component: paymentPage
-  }
-  ,
-  {
-    path: '/CSRViewReservations',
-    name: 'CSRViewReservations',
-    component: CSRViewReservations
+    path: "/paymentPage",
+    name: "paymentPage",
+    component: paymentPage,
   },
   {
-    path: '/CSRReport',
-    name: 'CSRReport',
-    component: CSRReport
+    path: "/CSRViewReservations",
+    name: "CSRViewReservations",
+    component: CSRViewReservations,
   },
   {
-    path: '/carInspection',
-    name: 'CarInspection',
-    component: CarInspection
+    path: "/CSRReport",
+    name: "CSRReport",
+    component: CSRReport,
   },
   {
     path: '/PickUp',
@@ -125,7 +153,7 @@ const routes = [
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  routes
-})
+  routes,
+});
 
-export default router
+export default router;
