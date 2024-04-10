@@ -30,6 +30,7 @@
         <div class="features">
           <button @click="deleteReservation(reservation.id)">Delete</button>
           <button>Modify</button>
+          <<<<<<< HEAD
           <button
             @click="
               confirmReservation(reservation.id, reservation.pickup_location)
@@ -60,14 +61,43 @@ export default {
     this.getReservations();
   },
   methods: {
+    redirectToCSRReport() {
+      this.$router.push("/CSRReport");
+    },
     getReservations() {
       axios
         .get("http://127.0.0.1:8000/accounts/reservations/")
         .then((response) => {
-          this.reservations = response.data;
+          const reservationsWithDetails = response.data.map(
+            async (reservation) => {
+              const carResponse = await axios.get(
+                `http://127.0.0.1:8000/vehicles/cars/${reservation.car}`
+              );
+              const carDetails = carResponse.data;
+
+              const userResponse = await axios.get(
+                `http://127.0.0.1:8000/accounts/user/${reservation.user}`
+              );
+              const userDetails = userResponse.data;
+
+              return {
+                ...reservation,
+                car_details: carDetails,
+                user_details: userDetails,
+              };
+            }
+          );
+
+          Promise.all(reservationsWithDetails)
+            .then((reservations) => {
+              this.reservations = reservations;
+            })
+            .catch((error) => {
+              console.error("Error fetching reservation details:", error);
+            });
         })
         .catch((error) => {
-          console.log(error);
+          console.error("Error fetching reservations:", error);
         });
     },
     deleteReservation(id) {
@@ -82,8 +112,12 @@ export default {
           console.error("Error deleting reservation:", error);
         });
     },
-    redirectToCSRReport() {
-      this.$router.push("/CSRReport");
+    confirmReservation(id, pickup_location) {
+      alert(`Reservation ID: ${id}`);
+      this.$router.push({
+        name: "paymentPage",
+        query: { id: id, pickup_location: pickup_location },
+      });
     },
   },
 };

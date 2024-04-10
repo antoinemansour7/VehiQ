@@ -9,7 +9,7 @@ from .models import Reservation
 class ReservationSerializer(serializers.ModelSerializer):
     class Meta:
         model = Reservation
-        fields = ['id', 'car', 'user', 'start_date', 'end_date', 'reservation_date', 'pickup_location', 'dropoff_location','card_number', 'confirmation_number']
+        fields = ['id', 'car', 'user', 'start_date', 'end_date', 'reservation_date', 'pickup_location', 'dropoff_location','card_number', 'confirmation_number', 'price', 'deposit']
 
     # Optionally, you can add extra fields or customize the serializer behavior here
 

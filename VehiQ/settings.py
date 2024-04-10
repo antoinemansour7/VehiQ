@@ -11,9 +11,11 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 import os
-from dotenv import load_dotenv
 from pathlib import Path
+from dotenv import load_dotenv
 
+import accounts
+from dotenv import load_dotenv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -51,7 +53,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.contrib.gis',
     'rest_framework', # new
     'rest_framework.authtoken', # new
     'corsheaders', # new
@@ -59,19 +60,26 @@ INSTALLED_APPS = [
     'accounts',
     'vehicles',
     'branches'
-]
 
+]
+CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:8080",
-    "http://172.30.32.150:8080",
+    "http://172.30.20.92:8080",
 ]
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+
+]
+CSRF_TRUSTED_ORIGINS = []
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'corsheaders.middleware.CorsMiddleware', # new
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    'accounts.disable.DisableCSRF',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -100,6 +108,7 @@ WSGI_APPLICATION = 'VehiQ.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
@@ -110,9 +119,6 @@ DATABASES = {
         'PORT': os.getenv('DB_PORT'),  # Default PostgreSQL port
     }
 }
-
-#Debugging
-print("Database Name:", os.getenv('DB_NAME'))
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -132,30 +138,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-# Check for Logs
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'handlers': {
-        'console': {
-            'class': 'logging.StreamHandler',
-        },
-    },
-    'loggers': {
-        'django': {
-            'handlers': ['console'],
-            'level': 'DEBUG',
-        },
-    },
-}
 
-# caching to reduce number of API calls
-CACHES = {
-    'default': {
-        'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
-        'LOCATION': '/var/tmp/django_cache',
-    }
-}
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 

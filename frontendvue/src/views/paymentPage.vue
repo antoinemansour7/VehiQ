@@ -1,6 +1,7 @@
 <template>
   <div class="payment-container">
     <h1>Payment Information</h1>
+    <p>this is price : {{ this.$route.query.price }}</p>
     <form @submit.prevent="submitPayment" class="payment-form">
       <div class="form-group">
         <label for="cardNumber" class="left-label"
@@ -37,7 +38,6 @@
       </div>
       <button type="submit">Submit Payment</button>
     </form>
-
     <div v-if="confirmationNumber" class="confirmation">
       <h2>Booking Confirmation</h2>
       <p>
@@ -59,6 +59,7 @@ export default {
       cvv: "",
       confirmationNumber: "",
       pickupLocation: "",
+      reservation: {},
     };
   },
   methods: {
@@ -73,7 +74,14 @@ export default {
         const reservationData = reservationResponse.data;
 
         // Extract necessary data
-        const { car, user, end_date } = reservationData;
+        const {
+          car,
+          user,
+          end_date,
+          price,
+          pickup_location,
+          dropoff_location,
+        } = reservationData;
 
         // Construct the payload for the PUT request
         const payload = {
@@ -84,6 +92,10 @@ export default {
           car,
           user,
           end_date,
+          price,
+          pickup_location,
+          dropoff_location,
+          deposit: 500,
         };
 
         // Perform the PUT request to update the reservation
@@ -95,12 +107,11 @@ export default {
 
         // Update confirmation number after successful submission
         this.confirmationNumber = payload.confirmation_number;
-        setTimeout(() => {
-          this.$router.push({
-            name: "ReservationPage",
-            params: { reservationId: response.data.id },
-          });
-        }, 30000); // 30 seconds delay (30,000 milliseconds)
+
+        this.$router.push({
+          name: "ReservationPage",
+          params: { reservationId: response.data.id },
+        });
       } catch (error) {
         console.error("Error updating reservation:", error);
       }
@@ -108,6 +119,7 @@ export default {
   },
 };
 </script>
+
 <style scoped>
 .payment-container {
   max-width: 400px;

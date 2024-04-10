@@ -16,6 +16,10 @@ import paymentPage from "../views/paymentPage.vue";
 import CSRViewReservations from "../views/CSRViewReservations.vue";
 import CSRReport from "../views/CSRReport.vue";
 import NearestBranchView from "../views/NearestBranchView.vue";
+import LoginForm from "../components/LoginForm.vue";
+import RegisterForm from "../components/RegisterForm.vue";
+import CarInspection from "../views/CarInspection.vue";
+import PickUp from "../views/PickUp.vue";
 
 const routes = [
   {
@@ -42,6 +46,18 @@ const routes = [
     path: "/reservations",
     name: "Reservations",
     component: Reservations,
+  },
+
+  {
+    path: "/login",
+    name: "login",
+    component: LoginForm,
+  },
+
+  {
+    path: "/register",
+    name: "Register",
+    component: RegisterForm,
   },
 
   {
@@ -82,11 +98,25 @@ const routes = [
     name: "LogOut",
     component: LogOut,
   },
+
+  {
+    path: "/carInspection",
+    name: "CarInspection",
+    component: CarInspection,
+  },
+
+  {
+    path: "/PickUp",
+    name: "PickUp",
+    component: PickUp,
+  },
+
   {
     path: "/viewReservations",
     name: "ViewReservations",
     component: ViewReservations,
   },
+
   {
     path: "/userReport",
     name: "UserReport",

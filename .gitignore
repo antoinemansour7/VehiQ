@@ -11,11 +11,6 @@ local_settings.py
 # Virtual environment
 venv/
 
-# Environment Vaiables
-.env
-
-# node modules
 node_modules/
 
-# migration
-branches/migrations/0002_*
+.env
