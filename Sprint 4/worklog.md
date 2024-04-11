@@ -25,7 +25,10 @@
 | Time (h) | Time Stamp               | Task                                                                                                      |
 | :------: | ------------------------ | --------------------------------------------------------------------------------------------------------- |
 |   3    | Apr 6th - 14:00 - 17:00| Tried to research and download dependencies for the Google API to make the Main branch runnable.|
-|4      | apr 10th - 21:00-01:00|   Transfer all project files to Ubunty, fix vue installation in Ubuntu, added Google API and GeoDjango instllations file via Ubuntu|
+|4      | Apr 7th - 21:00-01:00|   Transfer all project files to Ubuntu, fix vue installation in Ubuntu, added Google API and GeoDjango instllations file via Ubuntu|
+|1     | apr 9th - 11:00-12:00|   Reviewed pull request called chatbot integration, gave some positive feedback, some comments about naming convention, some readabilty issues|
+|4      | apr 10th - 13:00-17:00|   Manually did some static analysis of our code to delete unused imports, whitespaces,empty lines and refactor code according to PEP8 guidelines|
+|3     | apr 10th - 18:00-21:00|   Did some Sprint 2 backlog, fixed some issues due to our critical commit, added create and modify functionlity to vehicles|
 
 
-**Total Time (h):** 7
+**Total Time (h):** 15
