@@ -6,8 +6,11 @@
 | :------: | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
 |    5     | Apr 6th - 16:00 - 21:00                 | Spend time on configuring Jest to create unit tests. Spend most of the time figuring out configurations for Jest. Did not work. |
 |   4.5    | Apr 7th - 13:00 - 15:30 / 17:00 - 19:00 | Spent more time in the morning and got the tests to run. In the afternoon I wrote 6 unit tests                                  |
+|3 | Apr 8th - 20:00 - 23:00| continue workin on the unit tests and help out with the branch merging|
+|4| April 9th 21:00 - 02:00 | finishing up on the unit tests and modyfying the classes so the tests pass| 
+| 1 | Apr 10th - 9:00 - 10:00 | merging branch into main with corresponding dependancies|
 
-**Total Time (h):** 20.5
+**Total Time (h):** 17.5
 
 ### Julia :
 
