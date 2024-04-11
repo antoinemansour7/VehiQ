@@ -16,10 +16,14 @@
 
 | Time (h) | Time Stamp              | Task                                                                                                                                                                                                                                          |
 | :------: | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|    3     | Apr 6th - 14:00 - 17:00 | Tried to research and download dependencies for the Google API to make the Main branch runnable.                                                                                                                                              |
+|    3     | Apr 6th - 14:00 - 17:00 | Tried to research and download dependencies for the Google API to make the Main branch runnable. |
 |    3     | Apr 8th - 18:00 - 21:00 | Created meeting minutes files. Worked on the presentation PowerPoint. Gathered data on the planned story points and the actual story points for each sprint, and created the Planned Story Points vs Actual Story Points chart based on that. |
+|    1     | April 9th 02:30 - 03:30 | Researched on how the pipelines and Flake8 work and fixed the dotenv issue in the pipelines. |
+|    3.5     | April 9th 21:00 - 00:30 | Successfully downloaded the dependencies for the Google API and run the SQL database. Finalized the PowerPoint. |
+|    1.5     | April 10th 17:00 - 18:30 | Researched on how to connect the Chatbot to the frontend. |
+|    3.5     | April 10th 21:00 - 00:30 | Continued to research and to try to connect the Chatbot to the frontend and made the UI for it. Tried to fix the login in the main. |
 
-**Total Time (h):** 6
+**Total Time (h):** 15.5
 
 ### Jackson :
 
