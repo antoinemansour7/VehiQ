@@ -157,7 +157,7 @@ sudo apt-get install postgresql postgresql-contrib
 Install PostGIS:
 
 ```
-sudo apt-get install postgis postgresql-12-postgis-3
+sudo apt-get install postgis postgresql-14-postgis-3
 ```
 
 6. **Setting up the DatabaseCreate a PostgreSQL database and enable the PostGIS extension.**
