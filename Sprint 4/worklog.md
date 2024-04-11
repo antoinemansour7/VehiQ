@@ -56,7 +56,7 @@
 
 | Time (h) | Time Stamp           | Task                                                                                 |
 | :------: | -------------------- | ------------------------------------------------------------------------------------ |
-|    2     | April 07 15:30:17:00 | Fixing local branching problems                                                      |
+|    2     | April 07 15:00:17:00 | Fixing local branching problems                                                      |
 |    4     | April 09 15:00:19:00 | Learning how and training the chat bot model for app implementation                  |
 |    4     | April 10 18:00-22:00 | Trying to fix broken local codes and branches after recent merges                    |
 
