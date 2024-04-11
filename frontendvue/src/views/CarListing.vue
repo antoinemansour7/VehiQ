@@ -1,6 +1,6 @@
 <template>
   <div>
-      <h1>Available Cars</h1>
+      <h1>Available Cars {{this.$route.params.id}}</h1>
 
       <!--Create new car-->
       <button class="button-looking" @click="openCreateCarForm">Create</button>
@@ -47,8 +47,8 @@
             </button>
             
             <button class="button-looking small-button">
-              <span class="icon"><i class="fas fa-edit"></i></span>
-            </button>
+  <span class="icon"><i class="fas fa-edit" @click="modifyCar(car.id)"></i></span>
+</button>
             <button class="button-looking small-button" @click="openReserveCarPage(car.id)">
               <span class="icon"><i class="fas fa-calendar"></i></span>
             </button>
@@ -116,7 +116,12 @@ export default {
     ,
     openReserveCarPage(id) {
     this.$router.push({ name: 'carPage', params: { id: id} })
-    }
+    },
+
+    modifyCar(id) {
+      this.$router.push({ name: 'modifyCar', params: { id: id } });
+}
+
 
   },
   computed: {

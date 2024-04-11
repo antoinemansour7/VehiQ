@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "test": "vue-cli-service test:unit"
+    "test": "jest && vue-cli-service test:unit",
+    "test:unit": "jest --config jest.config.unit.js"
   },
   "devDependencies": {
     "@babel/core": "^7.24.4",

@@ -21,6 +21,7 @@ import RegisterForm from '../components/RegisterForm.vue'
 import LoginForm from '../components/LoginForm.vue'
 import PickUp from '../views/PickUp.vue'
 import ChatBot from '../views/ChatBot.vue'
+import modifyCar from '../views/modifyCar.vue'
 
 
 const routes = [
@@ -82,6 +83,11 @@ const routes = [
     path: "/carPage/:id",
     name: "carPage",
     component: CarPage,
+  },
+  {
+    path: '/modifyCar/:id',
+    name: 'modifyCar',
+    component: modifyCar,
   },
 
   {
