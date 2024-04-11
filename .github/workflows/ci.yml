@@ -64,5 +64,4 @@ jobs:
           node-version: '20.11.1'
 
       - name: Run vue.js unit tests
-        on: [push, pull_request]
         run: npm run test:unit
