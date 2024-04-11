@@ -108,10 +108,12 @@ export default {
         // Update confirmation number after successful submission
         this.confirmationNumber = payload.confirmation_number;
 
-        this.$router.push({
-          name: "ReservationPage",
-          params: { reservationId: response.data.id },
-        });
+        setTimeout(() => {
+      this.$router.push({
+        name: "ReservationPage",
+        params: { reservationId: response.data.id },
+      });
+    }, 20000); 
       } catch (error) {
         console.error("Error updating reservation:", error);
       }
