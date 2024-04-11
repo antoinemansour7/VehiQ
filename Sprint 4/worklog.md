@@ -51,3 +51,13 @@
 |    3     | March 10 21:00-00:00 | Implement actions that the model should do as a response to the user prompt          |
 
 **Total Time (h):** 22
+
+### André :
+
+| Time (h) | Time Stamp           | Task                                                                                 |
+| :------: | -------------------- | ------------------------------------------------------------------------------------ |
+|    2     | April 07 15:30:19:00 | Fixing local branching problems                                                      |
+|    4     | April 09 15:30:19:00 | Learning how and training the chat bot model for app implementation                  |
+|    4     | April 10 12:00-19:00 | Trying to fix broken local codes and branches after recent merges                    |
+
+**Total Time (h):** 10
