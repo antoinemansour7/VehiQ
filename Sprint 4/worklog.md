@@ -61,3 +61,15 @@
 |    4     | April 10 18:00-22:00 | Trying to fix broken local codes and branches after recent merges                    |
 
 **Total Time (h):** 10
+
+
+### Antoine :
+
+| Time (h) | Time Stamp         | Task                                                                |
+| :------: | ------------------ | ------------------------------------------------------------------- |
+|    3     | Mar 30 15:00-18:00 | Helped with chatbot integration, tried to download dependencies (did not work |
+|    1.5   | April 08 17:00-18:30| Helped with the Design of the PowerPoint Theme/colors/etc.  |
+|    7.5   | April 10 11:00-18:30| Wrote 8 Unit tests for accounts app |    
+|    2.5   | April 10 20:00-22:30| Wrote 1 Unit test for vehicules app | 
+
+**Total Time (h):** 14.5
