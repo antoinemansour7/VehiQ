@@ -82,4 +82,8 @@ h1, h3, p{
   justify-content: center;
   align-items: center;
 }
+
+.chatbot-toggle-button:hover {
+  background-color: #90839c; 
+}
 </style>
