@@ -30,8 +30,10 @@
 |    1     | apr 9th - 11:00-12:00   | Reviewed pull request called chatbot integration, gave some positive feedback, some comments about naming convention, some readabilty issues   |
 |    4     | apr 10th - 13:00-17:00  | Manually did some static analysis of our code to delete unused imports, whitespaces,empty lines and refactor code according to PEP8 guidelines |
 |    3     | apr 10th - 18:00-21:00  | Did some Sprint 2 backlog, fixed some issues due to our critical commit, added create and modify functionlity to vehicles                      |
+|    1     | apr 10th - 23:00-00:00  | Updated the README and tried to fix the CI pipeline                    |
 
-**Total Time (h):** 15
+
+**Total Time (h):** 16
 
 ### Leiticia :
 
