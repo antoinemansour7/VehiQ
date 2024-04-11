@@ -20,6 +20,7 @@ import LoginForm from "../components/LoginForm.vue";
 import RegisterForm from "../components/RegisterForm.vue";
 import CarInspection from "../views/CarInspection.vue";
 import PickUp from "../views/PickUp.vue";
+import Chatbot from "../views/Chatbot.vue";
 
 const routes = [
   {
@@ -137,6 +138,11 @@ const routes = [
     name: "CSRReport",
     component: CSRReport,
   },
+  {
+    path: "/Chatbot",
+    name: "Chatbot",
+    component: Chatbot,
+  }
 ];
 
 const router = createRouter({
