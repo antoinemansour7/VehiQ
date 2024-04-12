@@ -199,11 +199,29 @@ psql -d branch -U postgres
 
 ### Setting Up The ChatBot 
 
-1. Install Rasa
-```pip install rasa```
+```
+cd chatbot
+```
 
-2. Run the server
-```rasa run --enable-api -p 5002```
+1. Install Rasa
+```
+pip install rasa
+```
+
+3. Run the server
+```
+rasa run --enable-api -p 5002
+```
+
+5. Train the chatbot
+```
+rasa train
+```
+
+7. Load the training model
+```
+Rasa shell
+```
 
 Once you are done with all these steps, you can now open you browser and go to the following URL [http://localhost:8080/](http://localhost:8080/) to explore the project!
 
