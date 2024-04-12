@@ -8,59 +8,57 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
-  - user_sign_in
+  - sign_in
   - find_branch
   - select_car
   - complete_payment
   - check_in
   - report_issue
+  - payment_methods
+  - cancellation
+  - car_availability
+  - insurance_coverage
+  - reservation_modification
+  - additional_driver
+  - age_requirements
+  - fuel_policy
 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
-  - text: "Hello there! How can I assist you today?"
-  - text: "Hi! Welcome to our car rental service. How may I help you?"
-  - text: "Good [morning/afternoon/evening]! How may I assist you today?"
+    - text: "Hey! How are you?"
+    - text: "Hello there! How can I assist you today?"
+    - text: "Hi! Welcome to our car rental service. How may I help you?"
+    - text: "Good [morning/afternoon/evening]! How may I assist you today?"
 
   utter_goodbye:
-  - text: "Goodbye! If you need any further assistance, feel free to ask."
-  - text: "See you later! Have a great day."
-  - text: "Bye for now! Take care."
-  - text: "Until next time! Goodbye."
+    - text: "Goodbye! If you need any further assistance, feel free to ask."
+    - text: "See you later! Have a great day."
+    - text: "Bye for now! Take care."
+    - text: "Until next time! Goodbye."
 
   utter_iamabot:
-  - text: "Yes, I am a bot, powered by Rasa. But don't worry, I'm here to help you with your car rental needs."
-  - text: "Indeed, I'm a bot. But I'm a helpful one!"
+    - text: "Yes, I am a bot, powered by Rasa. But don't worry, I'm here to help you with your car rental needs."
+    - text: "Indeed, I'm a bot. But I'm a helpful one!"
+    - text: "I am a bot, powered by Rasa."
 
   utter_ask_sign_in:
-  - text: "Sure! Please provide your email and password to sign in."
-  - text: "To sign in, please provide your email address and password."
-  - text: "I can assist you with signing in. Please provide your email and password."
+    - text: "I can't sign you in directly. Please use the sign-in page on our website to enter your email and password."
 
   utter_ask_branch_location:
-  - text: "Where are you located? I can help you find the nearest branch."
-  - text: "Sure! Let me assist you in finding the nearest branch. Could you please provide your current location?"
-  - text: "Looking for the nearest branch? Just let me know your location and I'll find it for you."
+    - text: "I can't perform that action directly. Please go to the find branch section in the toolbar, enter your postal code or address, and it will show you the nearest branch."
+    - text: "I can't locate branches directly. Please go to the 'Find Branch' section in the toolbar, enter your postal code or address, and it will show you the nearest branch."
 
   utter_ask_car_selection:
-  - text: "Great! What type of car are you looking for?"
-  - text: "Excellent choice! Could you specify the type of car you're interested in?"
-  - text: "Sure thing! Let me know the type of car you're looking to rent."
+    - text: "I can't show cars directly. Please visit the 'Car Listing' section of our website to view all available vehicles and select the one you like."
 
   utter_ask_payment:
-  - text: "Ready to complete your payment. How would you like to pay?"
-  - text: "To finalize your reservation, we just need your payment details. How do you want to pay?"
-  - text: "Almost there! Let's complete your reservation. What payment method would you like to use?"
+    - text: "I can't process payments. To complete your payment, please go to the 'Payments' section on our website and follow the instructions there."
 
   utter_check_in_instructions:
-  - text: "To check in, please provide your reservation details."
-  - text: "Ready to check in! Please provide your reservation information."
-  - text: "Let's get you checked in! I'll need some details from your reservation."
+    - text: "I can't check you in. Please check in through our website or mobile app by entering your reservation details in the 'Check-In' section."
 
   utter_report_issue:
-  - text: "I'm sorry to hear that. Please describe the issue you're facing so I can assist you further."
-  - text: "I'm here to help! What problem are you experiencing with your reservation?"
-  - text: "No worries, I'll do my best to resolve the issue. Can you tell me more about what's happening?"
+    - text: "I can't resolve issues directly. Please report any problems through our support page or contact our helpdesk."
 
   utter_faq_payment_methods:
     - text: "We accept various payment methods including credit/debit cards, PayPal, and bank transfers."
@@ -85,19 +83,17 @@ responses:
 
   utter_faq_fuel_policy:
     - text: "Our fuel policy varies depending on the rental location and package. In most cases, we operate on a full-to-full basis where you receive the car with a full tank of fuel and are expected to return it with a full tank. Please check your reservation details or contact our support team for more information."
+    - text: "The Car has to be returned with 3/4 to full Tank. Otherwise additional fees may apply. Please check you reservation details or contact our support team for more details."
 
   utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
+    - text: "Here is something to cheer you up:"
+      image: "https://i.imgur.com/nGF1K8f.jpg"
 
   utter_did_that_help:
-  - text: "Did that help you?"
+    - text: "Did that help you?"
 
   utter_happy:
-  - text: "Great, carry on!"
-
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+    - text: "Great, carry on!"
 
 session_config:
   session_expiration_time: 60

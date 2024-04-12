@@ -1,13 +1,82 @@
 version: "3.1"
 
 rules:
+  - rule: Say goodbye anytime the user says goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
 
-- rule: Say goodbye anytime the user says goodbye
-  steps:
-  - intent: goodbye
-  - action: utter_goodbye
+  - rule: Say 'I am a bot' anytime the user challenges
+    steps:
+      - intent: bot_challenge
+      - action: utter_iamabot
 
-- rule: Say 'I am a bot' anytime the user challenges
-  steps:
-  - intent: bot_challenge
-  - action: utter_iamabot
+  - rule: Provide sign in answer
+    steps:
+      - intent: sign_in
+      - action: utter_ask_sign_in
+
+  - rule: Tell the user where to find the branch
+    steps:
+      - intent: find_branch
+      - action: utter_ask_branch_location
+
+  - rule: Tell where to select a car
+    steps:
+      - intent: select_car
+      - action: utter_ask_car_selection
+
+  - rule: Say how to complete a payment
+    steps:
+      - intent: complete_payment
+      - action: utter_ask_payment
+
+  - rule: Say how to check in
+    steps:
+      - intent: check_in
+      - action: utter_check_in_instructions
+
+  - rule: Say the payment methods
+    steps:
+      - intent: payment_methods
+      - action: utter_faq_payment_methods
+
+  - rule: Say how to cancel
+    steps:
+      - intent: cancellation
+      - action: utter_faq_cancellation
+
+  - rule: Say where to look for car availabilityl
+    steps:
+      - intent: car_availability
+      - action: utter_faq_car_availability
+
+  - rule: Say the insurance coverage
+    steps:
+      - intent: insurance_coverage
+      - action: utter_faq_insurance_coverage
+
+  - rule: Say how to modify a reservation
+    steps:
+      - intent: reservation_modification
+      - action: utter_faq_reservation_modification
+
+  - rule: Say driver conditions
+    steps:
+      - intent: additional_driver
+      - action: utter_faq_additional_driver
+
+  - rule: Say the age limit
+    steps:
+      - intent: age_requirements
+      - action: utter_faq_age_requirements
+
+  - rule: Say the fuel policy
+    steps:
+      - intent: fuel_policy
+      - action: utter_faq_fuel_policy
+
+  - rule: Say what to do in case there an issue
+    steps:
+      - intent: report_issue
+      - action: utter_report_issue

@@ -73,6 +73,13 @@
     >
       <i class="fas fa-angle-double-left" />
     </span>
+
+    <SidebarLink
+      to="/chatbot"
+      icon="fas fa-comments"
+      @click.prevent="toggleChatbot"
+      >Chatbot</SidebarLink
+    >
   </div>
 </template>
 
@@ -98,6 +105,11 @@ export default {
       store.dispatch("clearNotification");
     };
 
+    // Method to toggle chetbot visibility
+    const toggleChatbot = () => {
+      store.commit("TOGGLE_CHATBOT");
+    };
+
     return {
       isLoggedIn,
       collapsed,
@@ -106,6 +118,7 @@ export default {
       handleLogout,
       notification,
       clearNotification,
+      toggleChatbot,
     };
   },
 };
@@ -174,5 +187,16 @@ export default {
   color: #fff;
   padding: 10px;
   border-radius: 5px;
+}
+
+.chatbot-toggle-button {
+  margin-top: 10px;
+  padding: 10px;
+  width: 100%;
+  background-color: #4a69bd;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 </style>

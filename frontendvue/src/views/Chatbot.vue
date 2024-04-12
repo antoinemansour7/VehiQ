@@ -1,129 +1,147 @@
 <template>
-    <div v-if="isOpen" class="chatbot-window" :style="chatbotWindowStyle">
-      <!-- Chat interface content -->
-      <div class="message-container">
-        <div v-for="(message, index) in messages" :key="index" class="message" :class="{ 'user-message': message.user === 'user', 'bot-message': message.user === 'bot' }">{{ message.text }}</div>
+  <div v-if="isOpen" class="chatbot-window" :style="chatbotWindowStyle">
+    <!-- Chat interface content -->
+    <div class="message-container" ref="messageContainer">
+      <div
+        v-for="(message, index) in messages"
+        :key="index"
+        class="message"
+        :class="{
+          'user-message': message.user === 'user',
+          'bot-message': message.user === 'bot',
+        }"
+      >
+        {{ message.text }}
       </div>
-      <input v-model="newMessage" @keyup.enter="sendMessageAndClear" placeholder="Type a message..." class="input-message">
+      <div v-if="isLoading" class="loading-indicator">Typing...</div>
     </div>
-  </template>
-  
-  <script>
-  import axios from 'axios';
-  
-  export default {
-    props: {
-      isOpen: Boolean
-    },
-    data() {
+    <input
+      v-model="newMessage"
+      @keyup.enter="sendMessageAndClear"
+      placeholder="Type a message..."
+      class="input-message"
+      aria-label="Type your message here"
+    />
+  </div>
+</template>
+
+<script>
+import axios from "axios";
+
+export default {
+  props: {
+    isOpen: Boolean,
+  },
+  data() {
+    return {
+      messages: [],
+      newMessage: "",
+      isLoading: false,
+    };
+  },
+  computed: {
+    chatbotWindowStyle() {
       return {
-        messages: [],
-        newMessage: ''
+        position: "fixed",
+        bottom: this.isOpen ? "80px" : "-380px",
+        right: "20px",
+        width: "300px",
+        height: "400px",
+        border: "1px solid #ccc",
+        backgroundColor: "#f4f4f4",
+        zIndex: this.isOpen ? "999" : "-1",
+        borderRadius: "10px",
+        boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)",
       };
     },
-    computed: {
-      chatbotWindowStyle() {
-        return {
-          position: 'fixed',
-          bottom: this.isOpen ? '80px' : '-380px', // Adjust the bottom position to show above the button
-          right: '20px',
-          width: '300px',
-          height: '400px',
-          border: '1px solid #ccc',
-          backgroundColor: '#f4f4f4', // Background color
-          zIndex: this.isOpen ? '999' : '-1',
-          borderRadius: '10px',
-          boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)' // Box shadow for depth effect
-        };
-      }
+  },
+  methods: {
+    scrollToBottom() {
+      this.$nextTick(() => {
+        if (this.$refs.messageContainer) {
+          this.$refs.messageContainer.scrollTop =
+            this.$refs.messageContainer.scrollHeight;
+        }
+      });
     },
-    mounted() {
-      // Fetch initial messages from Rasa server when component is mounted
-      this.getInitialMessages();
+    sendMessageAndClear() {
+      if (!this.newMessage.trim()) return;
+      this.sendMessage();
+      this.newMessage = "";
     },
-    methods: {
-      getInitialMessages() {
-        axios.get('http://localhost:5002/api')
-          .then(response => {
-            this.messages = response.data.messages;
-          })
-          .catch(error => {
-            console.error('Error fetching initial messages:', error);
+    sendMessage() {
+      this.isLoading = true;
+      this.messages.push({ text: this.newMessage, user: "user" });
+      axios
+        .post(process.env.VUE_APP_CHAT_ENDPOINT, { message: this.newMessage })
+        .then((response) => {
+          response.data.forEach((msg) => {
+            this.messages.push({ text: msg.text, user: "bot" });
           });
-      },
-      sendMessageAndClear() {
-        // Call sendMessage method
-        this.sendMessage();
-  
-        // Clear the input field
-        this.newMessage = '';
-      },
-      sendMessage() {
-        // Ensure the new message is not empty
-        if (!this.newMessage.trim()) return;
-  
-        // Add the new message to the messages array
-        this.messages.push({ text: this.newMessage, user: 'user' });
-  
-        // Send the message to the Rasa server
-        axios.post('http://localhost:5002/api', { text: this.newMessage })
-          .then(response => {
-            // Add the response message to the messages array
-            this.messages.push({ text: response.data.text, user: 'bot' });
-          })
-          .catch(error => {
-            console.error('Error sending message:', error);
+        })
+        .catch((error) => {
+          console.error("Error sending message:", error);
+          this.messages.push({
+            text: "Failed to get response from the server.",
+            user: "bot",
           });
-      }
-    }
-  };
-  </script>
-  
-  <style scoped>
-  /* Styles for the chatbot window */
-  .chatbot-window {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    padding: 20px;
-  }
-  
-  .message-container {
-    overflow-y: auto;
-    height: calc(100% - 70px);
-    width: 100%;
-  }
-  
-  .message {
-    margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 10px;
-    max-width: 70%;
-  }
-  
-  .user-message {
-    background-color: #ada3b8; /* User message background color */
-    color: white;
-    align-self: flex-end;
-  }
-  
-  .bot-message {
-    background-color: #f0f0f0; /* Bot message background color */
-  }
-  
-  .input-message {
-    margin-top: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    width: calc(100% - 22px);
-    font-size: 16px;
-  }
-  
-  /* Hover effect for input message */
-  .input-message:hover {
-    background-color: #eaeaea;
-    transition: background-color 0.3s ease;
-  }
-  </style>
-  
+        })
+        .finally(() => {
+          this.isLoading = false;
+          this.scrollToBottom();
+        });
+    },
+  },
+};
+</script>
+
+<style scoped>
+.chatbot-window {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 20px;
+}
+
+.message-container {
+  overflow-y: auto;
+  height: calc(100% - 70px);
+  width: 100%;
+}
+
+.message {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 70%;
+}
+
+.user-message {
+  background-color: #ada3b8;
+  color: white;
+  align-self: flex-end;
+}
+
+.bot-message {
+  background-color: #f0f0f0;
+}
+
+.input-message {
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: calc(100% - 22px);
+  font-size: 16px;
+}
+
+.input-message:hover {
+  background-color: #eaeaea;
+  transition: background-color 0.3s ease;
+}
+
+.loading-indicator {
+  color: #aaa;
+  font-style: italic;
+}
+</style>

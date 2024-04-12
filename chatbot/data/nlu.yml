@@ -138,7 +138,7 @@ nlu:
       - tell me a joke
       - do you have feelings?
 
-  - intent: user_sign_in
+  - intent: sign_in
     examples: |
       - I want to sign in using my email [john.doe@example.com](email) and password [password1234](password)
       - Sign in with [jane.doe@example.com](email) and [secret](password)
@@ -162,6 +162,9 @@ nlu:
       - what's the address of your branch in [Vancouver](location)?
       - find the nearest office
       - show me your branches on the map
+      - How can I find the nearest car rental branch?
+      - Directions to the closest branch
+      - nearest car rental location
 
   - intent: select_car
     examples: |
@@ -200,6 +203,7 @@ nlu:
       - I'm ready to pick up my car
       - start my rental
       - what's the check-in process?
+      - check in
 
   - intent: report_issue
     examples: |
@@ -216,54 +220,90 @@ nlu:
       - what do I do if I have a problem?
       - how can I resolve an issue?
       - who can I contact if I have an issue?
+      - issue
+      - problem
 
-  - intent: faq_payment_methods
+  - intent: payment_methods
     examples: |
       - What payment methods do you accept?
       - Can I pay with PayPal?
       - Do you accept bank transfers?
+      - pay
+      - How can i pay?
+      - payment
+      - Do you accept credit cards?
+      - credit
+      - debit
+      - payment methods
 
-  - intent: faq_cancellation
+  - intent: cancellation
     examples: |
       - How can I cancel my reservation?
       - What is your cancellation policy?
       - Can I get a refund if I cancel my booking?
 
-  - intent: faq_car_availability
+  - intent: car_availability
     examples: |
       - Are there any cars available for rent?
       - Can I check the availability of a specific car model?
       - Do you have any SUVs available for rent?
+      - available
+      - is there any car available?
+      - available car
+      - available car for rent
+      - How can i see available cars?
+      - Check available car
 
-  - intent: faq_insurance_coverage
+  - intent: insurance_coverage
     examples: |
       - What type of insurance coverage is included in my rental?
       - Can I purchase additional insurance coverage?
       - Do you offer collision damage waiver (CDW)?
+      - insurance
+      - coverage
+      - accident
+      - What is coreved in my insurence rental?
 
-  - intent: faq_reservation_modification
+  - intent: reservation_modification
     examples: |
       - How can I change my reservation details?
       - Can I modify my pickup location?
       - Is it possible to extend my rental period?
+      - cancel
+      - cancelation
+      - canclation policy
+      - What is the cancelation policy?
+      - How can i cancel my reservation?
+      - cancel reservation
 
-  - intent: faq_additional_driver
+  - intent: additional_driver
     examples: |
       - Can I add another driver to my reservation?
       - How much does it cost to add an additional driver?
       - What are the requirements for adding an extra driver?
+      - Can i add another driver ?
+      - another driver
+      - Can someone else drive?
+      - add a driver
 
-  - intent: faq_age_requirements
+  - intent: age_requirements
     examples: |
       - What is the minimum age to rent a car?
       - Are there any age restrictions for renting a car?
       - Can someone under 25 rent a car?
+      - minimum age
+      - age
+      - what is the minimum age?
 
-  - intent: faq_fuel_policy
+  - intent: fuel_policy
     examples: |
       - How does your fuel policy work?
       - Do I need to return the car with a full tank of gas?
       - What happens if I return the car without refueling?
+      - fuel
+      - Should i return the car full?
+      - fuel policy
+      - tank
 
 entities:
   - email

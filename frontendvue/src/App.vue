@@ -1,42 +1,41 @@
 <template>
-  <SideBar/>
-  <div :style="{'margin-left': sidebarWidth}">
-    <router-view/>
-    <router-view name="login-form"/>
-    <router-view name="register-form"/>
+  <SideBar />
+  <div :style="{ 'margin-left': sidebarWidth }">
+    <router-view />
+    <router-view name="login-form" />
+    <router-view name="register-form" />
   </div>
-  <button class="chatbot-toggle-button" @click="toggleChatbot"><i class="fas fa-robot"></i></button>
+  <button class="chatbot-toggle-button" @click="toggleChatbot">
+    <i class="fas fa-robot"></i>
+  </button>
   <Chatbot :isOpen="isChatbotOpen" />
-
 </template>
 
 <script>
-import SideBar from '@/components/sidebar/SideBar'
-import { sidebarWidth } from '@/components/sidebar/state'
-import Chatbot from '@/views/Chatbot'
-
+import SideBar from "@/components/sidebar/SideBar";
+import { sidebarWidth } from "@/components/sidebar/state";
+import Chatbot from "@/views/Chatbot";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     SideBar,
-    Chatbot
-
+    Chatbot,
   },
   data() {
     return {
-      isChatbotOpen: false
+      isChatbotOpen: false,
     };
   },
   methods: {
     toggleChatbot() {
       this.isChatbotOpen = !this.isChatbotOpen;
-    }
+    },
   },
-  setup(){
-    return {sidebarWidth}
-  }
-}
+  setup() {
+    return { sidebarWidth };
+  },
+};
 </script>
 
 <style>
@@ -62,7 +61,9 @@ export default {
   color: #42b983;
 }
 
-h1, h3, p{
+h1,
+h3,
+p {
   color: #544e63;
 }
 
@@ -84,6 +85,6 @@ h1, h3, p{
 }
 
 .chatbot-toggle-button:hover {
-  background-color: #90839c; 
+  background-color: #90839c;
 }
 </style>

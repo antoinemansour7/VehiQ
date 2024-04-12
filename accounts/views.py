@@ -102,7 +102,7 @@ def login_user(request):
 def logout_user(request):
     logout(request)
     return JsonResponse({'success': 'User logged out successfully'})
-    
+
 
 class AllReservations(viewsets.ModelViewSet):
     queryset = Reservation.objects.all()
@@ -134,13 +134,13 @@ class UserReservationsViewSet(viewsets.ModelViewSet):
         return JsonResponse(status=status.HTTP_204_NO_CONTENT)
 
 class AllUsers(viewsets.ModelViewSet):
-    queryset = CustomUser.objects.all() 
-    serializer_class = UserSerializer 
-    
-    
-    
-    
-    
+    queryset = CustomUser.objects.all()
+    serializer_class = UserSerializer
+
+
+
+
+
     # from django.shortcuts import get_object_or_404, render, redirect
 # from django.contrib.auth.decorators import login_required
 # from django.contrib.auth.forms import UserCreationForm  # noqa: F401
