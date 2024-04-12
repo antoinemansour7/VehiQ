@@ -19,6 +19,9 @@ models/*
 !models/.gitkeep
 !rasa/actions/__init__.py
 
+# Rasa cache
+.chatbot/.rasa/cache/
+
 # Virtual environment
 venv/
 ENV/
