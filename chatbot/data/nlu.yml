@@ -1,0 +1,318 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - hey
+      - hello
+      - hi
+      - hello there
+      - good morning
+      - good evening
+      - moin
+      - hey there
+      - let's go
+      - hey dude
+      - goodmorning
+      - goodevening
+      - good afternoon
+      - hiya
+      - howdy
+      - what's up
+      - hi there, how can I help you?
+      - nice to meet you
+
+  - intent: goodbye
+    examples: |
+      - cu
+      - good by
+      - cee you later
+      - good night
+      - bye
+      - goodbye
+      - have a nice day
+      - see you around
+      - bye bye
+      - see you later
+      - take care
+      - see you soon
+      - catch you later
+      - until next time
+      - farewell
+      - have a good one
+      - bye for now
+      - talk to you later
+
+  - intent: affirm
+    examples: |
+      - yes
+      - y
+      - indeed
+      - of course
+      - that sounds good
+      - correct
+      - absolutely
+      - definitely
+      - sure thing
+      - you bet
+      - for sure
+      - no doubt
+      - affirmative
+      - yep
+      - yeah
+      - sure
+      - absolutely
+
+  - intent: deny
+    examples: |
+      - no
+      - n
+      - never
+      - I don't think so
+      - don't like that
+      - no way
+      - not really
+      - I disagree
+      - I'm afraid not
+      - I beg to differ
+      - definitely not
+      - absolutely not
+      - not at all
+      - I'm not sure about that
+
+  - intent: mood_great
+    examples: |
+      - perfect
+      - great
+      - amazing
+      - feeling like a king
+      - wonderful
+      - I am feeling very good
+      - I am great
+      - I am amazing
+      - I am going to save the world
+      - super stoked
+      - extremely good
+      - so so perfect
+      - so good
+      - so perfect
+      - fantastic
+      - splendid
+      - superb
+      - marvelous
+      - excellent
+      - outstanding
+
+  - intent: mood_unhappy
+    examples: |
+      - my day was horrible
+      - I am sad
+      - I don't feel very well
+      - I am disappointed
+      - super sad
+      - I'm so sad
+      - sad
+      - very sad
+      - unhappy
+      - not good
+      - not very good
+      - extremly sad
+      - so saad
+      - so sad
+      - terrible
+      - awful
+      - dreadful
+      - miserable
+      - depressed
+      - upset
+
+  - intent: bot_challenge
+    examples: |
+      - are you a bot?
+      - are you a human?
+      - am I talking to a bot?
+      - am I talking to a human?
+      - prove that you're not a bot
+      - what's 2+2?
+      - can you pass the Turing test?
+      - tell me a joke
+      - do you have feelings?
+
+  - intent: sign_in
+    examples: |
+      - I want to sign in using my email [john.doe@example.com](email) and password [password1234](password)
+      - Sign in with [jane.doe@example.com](email) and [secret](password)
+      - Log in
+      - Start session
+      - sign in
+      - sign
+      - start a reservation
+      - login to my account
+      - create an account
+      - register with my email and password
+
+  - intent: find_branch
+    examples: |
+      - Where is the nearest branch?
+      - Find a branch near me
+      - Locate a branch in [Montreal](location)
+      - I'm looking for a branch in [Laval](location)
+      - which branch is closest to my location?
+      - where can I find your branch in [Toronto](location)?
+      - what's the address of your branch in [Vancouver](location)?
+      - find the nearest office
+      - show me your branches on the map
+      - How can I find the nearest car rental branch?
+      - Directions to the closest branch
+      - nearest car rental location
+
+  - intent: select_car
+    examples: |
+      - I need to rent a car
+      - Show me available cars
+      - I want to book an [SUV](car_type)
+      - What cars do you have?
+      - How can i see the available cars?
+      - I'm interested in renting a [sedan](car_type)
+      - can I get a list of cars for rent?
+      - which vehicles are available for rent?
+      - give me options for renting a car
+
+  - intent: complete_payment
+    examples: |
+      - I want to pay
+      - complete the payment
+      - How do i pay?
+      - what are the payment options?
+      - how can I make a payment?
+      - pay for my reservation
+      - I'd like to finalize my payment
+      - can I pay online?
+      - what's your payment policy?
+      - how much do I need to pay?
+
+  - intent: check_in
+    examples: |
+      - I want to check in
+      - Start my reservation now
+      - Activate my booking
+      - How do i check in
+      - can I check in online?
+      - how do I confirm my reservation?
+      - check me in for my reservation
+      - I'm ready to pick up my car
+      - start my rental
+      - what's the check-in process?
+      - check in
+
+  - intent: report_issue
+    examples: |
+      - I have a problem
+      - Resport an issue
+      - Something went wrong with my reservation
+      - i have an issue with my check in
+      - I need assistance with my booking
+      - there's an issue with my rental
+      - I'm experiencing problems with my reservation
+      - can you help me with a problem?
+      - I encountered an issue
+      - I'd like to report a problem
+      - what do I do if I have a problem?
+      - how can I resolve an issue?
+      - who can I contact if I have an issue?
+      - issue
+      - problem
+
+  - intent: payment_methods
+    examples: |
+      - What payment methods do you accept?
+      - Can I pay with PayPal?
+      - Do you accept bank transfers?
+      - pay
+      - How can i pay?
+      - payment
+      - Do you accept credit cards?
+      - credit
+      - debit
+      - payment methods
+
+  - intent: cancellation
+    examples: |
+      - How can I cancel my reservation?
+      - What is your cancellation policy?
+      - Can I get a refund if I cancel my booking?
+
+  - intent: car_availability
+    examples: |
+      - Are there any cars available for rent?
+      - Can I check the availability of a specific car model?
+      - Do you have any SUVs available for rent?
+      - available
+      - is there any car available?
+      - available car
+      - available car for rent
+      - How can i see available cars?
+      - Check available car
+
+  - intent: insurance_coverage
+    examples: |
+      - What type of insurance coverage is included in my rental?
+      - Can I purchase additional insurance coverage?
+      - Do you offer collision damage waiver (CDW)?
+      - insurance
+      - coverage
+      - accident
+      - What is coreved in my insurence rental?
+
+  - intent: reservation_modification
+    examples: |
+      - How can I change my reservation details?
+      - Can I modify my pickup location?
+      - Is it possible to extend my rental period?
+      - cancel
+      - cancelation
+      - canclation policy
+      - What is the cancelation policy?
+      - How can i cancel my reservation?
+      - cancel reservation
+
+  - intent: additional_driver
+    examples: |
+      - Can I add another driver to my reservation?
+      - How much does it cost to add an additional driver?
+      - What are the requirements for adding an extra driver?
+      - Can i add another driver ?
+      - another driver
+      - Can someone else drive?
+      - add a driver
+
+  - intent: age_requirements
+    examples: |
+      - What is the minimum age to rent a car?
+      - Are there any age restrictions for renting a car?
+      - Can someone under 25 rent a car?
+      - minimum age
+      - age
+      - what is the minimum age?
+
+  - intent: fuel_policy
+    examples: |
+      - How does your fuel policy work?
+      - Do I need to return the car with a full tank of gas?
+      - What happens if I return the car without refueling?
+      - fuel
+      - Should i return the car full?
+      - fuel policy
+      - tank
+
+entities:
+  - email
+  - password
+  - location
+  - car_type
+  - start_date
+  - end_date
+  - pickup_location
+  - dropoff_location
+  - payment_info
+  - confirmation_number

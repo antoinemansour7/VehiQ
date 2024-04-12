@@ -1,28 +1,27 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-import CarListing from '../views/CarListing.vue'
-import AccountProfile from '../views/AccountProfile.vue'
-import SignUp from '../views/SignUp.vue'
-import Reservations from '../views/Reservations.vue'
-import ViewUsers from '../views/ViewUsers.vue'
-import CreateCarForm from '../views/CreateCarForm.vue'
-import LogIn from '../views/LogIn.vue'
-import LogOut from '../views/LogOut.vue'
-import ViewReservations from '../views/ViewReservations.vue'
-import UserReport from '../views/UserReport.vue'
-import CarPage from '../views/CarPage.vue'
-import ReservationPage from '../views/ReservationPage.vue'
-import paymentPage from '../views/paymentPage.vue'
-import CSRViewReservations from '../views/CSRViewReservations.vue'
-import CSRReport from '../views/CSRReport.vue'
+import { createRouter, createWebHistory } from "vue-router";
+import HomeView from "../views/HomeView.vue";
+import CarListing from "../views/CarListing.vue";
+import AccountProfile from "../views/AccountProfile.vue";
+import SignUp from "../views/SignUp.vue";
+import Reservations from "../views/Reservations.vue";
+import ViewUsers from "../views/ViewUsers.vue";
+import CreateCarForm from "../views/CreateCarForm.vue";
+import LogIn from "../views/LogIn.vue";
+import LogOut from "../views/LogOut.vue";
+import ViewReservations from "../views/ViewReservations.vue";
+import UserReport from "../views/UserReport.vue";
+import CarPage from "../views/CarPage.vue";
+import ReservationPage from "../views/ReservationPage.vue";
+import paymentPage from "../views/paymentPage.vue";
+import CSRViewReservations from "../views/CSRViewReservations.vue";
+import CSRReport from "../views/CSRReport.vue";
 import NearestBranchView from "../views/NearestBranchView.vue";
-import CarInspection from '../views/CarInspection.vue'
-import RegisterForm from '../components/RegisterForm.vue'
-import LoginForm from '../components/LoginForm.vue'
-import PickUp from '../views/PickUp.vue'
-import ChatBot from '../views/ChatBot.vue'
-import modifyCar from '../views/modifyCar.vue'
-
+import CarInspection from "../views/CarInspection.vue";
+import RegisterForm from "../components/RegisterForm.vue";
+import LoginForm from "../components/LoginForm.vue";
+import PickUp from "../views/PickUp.vue";
+import ChatBot from "../views/ChatBot.vue";
+import modifyCar from "../views/modifyCar.vue";
 
 const routes = [
   {
@@ -85,8 +84,8 @@ const routes = [
     component: CarPage,
   },
   {
-    path: '/modifyCar/:id',
-    name: 'modifyCar',
+    path: "/modifyCar/:id",
+    name: "modifyCar",
     component: modifyCar,
   },
 
@@ -146,16 +145,11 @@ const routes = [
     component: CSRReport,
   },
   {
-    path: '/PickUp',
-    name: 'PickUp',
-    component: PickUp
+    path: "/Chatbot",
+    name: "Chatbot",
+    component: ChatBot,
   },
-  {
-    path: '/chatBot',
-    name: 'ChatBot',
-    component: ChatBot
-  }
-]
+];
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),

@@ -1,0 +1,50 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"select_car\"}}]": "utter_ask_car_selection",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"select_car\"}}, {\"prev_action\": {\"action_name\": \"utter_ask_car_selection\"}, \"user\": {\"intent\": \"select_car\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"report_issue\"}}]": "utter_report_issue",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"report_issue\"}}, {\"prev_action\": {\"action_name\": \"utter_report_issue\"}, \"user\": {\"intent\": \"report_issue\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"sign_in\"}}]": "utter_ask_sign_in",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"sign_in\"}}, {\"prev_action\": {\"action_name\": \"utter_ask_sign_in\"}, \"user\": {\"intent\": \"sign_in\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"fuel_policy\"}}]": "utter_faq_fuel_policy",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"fuel_policy\"}}, {\"prev_action\": {\"action_name\": \"utter_faq_fuel_policy\"}, \"user\": {\"intent\": \"fuel_policy\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"complete_payment\"}}]": "utter_ask_payment",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"complete_payment\"}}, {\"prev_action\": {\"action_name\": \"utter_ask_payment\"}, \"user\": {\"intent\": \"complete_payment\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"age_requirements\"}}]": "utter_faq_age_requirements",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"age_requirements\"}}, {\"prev_action\": {\"action_name\": \"utter_faq_age_requirements\"}, \"user\": {\"intent\": \"age_requirements\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"payment_methods\"}}]": "utter_faq_payment_methods",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"payment_methods\"}}, {\"prev_action\": {\"action_name\": \"utter_faq_payment_methods\"}, \"user\": {\"intent\": \"payment_methods\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"additional_driver\"}}]": "utter_faq_additional_driver",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"additional_driver\"}}, {\"prev_action\": {\"action_name\": \"utter_faq_additional_driver\"}, \"user\": {\"intent\": \"additional_driver\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}]": "utter_goodbye",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}, {\"prev_action\": {\"action_name\": \"utter_goodbye\"}, \"user\": {\"intent\": \"goodbye\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"check_in\"}}]": "utter_check_in_instructions",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"check_in\"}}, {\"prev_action\": {\"action_name\": \"utter_check_in_instructions\"}, \"user\": {\"intent\": \"check_in\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"car_availability\"}}]": "utter_faq_car_availability",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"car_availability\"}}, {\"prev_action\": {\"action_name\": \"utter_faq_car_availability\"}, \"user\": {\"intent\": \"car_availability\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}]": "utter_iamabot",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}, {\"prev_action\": {\"action_name\": \"utter_iamabot\"}, \"user\": {\"intent\": \"bot_challenge\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"cancellation\"}}]": "utter_faq_cancellation",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"cancellation\"}}, {\"prev_action\": {\"action_name\": \"utter_faq_cancellation\"}, \"user\": {\"intent\": \"cancellation\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"reservation_modification\"}}]": "utter_faq_reservation_modification",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"reservation_modification\"}}, {\"prev_action\": {\"action_name\": \"utter_faq_reservation_modification\"}, \"user\": {\"intent\": \"reservation_modification\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"insurance_coverage\"}}]": "utter_faq_insurance_coverage",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"insurance_coverage\"}}, {\"prev_action\": {\"action_name\": \"utter_faq_insurance_coverage\"}, \"user\": {\"intent\": \"insurance_coverage\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"find_branch\"}}]": "utter_ask_branch_location",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"find_branch\"}}, {\"prev_action\": {\"action_name\": \"utter_ask_branch_location\"}, \"user\": {\"intent\": \"find_branch\"}}]": "action_listen"
+    },
+    "rule_only_slots": [],
+    "rule_only_loops": [],
+    "rules_for_loop_unhappy_path": {},
+    "rules_not_in_stories": [
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}]",
+      "predicting default action with intent session_start",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}, {\"prev_action\": {\"action_name\": \"utter_iamabot\"}, \"user\": {\"intent\": \"bot_challenge\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}, {\"prev_action\": {\"action_name\": \"utter_goodbye\"}, \"user\": {\"intent\": \"goodbye\"}}]",
+      "predicting default action with intent restart",
+      "predicting default action with intent back"
+    ]
+  }
+}

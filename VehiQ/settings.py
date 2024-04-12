@@ -59,7 +59,8 @@ INSTALLED_APPS = [
     'djoser', # new
     'accounts',
     'vehicles',
-    'branches'
+    'branches',
+    'chat_interface',
 
 ]
 CORS_ALLOW_ALL_ORIGINS = True

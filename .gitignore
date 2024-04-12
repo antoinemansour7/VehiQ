@@ -1,16 +1,43 @@
-# Byte-compiled / optimized / DLL files
-__pycache__/
+# General
 *.py[cod]
-*$py.class
+__pycache__/
+*.db
+*.log
+*.tar.gz
+.env
+*.sqlite3
 
-# Django stuff:
-db.sqlite3
+# Django specific
 *.log
 local_settings.py
+db.sqlite3
+media/
+
+# Rasa specific
+models/*
+.rasa/*
+!models/.gitkeep
+!rasa/actions/__init__.py
+
+# Rasa cache
+.chatbot/.rasa/cache/
 
 # Virtual environment
 venv/
+ENV/
 
+# Node modules for your front end
 node_modules/
 
-.env
+# IDE specific settings
+.idea/
+.vscode/
+
+# Operating System specific files
+.DS_Store
+Thumbs.db
+
+# Chatbot training data (if you want to keep this out of your repo)
+data/nlu/*
+data/stories/*
+

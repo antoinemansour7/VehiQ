@@ -1,0 +1,100 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - sign_in
+  - find_branch
+  - select_car
+  - complete_payment
+  - check_in
+  - report_issue
+  - payment_methods
+  - cancellation
+  - car_availability
+  - insurance_coverage
+  - reservation_modification
+  - additional_driver
+  - age_requirements
+  - fuel_policy
+
+responses:
+  utter_greet:
+    - text: "Hey! How are you?"
+    - text: "Hello there! How can I assist you today?"
+    - text: "Hi! Welcome to our car rental service. How may I help you?"
+    - text: "Good [morning/afternoon/evening]! How may I assist you today?"
+
+  utter_goodbye:
+    - text: "Goodbye! If you need any further assistance, feel free to ask."
+    - text: "See you later! Have a great day."
+    - text: "Bye for now! Take care."
+    - text: "Until next time! Goodbye."
+
+  utter_iamabot:
+    - text: "Yes, I am a bot, powered by Rasa. But don't worry, I'm here to help you with your car rental needs."
+    - text: "Indeed, I'm a bot. But I'm a helpful one!"
+    - text: "I am a bot, powered by Rasa."
+
+  utter_ask_sign_in:
+    - text: "I can't sign you in directly. Please use the sign-in page on our website to enter your email and password."
+
+  utter_ask_branch_location:
+    - text: "I can't perform that action directly. Please go to the find branch section in the toolbar, enter your postal code or address, and it will show you the nearest branch."
+    - text: "I can't locate branches directly. Please go to the 'Find Branch' section in the toolbar, enter your postal code or address, and it will show you the nearest branch."
+
+  utter_ask_car_selection:
+    - text: "I can't show cars directly. Please visit the 'Car Listing' section of our website to view all available vehicles and select the one you like."
+
+  utter_ask_payment:
+    - text: "I can't process payments. To complete your payment, please go to the 'Payments' section on our website and follow the instructions there."
+
+  utter_check_in_instructions:
+    - text: "I can't check you in. Please check in through our website or mobile app by entering your reservation details in the 'Check-In' section."
+
+  utter_report_issue:
+    - text: "I can't resolve issues directly. Please report any problems through our support page or contact our helpdesk."
+
+  utter_faq_payment_methods:
+    - text: "We accept various payment methods including credit/debit cards, PayPal, and bank transfers."
+
+  utter_faq_cancellation:
+    - text: "You can cancel your reservation up to 24 hours before the pickup time for a full refund. Please contact our support team to initiate the cancellation process."
+
+  utter_faq_car_availability:
+    - text: "Our car availability varies depending on the location and the time of booking. We recommend checking our website or contacting our support team for the most up-to-date information."
+
+  utter_faq_insurance_coverage:
+    - text: "Our rental packages typically include basic insurance coverage. However, you can opt for additional insurance options for enhanced coverage. Please refer to our support team for more details."
+
+  utter_faq_reservation_modification:
+    - text: "You can modify your reservation details such as pickup/dropoff location, date, and time. Please contact our support team or visit our website to make modifications to your reservation."
+
+  utter_faq_additional_driver:
+    - text: "Yes, you can add additional drivers to your reservation. However, there may be an extra fee associated with adding extra drivers. Please check our terms and conditions for more information."
+
+  utter_faq_age_requirements:
+    - text: "The minimum age requirement for renting a car is typically 18 years old. However, some locations may have higher age requirements. Please check our terms and conditions or contact our support team for specific age requirements."
+
+  utter_faq_fuel_policy:
+    - text: "Our fuel policy varies depending on the rental location and package. In most cases, we operate on a full-to-full basis where you receive the car with a full tank of fuel and are expected to return it with a full tank. Please check your reservation details or contact our support team for more information."
+    - text: "The Car has to be returned with 3/4 to full Tank. Otherwise additional fees may apply. Please check you reservation details or contact our support team for more details."
+
+  utter_cheer_up:
+    - text: "Here is something to cheer you up:"
+      image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+    - text: "Did that help you?"
+
+  utter_happy:
+    - text: "Great, carry on!"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

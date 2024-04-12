@@ -1,0 +1,72 @@
+version: "3.1"
+
+stories:
+  - story: happy path
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_great
+      - action: utter_happy
+
+  - story: sad path 1
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_unhappy
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+      - intent: affirm
+      - action: utter_happy
+
+  - story: sad path 2
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_unhappy
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+      - intent: deny
+      - action: utter_goodbye
+
+  - story: general inquiry path
+    steps:
+      - intent: find_branch
+      - action: utter_ask_branch_location
+      - intent: sign_in
+      - action: utter_ask_sign_in
+
+  - story: car rental inquiry
+    steps:
+      - intent: select_car
+      - action: utter_ask_car_selection
+      - intent: complete_payment
+      - action: utter_ask_payment
+
+  - story: Car Check in
+    steps:
+      - intent: check_in
+      - action: utter_check_in_instructions
+
+  - story: Faq
+    steps:
+      - intent: payment_methods
+      - action: utter_faq_payment_methods
+      - intent: cancellation
+      - action: utter_faq_cancellation
+      - intent: car_availability
+      - action: utter_faq_car_availability
+      - intent: insurance_coverage
+      - action: utter_faq_insurance_coverage
+      - intent: reservation_modification
+      - action: utter_faq_reservation_modification
+      - intent: additional_driver
+      - action: utter_faq_additional_driver
+      - intent: age_requirements
+      - action: utter_faq_age_requirements
+      - intent: fuel_policy
+      - action: utter_faq_fuel_policy
+
+  - story: support inquiry
+    steps:
+      - intent: report_issue
+      - action: utter_report_issue
