@@ -71,7 +71,7 @@ To set up the project on your local machine, follow these steps in a Linux envir
    
    Move to the `frontend` directory and install the necessary Node.js packages for the Vue.js frontend:
    ```bash
-   cd frontend
+   cd frontendvue
    npm install
    npm install axios
    npm install bulma
