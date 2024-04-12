@@ -1,0 +1,62 @@
+./VehiQ/rentals/models.py:17:1: E302 expected 2 blank lines, found 1
+./VehiQ/rentals/models.py:23:1: W293 blank line contains whitespace
+./VehiQ/rentals/models.py:24:1: W293 blank line contains whitespace
+./VehiQ/rentals/models.py:32:55: W292 no newline at end of file
+./VehiQ/rentals/views.py:31:114: W292 no newline at end of file
+./VehiQ/urls.py:7:55: W291 trailing whitespace
+./VehiQ/urls.py:8:47: W291 trailing whitespace
+./accounts/admin.py:7:1: E302 expected 2 blank lines, found 1
+./accounts/admin.py:19:1: E302 expected 2 blank lines, found 1
+./accounts/admin.py:21:1: E304 blank lines found after function decorator
+./accounts/disable.py:8:1: W293 blank line contains whitespace
+./accounts/disable.py:8:5: W292 no newline at end of file
+./accounts/models.py:7:1: E302 expected 2 blank lines, found 1
+./accounts/models.py:12:1: W293 blank line contains whitespace
+./accounts/models.py:33:54: E231 missing whitespace after ','
+./accounts/models.py:33:66: W291 trailing whitespace
+./accounts/models.py:34:55: E231 missing whitespace after ','
+./accounts/models.py:38:59: W291 trailing whitespace
+./accounts/serializers.py:5:1: E302 expected 2 blank lines, found 1
+./accounts/serializers.py:8:123: E231 missing whitespace after ','
+./accounts/serializers.py:14:1: E303 too many blank lines (3)
+./accounts/serializers.py:23:1: W293 blank line contains whitespace
+./accounts/serializers.py:28:1: W391 blank line at end of file
+./accounts/signals.py:1:1: F401 'django.db.models.signals.post_save' imported but unused
+./accounts/signals.py:1:1: F401 'django.db.models.signals.post_delete' imported but unused
+./accounts/signals.py:2:1: F401 'django.dispatch.receiver' imported but unused
+./accounts/signals.py:3:1: F401 'django.contrib.auth.models.User' imported but unused
+./accounts/signals.py:4:1: W293 blank line contains whitespace
+./accounts/signals.py:7:1: E303 too many blank lines (3)
+./accounts/tests.py:3:1: W293 blank line contains whitespace
+./accounts/urls.py:3:1: F811 redefinition of unused 'views' from line 2
+./accounts/urls.py:17:6: E131 continuation line unaligned for hanging indent
+./accounts/views.py:24:1: E302 expected 2 blank lines, found 1
+./accounts/views.py:56:1: E303 too many blank lines (3)
+./accounts/views.py:71:32: E201 whitespace after '('
+./accounts/views.py:93:1: E302 expected 2 blank lines, found 1
+./accounts/views.py:99:1: W293 blank line contains whitespace
+./accounts/views.py:105:1: E302 expected 2 blank lines, found 1
+./accounts/views.py:130:1: E302 expected 2 blank lines, found 1
+./accounts/views.py:131:40: W291 trailing whitespace
+./accounts/views.py:132:38: W291 trailing whitespace
+./accounts/views.py:133:1: W293 blank line contains whitespace
+./accounts/views.py:159:1: E303 too many blank lines (3)
+./accounts/views.py:256:1: W391 blank line at end of file
+./branches/management/commands/load_branches.py:5:1: E302 expected 2 blank lines, found 1
+./branches/serializers.py:4:1: E302 expected 2 blank lines, found 1
+./branches/tests.py:6:1: E302 expected 2 blank lines, found 1
+./branches/tests.py:23:1: E302 expected 2 blank lines, found 1
+./branches/tests.py:36:1: W391 blank line at end of file
+./branches/utils.py:13:1: E302 expected 2 blank lines, found 1
+./branches/utils.py:16:1: E302 expected 2 blank lines, found 1
+./branches/utils.py:20:1: E302 expected 2 blank lines, found 1
+./branches/utils.py:42:1: E302 expected 2 blank lines, found 1
+./branches/views.py:11:1: E302 expected 2 blank lines, found 1
+./branches/views.py:29:1: E302 expected 2 blank lines, found 1
+./branches/views.py:40:1: E302 expected 2 blank lines, found 1
+./vehicles/models.py:15:1: W293 blank line contains whitespace
+./vehicles/models.py:21:14: E111 indentation is not a multiple of 4
+./vehicles/models.py:21:14: E117 over-indented
+./vehicles/models.py:21:44: E225 missing whitespace around operator
+./vehicles/urls.py:11:1: W391 blank line at end of file
+./vehicles/views.py:9:1: W391 blank line at end of file

@@ -1,8 +1,4 @@
-from rest_framework import serializers
-from .models import Reservation
-from vehicles.models import Car
 from accounts.models import CustomUser
-
 from rest_framework import serializers
 from .models import Reservation
 
@@ -11,7 +7,7 @@ class ReservationSerializer(serializers.ModelSerializer):
         model = Reservation
         fields = ['id', 'car', 'user', 'start_date', 'end_date', 'reservation_date', 'pickup_location', 'dropoff_location','card_number', 'confirmation_number', 'price', 'deposit']
 
-    # Optionally, you can add extra fields or customize the serializer behavior here
+
 
 
 

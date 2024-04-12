@@ -6,6 +6,7 @@ from django.forms import ValidationError
 from django.contrib.auth.forms import UserCreationForm
 from accounts.models import CustomUser  # Import the CustomUser model
 
+
 class ProfileForm(forms.ModelForm):
     phone = forms.CharField(validators=[RegexValidator(regex=r'^\+?1?\d{9,15}$', message="Phone number must be entered in the format: '+999999999'. Up to 15 digits allowed.")])
 
@@ -13,20 +14,17 @@ class ProfileForm(forms.ModelForm):
         model = CustomUser  # Use CustomUser instead of Profile
         fields = ['phone']
 
-    # def clean_bio(self):
-    #     bio = self.cleaned_data.get('bio')
-    #     if 'badword' in bio:
-    #         raise ValidationError("Please do not use bad words in your bio.")
-    #     return bio
 
 class ReservationForm(forms.ModelForm):
     class Meta:
         model = Reservation
         fields = ['car', 'start_date', 'end_date',]
 
+
 def validate_no_special_characters(value):
     if any(char not in string.ascii_letters + string.digits for char in value):
         raise ValidationError("Special characters are not allowed.")
+
 
 class RegistrationForm(UserCreationForm):
     email = forms.EmailField()

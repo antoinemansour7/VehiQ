@@ -182,7 +182,7 @@ export default {
         price: null,
         electric: false,
         allWheelDrive: false,
-        image: null
+        image: ''
       }
     };
   },
@@ -211,7 +211,7 @@ export default {
         price: null,
         electric: false,
         allWheelDrive: false,
-        image: null
+        image: ''
       };
     }
   }

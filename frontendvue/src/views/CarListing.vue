@@ -1,68 +1,70 @@
 <template>
-  <h1>Available Cars</h1>
+  <div>
+      <h1>Available Cars {{this.$route.params.id}}</h1>
 
-  <!--Create new car-->
-  <button class="button-looking" @click="openCreateCarForm">Create</button>
-  
-  <!-- Filter dropdowns -->
-  <div class="filter-container">
-    <select class="filter-select" v-model="search.make">
-      <option value="">Select Make</option>
-      <option v-for="make in uniqueMakes" :key="make" :value="make">{{ make }}</option>
-    </select>
-    <select class="filter-select" v-model="search.model">
-      <option value="">Select Model</option>
-      <option v-for="model in uniqueModels" :key="model" :value="model">{{ model }}</option>
-    </select>
-    <select class="filter-select" v-model="search.year">
-      <option value="">Select Year</option>
-      <option v-for="year in uniqueYears" :key="year" :value="year">{{ year }}</option>
-    </select>
-    <select class="filter-select" v-model="search.price">
-      <option value="">Select Price</option>
-      <option value="0-10000">$0 - $10,000</option>
-      <option value="10001-20000">$10,001 - $20,000</option>
-      <!-- Add more options as needed -->
-    </select>
-    <select class="filter-select" v-model="search.isElectric">
-      <option value="">Electric?</option>
-      <option value="true">Yes</option>
-      <option value="false">No</option>
-    </select>
-    <select class="filter-select" v-model="search.isAllWheelDrive">
-      <option value="">All-Wheel Drive?</option>
-      <option value="true">Yes</option>
-      <option value="false">No</option>
-    </select>
-  </div>
+      <!--Create new car-->
+      <button class="button-looking" @click="openCreateCarForm">Create</button>
+      
+      <!-- Filter dropdowns -->
+      <div class="filter-container">
+        <select class="filter-select" v-model="search.make">
+          <option value="">Select Make</option>
+          <option v-for="make in uniqueMakes" :key="make" :value="make">{{ make }}</option>
+        </select>
+        <select class="filter-select" v-model="search.model">
+          <option value="">Select Model</option>
+          <option v-for="model in uniqueModels" :key="model" :value="model">{{ model }}</option>
+        </select>
+        <select class="filter-select" v-model="search.year">
+          <option value="">Select Year</option>
+          <option v-for="year in uniqueYears" :key="year" :value="year">{{ year }}</option>
+        </select>
+        <select class="filter-select" v-model="search.price">
+          <option value="">Select Price</option>
+          <option value="0-10000">$0 - $10,000</option>
+          <option value="10001-20000">$10,001 - $20,000</option>
+          <!-- Add more options as needed -->
+        </select>
+        <select class="filter-select" v-model="search.isElectric">
+          <option value="">Electric?</option>
+          <option value="true">Yes</option>
+          <option value="false">No</option>
+        </select>
+        <select class="filter-select" v-model="search.isAllWheelDrive">
+          <option value="">All-Wheel Drive?</option>
+          <option value="true">Yes</option>
+          <option value="false">No</option>
+        </select>
+      </div>
 
 
-  <div class="rental-car-list">
-    <div v-for="car in filteredCars" :key="car.id" class="rental-car">
-      <div class="button-container">
-        
-        <button class="button-looking small-button" @click="deleteCar(car.id)">
-          <span class="icon"><i class="fas fa-trash"></i></span>
-        </button>
-        
-        <button class="button-looking small-button">
-          <span class="icon"><i class="fas fa-edit"></i></span>
-        </button>
-        <button class="button-looking small-button" @click="openReserveCarPage(car.id)">
-          <span class="icon"><i class="fas fa-calendar"></i></span>
-        </button>
+      <div class="rental-car-list">
+        <div v-for="car in filteredCars" :key="car.id" class="rental-car">
+          <div class="button-container">
+            
+            <button class="button-looking small-button" @click="deleteCar(car.id)">
+              <span class="icon"><i class="fas fa-trash"></i></span>
+            </button>
+            
+            <button class="button-looking small-button">
+  <span class="icon"><i class="fas fa-edit" @click="modifyCar(car.id)"></i></span>
+</button>
+            <button class="button-looking small-button" @click="openReserveCarPage(car.id)">
+              <span class="icon"><i class="fas fa-calendar"></i></span>
+            </button>
+          </div>
+          <img :src="car.get_image" alt="Car Image">
+          <div class="details">
+            <h3>{{ car.make }} {{ car.model }}</h3>
+            <p>{{ car.year }}</p>
+            <p>{{ car.price }}</p>
+          </div>
+          <div class="features">
+            <img v-if="car.is_electric" src="../assets/lightning.png" class="icon">
+            <img v-if="car.is_all_wheel_drive" src="../assets/wheels.png" class="icon">
+          </div>
+        </div>
       </div>
-      <img :src="car.get_image" alt="Car Image">
-      <div class="details">
-        <h3>{{ car.make }} {{ car.model }}</h3>
-        <p>{{ car.year }}</p>
-        <p>{{ car.price }}</p>
-      </div>
-      <div class="features">
-        <img v-if="car.is_electric" src="../assets/lightning.png" class="icon">
-        <img v-if="car.is_all_wheel_drive" src="../assets/wheels.png" class="icon">
-      </div>
-    </div>
   </div>
 </template>
 
@@ -114,7 +116,12 @@ export default {
     ,
     openReserveCarPage(id) {
     this.$router.push({ name: 'carPage', params: { id: id} })
-    }
+    },
+
+    modifyCar(id) {
+      this.$router.push({ name: 'modifyCar', params: { id: id } });
+}
+
 
   },
   computed: {

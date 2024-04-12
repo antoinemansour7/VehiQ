@@ -16,11 +16,12 @@ import paymentPage from "../views/paymentPage.vue";
 import CSRViewReservations from "../views/CSRViewReservations.vue";
 import CSRReport from "../views/CSRReport.vue";
 import NearestBranchView from "../views/NearestBranchView.vue";
-import LoginForm from "../components/LoginForm.vue";
-import RegisterForm from "../components/RegisterForm.vue";
 import CarInspection from "../views/CarInspection.vue";
+import RegisterForm from "../components/RegisterForm.vue";
+import LoginForm from "../components/LoginForm.vue";
 import PickUp from "../views/PickUp.vue";
-import Chatbot from "../views/Chatbot.vue";
+import ChatBot from "../views/ChatBot.vue";
+import modifyCar from "../views/modifyCar.vue";
 
 const routes = [
   {
@@ -82,6 +83,11 @@ const routes = [
     name: "carPage",
     component: CarPage,
   },
+  {
+    path: "/modifyCar/:id",
+    name: "modifyCar",
+    component: modifyCar,
+  },
 
   {
     path: "/ReservationPage/:reservationId",
@@ -141,8 +147,8 @@ const routes = [
   {
     path: "/Chatbot",
     name: "Chatbot",
-    component: Chatbot,
-  }
+    component: ChatBot,
+  },
 ];
 
 const router = createRouter({

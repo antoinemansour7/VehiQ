@@ -10,7 +10,6 @@ urlpatterns = [
     path('api/v1/', include('djoser.urls.authtoken')), # new
     path('api/v1/', include('vehicles.urls')), # new
     path('vehicles/', include('vehicles.urls')),
-    path('accounts/', include('django.contrib.auth.urls')),
     path('accounts/', include('accounts.urls')),
     path('branches/', include('branches.urls')),
     path('api/chat/', include('chat_interface.urls')),]

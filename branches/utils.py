@@ -10,19 +10,15 @@ import logging
 
 logger = logging.getLogger(__name__)
 
-# Utility function to sanitize cache keys
 def sanitize_cache_key(key):
-    """Sanitize the cache key by replacing disallowed characters."""
     return re.sub(r'[^a-zA-Z0-9_]', '_', key)
 
 def get_gmaps_client():
-    """Lazy load the Google Maps Client."""
     logger.debug(f"Using API Key: {settings.GMAPS_API_KEY}")
     return googlemaps.Client(key=settings.GMAPS_API_KEY)
 
 def geocode_location(address_or_code):
     print("geocode_location called")
-    """Converts an address or code to geolocation with caching."""
     address_or_code = sanitize_cache_key(address_or_code)
     cache_key = f'geocode_{address_or_code}'
     cached_result = cache.get(cache_key)

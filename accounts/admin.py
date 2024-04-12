@@ -1,12 +1,12 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
-from django.utils.translation import gettext_lazy as _
 from .models import Reservation
 from accounts.models import CustomUser  # Import your CustomUser model
 
 # Define a new UserAdmin
 class CustomUserAdmin(BaseUserAdmin):
     search_fields = ('username', 'email')
+
 
 # Re-register UserAdmin
 # admin.site.unregister(User)
