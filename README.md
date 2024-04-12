@@ -196,8 +196,14 @@ psql -d branch -U postgres
  ```
  python manage.py load_branches
   ```
-   
-   
+
+### Setting Up The ChatBot 
+
+1. Install Rasa
+```pip install rasa```
+
+2. Run the server
+```rasa run --enable-api -p 5002```
 
 Once you are done with all these steps, you can now open you browser and go to the following URL [http://localhost:8080/](http://localhost:8080/) to explore the project!
 
