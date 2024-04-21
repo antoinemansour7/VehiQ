@@ -20,14 +20,14 @@ payment process ensures a hassle-free rental experience from start to finish.
 ## Team Members and Roles
 
 **Front end :** <br>
-- Cristina Trofimov 
-- Jackson Amirthalingam
-- Julia Trinh
+- Cristina Trofimov (40249494) : cristina-trofimov
+- Jackson Amirthalingam (40249183) : j-ackamir
+- Julia Trinh (40245980) : Julia-Trinh
 
 **Back end :**<br>
-- Leiticia Taleb
-- André Assaad
-- Antoine Mansour
+- Leiticia Taleb (40225167) : l3itisys
+- André Assaad (40242006) : andrecodes1
+- Antoine Mansour (40250454) : antoinemansour7
 
 For more details on our members, please visit our [Wiki](https://github.com/cristina-trofimov/Matter-soen341projectW2024/wiki) page
 
